@@ -494,6 +494,7 @@ F 3 "" H 10250 6050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
+<<<<<<< HEAD
 	10050 5850 9850 5850
 Wire Wire Line
 	10050 5950 9850 5950
@@ -509,4 +510,6 @@ Text Label 9850 5850 0    60   ~ 0
 /+5V
 Text Label 9850 5950 0    60   ~ 0
 /GND
+=======
+>>>>>>> 904a8a96df15c6a9306a1a40d17c8132d69ad6c0
 $EndSCHEMATC
