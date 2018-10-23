@@ -31,6 +31,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:FSAE Main Panel-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -493,4 +494,25 @@ F 3 "" H 10250 6050 50  0001 C CNN
 	1    10250 6050
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	10050 5850 10050 5950
+Wire Wire Line
+	10050 5950 9750 5950
+Wire Wire Line
+	9750 5950 9750 6050
+Wire Wire Line
+	9750 6050 10050 6050
+Wire Wire Line
+	10050 6150 9500 6150
+Wire Wire Line
+	9500 6150 9500 6250
+Wire Wire Line
+	9500 6250 10050 6250
+Wire Wire Line
+	10050 6350 9350 6350
+Wire Wire Line
+	9350 6350 9350 6000
+Wire Wire Line
+	9350 6000 9750 6000
+Connection ~ 9750 6000
 $EndSCHEMATC
