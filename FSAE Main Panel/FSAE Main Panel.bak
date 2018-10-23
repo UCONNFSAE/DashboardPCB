@@ -31,7 +31,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:FSAE Main Panel-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -481,6 +480,17 @@ F 1 "+5V" H 5200 5940 50  0000 C CNN
 F 2 "" H 5200 5800 50  0001 C CNN
 F 3 "" H 5200 5800 50  0001 C CNN
 	1    5200 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x06 J2
+U 1 1 5BCFB739
+P 10250 6050
+F 0 "J2" H 10250 6350 50  0000 C CNN
+F 1 "Conn_01x06" H 10250 5650 50  0000 C CNN
+F 2 "Connectors_TE-Connectivity:TE_84953-6_1x06_P1.0mm_Horizontal" H 10250 6050 50  0001 C CNN
+F 3 "" H 10250 6050 50  0001 C CNN
+	1    10250 6050
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

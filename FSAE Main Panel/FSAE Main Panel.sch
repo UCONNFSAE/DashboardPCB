@@ -493,4 +493,20 @@ F 3 "" H 10250 6050 50  0001 C CNN
 	1    10250 6050
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	10050 5850 9850 5850
+Wire Wire Line
+	10050 5950 9850 5950
+Wire Wire Line
+	10050 6050 9850 6050
+Wire Wire Line
+	10050 6150 9850 6150
+Wire Wire Line
+	9850 6250 10050 6250
+Wire Wire Line
+	10050 6350 9850 6350
+Text Label 9850 5850 0    60   ~ 0
+/+5V
+Text Label 9850 5950 0    60   ~ 0
+/GND
 $EndSCHEMATC
