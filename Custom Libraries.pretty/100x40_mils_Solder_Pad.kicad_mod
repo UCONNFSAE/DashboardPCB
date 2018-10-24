@@ -1,0 +1,9 @@
+(module 100x40_mils_Solder_Pad (layer F.Cu) (tedit 5B11ECC3)
+  (fp_text reference REF** (at 1.27 2.286) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value "100x40 mils Solder Pad" (at 1.778 -1.016) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad 1 smd rect (at 1.27 0.508) (size 2.54 1.016) (layers F.Cu F.Paste F.Mask))
+)
