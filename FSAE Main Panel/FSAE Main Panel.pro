@@ -1,4 +1,4 @@
-update=Mon 31 Jul 2017 10:04:56 AM MDT
+update=10/23/2018 8:59:55 PM
 version=1
 last_client=kicad
 [general]
@@ -63,3 +63,7 @@ LibName29=opto
 LibName30=atmel
 LibName31=contrib
 LibName32=valves
+LibName33=C:/Users/Gary/Documents/GitHub/DashboardPCB/Custom Libraries/apa102c
+LibName34=C:/Users/Gary/Documents/GitHub/DashboardPCB/Custom Libraries/lm2734
+LibName35=C:/Users/Gary/Documents/GitHub/DashboardPCB/Custom Libraries/prtr5v0u2x
+LibName36=C:/Users/Gary/Documents/GitHub/DashboardPCB/Custom Libraries/samd21g18a-au
