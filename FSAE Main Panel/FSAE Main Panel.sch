@@ -40,7 +40,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -125,17 +125,6 @@ F 1 "GND" H 8050 5500 50  0000 C CNN
 F 2 "" H 8050 5650 50  0001 C CNN
 F 3 "" H 8050 5650 50  0001 C CNN
 	1    8050 5650
-	1    0    0    -1  
-$EndComp
-$Comp
-L +5V #PWR?
-U 1 1 5BC69A12
-P 10350 4800
-F 0 "#PWR?" H 10350 4650 50  0001 C CNN
-F 1 "+5V" H 10350 4940 50  0000 C CNN
-F 2 "" H 10350 4800 50  0001 C CNN
-F 3 "" H 10350 4800 50  0001 C CNN
-	1    10350 4800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -245,8 +234,6 @@ Wire Wire Line
 Wire Wire Line
 	9700 5000 9950 5000
 Wire Wire Line
-	10350 5000 10350 4800
-Wire Wire Line
 	9850 5200 9850 5000
 Connection ~ 9850 5000
 Wire Wire Line
@@ -288,8 +275,6 @@ Wire Wire Line
 Wire Wire Line
 	10550 3750 10550 5600
 Connection ~ 9850 5600
-Wire Wire Line
-	10250 5000 10350 5000
 Wire Wire Line
 	10050 5850 9850 5850
 Wire Wire Line
@@ -532,9 +517,14 @@ Wire Wire Line
 	8700 2800 7050 2800
 Wire Wire Line
 	8900 3750 9350 3750
-Text GLabel 8500 4500 0    39   Input ~ 0
-USB_HOST_ENABLE/2
+Text GLabel 10650 5000 2    39   Input ~ 0
+USB_POWER
 Wire Wire Line
-	8700 4500 8500 4500
-Connection ~ 8700 4500
+	10650 5000 10250 5000
+$Sheet
+S 700  1700 800  300 
+U 5BE25053
+F0 "Sheet004" 60
+F1 "CAN.sch" 60
+$EndSheet
 $EndSCHEMATC
