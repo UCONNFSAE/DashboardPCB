@@ -31,16 +31,14 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:apa102c
-LIBS:lm2734
-LIBS:prtr5v0u2x
-LIBS:samd21g18a-au
+LIBS:KingBright_Addition
+LIBS:TI_Additions
 LIBS:FSAE Main Panel-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 3 5
 Title ""
 Date ""
 Rev ""

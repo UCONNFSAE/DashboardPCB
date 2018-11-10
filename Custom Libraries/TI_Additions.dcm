@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TLC6C598
+D TLC6C598 Shift Register
+K 8bit Shift Register
+$ENDCMP
+#
+#End Doc Library

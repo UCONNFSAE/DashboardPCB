@@ -1,4 +1,4 @@
-update=10/23/2018 8:59:55 PM
+update=11/9/2018 6:27:34 PM
 version=1
 last_client=kicad
 [general]
@@ -67,3 +67,5 @@ LibName33=C:/Users/Gary/Documents/GitHub/DashboardPCB/Custom Libraries/apa102c
 LibName34=C:/Users/Gary/Documents/GitHub/DashboardPCB/Custom Libraries/lm2734
 LibName35=C:/Users/Gary/Documents/GitHub/DashboardPCB/Custom Libraries/prtr5v0u2x
 LibName36=C:/Users/Gary/Documents/GitHub/DashboardPCB/Custom Libraries/samd21g18a-au
+LibName37=E:/Projects/GitHub/DashboardPCB/Custom Libraries/KingBright_Addition
+LibName38=E:/Projects/GitHub/DashboardPCB/Custom Libraries/TI_Additions

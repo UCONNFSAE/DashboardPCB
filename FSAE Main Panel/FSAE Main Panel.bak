@@ -31,16 +31,14 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:apa102c
-LIBS:lm2734
-LIBS:prtr5v0u2x
-LIBS:samd21g18a-au
+LIBS:KingBright_Addition
+LIBS:TI_Additions
 LIBS:FSAE Main Panel-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 5
 Title ""
 Date ""
 Rev ""
@@ -526,5 +524,11 @@ S 700  1700 800  300
 U 5BE25053
 F0 "Sheet004" 60
 F1 "CAN.sch" 60
+$EndSheet
+$Sheet
+S 700  2200 800  300 
+U 5BE60AE3
+F0 "Display" 60
+F1 "Display.sch" 60
 $EndSheet
 $EndSCHEMATC
