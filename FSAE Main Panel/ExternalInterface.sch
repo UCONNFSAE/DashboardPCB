@@ -31,8 +31,10 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:KingBright_Addition
-LIBS:TI_Additions
+LIBS:apa102c
+LIBS:lm2734
+LIBS:prtr5v0u2x
+LIBS:samd21g18a-au
 LIBS:FSAE Main Panel-cache
 EELAYER 25 0
 EELAYER END

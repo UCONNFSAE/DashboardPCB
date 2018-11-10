@@ -31,8 +31,10 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:KingBright_Addition
-LIBS:TI_Additions
+LIBS:apa102c
+LIBS:lm2734
+LIBS:prtr5v0u2x
+LIBS:samd21g18a-au
 LIBS:FSAE Main Panel-cache
 EELAYER 25 0
 EELAYER END
@@ -278,7 +280,7 @@ F 3 "" H 6150 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6150 4900 6150 5000
+	6150 4100 6150 5000
 Wire Wire Line
 	6450 4900 6450 5000
 Connection ~ 6150 4900
@@ -310,4 +312,9 @@ Connection ~ 1850 5950
 Wire Wire Line
 	2100 5150 2100 5950
 Connection ~ 2100 5950
+Wire Wire Line
+	6150 4100 1350 4100
+Wire Wire Line
+	1350 4100 1350 4950
+Connection ~ 1350 4950
 $EndSCHEMATC
