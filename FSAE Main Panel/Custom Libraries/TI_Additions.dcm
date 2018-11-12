@@ -1,5 +1,10 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP TLC6C5816
+D 16-Bit Line Driver Shift Register with Diagnostics
+K 16bit LED Driver Shift Register
+$ENDCMP
+#
 $CMP TLC6C598
 D TLC6C598 Shift Register
 K 8bit Shift Register

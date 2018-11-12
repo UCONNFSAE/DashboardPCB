@@ -1,4 +1,4 @@
-update=11/11/2018 7:30:57 PM
+update=11/12/2018 1:43:20 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,5 +59,11 @@ LibName29=opto
 LibName30=atmel
 LibName31=contrib
 LibName32=valves
+LibName33=Custom Libraries/TI_Additions
+LibName34=Custom Libraries/apa102c
+LibName35=Custom Libraries/KingBright_Addition
+LibName36=Custom Libraries/lm2734
+LibName37=Custom Libraries/prtr5v0u2x
+LibName38=Custom Libraries/samd21g18a-au
 [general]
 version=1
