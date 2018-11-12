@@ -1,3 +1,5 @@
 (fp_lib_table
-  (lib (name Kingbright)(type KiCad)(uri E:/Projects/GitHub/DashboardPCB/Kingbright.pretty)(options "")(descr ""))
+  (lib (name Kingbright)(type KiCad)(uri "$(KIPRJMOD)/Custom Libraries/Kingbright.pretty")(options "")(descr ""))
+  (lib (name "Custom Libraries")(type KiCad)(uri "$(KIPRJMOD)/Custom Libraries/Custom Libraries.pretty")(options "")(descr ""))
+  (lib (name OSRAM)(type KiCad)(uri "$(KIPRJMOD)/Custom Libraries/OSRAM.pretty")(options "")(descr ""))
 )

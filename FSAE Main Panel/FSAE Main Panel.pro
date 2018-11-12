@@ -1,10 +1,6 @@
-update=11/10/2018 6:18:32 PM
+update=11/11/2018 7:30:57 PM
 version=1
 last_client=kicad
-[general]
-version=1
-RootSch=
-BoardNm=
 [pcbnew]
 version=1
 LastNetListRead=
@@ -29,7 +25,7 @@ version=1
 NetIExt=net
 [eeschema]
 version=1
-LibDir=../Custom Libraries
+LibDir=../FSAE Main Panel;Custom Libraries
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -63,3 +59,5 @@ LibName29=opto
 LibName30=atmel
 LibName31=contrib
 LibName32=valves
+[general]
+version=1

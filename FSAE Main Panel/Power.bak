@@ -31,8 +31,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:KingBright_Addition
-LIBS:TI_Additions
 LIBS:FSAE Main Panel-cache
 EELAYER 25 0
 EELAYER END
