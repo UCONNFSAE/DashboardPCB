@@ -512,4 +512,30 @@ Text GLabel 7200 2900 2    39   Input ~ 0
 ~RESET
 Wire Wire Line
 	7200 2900 7050 2900
+Text GLabel 7850 1300 0    60   Input ~ 0
+~CLEAR
+Text GLabel 8650 850  0    39   Input ~ 0
+~RPM_EN
+Text GLabel 8650 950  0    39   Input ~ 0
+RPM_CLR
+Text GLabel 8650 700  0    39   Input ~ 0
+RPM_IN
+Text GLabel 8650 1150 0    39   Input ~ 0
+RPM_SCLK
+Text GLabel 8600 1050 0    39   Input ~ 0
+RPM_RCLK
+Text GLabel 8650 1250 0    39   Input ~ 0
+RPM_OUT
+Text GLabel 9550 1150 0    60   Input ~ 0
+~GEAR_PWM
+Text GLabel 9550 1000 0    60   Input ~ 0
+GEAR_CLR
+Text GLabel 9550 1300 0    60   Input ~ 0
+GEAR_RCLK
+Text GLabel 9550 700  0    60   Input ~ 0
+GEAR_SCLK
+Text GLabel 9550 850  0    60   Input ~ 0
+GEAR_IN
+Text GLabel 8650 600  0    39   Input ~ 0
+RPM_PWM
 $EndSCHEMATC

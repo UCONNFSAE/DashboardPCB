@@ -91,8 +91,10 @@ U 1 1 5BD92364
 P 4550 3550
 F 0 "U301" H 4750 3200 60  0000 C CNN
 F 1 "LM2734" H 4550 3900 60  0000 C CNN
-F 2 "" H 4550 3550 60  0001 C CNN
-F 3 "" H 4550 3550 60  0001 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 4550 3550 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2734.pdf" H 4550 3550 60  0001 C CNN
+F 4 "0.8-18V" H 4550 3550 60  0001 C CNN "Output Voltage"
+F 5 "1A" H 4550 3550 60  0001 C CNN "Output Current"
 	1    4550 3550
 	1    0    0    -1  
 $EndComp
@@ -213,7 +215,10 @@ P 8500 3400
 F 0 "U302" H 8250 3625 50  0000 C CNN
 F 1 "LP2985-3.3" H 8500 3625 50  0000 L CNN
 F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 8500 3725 50  0001 C CNN
-F 3 "" H 8500 3400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lp2985-n.pdf" H 8500 3400 50  0001 C CNN
+F 4 "TI" H 8500 3400 60  0001 C CNN "Manufacturer"
+F 5 "3.3V" H 8500 3400 60  0001 C CNN "Output Voltage"
+F 6 "150mA" H 8500 3400 60  0001 C CNN "Output Current"
 	1    8500 3400
 	1    0    0    -1  
 $EndComp
@@ -400,4 +405,6 @@ Wire Wire Line
 	6850 3600 6350 3600
 Connection ~ 7050 3300
 Connection ~ 6850 3300
+Text Notes 600  850  0    60   ~ 0
+Peak total draw for low power LEDs is 1.2A at 5V\nPeak total draw for high power LEDs is \nPeak total draw for alarm cluster is 800mA at 5V
 $EndSCHEMATC

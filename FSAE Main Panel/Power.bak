@@ -400,4 +400,6 @@ Wire Wire Line
 	6850 3600 6350 3600
 Connection ~ 7050 3300
 Connection ~ 6850 3300
+Text Notes 600  850  0    60   ~ 0
+Peak total draw for low power LEDs is 1.2A at 5V\nPeak total draw for high power LEDs is \nPeak total draw for alarm cluster is 800mA at 5V
 $EndSCHEMATC
