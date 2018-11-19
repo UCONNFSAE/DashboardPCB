@@ -155,7 +155,7 @@ DWC_SDI
 Text Label 1250 2900 0    39   ~ 0
 DWC_SCLK
 Text Notes 1100 2200 0    39   ~ 0
-Dashboard Warning light Cluster
+Dashboard Warning Light Cluster
 Wire Notes Line
 	650  2100 2450 2100
 Wire Notes Line
@@ -376,4 +376,158 @@ F 3 "" H 2300 4650 50  0001 C CNN
 	1    2300 4650
 	1    0    0    -1  
 $EndComp
+$Comp
+L Conn_01x06 J?
+U 1 1 5BF06479
+P 3200 2150
+F 0 "J?" H 3200 2350 50  0000 C CNN
+F 1 "Conn_01x06" V 3300 2100 50  0000 C CNN
+F 2 "" H 3200 2150 50  0001 C CNN
+F 3 "" H 3200 2150 50  0001 C CNN
+	1    3200 2150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5BF06480
+P 4000 2800
+F 0 "#PWR?" H 4000 2550 50  0001 C CNN
+F 1 "GND" H 4000 2650 50  0000 C CNN
+F 2 "" H 4000 2800 50  0001 C CNN
+F 3 "" H 4000 2800 50  0001 C CNN
+	1    4000 2800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Ferrite_Bead L?
+U 1 1 5BF06486
+P 5200 1950
+F 0 "L?" V 5050 1975 50  0000 C CNN
+F 1 "Ferrite_Bead" V 5350 1950 50  0000 C CNN
+F 2 "" V 5130 1950 50  0001 C CNN
+F 3 "" H 5200 1950 50  0001 C CNN
+	1    5200 1950
+	0    1    -1   0   
+$EndComp
+$Comp
+L D D?
+U 1 1 5BF0648D
+P 5950 1950
+F 0 "D?" H 5950 2050 50  0000 C CNN
+F 1 "D" H 5950 1850 50  0000 C CNN
+F 2 "" H 5950 1950 50  0001 C CNN
+F 3 "" H 5950 1950 50  0001 C CNN
+	1    5950 1950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5BF06494
+P 4450 2500
+F 0 "C?" H 4475 2600 50  0000 L CNN
+F 1 "4.7nF" H 4475 2400 50  0000 L CNN
+F 2 "" H 4488 2350 50  0001 C CNN
+F 3 "" H 4450 2500 50  0001 C CNN
+	1    4450 2500
+	1    0    0    1   
+$EndComp
+$Comp
+L PRTR5V0U2X D?
+U 1 1 5BF064A8
+P 4300 1400
+F 0 "D?" H 4300 1700 39  0000 C CNN
+F 1 "PRTR5V0U2X" V 4300 1400 39  0000 C CNN
+F 2 "" H 4300 1400 60  0001 C CNN
+F 3 "" H 4300 1400 60  0001 C CNN
+	1    4300 1400
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	3400 1950 5050 1950
+Wire Wire Line
+	3400 2350 4000 2350
+Wire Wire Line
+	4000 2350 4000 2800
+Wire Wire Line
+	3400 2050 6250 2050
+Wire Wire Line
+	3750 1600 3750 2150
+Text Label 3400 1950 0    39   ~ 0
+VBUS
+Text Label 3400 2050 0    39   ~ 0
+D-
+Text Label 3400 2150 0    39   ~ 0
+D+
+Text Label 3400 2250 0    39   ~ 0
+ID
+Text Label 3400 2350 0    39   ~ 0
+GND
+Text Label 3400 2450 0    39   ~ 0
+SHIELD
+Text GLabel 6250 1950 2    39   Input ~ 0
+USB_POWER
+Connection ~ 3750 2150
+Wire Wire Line
+	3400 2150 6250 2150
+Wire Wire Line
+	3750 1200 3600 1200
+Wire Wire Line
+	3600 1200 3600 1950
+Connection ~ 3600 1950
+Wire Wire Line
+	5350 1950 5800 1950
+Wire Wire Line
+	4450 1950 4450 2350
+Connection ~ 4450 1950
+Wire Wire Line
+	5600 2350 5600 1950
+Connection ~ 5600 1950
+Wire Wire Line
+	6250 1950 6100 1950
+$Comp
+L C C?
+U 1 1 5BF0649B
+P 5600 2500
+F 0 "C?" H 5625 2600 50  0000 L CNN
+F 1 "4.7nF" H 5625 2400 50  0000 L CNN
+F 2 "" H 5638 2350 50  0001 C CNN
+F 3 "" H 5600 2500 50  0001 C CNN
+	1    5600 2500
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4800 2050 4800 1600
+Connection ~ 4800 2050
+Wire Wire Line
+	4800 1200 4900 1200
+Wire Wire Line
+	4900 1200 4900 2750
+Text GLabel 6250 2150 2    39   Input ~ 0
+USB_D+
+Text GLabel 6250 2050 2    39   Input ~ 0
+USB_D-
+Wire Wire Line
+	5600 2750 5600 2650
+Wire Wire Line
+	3400 2750 5600 2750
+Connection ~ 4000 2750
+Connection ~ 4900 2750
+Wire Wire Line
+	4450 2650 4450 2750
+Connection ~ 4450 2750
+Wire Notes Line
+	3000 850  6700 850 
+Wire Notes Line
+	6700 850  6700 3050
+Wire Notes Line
+	6700 3050 3000 3050
+Wire Notes Line
+	3000 3050 3000 850 
+Text Notes 1650 950  2    39   ~ 0
+CAN Line
+Text Notes 4900 950  2    39   ~ 0
+USB
+NoConn ~ 3400 2250
+Wire Wire Line
+	3400 2450 3400 2750
 $EndSCHEMATC
