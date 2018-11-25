@@ -1,4 +1,4 @@
-update=11/16/2018 12:32:56 PM
+update=11/24/2018 3:19:46 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,6 +23,8 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=../FSAE Main Panel;Custom Libraries
@@ -60,10 +62,8 @@ LibName30=atmel
 LibName31=contrib
 LibName32=valves
 LibName33=Custom Libraries/TI_Additions
-LibName34=Custom Libraries/apa102c
-LibName35=Custom Libraries/KingBright_Addition
-LibName36=Custom Libraries/lm2734
-LibName37=Custom Libraries/prtr5v0u2x
-LibName38=Custom Libraries/samd21g18a-au
-[general]
-version=1
+LibName34=Custom Libraries/KingBright_Addition
+LibName35=Custom Libraries/lm2734
+LibName36=Custom Libraries/prtr5v0u2x
+LibName37=Custom Libraries/samd21g18a-au
+LibName38=Custom Libraries/zldo1117-5v

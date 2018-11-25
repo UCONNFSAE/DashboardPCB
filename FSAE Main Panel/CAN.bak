@@ -32,11 +32,11 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:TI_Additions
-LIBS:apa102c
 LIBS:KingBright_Addition
 LIBS:lm2734
 LIBS:prtr5v0u2x
 LIBS:samd21g18a-au
+LIBS:zldo1117-5v
 LIBS:FSAE Main Panel-cache
 EELAYER 25 0
 EELAYER END
