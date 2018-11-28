@@ -1,4 +1,4 @@
-update=11/24/2018 3:19:46 PM
+update=11/27/2018 8:38:52 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -67,3 +67,4 @@ LibName35=Custom Libraries/lm2734
 LibName36=Custom Libraries/prtr5v0u2x
 LibName37=Custom Libraries/samd21g18a-au
 LibName38=Custom Libraries/zldo1117-5v
+LibName39=Custom Libraries/cortex_debug

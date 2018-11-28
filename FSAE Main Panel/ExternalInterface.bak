@@ -37,6 +37,7 @@ LIBS:lm2734
 LIBS:prtr5v0u2x
 LIBS:samd21g18a-au
 LIBS:zldo1117-5v
+LIBS:cortex_debug
 LIBS:FSAE Main Panel-cache
 EELAYER 25 0
 EELAYER END
@@ -528,4 +529,64 @@ Wire Wire Line
 	5350 1950 5800 1950
 Wire Wire Line
 	6100 1950 6250 1950
+$Comp
+L Cortex_Debug J?
+U 1 1 5BFE970B
+P 3950 3750
+F 0 "J?" H 3950 4050 50  0000 C CNN
+F 1 "Cortex_Debug" H 3950 3450 50  0000 C CNN
+F 2 "" H 4100 3750 39  0001 C CNN
+F 3 "" H 4100 3750 39  0001 C CNN
+	1    3950 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 5BFE98A3
+P 3200 3400
+F 0 "#PWR?" H 3200 3250 50  0001 C CNN
+F 1 "+3.3V" H 3200 3540 50  0000 C CNN
+F 2 "" H 3200 3400 50  0001 C CNN
+F 3 "" H 3200 3400 50  0001 C CNN
+	1    3200 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5BFE993E
+P 3200 3900
+F 0 "#PWR?" H 3200 3650 50  0001 C CNN
+F 1 "GND" H 3200 3750 50  0000 C CNN
+F 2 "" H 3200 3900 50  0001 C CNN
+F 3 "" H 3200 3900 50  0001 C CNN
+	1    3200 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 3550 3200 3550
+Wire Wire Line
+	3200 3550 3200 3400
+Wire Wire Line
+	3350 3650 3200 3650
+Wire Wire Line
+	3200 3650 3200 3900
+Wire Wire Line
+	3350 3750 3200 3750
+Connection ~ 3200 3750
+Text GLabel 4650 3550 2    39   Input ~ 0
+SWDIO
+Text GLabel 4650 3650 2    39   Input ~ 0
+SWCLK
+Wire Wire Line
+	4650 3550 4550 3550
+Wire Wire Line
+	4650 3650 4550 3650
+Wire Notes Line
+	3000 3200 3000 4200
+Wire Notes Line
+	3000 4200 5000 4200
+Wire Notes Line
+	5000 4200 5000 3200
+Wire Notes Line
+	5000 3200 3000 3200
 $EndSCHEMATC
