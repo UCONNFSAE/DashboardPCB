@@ -148,9 +148,7 @@ $EndComp
 Wire Wire Line
 	8050 4600 8200 4600
 Wire Wire Line
-	8200 4450 8200 4600
-Wire Wire Line
-	8200 4600 8200 5050
+	8200 4450 8200 5050
 Wire Wire Line
 	8200 5850 8200 5350
 Connection ~ 7650 5850
@@ -186,13 +184,9 @@ Wire Wire Line
 Wire Wire Line
 	6400 5200 6400 4600
 Wire Wire Line
-	6400 4600 7000 4600
+	6400 4600 7250 4600
 Wire Wire Line
-	7000 4600 7250 4600
-Wire Wire Line
-	6200 4450 6200 4600
-Wire Wire Line
-	6200 4600 6200 5200
+	6200 4450 6200 5200
 Text Notes 600  850  0    60   ~ 0
 Peak total draw for low power LEDs is 1.2A at 5V\nPeak total draw for high power LEDs is \nPeak total draw for alarm cluster is 800mA at 5V
 Wire Wire Line
@@ -202,17 +196,7 @@ Connection ~ 6000 4600
 Wire Wire Line
 	6000 4600 6000 4900
 Wire Wire Line
-	3950 5850 4600 5850
-Wire Wire Line
-	4600 5850 5200 5850
-Wire Wire Line
-	5200 5850 6700 5850
-Wire Wire Line
-	6700 5850 7000 5850
-Wire Wire Line
-	7000 5850 7650 5850
-Wire Wire Line
-	7650 5850 8200 5850
+	3950 5850 8200 5850
 $Comp
 L GND #PWR302
 U 1 1 5BD92372
@@ -225,11 +209,7 @@ F 3 "" H 6700 5950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5150 4600 5200 4600
-Wire Wire Line
-	5200 4600 6000 4600
-Wire Wire Line
-	6000 4600 6200 4600
+	5150 4600 6200 4600
 Wire Wire Line
 	4600 5050 4600 5850
 Wire Wire Line
@@ -247,9 +227,7 @@ F 3 "" H 3950 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3850 4600 3950 4600
-Wire Wire Line
-	3950 4600 4050 4600
+	3850 4600 4050 4600
 Wire Wire Line
 	3950 4600 3950 5050
 Wire Wire Line
@@ -294,4 +272,99 @@ F 3 "" H 4600 4600 60  0001 C CNN
 	1    4600 4600
 	1    0    0    -1  
 $EndComp
+$Comp
+L +12V #PWR?
+U 1 1 5C034AE4
+P 4250 2550
+F 0 "#PWR?" H 4250 2400 50  0001 C CNN
+F 1 "+12V" H 4250 2690 50  0000 C CNN
+F 2 "" H 4250 2550 50  0001 C CNN
+F 3 "" H 4250 2550 50  0001 C CNN
+	1    4250 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM1085-5.0 U?
+U 1 1 5C0353B0
+P 5100 2750
+F 0 "U?" H 4950 2875 50  0000 C CNN
+F 1 "LM1085-5.0" H 5100 2875 50  0000 L CNN
+F 2 "" H 5100 3000 50  0001 C CIN
+F 3 "" H 5100 2750 50  0001 C CNN
+	1    5100 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 2550 4250 2750
+Wire Wire Line
+	4250 2750 4800 2750
+$Comp
+L GND #PWR?
+U 1 1 5C03578E
+P 5100 3350
+F 0 "#PWR?" H 5100 3100 50  0001 C CNN
+F 1 "GND" H 5100 3200 50  0000 C CNN
+F 2 "" H 5100 3350 50  0001 C CNN
+F 3 "" H 5100 3350 50  0001 C CNN
+	1    5100 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3050 5100 3350
+$Comp
+L CP1 C?
+U 1 1 5C036676
+P 4550 3050
+F 0 "C?" H 4575 3150 50  0000 L CNN
+F 1 "10uF" H 4575 2950 50  0000 L CNN
+F 2 "" H 4550 3050 50  0001 C CNN
+F 3 "" H 4550 3050 50  0001 C CNN
+	1    4550 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5C0366B5
+P 5650 3050
+F 0 "C?" H 5675 3150 50  0000 L CNN
+F 1 "100uF" H 5675 2950 50  0000 L CNN
+F 2 "" H 5650 3050 50  0001 C CNN
+F 3 "" H 5650 3050 50  0001 C CNN
+	1    5650 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2900 4550 2750
+Connection ~ 4550 2750
+Wire Wire Line
+	4550 3200 4550 3300
+Wire Wire Line
+	4550 3300 5650 3300
+Connection ~ 5100 3300
+Wire Wire Line
+	5650 2900 5650 2750
+Wire Wire Line
+	5400 2750 6000 2750
+Wire Wire Line
+	5650 3300 5650 3200
+Text GLabel 6000 2750 2    60   Input ~ 0
+LED_+5V
+Text GLabel 6000 2550 2    60   Input ~ 0
+DWC_+5V
+Connection ~ 5650 2750
+Wire Wire Line
+	6000 2550 5850 2550
+Wire Wire Line
+	5850 2550 5850 2750
+Connection ~ 5850 2750
+Wire Notes Line
+	4100 3600 4100 2250
+Wire Notes Line
+	4100 2250 6550 2250
+Wire Notes Line
+	6550 2250 6550 3600
+Wire Notes Line
+	6550 3600 4100 3600
+Text Notes 5050 2400 0    60   ~ 0
+LED Power
 $EndSCHEMATC

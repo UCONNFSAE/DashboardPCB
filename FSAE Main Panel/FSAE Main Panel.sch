@@ -76,16 +76,22 @@ F 3 "" H 3250 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3250 1450 3750 1450
+	3250 1450 3550 1450
+Wire Wire Line
+	3550 1450 3750 1450
 Wire Wire Line
 	3250 1450 3250 1600
 Connection ~ 3550 1450
 Connection ~ 3750 1950
 Connection ~ 3550 1950
 Wire Wire Line
-	3750 1750 3750 2100
+	3750 1750 3750 1950
 Wire Wire Line
-	3550 1750 3550 2200
+	3750 1950 3750 2100
+Wire Wire Line
+	3550 1750 3550 1950
+Wire Wire Line
+	3550 1950 3550 2200
 Wire Wire Line
 	3550 1550 3550 1450
 Wire Wire Line
@@ -126,15 +132,21 @@ $EndComp
 Wire Wire Line
 	7750 2500 7750 2400
 Wire Wire Line
-	7050 2500 7850 2500
+	7050 2500 7750 2500
+Wire Wire Line
+	7750 2500 7850 2500
 Wire Wire Line
 	7150 3600 7150 3500
 Wire Wire Line
-	7050 3600 7200 3600
+	7050 3600 7150 3600
+Wire Wire Line
+	7150 3600 7200 3600
 Wire Wire Line
 	3250 3900 3250 4000
 Wire Wire Line
-	3100 4000 3850 4000
+	3100 4000 3250 4000
+Wire Wire Line
+	3250 4000 3850 4000
 $Comp
 L GND #PWR108
 U 1 1 5BCFF22A
@@ -204,7 +216,9 @@ Wire Wire Line
 Wire Wire Line
 	7050 2600 8000 2600
 Wire Wire Line
-	8200 2600 8400 2600
+	8200 2600 8300 2600
+Wire Wire Line
+	8300 2600 8400 2600
 Connection ~ 8300 2600
 Connection ~ 7150 3600
 $Comp
@@ -251,31 +265,31 @@ Text GLabel 7150 2900 2    39   Input ~ 0
 ~RESET
 Wire Wire Line
 	7150 2900 7050 2900
-Text GLabel 4550 1300 0    39   Input ~ 0
+Text GLabel 3750 3900 0    39   Input ~ 0
 ~CLEAR
-Text GLabel 5350 850  0    39   Input ~ 0
+Text GLabel 3750 4400 0    39   Input ~ 0
 ~RPM_EN
-Text GLabel 5350 950  0    39   Input ~ 0
+Text GLabel 3750 4500 0    39   Input ~ 0
 RPM_CLR
-Text GLabel 5350 700  0    39   Input ~ 0
+Text GLabel 3750 4300 0    39   Input ~ 0
 RPM_IN
-Text GLabel 5350 1150 0    39   Input ~ 0
+Text GLabel 3750 4700 0    39   Input ~ 0
 RPM_SCLK
-Text GLabel 5300 1050 0    39   Input ~ 0
+Text GLabel 3750 4600 0    39   Input ~ 0
 RPM_RCLK
-Text GLabel 5350 1250 0    39   Input ~ 0
+Text GLabel 9450 2100 0    39   Input ~ 0
 RPM_OUT
-Text GLabel 6250 1150 0    39   Input ~ 0
+Text GLabel 7150 4400 2    39   Input ~ 0
 ~GEAR_PWM
-Text GLabel 6250 1000 0    39   Input ~ 0
+Text GLabel 7150 4300 2    39   Input ~ 0
 GEAR_CLR
-Text GLabel 6250 1300 0    39   Input ~ 0
+Text GLabel 7150 4500 2    39   Input ~ 0
 GEAR_RCLK
-Text GLabel 6250 700  0    39   Input ~ 0
+Text GLabel 7150 4200 2    39   Input ~ 0
 GEAR_SCLK
-Text GLabel 6250 850  0    39   Input ~ 0
+Text GLabel 9950 2100 2    39   Input ~ 0
 GEAR_IN
-Text GLabel 5350 600  0    39   Input ~ 0
+Text GLabel 7650 1350 0    39   Input ~ 0
 RPM_PWM
 Text GLabel 7150 3800 2    39   Input ~ 0
 USB_D+
@@ -314,9 +328,13 @@ Wire Wire Line
 Wire Wire Line
 	2900 2300 2900 2350
 Wire Wire Line
-	2900 2550 2900 2650
+	2900 2550 2900 2600
 Wire Wire Line
-	2650 2600 3850 2600
+	2900 2600 2900 2650
+Wire Wire Line
+	2650 2600 2900 2600
+Wire Wire Line
+	2900 2600 3850 2600
 Connection ~ 2900 2600
 $Comp
 L GND #PWR?
@@ -336,7 +354,9 @@ Wire Wire Line
 Wire Wire Line
 	2650 2900 2900 2900
 Wire Wire Line
-	2900 2850 2900 2950
+	2900 2850 2900 2900
+Wire Wire Line
+	2900 2900 2900 2950
 Connection ~ 2900 2900
 $Comp
 L Ferrite_Bead_Small L?
@@ -476,4 +496,12 @@ Text GLabel 3750 3600 0    39   Input ~ 0
 DWC_SDI
 Text GLabel 3750 3700 0    39   Input ~ 0
 DWC_SCLK
+Text Notes 7850 1100 0    60   ~ 0
+PA27 RX LED
+Text Notes 7850 1250 0    60   ~ 0
+PB3 TX LED
+Wire Wire Line
+	9950 2100 9450 2100
+Text Notes 7850 1400 0    60   ~ 0
+RPM_PWM has 6 (4 if grouped by color) separate inputs
 $EndSCHEMATC

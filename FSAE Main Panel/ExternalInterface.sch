@@ -109,7 +109,7 @@ DWC_SDO
 Text GLabel 1900 2250 2    39   Input ~ 0
 ~CHECK_ENGINE
 Text GLabel 1900 2050 2    39   Input ~ 0
-DWC_5V+
+DWC_+5V
 $Comp
 L GND #PWR204
 U 1 1 5BE9B884
@@ -401,17 +401,11 @@ Wire Wire Line
 Wire Wire Line
 	750  3250 750  3400
 Wire Wire Line
-	1600 3250 1700 3250
+	1600 3250 1800 3250
 Wire Wire Line
-	1700 3250 1800 3250
+	2100 3250 2300 3250
 Wire Wire Line
-	2100 3250 2150 3250
-Wire Wire Line
-	2150 3250 2300 3250
-Wire Wire Line
-	1700 3050 1700 3250
-Wire Wire Line
-	1700 3250 1700 3450
+	1700 3050 1700 3450
 Connection ~ 1700 3250
 Wire Notes Line
 	650  3700 2450 3700
@@ -445,17 +439,11 @@ Wire Wire Line
 	2150 3050 2150 3250
 Connection ~ 2150 3250
 Wire Wire Line
-	1600 4150 1700 4150
+	1600 4150 1800 4150
 Wire Wire Line
-	1700 4150 1800 4150
+	2100 4150 2300 4150
 Wire Wire Line
-	2100 4150 2150 4150
-Wire Wire Line
-	2150 4150 2300 4150
-Wire Wire Line
-	1700 3950 1700 4150
-Wire Wire Line
-	1700 4150 1700 4350
+	1700 3950 1700 4350
 Connection ~ 1700 4150
 Wire Notes Line
 	2450 4500 700  4500
@@ -471,28 +459,18 @@ Wire Wire Line
 	2150 3950 2150 4150
 Connection ~ 2150 4150
 Wire Wire Line
-	3400 1950 3600 1950
-Wire Wire Line
-	3600 1950 4450 1950
-Wire Wire Line
-	4450 1950 5050 1950
+	3400 1950 5050 1950
 Wire Wire Line
 	3400 2350 4000 2350
 Wire Wire Line
-	4000 2350 4000 2750
+	4000 2350 4000 2800
 Wire Wire Line
-	4000 2750 4000 2800
-Wire Wire Line
-	3400 2050 4800 2050
-Wire Wire Line
-	4800 2050 6250 2050
+	3400 2050 6250 2050
 Wire Wire Line
 	3750 1600 3750 2150
 Connection ~ 3750 2150
 Wire Wire Line
-	3400 2150 3750 2150
-Wire Wire Line
-	3750 2150 6250 2150
+	3400 2150 6250 2150
 Wire Wire Line
 	3750 1200 3600 1200
 Wire Wire Line
@@ -510,17 +488,11 @@ Connection ~ 4800 2050
 Wire Wire Line
 	4800 1200 4900 1200
 Wire Wire Line
-	4900 1200 4900 2750
+	4900 2750 4900 1200
 Wire Wire Line
 	5600 2750 5600 2650
 Wire Wire Line
-	3400 2750 4000 2750
-Wire Wire Line
-	4000 2750 4450 2750
-Wire Wire Line
-	4450 2750 4900 2750
-Wire Wire Line
-	4900 2750 5600 2750
+	3400 2750 5600 2750
 Connection ~ 4000 2750
 Connection ~ 4900 2750
 Wire Wire Line
@@ -554,9 +526,7 @@ F 3 "" H 5950 1950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5350 1950 5600 1950
-Wire Wire Line
-	5600 1950 5800 1950
+	5350 1950 5800 1950
 Wire Wire Line
 	6100 1950 6250 1950
 $Comp
@@ -599,9 +569,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 3650 3200 3650
 Wire Wire Line
-	3200 3650 3200 3750
-Wire Wire Line
-	3200 3750 3200 4000
+	3200 3650 3200 4000
 Wire Wire Line
 	3350 3750 3200 3750
 Connection ~ 3200 3750
@@ -621,4 +589,6 @@ Wire Notes Line
 	5000 4200 5000 3200
 Wire Notes Line
 	5000 3200 3000 3200
+Text Notes 3750 3300 0    39   ~ 0
+Cortex Debugger
 $EndSCHEMATC
