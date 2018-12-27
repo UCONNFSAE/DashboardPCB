@@ -1,45 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:TI_Additions
-LIBS:KingBright_Addition
-LIBS:lm2734
-LIBS:prtr5v0u2x
-LIBS:samd21g18a-au
-LIBS:zldo1117-5v
-LIBS:cortex_debug
+EESchema Schematic File Version 4
 LIBS:FSAE Main Panel-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -56,7 +17,7 @@ $EndDescr
 Text Notes 6150 6450 0    60   ~ 0
 Kingbright SC10-11GWA\n26mm Green Single Digit\n32.9mmx22.5mmx8.5mm\n4.0V Vf & 20mA If per segment\nR = Vs-Vf/If\nR = 5v - 4v / 20mA\nR = 50 ohm\n(TLC6C598 will be 7-11 Ohms.)
 $Comp
-L R_Pack08 RN501
+L Device:R_Pack08 RN501
 U 1 1 5BE61583
 P 4400 6700
 F 0 "RN501" V 3900 6700 50  0000 C CNN
@@ -71,7 +32,7 @@ NoConn ~ 5750 6800
 NoConn ~ 5750 7000
 NoConn ~ 5750 6900
 $Comp
-L TLC6C598 U501
+L TI_Additions:TLC6C598 U501
 U 1 1 5BE620C9
 P 3050 6700
 F 0 "U501" H 3050 7200 60  0000 C CNN
@@ -90,7 +51,7 @@ Text GLabel 1250 7200 0    60   Input ~ 0
 GEAR_RCLK
 NoConn ~ 3550 7050
 $Comp
-L C C502
+L Device:C C502
 U 1 1 5BE6228F
 P 1950 6500
 F 0 "C502" H 1975 6600 50  0000 L CNN
@@ -105,7 +66,7 @@ GEAR_SCLK
 Text GLabel 1250 6750 0    60   Input ~ 0
 GEAR_IN
 $Comp
-L C C501
+L Device:C C501
 U 1 1 5BE62816
 P 1700 6500
 F 0 "C501" H 1725 6600 50  0000 L CNN
@@ -118,7 +79,7 @@ $EndComp
 Text Notes 9200 7050 0    60   ~ 0
 To drive shift register fed LED arrays:\nHold ~G~ Low to enable. (~GEAR_PWM~)\nUsing Shift Clock SRCK (GEAR_SCLK) shift in\n8 bit code corresponding to desired\ndigit on SER_IN (GEAR_IN).\nOnce all 8 bits are in shift register\ntransfer them to the buffer by toggling\nRegister Clock RCK (GEAR_RCLK).\nTo clear buffer pull ~CLR~ (GEAR_CLR)\nlow.
 $Comp
-L SA10-11GWA D501
+L KingBright_Addition:SA10-11GWA D501
 U 1 1 5BE62E2C
 P 5150 6800
 F 0 "D501" H 5260 7400 60  0000 C CNN
@@ -129,7 +90,7 @@ F 3 "" H 5350 6600 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED_Small D502
+L Device:LED_Small D502
 U 1 1 5BE84A41
 P 6000 1100
 F 0 "D502" H 6250 1100 50  0000 L CNN
@@ -142,7 +103,7 @@ F 5 "500-Green" H 5900 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D518
+L Device:LED_Small D518
 U 1 1 5BE8AA2E
 P 8550 1100
 F 0 "D518" H 8800 1100 50  0000 L CNN
@@ -155,7 +116,7 @@ F 5 "8500-Yellow" H 8450 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D526
+L Device:LED_Small D526
 U 1 1 5BE8AF92
 P 9900 1100
 F 0 "D526" H 10150 1100 50  0000 L CNN
@@ -168,7 +129,7 @@ F 5 "12500-Red" H 9800 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L TLC6C5816 U502
+L TI_Additions:TLC6C5816 U502
 U 1 1 5BEA0CD8
 P 2000 4200
 F 0 "U502" H 2000 5100 60  0000 C CNN
@@ -215,10 +176,10 @@ RPM_16
 NoConn ~ 2550 3600
 NoConn ~ 2550 3700
 $Comp
-L C C?
+L Device:C C504
 U 1 1 5BEA47ED
 P 2550 3200
-F 0 "C?" H 2575 3300 50  0000 L CNN
+F 0 "C504" H 2575 3300 50  0000 L CNN
 F 1 "100nF" H 2575 3100 50  0000 L CNN
 F 2 "" H 2588 3050 50  0001 C CNN
 F 3 "" H 2550 3200 50  0001 C CNN
@@ -226,10 +187,10 @@ F 3 "" H 2550 3200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C?
+L Device:C C503
 U 1 1 5BEA4CB8
 P 1200 3200
-F 0 "C?" H 1225 3300 50  0000 L CNN
+F 0 "C503" H 1225 3300 50  0000 L CNN
 F 1 "4.7uF" H 1225 3100 50  0000 L CNN
 F 2 "" H 1238 3050 50  0001 C CNN
 F 3 "" H 1200 3200 50  0001 C CNN
@@ -269,7 +230,7 @@ Entry Wire Line
 Entry Wire Line
 	1200 4600 1300 4500
 $Comp
-L TLC6C5816 U503
+L TI_Additions:TLC6C5816 U503
 U 1 1 5BEA6D72
 P 3700 4200
 F 0 "U503" H 3700 5100 60  0000 C CNN
@@ -346,7 +307,7 @@ Entry Wire Line
 Entry Wire Line
 	2850 4600 2950 4500
 $Comp
-L TLC6C5816 U504
+L TI_Additions:TLC6C5816 U504
 U 1 1 5BEA6EBB
 P 5400 4200
 F 0 "U504" H 5400 5100 60  0000 C CNN
@@ -431,10 +392,10 @@ Entry Bus Bus
 Entry Bus Bus
 	6250 5000 6350 5100
 $Comp
-L C C?
+L Device:C C505
 U 1 1 5BEAA1A1
 P 4250 3200
-F 0 "C?" H 4275 3300 50  0000 L CNN
+F 0 "C505" H 4275 3300 50  0000 L CNN
 F 1 "100nF" H 4275 3100 50  0000 L CNN
 F 2 "" H 4288 3050 50  0001 C CNN
 F 3 "" H 4250 3200 50  0001 C CNN
@@ -442,10 +403,10 @@ F 3 "" H 4250 3200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C?
+L Device:C C506
 U 1 1 5BEAA3BB
 P 5950 3200
-F 0 "C?" H 5975 3300 50  0000 L CNN
+F 0 "C506" H 5975 3300 50  0000 L CNN
 F 1 "100nF" H 5975 3100 50  0000 L CNN
 F 2 "" H 5988 3050 50  0001 C CNN
 F 3 "" H 5950 3200 50  0001 C CNN
@@ -453,10 +414,10 @@ F 3 "" H 5950 3200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +3.3V #PWR?
+L power:+3.3V #PWR501
 U 1 1 5BEAB3A4
 P 800 3000
-F 0 "#PWR?" H 800 2850 50  0001 C CNN
+F 0 "#PWR501" H 800 2850 50  0001 C CNN
 F 1 "+3.3V" H 800 3140 50  0000 C CNN
 F 2 "" H 800 3000 50  0001 C CNN
 F 3 "" H 800 3000 50  0001 C CNN
@@ -464,10 +425,10 @@ F 3 "" H 800 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR503
 U 1 1 5BEAB544
 P 1200 3450
-F 0 "#PWR?" H 1200 3200 50  0001 C CNN
+F 0 "#PWR503" H 1200 3200 50  0001 C CNN
 F 1 "GND" H 1200 3300 50  0000 C CNN
 F 2 "" H 1200 3450 50  0001 C CNN
 F 3 "" H 1200 3450 50  0001 C CNN
@@ -475,10 +436,10 @@ F 3 "" H 1200 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR505
 U 1 1 5BEAB5DA
 P 2700 3500
-F 0 "#PWR?" H 2700 3250 50  0001 C CNN
+F 0 "#PWR505" H 2700 3250 50  0001 C CNN
 F 1 "GND" H 2700 3350 50  0000 C CNN
 F 2 "" H 2700 3500 50  0001 C CNN
 F 3 "" H 2700 3500 50  0001 C CNN
@@ -486,10 +447,10 @@ F 3 "" H 2700 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR506
 U 1 1 5BEAB669
 P 4400 3500
-F 0 "#PWR?" H 4400 3250 50  0001 C CNN
+F 0 "#PWR506" H 4400 3250 50  0001 C CNN
 F 1 "GND" H 4400 3350 50  0000 C CNN
 F 2 "" H 4400 3500 50  0001 C CNN
 F 3 "" H 4400 3500 50  0001 C CNN
@@ -497,10 +458,10 @@ F 3 "" H 4400 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR507
 U 1 1 5BEAB7A8
 P 6100 3500
-F 0 "#PWR?" H 6100 3250 50  0001 C CNN
+F 0 "#PWR507" H 6100 3250 50  0001 C CNN
 F 1 "GND" H 6100 3350 50  0000 C CNN
 F 2 "" H 6100 3500 50  0001 C CNN
 F 3 "" H 6100 3500 50  0001 C CNN
@@ -520,10 +481,10 @@ RPM_RCLK
 Text GLabel 1000 5600 0    39   Input ~ 0
 RPM_OUT
 $Comp
-L +3.3V #PWR?
+L power:+3.3V #PWR504
 U 1 1 5BEAF345
 P 1200 6250
-F 0 "#PWR?" H 1200 6100 50  0001 C CNN
+F 0 "#PWR504" H 1200 6100 50  0001 C CNN
 F 1 "+3.3V" H 1200 6390 50  0000 C CNN
 F 2 "" H 1200 6250 50  0001 C CNN
 F 3 "" H 1200 6250 50  0001 C CNN
@@ -533,10 +494,10 @@ $EndComp
 Text GLabel 5850 6050 0    60   Input ~ 0
 LED_5V+
 $Comp
-L GND #PWR?
+L power:GND #PWR502
 U 1 1 5BEAF6F1
 P 900 7450
-F 0 "#PWR?" H 900 7200 50  0001 C CNN
+F 0 "#PWR502" H 900 7200 50  0001 C CNN
 F 1 "GND" H 900 7300 50  0000 C CNN
 F 2 "" H 900 7450 50  0001 C CNN
 F 3 "" H 900 7450 50  0001 C CNN
@@ -546,7 +507,7 @@ $EndComp
 Text GLabel 5250 900  0    60   Input ~ 0
 LED_+5V
 $Comp
-L R_Pack08 RN502
+L Device:R_Pack08 RN502
 U 1 1 5BEC333B
 P 6750 2300
 F 0 "RN502" V 6250 2300 50  0000 C CNN
@@ -558,7 +519,7 @@ F 4 "4816P-1-151" V 6750 2300 60  0001 C CNN "Part Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Pack08 RN503
+L Device:R_Pack08 RN503
 U 1 1 5BEC3775
 P 7950 2300
 F 0 "RN503" V 7450 2300 50  0000 C CNN
@@ -570,7 +531,7 @@ F 4 "4816P-1-151" V 7950 2300 60  0001 C CNN "Part Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Pack08 RN504
+L Device:R_Pack08 RN504
 U 1 1 5BEC381A
 P 9300 2300
 F 0 "RN504" V 8800 2300 50  0000 C CNN
@@ -582,7 +543,7 @@ F 4 "4816P-1-221LF" V 9300 2300 60  0001 C CNN "Part Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Pack08 RN505
+L Device:R_Pack08 RN505
 U 1 1 5BEC38CC
 P 10650 2300
 F 0 "RN505" V 10150 2300 50  0000 C CNN
@@ -786,7 +747,7 @@ RPM_31
 Text Label 10950 2500 3    35   ~ 0
 RPM_32
 $Comp
-L LED_Small D534
+L Device:LED_Small D534
 U 1 1 5BED0325
 P 8400 4400
 F 0 "D534" H 8650 4400 50  0000 L CNN
@@ -799,7 +760,7 @@ F 5 "Shift_1" H 8150 4450 50  0000 C CNN "Function"
 	0    1    1    0   
 $EndComp
 $Comp
-L R_Pack08 RN506
+L Device:R_Pack08 RN506
 U 1 1 5BED0C4D
 P 8800 3450
 F 0 "RN506" V 8300 3450 50  0000 C CNN
@@ -813,7 +774,7 @@ $EndComp
 Text Notes 7700 4400 0    35   ~ 0
 OSRAM LB M673\nVf = 3.7V, If = 20mA\n45mcd
 $Comp
-L R_Pack08 RN507
+L Device:R_Pack08 RN507
 U 1 1 5BED2CCE
 P 10000 3450
 F 0 "RN507" V 9500 3450 50  0000 C CNN
@@ -941,15 +902,11 @@ Wire Wire Line
 Wire Wire Line
 	5750 6300 5850 6300
 Wire Wire Line
-	5850 6300 5850 6400
-Wire Wire Line
-	5850 6400 5850 6500
+	5850 6300 5850 6500
 Wire Wire Line
 	5850 6500 5750 6500
 Wire Wire Line
-	5750 6400 5850 6400
-Wire Wire Line
-	5850 6400 6000 6400
+	5750 6400 6000 6400
 Connection ~ 5850 6400
 Wire Wire Line
 	3550 6550 3850 6550
@@ -1056,21 +1013,13 @@ Wire Wire Line
 Wire Wire Line
 	2450 6350 2550 6350
 Wire Wire Line
-	900  7450 1700 7450
-Wire Wire Line
-	1700 7450 1950 7450
-Wire Wire Line
-	1950 7450 3700 7450
+	900  7450 3700 7450
 Wire Wire Line
 	6000 6400 6000 6050
 Wire Wire Line
 	2450 6250 2450 6350
 Wire Wire Line
-	1200 6250 1700 6250
-Wire Wire Line
-	1700 6250 1950 6250
-Wire Wire Line
-	1950 6250 2450 6250
+	1200 6250 2450 6250
 Wire Wire Line
 	1700 6350 1700 6250
 Connection ~ 1700 6250
@@ -1216,69 +1165,7 @@ Wire Wire Line
 Wire Wire Line
 	10500 1200 10500 1800
 Wire Wire Line
-	5250 900  6000 900 
-Wire Wire Line
-	6000 900  6150 900 
-Wire Wire Line
-	6150 900  6300 900 
-Wire Wire Line
-	6300 900  6450 900 
-Wire Wire Line
-	6450 900  6600 900 
-Wire Wire Line
-	6600 900  6750 900 
-Wire Wire Line
-	6750 900  6900 900 
-Wire Wire Line
-	6900 900  7050 900 
-Wire Wire Line
-	7050 900  7200 900 
-Wire Wire Line
-	7200 900  7350 900 
-Wire Wire Line
-	7350 900  7500 900 
-Wire Wire Line
-	7500 900  7650 900 
-Wire Wire Line
-	7650 900  7800 900 
-Wire Wire Line
-	7800 900  7950 900 
-Wire Wire Line
-	7950 900  8100 900 
-Wire Wire Line
-	8100 900  8250 900 
-Wire Wire Line
-	8250 900  8550 900 
-Wire Wire Line
-	8550 900  8700 900 
-Wire Wire Line
-	8700 900  8850 900 
-Wire Wire Line
-	8850 900  9000 900 
-Wire Wire Line
-	9000 900  9150 900 
-Wire Wire Line
-	9150 900  9300 900 
-Wire Wire Line
-	9300 900  9450 900 
-Wire Wire Line
-	9450 900  9600 900 
-Wire Wire Line
-	9600 900  9900 900 
-Wire Wire Line
-	9900 900  10050 900 
-Wire Wire Line
-	10050 900  10200 900 
-Wire Wire Line
-	10200 900  10350 900 
-Wire Wire Line
-	10350 900  10500 900 
-Wire Wire Line
-	10500 900  10650 900 
-Wire Wire Line
-	10650 900  10800 900 
-Wire Wire Line
-	10800 900  10950 900 
+	5250 900  10950 900 
 Wire Wire Line
 	10500 900  10500 1000
 Wire Wire Line
@@ -1313,21 +1200,7 @@ Wire Wire Line
 Wire Wire Line
 	1450 3800 1300 3800
 Wire Bus Line
-	1200 3900 1200 4000
-Wire Bus Line
-	1200 4000 1200 4100
-Wire Bus Line
-	1200 4100 1200 4200
-Wire Bus Line
-	1200 4200 1200 4300
-Wire Bus Line
-	1200 4300 1200 4400
-Wire Bus Line
-	1200 4400 1200 4500
-Wire Bus Line
-	1200 4500 1200 4600
-Wire Bus Line
-	1200 4600 1200 5000
+	1200 3900 1200 5000
 Wire Wire Line
 	4250 3800 4450 3800
 Wire Wire Line
@@ -1379,70 +1252,16 @@ Wire Wire Line
 Wire Wire Line
 	4850 3800 4650 3800
 Wire Bus Line
-	6250 3900 6250 4000
+	6250 3900 6250 5000
 Wire Bus Line
-	6250 4000 6250 4100
+	2850 3900 2850 5000
 Wire Bus Line
-	6250 4100 6250 4200
-Wire Bus Line
-	6250 4200 6250 4300
-Wire Bus Line
-	6250 4300 6250 4400
-Wire Bus Line
-	6250 4400 6250 4500
-Wire Bus Line
-	6250 4500 6250 4600
-Wire Bus Line
-	6250 4600 6250 5000
-Wire Bus Line
-	2850 3900 2850 4000
-Wire Bus Line
-	2850 4000 2850 4100
-Wire Bus Line
-	2850 4100 2850 4200
-Wire Bus Line
-	2850 4200 2850 4300
-Wire Bus Line
-	2850 4300 2850 4400
-Wire Bus Line
-	2850 4400 2850 4500
-Wire Bus Line
-	2850 4500 2850 4600
-Wire Bus Line
-	2850 4600 2850 5000
-Wire Bus Line
-	4550 3900 4550 4000
-Wire Bus Line
-	4550 4000 4550 4100
-Wire Bus Line
-	4550 4100 4550 4200
-Wire Bus Line
-	4550 4200 4550 4300
-Wire Bus Line
-	4550 4300 4550 4400
-Wire Bus Line
-	4550 4400 4550 4500
-Wire Bus Line
-	4550 4500 4550 4600
-Wire Bus Line
-	4550 4600 4550 5000
+	4550 3900 4550 5000
 Connection ~ 10200 900 
 Wire Wire Line
 	5950 3000 5950 3050
 Wire Wire Line
-	800  3000 1200 3000
-Wire Wire Line
-	1200 3000 1400 3000
-Wire Wire Line
-	1400 3000 2550 3000
-Wire Wire Line
-	2550 3000 3100 3000
-Wire Wire Line
-	3100 3000 4250 3000
-Wire Wire Line
-	4250 3000 4800 3000
-Wire Wire Line
-	4800 3000 5950 3000
+	800  3000 5950 3000
 Wire Wire Line
 	4250 3000 4250 3050
 Wire Wire Line
@@ -1494,11 +1313,11 @@ Wire Wire Line
 Wire Wire Line
 	4850 4700 4750 4700
 Wire Wire Line
-	4750 4700 4750 5300
+	4750 5300 4750 4700
 Wire Wire Line
 	4850 4800 4800 4800
 Wire Wire Line
-	4800 4800 4800 5200
+	4800 5200 4800 4800
 Wire Wire Line
 	3150 4800 3100 4800
 Wire Wire Line
@@ -1528,18 +1347,10 @@ Wire Wire Line
 Wire Wire Line
 	1350 4700 1350 5300
 Wire Wire Line
-	4800 5200 3100 5200
-Wire Wire Line
-	3100 5200 1400 5200
-Wire Wire Line
-	1400 5200 1000 5200
+	1000 5200 4800 5200
 Connection ~ 1400 5200
 Wire Wire Line
-	4750 5300 3050 5300
-Wire Wire Line
-	3050 5300 1350 5300
-Wire Wire Line
-	1350 5300 1000 5300
+	1000 5300 4750 5300
 Connection ~ 1350 5300
 Connection ~ 3050 5300
 Connection ~ 3100 5200
@@ -1675,69 +1486,7 @@ Wire Wire Line
 Wire Wire Line
 	10950 2500 10950 2650
 Wire Bus Line
-	6450 2750 6550 2750
-Wire Bus Line
-	6550 2750 6650 2750
-Wire Bus Line
-	6650 2750 6750 2750
-Wire Bus Line
-	6750 2750 6850 2750
-Wire Bus Line
-	6850 2750 6950 2750
-Wire Bus Line
-	6950 2750 7050 2750
-Wire Bus Line
-	7050 2750 7150 2750
-Wire Bus Line
-	7150 2750 7650 2750
-Wire Bus Line
-	7650 2750 7750 2750
-Wire Bus Line
-	7750 2750 7850 2750
-Wire Bus Line
-	7850 2750 7950 2750
-Wire Bus Line
-	7950 2750 8050 2750
-Wire Bus Line
-	8050 2750 8150 2750
-Wire Bus Line
-	8150 2750 8250 2750
-Wire Bus Line
-	8250 2750 8350 2750
-Wire Bus Line
-	8350 2750 9000 2750
-Wire Bus Line
-	9000 2750 9100 2750
-Wire Bus Line
-	9100 2750 9200 2750
-Wire Bus Line
-	9200 2750 9300 2750
-Wire Bus Line
-	9300 2750 9400 2750
-Wire Bus Line
-	9400 2750 9500 2750
-Wire Bus Line
-	9500 2750 9600 2750
-Wire Bus Line
-	9600 2750 9700 2750
-Wire Bus Line
-	9700 2750 10350 2750
-Wire Bus Line
-	10350 2750 10450 2750
-Wire Bus Line
-	10450 2750 10550 2750
-Wire Bus Line
-	10550 2750 10650 2750
-Wire Bus Line
-	10650 2750 10750 2750
-Wire Bus Line
-	10750 2750 10850 2750
-Wire Bus Line
-	10850 2750 10950 2750
-Wire Bus Line
-	10950 2750 11050 2750
-Wire Bus Line
-	11050 2750 11100 2750
+	6450 2750 11100 2750
 Wire Wire Line
 	8500 4000 8550 4000
 Wire Wire Line
@@ -1859,37 +1608,7 @@ Wire Wire Line
 Wire Wire Line
 	10300 3250 10300 3100
 Wire Wire Line
-	8400 4600 8550 4600
-Wire Wire Line
-	8550 4600 8700 4600
-Wire Wire Line
-	8700 4600 8850 4600
-Wire Wire Line
-	8850 4600 9000 4600
-Wire Wire Line
-	9000 4600 9150 4600
-Wire Wire Line
-	9150 4600 9300 4600
-Wire Wire Line
-	9300 4600 9450 4600
-Wire Wire Line
-	9450 4600 9600 4600
-Wire Wire Line
-	9600 4600 9750 4600
-Wire Wire Line
-	9750 4600 9900 4600
-Wire Wire Line
-	9900 4600 10050 4600
-Wire Wire Line
-	10050 4600 10200 4600
-Wire Wire Line
-	10200 4600 10350 4600
-Wire Wire Line
-	10350 4600 10500 4600
-Wire Wire Line
-	10500 4600 10650 4600
-Wire Wire Line
-	10650 4600 10750 4600
+	8400 4600 10750 4600
 Wire Wire Line
 	8400 4600 8400 4500
 Wire Wire Line
@@ -1960,19 +1679,13 @@ Entry Wire Line
 Wire Bus Line
 	4700 2900 1250 2900
 Wire Bus Line
-	1300 2900 1300 3500
-Wire Bus Line
-	1300 3500 1300 3600
+	1300 2900 1300 3600
 Text GLabel 1250 2900 0    39   Input ~ 0
 RPM_PWM
 Wire Bus Line
-	4700 2900 4700 3500
+	4700 2900 4700 3600
 Wire Bus Line
-	4700 3500 4700 3600
-Wire Bus Line
-	3000 2900 3000 3500
-Wire Bus Line
-	3000 3500 3000 3600
+	3000 2900 3000 3600
 Wire Wire Line
 	4850 3600 4800 3600
 Wire Wire Line
@@ -1998,51 +1711,13 @@ Text Label 4800 3600 0    39   ~ 0
 Text Label 4800 3700 0    39   ~ 0
 ~G6
 Wire Bus Line
-	1300 5100 2950 5100
+	1300 5100 6600 5100
 Wire Bus Line
-	2950 5100 4650 5100
-Wire Bus Line
-	4650 5100 6350 5100
-Wire Bus Line
-	6350 5100 6600 5100
-Wire Bus Line
-	6600 3000 8300 3000
-Wire Bus Line
-	8300 3000 8400 3000
-Wire Bus Line
-	8400 3000 8500 3000
-Wire Bus Line
-	8500 3000 8600 3000
-Wire Bus Line
-	8600 3000 8700 3000
-Wire Bus Line
-	8700 3000 8800 3000
-Wire Bus Line
-	8800 3000 8900 3000
-Wire Bus Line
-	8900 3000 9000 3000
-Wire Bus Line
-	9000 3000 9500 3000
-Wire Bus Line
-	9500 3000 9600 3000
-Wire Bus Line
-	9600 3000 9700 3000
-Wire Bus Line
-	9700 3000 9800 3000
-Wire Bus Line
-	9800 3000 9900 3000
-Wire Bus Line
-	9900 3000 10000 3000
-Wire Bus Line
-	10000 3000 10100 3000
-Wire Bus Line
-	10100 3000 10200 3000
-Wire Bus Line
-	10200 3000 11100 3000
+	6600 3000 11100 3000
 Wire Bus Line
 	11100 3000 11100 2750
 $Comp
-L LED_Small D535
+L Device:LED_Small D535
 U 1 1 5BEFB8D9
 P 8550 4400
 F 0 "D535" H 8800 4400 50  0000 L CNN
@@ -2055,7 +1730,7 @@ F 5 "Shift_2" H 8300 4450 50  0000 C CNN "Function"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED_Small D536
+L Device:LED_Small D536
 U 1 1 5BEFBABA
 P 8700 4400
 F 0 "D536" H 8950 4400 50  0000 L CNN
@@ -2068,7 +1743,7 @@ F 5 "Shift_3" H 8450 4450 50  0000 C CNN "Function"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED_Small D537
+L Device:LED_Small D537
 U 1 1 5BEFBC96
 P 8850 4400
 F 0 "D537" H 9100 4400 50  0000 L CNN
@@ -2081,7 +1756,7 @@ F 5 "Shift_4" H 8600 4450 50  0000 C CNN "Function"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED_Small D538
+L Device:LED_Small D538
 U 1 1 5BEFBD54
 P 9000 4400
 F 0 "D538" H 9250 4400 50  0000 L CNN
@@ -2094,7 +1769,7 @@ F 5 "Shift_5" H 8750 4450 50  0000 C CNN "Function"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED_Small D539
+L Device:LED_Small D539
 U 1 1 5BEFBE15
 P 9150 4400
 F 0 "D539" H 9400 4400 50  0000 L CNN
@@ -2107,7 +1782,7 @@ F 5 "Shift_6" H 8900 4450 50  0000 C CNN "Function"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED_Small D540
+L Device:LED_Small D540
 U 1 1 5BEFBED9
 P 9300 4400
 F 0 "D540" H 9550 4400 50  0000 L CNN
@@ -2120,7 +1795,7 @@ F 5 "Shift_7" H 9050 4450 50  0000 C CNN "Function"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED_Small D541
+L Device:LED_Small D541
 U 1 1 5BEFBFA0
 P 9450 4400
 F 0 "D541" H 9700 4400 50  0000 L CNN
@@ -2133,7 +1808,7 @@ F 5 "Shift_8" H 9200 4450 50  0000 C CNN "Function"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED_Small D542
+L Device:LED_Small D542
 U 1 1 5BEFC06A
 P 9600 4400
 F 0 "D542" H 9850 4400 50  0000 L CNN
@@ -2146,7 +1821,7 @@ F 5 "Shift_9" H 9350 4450 50  0000 C CNN "Function"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED_Small D543
+L Device:LED_Small D543
 U 1 1 5BEFC137
 P 9750 4400
 F 0 "D543" H 10000 4400 50  0000 L CNN
@@ -2159,7 +1834,7 @@ F 5 "Shift_10" H 9500 4450 50  0000 C CNN "Function"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED_Small D544
+L Device:LED_Small D544
 U 1 1 5BEFC207
 P 9900 4400
 F 0 "D544" H 10150 4400 50  0000 L CNN
@@ -2172,7 +1847,7 @@ F 5 "Shift_11" H 9650 4450 50  0000 C CNN "Function"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED_Small D545
+L Device:LED_Small D545
 U 1 1 5BEFC2DA
 P 10050 4400
 F 0 "D545" H 10300 4400 50  0000 L CNN
@@ -2185,7 +1860,7 @@ F 5 "Shift_12" H 9800 4450 50  0000 C CNN "Function"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED_Small D546
+L Device:LED_Small D546
 U 1 1 5BEFC3B0
 P 10200 4400
 F 0 "D546" H 10450 4400 50  0000 L CNN
@@ -2198,7 +1873,7 @@ F 5 "Shift_13" H 9950 4450 50  0000 C CNN "Function"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED_Small D547
+L Device:LED_Small D547
 U 1 1 5BEFC489
 P 10350 4400
 F 0 "D547" H 10600 4400 50  0000 L CNN
@@ -2211,7 +1886,7 @@ F 5 "Shift_14" H 10100 4450 50  0000 C CNN "Function"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED_Small D548
+L Device:LED_Small D548
 U 1 1 5BEFC565
 P 10500 4400
 F 0 "D548" H 10750 4400 50  0000 L CNN
@@ -2224,7 +1899,7 @@ F 5 "Shift_15" H 10250 4450 50  0000 C CNN "Function"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED_Small D549
+L Device:LED_Small D549
 U 1 1 5BEFC644
 P 10650 4400
 F 0 "D549" H 10900 4400 50  0000 L CNN
@@ -2255,7 +1930,7 @@ dp
 Wire Wire Line
 	6000 6050 5850 6050
 $Comp
-L LED_Small D527
+L Device:LED_Small D527
 U 1 1 5BF0203B
 P 10050 1100
 F 0 "D527" H 10300 1100 50  0000 L CNN
@@ -2268,7 +1943,7 @@ F 5 "13000-Red" H 9950 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D528
+L Device:LED_Small D528
 U 1 1 5BF022AA
 P 10200 1100
 F 0 "D528" H 10450 1100 50  0000 L CNN
@@ -2281,7 +1956,7 @@ F 5 "13500-Red" H 10100 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D529
+L Device:LED_Small D529
 U 1 1 5BF0248E
 P 10350 1100
 F 0 "D529" H 10600 1100 50  0000 L CNN
@@ -2294,7 +1969,7 @@ F 5 "14000-Red" H 10250 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D530
+L Device:LED_Small D530
 U 1 1 5BF0263E
 P 10500 1100
 F 0 "D530" H 10750 1100 50  0000 L CNN
@@ -2307,7 +1982,7 @@ F 5 "14500-Red" H 10400 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D531
+L Device:LED_Small D531
 U 1 1 5BF0297B
 P 10650 1100
 F 0 "D531" H 10900 1100 50  0000 L CNN
@@ -2320,7 +1995,7 @@ F 5 "15000-Red" H 10550 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D532
+L Device:LED_Small D532
 U 1 1 5BF02A51
 P 10800 1100
 F 0 "D532" H 11050 1100 50  0000 L CNN
@@ -2333,7 +2008,7 @@ F 5 "Spare-Red" H 10700 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D533
+L Device:LED_Small D533
 U 1 1 5BF02B2A
 P 10950 1100
 F 0 "D533" H 11200 1100 50  0000 L CNN
@@ -2346,7 +2021,7 @@ F 5 "Spare-Red" H 10850 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D519
+L Device:LED_Small D519
 U 1 1 5BF03209
 P 8700 1100
 F 0 "D519" H 8950 1100 50  0000 L CNN
@@ -2359,7 +2034,7 @@ F 5 "9000-Yellow" H 8600 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D520
+L Device:LED_Small D520
 U 1 1 5BF03466
 P 8850 1100
 F 0 "D520" H 9100 1100 50  0000 L CNN
@@ -2372,7 +2047,7 @@ F 5 "9500-Yellow" H 8750 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D521
+L Device:LED_Small D521
 U 1 1 5BF03536
 P 9000 1100
 F 0 "D521" H 9250 1100 50  0000 L CNN
@@ -2385,7 +2060,7 @@ F 5 "10000-Yellow" H 8900 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D522
+L Device:LED_Small D522
 U 1 1 5BF03609
 P 9150 1100
 F 0 "D522" H 9400 1100 50  0000 L CNN
@@ -2398,7 +2073,7 @@ F 5 "10500-Yellow" H 9050 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D523
+L Device:LED_Small D523
 U 1 1 5BF036DF
 P 9300 1100
 F 0 "D523" H 9550 1100 50  0000 L CNN
@@ -2411,7 +2086,7 @@ F 5 "11000-Yellow" H 9200 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D524
+L Device:LED_Small D524
 U 1 1 5BF037B8
 P 9450 1100
 F 0 "D524" H 9700 1100 50  0000 L CNN
@@ -2424,7 +2099,7 @@ F 5 "11500-Yellow" H 9350 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D525
+L Device:LED_Small D525
 U 1 1 5BF03BD5
 P 9600 1100
 F 0 "D525" H 9850 1100 50  0000 L CNN
@@ -2501,7 +2176,7 @@ Wire Wire Line
 Wire Wire Line
 	8900 2000 8550 2000
 $Comp
-L LED_Small D503
+L Device:LED_Small D503
 U 1 1 5BF09CDB
 P 6150 1100
 F 0 "D503" H 6400 1100 50  0000 L CNN
@@ -2514,7 +2189,7 @@ F 5 "1000-Green" H 6050 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D504
+L Device:LED_Small D504
 U 1 1 5BF09EB4
 P 6300 1100
 F 0 "D504" H 6550 1100 50  0000 L CNN
@@ -2527,7 +2202,7 @@ F 5 "1500-Green" H 6200 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D505
+L Device:LED_Small D505
 U 1 1 5BF09F6C
 P 6450 1100
 F 0 "D505" H 6700 1100 50  0000 L CNN
@@ -2540,7 +2215,7 @@ F 5 "2000-Green" H 6350 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D506
+L Device:LED_Small D506
 U 1 1 5BF0A027
 P 6600 1100
 F 0 "D506" H 6850 1100 50  0000 L CNN
@@ -2553,7 +2228,7 @@ F 5 "2500-Green" H 6500 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D507
+L Device:LED_Small D507
 U 1 1 5BF0A0E5
 P 6750 1100
 F 0 "D507" H 7000 1100 50  0000 L CNN
@@ -2566,7 +2241,7 @@ F 5 "3000-Green" H 6650 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D508
+L Device:LED_Small D508
 U 1 1 5BF0A1A6
 P 6900 1100
 F 0 "D508" H 7150 1100 50  0000 L CNN
@@ -2579,7 +2254,7 @@ F 5 "3500-Green" H 6800 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D509
+L Device:LED_Small D509
 U 1 1 5BF0A26A
 P 7050 1100
 F 0 "D509" H 7300 1100 50  0000 L CNN
@@ -2592,7 +2267,7 @@ F 5 "4000-Green" H 6950 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D510
+L Device:LED_Small D510
 U 1 1 5BF0A331
 P 7200 1100
 F 0 "D510" H 7450 1100 50  0000 L CNN
@@ -2605,7 +2280,7 @@ F 5 "4500-Green" H 7100 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D511
+L Device:LED_Small D511
 U 1 1 5BF0A3FB
 P 7350 1100
 F 0 "D511" H 7600 1100 50  0000 L CNN
@@ -2618,7 +2293,7 @@ F 5 "5000-Green" H 7250 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D512
+L Device:LED_Small D512
 U 1 1 5BF0A4C8
 P 7500 1100
 F 0 "D512" H 7750 1100 50  0000 L CNN
@@ -2631,7 +2306,7 @@ F 5 "5500-Green" H 7400 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D513
+L Device:LED_Small D513
 U 1 1 5BF0A598
 P 7650 1100
 F 0 "D513" H 7900 1100 50  0000 L CNN
@@ -2644,7 +2319,7 @@ F 5 "6000-Green" H 7550 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D514
+L Device:LED_Small D514
 U 1 1 5BF0A66B
 P 7800 1100
 F 0 "D514" H 8050 1100 50  0000 L CNN
@@ -2657,7 +2332,7 @@ F 5 "6500-Green" H 7700 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D515
+L Device:LED_Small D515
 U 1 1 5BF0A741
 P 7950 1100
 F 0 "D515" H 8200 1100 50  0000 L CNN
@@ -2670,7 +2345,7 @@ F 5 "7000-Green" H 7850 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D516
+L Device:LED_Small D516
 U 1 1 5BF0A81A
 P 8100 1100
 F 0 "D516" H 8350 1100 50  0000 L CNN
@@ -2683,7 +2358,7 @@ F 5 "7500-Green" H 8000 1150 50  0000 R CNN "Function"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED_Small D517
+L Device:LED_Small D517
 U 1 1 5BF0B0D1
 P 8250 1100
 F 0 "D517" H 8500 1100 50  0000 L CNN
@@ -2738,11 +2413,7 @@ Wire Wire Line
 Wire Wire Line
 	2650 4700 2650 5400
 Wire Wire Line
-	1000 5400 2650 5400
-Wire Wire Line
-	2650 5400 4350 5400
-Wire Wire Line
-	4350 5400 6050 5400
+	1000 5400 6050 5400
 Wire Wire Line
 	4350 4700 4350 5400
 Connection ~ 2650 5400
@@ -2750,13 +2421,9 @@ Wire Wire Line
 	6050 5400 6050 4700
 Connection ~ 4350 5400
 Wire Wire Line
-	6100 4600 6100 5500
+	6100 5500 6100 4600
 Wire Wire Line
-	6100 5500 4400 5500
-Wire Wire Line
-	4400 5500 2700 5500
-Wire Wire Line
-	2700 5500 1000 5500
+	1000 5500 6100 5500
 Wire Wire Line
 	4400 4600 4400 5500
 Connection ~ 4400 5500

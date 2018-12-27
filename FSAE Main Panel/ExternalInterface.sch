@@ -1,45 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:TI_Additions
-LIBS:KingBright_Addition
-LIBS:lm2734
-LIBS:prtr5v0u2x
-LIBS:samd21g18a-au
-LIBS:zldo1117-5v
-LIBS:cortex_debug
+EESchema Schematic File Version 4
 LIBS:FSAE Main Panel-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -54,10 +15,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Conn_01x04 J1
+L conn:Conn_01x04 J203
 U 1 1 5BE242F9
 P 1050 1250
-F 0 "J1" H 1050 1450 50  0000 C CNN
+F 0 "J203" H 1050 1450 50  0000 C CNN
 F 1 "Conn_01x04" H 1050 950 50  0000 C CNN
 F 2 "" H 1050 1250 50  0001 C CNN
 F 3 "" H 1050 1250 50  0001 C CNN
@@ -75,10 +36,10 @@ GND
 Text GLabel 1900 1150 2    39   Input ~ 0
 CAN_V+
 $Comp
-L GND #PWR203
+L power:GND #PWR204
 U 1 1 5BE24FFA
 P 1900 1450
-F 0 "#PWR203" H 1900 1200 50  0001 C CNN
+F 0 "#PWR204" H 1900 1200 50  0001 C CNN
 F 1 "GND" V 1900 1250 50  0000 C CNN
 F 2 "" H 1900 1450 50  0001 C CNN
 F 3 "" H 1900 1450 50  0001 C CNN
@@ -90,10 +51,10 @@ CAN_H
 Text GLabel 1900 1350 2    39   BiDi ~ 0
 CAN_L
 $Comp
-L Conn_01x06 J2
+L conn:Conn_01x06 J204
 U 1 1 5BE9B0A3
 P 1050 2250
-F 0 "J2" H 1050 2550 50  0000 C CNN
+F 0 "J204" H 1050 2550 50  0000 C CNN
 F 1 "TE_84953-6_FPC" H 1050 1850 50  0000 C CNN
 F 2 "Connectors_TE-Connectivity:TE_84953-6_1x06_P1.0mm_Horizontal" H 1050 2250 50  0001 C CNN
 F 3 "" H 1050 2250 50  0001 C CNN
@@ -111,10 +72,10 @@ Text GLabel 1900 2250 2    39   Input ~ 0
 Text GLabel 1900 2050 2    39   Input ~ 0
 DWC_+5V
 $Comp
-L GND #PWR204
+L power:GND #PWR203
 U 1 1 5BE9B884
 P 1850 2150
-F 0 "#PWR204" H 1850 1900 50  0001 C CNN
+F 0 "#PWR203" H 1850 1900 50  0001 C CNN
 F 1 "GND" V 1850 1950 50  0000 C CNN
 F 2 "" H 1850 2150 50  0001 C CNN
 F 3 "" H 1850 2150 50  0001 C CNN
@@ -136,7 +97,7 @@ DWC_SCLK
 Text Notes 1100 1850 0    39   ~ 0
 Dashboard Warning Light Cluster
 $Comp
-L SW_Push SW1
+L switches:SW_Push SW1
 U 1 1 5BE9B978
 P 1000 3250
 F 0 "SW1" H 1050 3350 50  0000 L CNN
@@ -150,7 +111,7 @@ $EndComp
 Text Notes 900  3000 0    39   ~ 0
 MCU Reset
 $Comp
-L SW_Push SW2
+L switches:SW_Push SW2
 U 1 1 5BE9BA9C
 P 1000 4150
 F 0 "SW2" H 1050 4250 50  0000 L CNN
@@ -164,7 +125,7 @@ $EndComp
 Text Notes 900  3950 0    39   ~ 0
 Alarm Clear
 $Comp
-L GND #PWR201
+L power:GND #PWR201
 U 1 1 5BE9BAFE
 P 750 3400
 F 0 "#PWR201" H 750 3150 50  0001 C CNN
@@ -175,7 +136,7 @@ F 3 "" H 750 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR202
+L power:GND #PWR202
 U 1 1 5BE9BB22
 P 750 4300
 F 0 "#PWR202" H 750 4050 50  0001 C CNN
@@ -186,7 +147,7 @@ F 3 "" H 750 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R201
+L Device:R R201
 U 1 1 5BE9BDD1
 P 1950 3250
 F 0 "R201" V 2030 3250 50  0000 C CNN
@@ -199,7 +160,7 @@ $EndComp
 Text GLabel 1850 3450 2    39   Input ~ 0
 ~RESET
 $Comp
-L C_Small C201
+L Device:C_Small C201
 U 1 1 5BE9C881
 P 1950 3050
 F 0 "C201" H 1960 3120 50  0000 L CNN
@@ -210,7 +171,7 @@ F 3 "" H 1950 3050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R202
+L Device:R R202
 U 1 1 5BE9C8E2
 P 1450 3250
 F 0 "R202" V 1530 3250 50  0000 C CNN
@@ -221,7 +182,7 @@ F 3 "" H 1450 3250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R203
+L Device:R R203
 U 1 1 5BE9CBCA
 P 1950 4150
 F 0 "R203" V 2030 4150 50  0000 C CNN
@@ -234,7 +195,7 @@ $EndComp
 Text GLabel 1850 4350 2    39   Input ~ 0
 ~CLEAR
 $Comp
-L C_Small C202
+L Device:C_Small C202
 U 1 1 5BE9CBDF
 P 1950 3950
 F 0 "C202" H 1960 4020 50  0000 L CNN
@@ -245,7 +206,7 @@ F 3 "" H 1950 3950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R204
+L Device:R R204
 U 1 1 5BE9CBE5
 P 1450 4150
 F 0 "R204" V 1530 4150 50  0000 C CNN
@@ -256,7 +217,7 @@ F 3 "" H 1450 4150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +3.3V #PWR205
+L power:+3.3V #PWR205
 U 1 1 5BE9CCF2
 P 2300 3250
 F 0 "#PWR205" H 2300 3100 50  0001 C CNN
@@ -267,7 +228,7 @@ F 3 "" H 2300 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR206
+L power:+3.3V #PWR206
 U 1 1 5BE9CD22
 P 2300 4150
 F 0 "#PWR206" H 2300 4000 50  0001 C CNN
@@ -278,10 +239,10 @@ F 3 "" H 2300 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_01x06 J201
+L conn:Conn_01x06 J201
 U 1 1 5BF06479
 P 3200 2150
-F 0 "J201" H 3200 2350 50  0000 C CNN
+F 0 "J201" H 3200 2450 50  0000 C CNN
 F 1 "Conn_01x06" V 3300 2100 50  0000 C CNN
 F 2 "" H 3200 2150 50  0001 C CNN
 F 3 "" H 3200 2150 50  0001 C CNN
@@ -289,10 +250,10 @@ F 3 "" H 3200 2150 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L GND #PWR207
+L power:GND #PWR209
 U 1 1 5BF06480
 P 4000 2800
-F 0 "#PWR207" H 4000 2550 50  0001 C CNN
+F 0 "#PWR209" H 4000 2550 50  0001 C CNN
 F 1 "GND" H 4000 2650 50  0000 C CNN
 F 2 "" H 4000 2800 50  0001 C CNN
 F 3 "" H 4000 2800 50  0001 C CNN
@@ -300,7 +261,7 @@ F 3 "" H 4000 2800 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Ferrite_Bead L201
+L Device:Ferrite_Bead L201
 U 1 1 5BF06486
 P 5200 1950
 F 0 "L201" V 5050 1975 50  0000 C CNN
@@ -311,10 +272,10 @@ F 3 "" H 5200 1950 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L C C201
+L Device:C C203
 U 1 1 5BF06494
 P 4450 2500
-F 0 "C201" H 4475 2600 50  0000 L CNN
+F 0 "C203" H 4475 2600 50  0000 L CNN
 F 1 "4.7nF" H 4475 2400 50  0000 L CNN
 F 2 "" H 4488 2350 50  0001 C CNN
 F 3 "" H 4450 2500 50  0001 C CNN
@@ -322,7 +283,7 @@ F 3 "" H 4450 2500 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L PRTR5V0U2X D201
+L prtr5v0u2x:PRTR5V0U2X D201
 U 1 1 5BF064A8
 P 4300 1400
 F 0 "D201" H 4300 1700 39  0000 C CNN
@@ -347,10 +308,10 @@ SHIELD
 Text GLabel 6250 1950 2    39   Input ~ 0
 USB_POWER
 $Comp
-L C C202
+L Device:C C204
 U 1 1 5BF0649B
 P 5600 2500
-F 0 "C202" H 5625 2600 50  0000 L CNN
+F 0 "C204" H 5625 2600 50  0000 L CNN
 F 1 "4.7nF" H 5625 2400 50  0000 L CNN
 F 2 "" H 5638 2350 50  0001 C CNN
 F 3 "" H 5600 2500 50  0001 C CNN
@@ -488,7 +449,7 @@ Connection ~ 4800 2050
 Wire Wire Line
 	4800 1200 4900 1200
 Wire Wire Line
-	4900 2750 4900 1200
+	4900 1200 4900 2750
 Wire Wire Line
 	5600 2750 5600 2650
 Wire Wire Line
@@ -515,10 +476,10 @@ Wire Notes Line
 Wire Notes Line
 	650  850  650  1650
 $Comp
-L Polyfuse F?
+L Device:Polyfuse F201
 U 1 1 5BF9A374
 P 5950 1950
-F 0 "F?" V 5850 1950 50  0000 C CNN
+F 0 "F201" V 5850 1950 50  0000 C CNN
 F 1 "MF-MSMF050-2" V 5750 1950 50  0000 C CNN
 F 2 "" H 6000 1750 50  0001 L CNN
 F 3 "" H 5950 1950 50  0001 C CNN
@@ -530,10 +491,10 @@ Wire Wire Line
 Wire Wire Line
 	6100 1950 6250 1950
 $Comp
-L Cortex_Debug J?
+L cortex_debug:Cortex_Debug J202
 U 1 1 5BFE970B
 P 3950 3750
-F 0 "J?" H 3950 4050 50  0000 C CNN
+F 0 "J202" H 3950 4050 50  0000 C CNN
 F 1 "Cortex_Debug" H 3950 3450 50  0000 C CNN
 F 2 "" H 4100 3750 39  0001 C CNN
 F 3 "" H 4100 3750 39  0001 C CNN
@@ -541,10 +502,10 @@ F 3 "" H 4100 3750 39  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR?
+L power:+3.3V #PWR207
 U 1 1 5BFE98A3
 P 3200 3400
-F 0 "#PWR?" H 3200 3250 50  0001 C CNN
+F 0 "#PWR207" H 3200 3250 50  0001 C CNN
 F 1 "+3.3V" H 3200 3540 50  0000 C CNN
 F 2 "" H 3200 3400 50  0001 C CNN
 F 3 "" H 3200 3400 50  0001 C CNN
@@ -552,10 +513,10 @@ F 3 "" H 3200 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR208
 U 1 1 5BFE993E
 P 3200 4000
-F 0 "#PWR?" H 3200 3750 50  0001 C CNN
+F 0 "#PWR208" H 3200 3750 50  0001 C CNN
 F 1 "GND" H 3200 3850 50  0000 C CNN
 F 2 "" H 3200 4000 50  0001 C CNN
 F 3 "" H 3200 4000 50  0001 C CNN
@@ -591,4 +552,9 @@ Wire Notes Line
 	5000 3200 3000 3200
 Text Notes 3750 3300 0    39   ~ 0
 Cortex Debugger
+NoConn ~ 4550 3750
+NoConn ~ 4550 3850
+NoConn ~ 4550 3950
+NoConn ~ 3350 3850
+NoConn ~ 3350 3950
 $EndSCHEMATC
