@@ -15,17 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:+12V #PWR0301
-U 1 1 5BD92350
-P 2800 4100
-F 0 "#PWR0301" H 2800 3950 50  0001 C CNN
-F 1 "+12V" H 2800 4240 50  0000 C CNN
-F 2 "" H 2800 4100 50  0001 C CNN
-F 3 "" H 2800 4100 50  0001 C CNN
-	1    2800 4100
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:D D301
 U 1 1 5BD92356
 P 3200 4600
@@ -153,8 +142,6 @@ Wire Wire Line
 	6200 4450 6200 4600
 Text Notes 600  850  0    60   ~ 0
 Peak total draw for low power LEDs is 1.2A at 5V\nPeak total draw for high power LEDs is \nPeak total draw for alarm cluster is 800mA at 5V
-Wire Wire Line
-	2800 4100 2800 4600
 Connection ~ 6200 4600
 Connection ~ 6000 4600
 Wire Wire Line
@@ -239,17 +226,6 @@ F 3 "" H 4600 4600 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+12V #PWR0302
-U 1 1 5C034AE4
-P 4150 2550
-F 0 "#PWR0302" H 4150 2400 50  0001 C CNN
-F 1 "+12V" H 4150 2690 50  0000 C CNN
-F 2 "" H 4150 2550 50  0001 C CNN
-F 3 "" H 4150 2550 50  0001 C CNN
-	1    4150 2550
-	1    0    0    -1  
-$EndComp
-$Comp
 L regul:LM1085-5.0 U303
 U 1 1 5C0353B0
 P 5100 2750
@@ -262,9 +238,7 @@ F 4 "Linear Regulator 5V 3A TO263" H 5100 2750 50  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4150 2550 4150 2750
-Wire Wire Line
-	4150 2750 4500 2750
+	4400 2750 4500 2750
 $Comp
 L power:GND #PWR0303
 U 1 1 5C03578E
@@ -371,6 +345,10 @@ Wire Wire Line
 Connection ~ 6200 5200
 Text Notes 6200 5500 0    50   ~ 0
 Gate - 3\nSource - 2\nDrain - 1
+Text GLabel 4400 2750 0    50   Input ~ 0
+CAN_V+
+Text GLabel 2900 4600 0    50   Input ~ 0
+CAN_V+
 Wire Wire Line
-	2800 4600 3050 4600
+	3050 4600 2900 4600
 $EndSCHEMATC
