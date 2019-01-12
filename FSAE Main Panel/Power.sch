@@ -351,4 +351,6 @@ Text GLabel 2900 4600 0    50   Input ~ 0
 CAN_V+
 Wire Wire Line
 	3050 4600 2900 4600
+NoConn ~ 8050 4700
+NoConn ~ 7250 4700
 $EndSCHEMATC
