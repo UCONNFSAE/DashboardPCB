@@ -523,6 +523,18 @@ Wire Wire Line
 	7150 4400 7050 4400
 Wire Wire Line
 	7050 4500 7150 4500
+Text Label 7050 4000 0    50   ~ 0
+~G1
+Text Label 7450 4000 0    50   ~ 0
+~G2
+Text Label 7050 4100 0    50   ~ 0
+~G3
+Text Label 7050 4600 0    50   ~ 0
+~G4
+Text Label 7050 4700 0    50   ~ 0
+~G5
+Text Label 7200 4700 0    50   ~ 0
+~G6
 Wire Bus Line
 	7650 4100 7650 4800
 $EndSCHEMATC
