@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L FSAE-Main-Panel-rescue:MCP2515-I_ST U401
+L Interface_CAN_LIN:MCP2515-xSO U401
 U 1 1 5BE2515F
 P 4700 3400
 F 0 "U401" H 4300 4175 50  0000 R CNN
