@@ -535,6 +535,10 @@ Text Label 7050 4700 0    50   ~ 0
 ~G5
 Text Label 7200 4700 0    50   ~ 0
 ~G6
+Text GLabel 3750 4200 0    50   Input ~ 0
+GEAR_IN
+Wire Wire Line
+	3850 4200 3750 4200
 Wire Bus Line
 	7650 4100 7650 4800
 $EndSCHEMATC

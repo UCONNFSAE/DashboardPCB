@@ -539,6 +539,10 @@ Text GLabel 3750 4200 0    50   Input ~ 0
 GEAR_IN
 Wire Wire Line
 	3850 4200 3750 4200
+Text GLabel 7150 2100 2    39   Input ~ 0
+~CHECK_ENGINE
+Wire Wire Line
+	7150 2100 7050 2100
 Wire Bus Line
 	7650 4100 7650 4800
 $EndSCHEMATC
