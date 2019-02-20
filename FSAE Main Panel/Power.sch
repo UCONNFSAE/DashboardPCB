@@ -116,18 +116,6 @@ F 3 "" H 8200 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 8200 4600
-$Comp
-L Device:Q_PMOS_GSD Q301
-U 1 1 5BD96D6D
-P 6000 5100
-F 0 "Q301" H 6200 5150 50  0000 L CNN
-F 1 "IRLML6402TRPBF" H 6200 5050 39  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 6200 5200 50  0001 C CNN
-F 3 "" H 6000 5100 50  0001 C CNN
-F 4 "P-Channel MOSFET SOT-23" H 6000 5100 50  0001 C CNN "Description"
-	1    6000 5100
-	0    -1   1    0   
-$EndComp
 Text GLabel 5750 5200 0    39   Input ~ 0
 USB_POWER
 Wire Wire Line
@@ -342,7 +330,6 @@ Wire Wire Line
 	5650 2750 5850 2750
 Wire Wire Line
 	5850 2750 6000 2750
-Connection ~ 6200 5200
 Text Notes 6200 5500 0    50   ~ 0
 Gate - 3\nSource - 2\nDrain - 1
 Text GLabel 4400 2750 0    50   Input ~ 0
@@ -353,4 +340,17 @@ Wire Wire Line
 	3050 4600 2900 4600
 NoConn ~ 8050 4700
 NoConn ~ 7250 4700
+Connection ~ 6200 5200
+$Comp
+L Device:Q_PMOS_GSD Q301
+U 1 1 5BD96D6D
+P 6000 5100
+F 0 "Q301" H 6200 5150 50  0000 L CNN
+F 1 "IRLML6402TRPBF" H 6200 5050 39  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 6200 5200 50  0001 C CNN
+F 3 "" H 6000 5100 50  0001 C CNN
+F 4 "P-Channel MOSFET SOT-23" H 6000 5100 50  0001 C CNN "Description"
+	1    6000 5100
+	0    -1   1    0   
+$EndComp
 $EndSCHEMATC

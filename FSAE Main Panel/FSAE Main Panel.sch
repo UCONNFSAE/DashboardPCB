@@ -543,6 +543,14 @@ Text GLabel 7150 2100 2    39   Input ~ 0
 ~CHECK_ENGINE
 Wire Wire Line
 	7150 2100 7050 2100
+Text GLabel 3750 2400 0    39   Input ~ 0
+HIGH_TEMP
+Text GLabel 3750 2700 0    39   Input ~ 0
+OIL_PRES
+Wire Wire Line
+	3850 2400 3750 2400
+Wire Wire Line
+	3750 2700 3850 2700
 Wire Bus Line
 	7650 4100 7650 4800
 $EndSCHEMATC
