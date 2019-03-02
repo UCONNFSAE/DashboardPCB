@@ -67,18 +67,18 @@ Wire Wire Line
 $Comp
 L Device:R R401
 U 1 1 5BE255B1
-P 5650 4000
-F 0 "R401" V 5730 4000 50  0000 C CNN
-F 1 "10k" V 5650 4000 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 5580 4000 50  0001 C CNN
-F 3 "" H 5650 4000 50  0001 C CNN
-	1    5650 4000
+P 5800 4000
+F 0 "R401" V 5880 4000 50  0000 C CNN
+F 1 "10k" V 5800 4000 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 5730 4000 50  0001 C CNN
+F 3 "" H 5800 4000 50  0001 C CNN
+	1    5800 4000
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5500 4000 5300 4000
+	5650 4000 5300 4000
 Wire Wire Line
-	5800 4000 6000 4000
+	5950 4000 6000 4000
 Wire Wire Line
 	6000 4000 6000 2400
 Wire Wire Line
@@ -140,9 +140,9 @@ F 3 "" H 8000 3200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text GLabel 8300 3000 2    39   Input ~ 0
-CAN_H
+CAN_IN+
 Text GLabel 8300 3200 2    39   Input ~ 0
-CAN_L
+CAN_IN-
 Wire Wire Line
 	7700 3000 8300 3000
 Wire Wire Line
@@ -172,7 +172,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 3850 6500 4000
 Wire Wire Line
-	6000 2400 7200 2400
+	6000 2400 6350 2400
 $Comp
 L Device:Resonator Y401
 U 1 1 5C382AA1
@@ -207,4 +207,63 @@ NoConn ~ 5300 3600
 NoConn ~ 5300 3700
 NoConn ~ 5300 3800
 NoConn ~ 5300 3900
+Text Label 5550 2800 0    50   ~ 0
+CAN_TX-
+Text Label 5550 2900 0    50   ~ 0
+CAN_TX+
+Text Label 3800 3600 0    50   ~ 0
+OSC2
+Text Label 3800 3700 0    50   ~ 0
+OSC1
+Text Label 6700 3300 2    50   ~ 0
+CANRS
+Text Label 7700 3200 0    50   ~ 0
+CANL
+Text Label 5300 4000 0    50   ~ 0
+CANRST
+$Comp
+L Device:C_Small C?
+U 1 1 5C806C3C
+P 6350 2600
+AR Path="/5C806C3C" Ref="C?"  Part="1" 
+AR Path="/5BE25053/5C806C3C" Ref="C401"  Part="1" 
+F 0 "C401" H 6360 2670 50  0000 L CNN
+F 1 "100nF" H 6360 2520 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 6350 2600 50  0001 C CNN
+F 3 "" H 6350 2600 50  0001 C CNN
+F 4 "Ceramic 0.1uF 10V X7R 1206" H 6350 2600 50  0001 C CNN "Description"
+	1    6350 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5C8072C7
+P 2800 3050
+AR Path="/5C8072C7" Ref="C?"  Part="1" 
+AR Path="/5BE25053/5C8072C7" Ref="C402"  Part="1" 
+F 0 "C402" H 2810 3120 50  0000 L CNN
+F 1 "100nF" H 2810 2970 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 2800 3050 50  0001 C CNN
+F 3 "" H 2800 3050 50  0001 C CNN
+F 4 "Ceramic 0.1uF 10V X7R 1206" H 2800 3050 50  0001 C CNN "Description"
+	1    2800 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6350 2500 6350 2400
+Connection ~ 6350 2400
+Wire Wire Line
+	6350 2400 7200 2400
+Wire Wire Line
+	6350 2700 6350 3850
+Wire Wire Line
+	6350 3850 6500 3850
+Wire Wire Line
+	2800 2950 2800 2400
+Wire Wire Line
+	2800 2400 4700 2400
+Wire Wire Line
+	2800 4350 3400 4350
+Wire Wire Line
+	2800 3150 2800 4350
 $EndSCHEMATC

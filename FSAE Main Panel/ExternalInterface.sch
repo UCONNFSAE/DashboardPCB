@@ -27,10 +27,6 @@ F 3 "" H 1050 1250 50  0001 C CNN
 $EndComp
 Text Label 1250 1150 0    39   ~ 0
 CAN_V+
-Text Label 1250 1250 0    39   ~ 0
-CAN_H
-Text Label 1250 1350 0    39   ~ 0
-CAN_L
 Text Label 1250 1450 0    39   ~ 0
 GND
 Text GLabel 1900 1150 2    39   Input ~ 0
@@ -46,10 +42,10 @@ F 3 "" H 1900 1450 50  0001 C CNN
 	1    1900 1450
 	0    -1   -1   0   
 $EndComp
-Text GLabel 1900 1250 2    39   BiDi ~ 0
-CAN_H
 Text GLabel 1900 1350 2    39   BiDi ~ 0
-CAN_L
+CAN_IN+
+Text GLabel 1900 1250 2    39   BiDi ~ 0
+CAN_IN-
 $Comp
 L conn:Conn_01x06 J204
 U 1 1 5BE9B0A3
@@ -82,8 +78,6 @@ F 3 "" H 1850 2150 50  0001 C CNN
 	1    1850 2150
 	0    -1   -1   0   
 $EndComp
-Text Label 1250 2050 0    39   ~ 0
-DWC_5V+
 Text Label 1250 2150 0    39   ~ 0
 GND
 Text Label 1250 2250 0    39   ~ 0
@@ -594,4 +588,10 @@ Wire Wire Line
 	3200 3750 3200 4000
 Wire Notes Line
 	650  4500 2450 4500
+Text Label 5450 1950 0    50   ~ 0
+V_USB_1
+Text Label 1200 4150 0    50   ~ 0
+SW2_L
+Text Label 1200 3250 0    50   ~ 0
+SW1_L
 $EndSCHEMATC

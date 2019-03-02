@@ -67,18 +67,18 @@ Wire Wire Line
 $Comp
 L Device:R R401
 U 1 1 5BE255B1
-P 5650 4000
-F 0 "R401" V 5730 4000 50  0000 C CNN
-F 1 "10k" V 5650 4000 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 5580 4000 50  0001 C CNN
-F 3 "" H 5650 4000 50  0001 C CNN
-	1    5650 4000
+P 5800 4000
+F 0 "R401" V 5880 4000 50  0000 C CNN
+F 1 "10k" V 5800 4000 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 5730 4000 50  0001 C CNN
+F 3 "" H 5800 4000 50  0001 C CNN
+	1    5800 4000
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5500 4000 5300 4000
+	5650 4000 5300 4000
 Wire Wire Line
-	5800 4000 6000 4000
+	5950 4000 6000 4000
 Wire Wire Line
 	6000 4000 6000 2400
 Wire Wire Line
@@ -140,9 +140,9 @@ F 3 "" H 8000 3200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text GLabel 8300 3000 2    39   Input ~ 0
-CAN_H
+CAN_IN+
 Text GLabel 8300 3200 2    39   Input ~ 0
-CAN_L
+CAN_IN-
 Wire Wire Line
 	7700 3000 8300 3000
 Wire Wire Line
@@ -207,4 +207,18 @@ NoConn ~ 5300 3600
 NoConn ~ 5300 3700
 NoConn ~ 5300 3800
 NoConn ~ 5300 3900
+Text Label 5550 2800 0    50   ~ 0
+CAN_TX-
+Text Label 5550 2900 0    50   ~ 0
+CAN_TX+
+Text Label 3800 3600 0    50   ~ 0
+OSC2
+Text Label 3800 3700 0    50   ~ 0
+OSC1
+Text Label 6700 3300 2    50   ~ 0
+CANRS
+Text Label 7700 3200 0    50   ~ 0
+CANL
+Text Label 5300 4000 0    50   ~ 0
+CANRST
 $EndSCHEMATC

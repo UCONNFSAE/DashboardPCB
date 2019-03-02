@@ -173,8 +173,6 @@ Text GLabel 3750 4700 0    39   Input ~ 0
 RPM_SCLK
 Text GLabel 3750 4600 0    39   Input ~ 0
 RPM_RCLK
-Text GLabel 9450 2100 0    39   Input ~ 0
-RPM_OUT
 Text GLabel 7150 4400 2    39   Input ~ 0
 ~GEAR_PWM
 Text GLabel 7150 4300 2    39   Input ~ 0
@@ -183,8 +181,6 @@ Text GLabel 7150 4500 2    39   Input ~ 0
 GEAR_RCLK
 Text GLabel 7150 4200 2    39   Input ~ 0
 GEAR_SCLK
-Text GLabel 9950 2100 2    39   Input ~ 0
-GEAR_IN
 Text GLabel 7750 4800 2    39   Input ~ 0
 RPM_PWM
 Text GLabel 7150 3800 2    39   Input ~ 0
@@ -207,12 +203,12 @@ $EndComp
 $Comp
 L power:GND #PWR0106
 U 1 1 5BF9A928
-P 3300 2500
-F 0 "#PWR0106" H 3300 2250 50  0001 C CNN
-F 1 "GND" H 3300 2350 50  0000 C CNN
-F 2 "" H 3300 2500 50  0001 C CNN
-F 3 "" H 3300 2500 50  0001 C CNN
-	1    3300 2500
+P 3450 2500
+F 0 "#PWR0106" H 3450 2250 50  0001 C CNN
+F 1 "GND" H 3450 2350 50  0000 C CNN
+F 2 "" H 3450 2500 50  0001 C CNN
+F 3 "" H 3450 2500 50  0001 C CNN
+	1    3450 2500
 	0    1    1    0   
 $EndComp
 $Comp
@@ -448,7 +444,7 @@ Wire Wire Line
 Wire Wire Line
 	7150 3900 7050 3900
 Wire Wire Line
-	3850 2500 3300 2500
+	3850 2500 3450 2500
 Wire Wire Line
 	2900 2300 2900 2350
 Wire Wire Line
@@ -479,8 +475,6 @@ Wire Wire Line
 	7150 2300 7050 2300
 Wire Wire Line
 	7050 2400 7150 2400
-Wire Wire Line
-	9950 2100 9450 2100
 Wire Wire Line
 	7050 4000 7550 4000
 Wire Wire Line
@@ -551,6 +545,20 @@ Wire Wire Line
 	3850 2400 3750 2400
 Wire Wire Line
 	3750 2700 3850 2700
+Wire Wire Line
+	9950 2100 9450 2100
+Text GLabel 9950 2100 2    39   Input ~ 0
+GEAR_IN
+Text GLabel 9450 2100 0    39   Input ~ 0
+RPM_OUT
+Text Label 2950 2600 0    50   ~ 0
+VDDANA
+Text Label 3750 2100 0    50   ~ 0
+XIN
+Text Label 3750 2200 0    50   ~ 0
+XOUT
+Text Label 7550 2600 0    50   ~ 0
+VCORE1
 Wire Bus Line
 	7650 4100 7650 4800
 $EndSCHEMATC
