@@ -24,7 +24,7 @@ F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" V 4875 6700 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/54/800P-777115.pdf" H 4400 6700 50  0001 C CNN
 F 4 "4816P-1-510LF" V 4400 6700 60  0001 C CNN "Part Number"
 	1    4400 6700
-	0    1    1    0   
+	0    -1   1    0   
 $EndComp
 $Comp
 L TI_Additions:TLC6C598 U501
@@ -44,7 +44,6 @@ Text GLabel 1250 6900 0    60   Input ~ 0
 GEAR_CLR
 Text GLabel 1250 7200 0    60   Input ~ 0
 GEAR_RCLK
-NoConn ~ 3550 7050
 $Comp
 L Device:C C502
 U 1 1 5BE6228F
@@ -58,7 +57,7 @@ F 4 "Ceramic 0.1uF 10V X7R 1206" H 1950 6500 50  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 Text GLabel 1250 6600 0    60   Input ~ 0
-GEAR_SCLK
+SCLK
 Text GLabel 1250 6750 0    60   Input ~ 0
 GEAR_IN
 $Comp
@@ -465,11 +464,9 @@ RPM_CLR
 Text GLabel 1000 5050 0    39   Input ~ 0
 RPM_IN
 Text GLabel 1000 5500 0    39   Input ~ 0
-RPM_SCLK
+SCLK
 Text GLabel 1000 5400 0    39   Input ~ 0
 RPM_RCLK
-Text GLabel 1000 5600 0    39   Input ~ 0
-RPM_OUT
 $Comp
 L power:+3.3V #PWR0504
 U 1 1 5BEAF345
@@ -1236,13 +1233,7 @@ Wire Wire Line
 Wire Wire Line
 	1200 3450 1200 3350
 Wire Wire Line
-	2550 4800 3000 4800
-Wire Wire Line
 	3000 4600 3150 4600
-Wire Wire Line
-	4250 4800 4700 4800
-Wire Wire Line
-	4700 4800 4700 4600
 Wire Wire Line
 	4700 4600 4850 4600
 Wire Wire Line
@@ -2300,8 +2291,6 @@ Wire Wire Line
 Wire Wire Line
 	3150 4500 2950 4500
 Wire Wire Line
-	3000 4800 3000 4600
-Wire Wire Line
 	2650 4700 2650 5400
 Wire Wire Line
 	1000 5400 2650 5400
@@ -2321,10 +2310,6 @@ Connection ~ 4400 5500
 Wire Wire Line
 	2700 4600 2700 5500
 Connection ~ 2700 5500
-Wire Wire Line
-	1000 5600 5950 5600
-Wire Wire Line
-	5950 5600 5950 4800
 Text Label 2500 7050 0    39   ~ 0
 ~G7
 Wire Wire Line
@@ -3186,12 +3171,34 @@ Wire Wire Line
 Connection ~ 5450 900 
 Wire Wire Line
 	5450 900  6000 900 
+Wire Wire Line
+	5950 5000 5950 4800
+Wire Wire Line
+	3000 4600 3000 5000
+NoConn ~ 4250 4800
+Wire Wire Line
+	4700 4600 4700 5050
+Wire Wire Line
+	4700 5050 2550 5050
+Wire Wire Line
+	2550 5050 2550 4800
+Wire Wire Line
+	3550 7400 3550 7050
+Text GLabel 1250 7350 0    60   Input ~ 0
+GEAR_OUT
+Wire Wire Line
+	1250 7400 1250 7350
+Wire Wire Line
+	1250 7400 3550 7400
+NoConn ~ -14750 5700
 Wire Bus Line
 	1300 2900 1300 3600
 Wire Bus Line
 	4700 2900 4700 3600
 Wire Bus Line
 	3000 2900 3000 3600
+Wire Wire Line
+	3000 5000 5950 5000
 Wire Bus Line
 	1300 5100 6600 5100
 Wire Bus Line

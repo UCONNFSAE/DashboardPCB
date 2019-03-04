@@ -27,24 +27,22 @@ F 3 "" H 1050 1250 50  0001 C CNN
 $EndComp
 Text Label 1250 1150 0    39   ~ 0
 CAN_V+
-Text Label 1250 1450 0    39   ~ 0
-GND
 Text GLabel 1900 1150 2    39   Input ~ 0
 CAN_V+
 $Comp
 L power:GND #PWR0204
 U 1 1 5BE24FFA
-P 1900 1450
-F 0 "#PWR0204" H 1900 1200 50  0001 C CNN
-F 1 "GND" V 1900 1250 50  0000 C CNN
-F 2 "" H 1900 1450 50  0001 C CNN
-F 3 "" H 1900 1450 50  0001 C CNN
-	1    1900 1450
+P 1900 1250
+F 0 "#PWR0204" H 1900 1000 50  0001 C CNN
+F 1 "GND" V 1900 1050 50  0000 C CNN
+F 2 "" H 1900 1250 50  0001 C CNN
+F 3 "" H 1900 1250 50  0001 C CNN
+	1    1900 1250
 	0    -1   -1   0   
 $EndComp
-Text GLabel 1900 1350 2    39   BiDi ~ 0
+Text GLabel 1900 1450 2    39   BiDi ~ 0
 CAN_IN+
-Text GLabel 1900 1250 2    39   BiDi ~ 0
+Text GLabel 1900 1350 2    39   BiDi ~ 0
 CAN_IN-
 $Comp
 L conn:Conn_01x06 J204

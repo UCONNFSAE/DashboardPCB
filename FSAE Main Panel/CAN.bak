@@ -172,7 +172,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 3850 6500 4000
 Wire Wire Line
-	6000 2400 7200 2400
+	6000 2400 6350 2400
 $Comp
 L Device:Resonator Y401
 U 1 1 5C382AA1
@@ -221,4 +221,49 @@ Text Label 7700 3200 0    50   ~ 0
 CANL
 Text Label 5300 4000 0    50   ~ 0
 CANRST
+$Comp
+L Device:C_Small C?
+U 1 1 5C806C3C
+P 6350 2600
+AR Path="/5C806C3C" Ref="C?"  Part="1" 
+AR Path="/5BE25053/5C806C3C" Ref="C401"  Part="1" 
+F 0 "C401" H 6360 2670 50  0000 L CNN
+F 1 "100nF" H 6360 2520 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 6350 2600 50  0001 C CNN
+F 3 "" H 6350 2600 50  0001 C CNN
+F 4 "Ceramic 0.1uF 10V X7R 1206" H 6350 2600 50  0001 C CNN "Description"
+	1    6350 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5C8072C7
+P 2800 3050
+AR Path="/5C8072C7" Ref="C?"  Part="1" 
+AR Path="/5BE25053/5C8072C7" Ref="C402"  Part="1" 
+F 0 "C402" H 2810 3120 50  0000 L CNN
+F 1 "100nF" H 2810 2970 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 2800 3050 50  0001 C CNN
+F 3 "" H 2800 3050 50  0001 C CNN
+F 4 "Ceramic 0.1uF 10V X7R 1206" H 2800 3050 50  0001 C CNN "Description"
+	1    2800 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6350 2500 6350 2400
+Connection ~ 6350 2400
+Wire Wire Line
+	6350 2400 7200 2400
+Wire Wire Line
+	6350 2700 6350 3850
+Wire Wire Line
+	6350 3850 6500 3850
+Wire Wire Line
+	2800 2950 2800 2400
+Wire Wire Line
+	2800 2400 4700 2400
+Wire Wire Line
+	2800 4350 3400 4350
+Wire Wire Line
+	2800 3150 2800 4350
 $EndSCHEMATC

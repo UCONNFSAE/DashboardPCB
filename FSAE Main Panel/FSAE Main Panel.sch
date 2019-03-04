@@ -167,10 +167,10 @@ Text GLabel 3750 4400 0    39   Input ~ 0
 ~RPM_EN
 Text GLabel 3750 4500 0    39   Input ~ 0
 RPM_CLR
-Text GLabel 3750 4300 0    39   Input ~ 0
+Text GLabel 9950 2100 2    39   Input ~ 0
 RPM_IN
 Text GLabel 3750 4700 0    39   Input ~ 0
-RPM_SCLK
+SCLK
 Text GLabel 3750 4600 0    39   Input ~ 0
 RPM_RCLK
 Text GLabel 7150 4400 2    39   Input ~ 0
@@ -179,8 +179,6 @@ Text GLabel 7150 4300 2    39   Input ~ 0
 GEAR_CLR
 Text GLabel 7150 4500 2    39   Input ~ 0
 GEAR_RCLK
-Text GLabel 7150 4200 2    39   Input ~ 0
-GEAR_SCLK
 Text GLabel 7750 4800 2    39   Input ~ 0
 RPM_PWM
 Text GLabel 7150 3800 2    39   Input ~ 0
@@ -510,8 +508,6 @@ Wire Wire Line
 Wire Wire Line
 	3750 2900 3850 2900
 Wire Wire Line
-	7150 4200 7050 4200
-Wire Wire Line
 	7050 4300 7150 4300
 Wire Wire Line
 	7150 4400 7050 4400
@@ -547,10 +543,10 @@ Wire Wire Line
 	3750 2700 3850 2700
 Wire Wire Line
 	9950 2100 9450 2100
-Text GLabel 9950 2100 2    39   Input ~ 0
+Text GLabel 3750 4300 0    39   Input ~ 0
 GEAR_IN
 Text GLabel 9450 2100 0    39   Input ~ 0
-RPM_OUT
+GEAR_OUT
 Text Label 2950 2600 0    50   ~ 0
 VDDANA
 Text Label 3750 2100 0    50   ~ 0
@@ -559,6 +555,15 @@ Text Label 3750 2200 0    50   ~ 0
 XOUT
 Text Label 7550 2600 0    50   ~ 0
 VCORE1
+NoConn ~ 7050 4200
+NoConn ~ 7050 3200
+NoConn ~ 7050 3100
+NoConn ~ 7050 3000
+NoConn ~ 7050 2800
+NoConn ~ 7050 2200
+NoConn ~ 3850 2300
+NoConn ~ 3850 2800
+NoConn ~ 3850 3800
 Wire Bus Line
 	7650 4100 7650 4800
 $EndSCHEMATC

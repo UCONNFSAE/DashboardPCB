@@ -197,9 +197,9 @@ L regul:uA7805 U301
 U 1 1 5BFDDF95
 P 3850 4600
 F 0 "U301" H 3950 4300 60  0000 C CNN
-F 1 "UA7805CKTTR" H 3850 4800 60  0000 C CNN
-F 2 "Texas_Additions:TO-263-3_TabPin2_PAD_2012" H 3850 4600 60  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ua78.pdf" H 3850 4600 60  0001 C CNN
+F 1 "LM7805" H 3850 4800 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223-3_TabPin2" H 3850 4600 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm340.pdf" H 3850 4600 60  0001 C CNN
 	1    3850 4600
 	1    0    0    -1  
 $EndComp
@@ -390,9 +390,9 @@ L Regulator_Linear:uA7805 U304
 U 1 1 5D08847D
 P 9200 2550
 F 0 "U304" H 9300 2250 60  0000 C CNN
-F 1 "UA7805CKTTR" H 9200 2750 60  0000 C CNN
-F 2 "Texas_Additions:TO-263-3_TabPin2_PAD_2012" H 9200 2550 60  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ua78.pdf" H 9200 2550 60  0001 C CNN
+F 1 "LM7805" H 9200 2750 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223-3_TabPin2" H 9200 2550 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm340.pdf" H 9200 2550 60  0001 C CNN
 	1    9200 2550
 	1    0    0    -1  
 $EndComp
