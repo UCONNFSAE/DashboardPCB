@@ -260,11 +260,11 @@ L Device:Crystal_Small Y101
 U 1 1 5BF9B401
 P 3650 1950
 F 0 "Y101" H 3650 2050 50  0000 C CNN
-F 1 "32.768kHz" H 3400 1900 39  0000 C CNN
+F 1 "32.768kHz" H 3950 1900 39  0000 C CNN
 F 2 "MS1V-T1K:MS1V-T1K" H 3650 1950 50  0001 C CNN
 F 3 "" H 3650 1950 50  0001 C CNN
 	1    3650 1950
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C105
@@ -550,9 +550,9 @@ GEAR_OUT
 Text Label 2950 2600 0    50   ~ 0
 VDDANA
 Text Label 3750 2100 0    50   ~ 0
-XIN
+XIN+
 Text Label 3750 2200 0    50   ~ 0
-XOUT
+XIN-
 Text Label 7550 2600 0    50   ~ 0
 VCORE1
 NoConn ~ 7050 4200
