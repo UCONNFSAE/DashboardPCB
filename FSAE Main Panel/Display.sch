@@ -39,11 +39,11 @@ F 4 "Texas Instruments" H 3050 6700 60  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 Text GLabel 1250 7050 0    60   Input ~ 0
-~GEAR_PWM
+~PWM_WHITE
 Text GLabel 1250 6900 0    60   Input ~ 0
 GEAR_CLR
 Text GLabel 1250 7200 0    60   Input ~ 0
-GEAR_RCLK
+GEAR_SET
 $Comp
 L Device:C C502
 U 1 1 5BE6228F
@@ -57,9 +57,9 @@ F 4 "Ceramic 0.1uF 10V X7R 1206" H 1950 6500 50  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 Text GLabel 1250 6600 0    60   Input ~ 0
-SCLK
+FRAME_CLK
 Text GLabel 1250 6750 0    60   Input ~ 0
-GEAR_IN
+FRAME_IN
 $Comp
 L Device:C C501
 U 1 1 5BE62816
@@ -120,7 +120,7 @@ P 2000 4200
 F 0 "U502" H 2000 5100 60  0000 C CNN
 F 1 "TLC6C5816" H 2000 3450 60  0000 C CNN
 F 2 "TLC6C5816:TLC6C5816" H 2050 3500 60  0001 C CNN
-F 3 "" H 2050 3500 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tlc6c5816-q1.pdf" H 2050 3500 60  0001 C CNN
 	1    2000 4200
 	1    0    0    -1  
 $EndComp
@@ -223,7 +223,7 @@ P 3700 4200
 F 0 "U503" H 3700 5100 60  0000 C CNN
 F 1 "TLC6C5816" H 3700 3450 60  0000 C CNN
 F 2 "TLC6C5816:TLC6C5816" H 3750 3500 60  0001 C CNN
-F 3 "" H 3750 3500 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tlc6c5816-q1.pdf" H 3750 3500 60  0001 C CNN
 	1    3700 4200
 	1    0    0    -1  
 $EndComp
@@ -300,7 +300,7 @@ P 5400 4200
 F 0 "U504" H 5400 5100 60  0000 C CNN
 F 1 "TLC6C5816" H 5400 3450 60  0000 C CNN
 F 2 "TLC6C5816:TLC6C5816" H 5450 3500 60  0001 C CNN
-F 3 "" H 5450 3500 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tlc6c5816-q1.pdf" H 5450 3500 60  0001 C CNN
 	1    5400 4200
 	1    0    0    -1  
 $EndComp
@@ -464,9 +464,9 @@ RPM_CLR
 Text GLabel 1000 5050 0    39   Input ~ 0
 RPM_IN
 Text GLabel 1000 5500 0    39   Input ~ 0
-SCLK
+FRAME_CLK
 Text GLabel 1000 5400 0    39   Input ~ 0
-RPM_RCLK
+RPM_SET
 $Comp
 L power:+3.3V #PWR0504
 U 1 1 5BEAF345
@@ -1588,18 +1588,16 @@ Wire Wire Line
 	1450 3600 1400 3600
 Wire Wire Line
 	1450 3700 1400 3700
-Text Label 1400 3600 0    39   ~ 0
-~G1
-Text Label 1400 3700 0    39   ~ 0
-~G2
-Text Label 3100 3600 0    39   ~ 0
-~G3
-Text Label 3100 3700 0    39   ~ 0
-~G4
-Text Label 4800 3600 0    39   ~ 0
-~G5
-Text Label 4800 3700 0    39   ~ 0
-~G6
+Text Label 1400 3600 2    39   ~ 0
+~PWM_GREEN
+Text Label 3100 3600 2    39   ~ 0
+~PWM_YELLOW
+Text Label 3100 3700 2    39   ~ 0
+~PWM_RED
+Text Label 4800 3600 2    39   ~ 0
+~PWM_BLUE
+Text Label 4800 3700 2    39   ~ 0
+~PWM_BLUE
 Wire Bus Line
 	11100 3000 11100 2750
 $Comp
@@ -2310,8 +2308,6 @@ Connection ~ 4400 5500
 Wire Wire Line
 	2700 4600 2700 5500
 Connection ~ 2700 5500
-Text Label 2500 7050 0    39   ~ 0
-~G7
 Wire Wire Line
 	1700 6250 1950 6250
 Wire Wire Line
@@ -3213,4 +3209,6 @@ Wire Bus Line
 	6600 3000 11100 3000
 Wire Bus Line
 	6450 2750 11100 2750
+Text Label 1400 3700 2    39   ~ 0
+~PWM_GREEN
 $EndSCHEMATC

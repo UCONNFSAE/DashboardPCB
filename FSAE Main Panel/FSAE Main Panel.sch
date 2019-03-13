@@ -163,22 +163,22 @@ Text GLabel 7150 2900 2    39   Input ~ 0
 ~RESET
 Text GLabel 3750 3900 0    39   Input ~ 0
 ~CLEAR
-Text GLabel 3750 4400 0    39   Input ~ 0
+Text GLabel 3750 4200 0    39   Input ~ 0
 ~RPM_EN
-Text GLabel 3750 4500 0    39   Input ~ 0
+Text GLabel 3750 4300 0    39   Input ~ 0
 RPM_CLR
 Text GLabel 9950 2100 2    39   Input ~ 0
 RPM_IN
 Text GLabel 3750 4700 0    39   Input ~ 0
-SCLK
-Text GLabel 3750 4600 0    39   Input ~ 0
-RPM_RCLK
+FRAME_CLK
+Text GLabel 3750 4400 0    39   Input ~ 0
+RPM_SET
 Text GLabel 7150 4400 2    39   Input ~ 0
-~GEAR_PWM
+~PWM_WHITE
 Text GLabel 7150 4300 2    39   Input ~ 0
 GEAR_CLR
 Text GLabel 7150 4500 2    39   Input ~ 0
-GEAR_RCLK
+GEAR_SET
 Text GLabel 7750 4800 2    39   Input ~ 0
 RPM_PWM
 Text GLabel 7150 3800 2    39   Input ~ 0
@@ -513,20 +513,14 @@ Wire Wire Line
 	7150 4400 7050 4400
 Wire Wire Line
 	7050 4500 7150 4500
-Text Label 7050 4000 0    50   ~ 0
-~G1
-Text Label 7450 4000 0    50   ~ 0
-~G2
-Text Label 7050 4100 0    50   ~ 0
-~G3
-Text Label 7050 4600 0    50   ~ 0
-~G4
-Text Label 7050 4700 0    50   ~ 0
-~G5
-Text Label 7200 4700 0    50   ~ 0
-~G6
-Text GLabel 3750 4200 0    50   Input ~ 0
-GEAR_IN
+Text Label 7100 4000 0    50   ~ 0
+~PWM_GREEN
+Text Label 7100 4100 0    50   ~ 0
+~PWM_YELLOW
+Text Label 7100 4600 0    50   ~ 0
+~PWM_RED
+Text Label 7100 4700 0    50   ~ 0
+~PWM_BLUE
 Wire Wire Line
 	3850 4200 3750 4200
 Text GLabel 7150 2100 2    39   Input ~ 0
@@ -543,8 +537,8 @@ Wire Wire Line
 	3750 2700 3850 2700
 Wire Wire Line
 	9950 2100 9450 2100
-Text GLabel 3750 4300 0    39   Input ~ 0
-GEAR_IN
+Text GLabel 3750 4600 0    39   Input ~ 0
+FRAME_IN
 Text GLabel 9450 2100 0    39   Input ~ 0
 GEAR_OUT
 Text Label 2950 2600 0    50   ~ 0
@@ -564,6 +558,7 @@ NoConn ~ 7050 2200
 NoConn ~ 3850 2300
 NoConn ~ 3850 2800
 NoConn ~ 3850 3800
+NoConn ~ 3750 4500
 Wire Bus Line
 	7650 4100 7650 4800
 $EndSCHEMATC

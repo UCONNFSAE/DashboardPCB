@@ -89,7 +89,7 @@ DWC_SCLK
 Text Notes 1100 1850 0    39   ~ 0
 Dashboard Warning Light Cluster
 $Comp
-L switches:SW_Push SW1
+L Omron:B3W-1000 SW1
 U 1 1 5BE9B978
 P 1000 3250
 F 0 "SW1" H 1050 3350 50  0000 L CNN
@@ -98,22 +98,10 @@ F 2 "Buttons_Switches_THT:SW_TH_Tactile_Omron_B3F-10xx" H 1000 3450 50  0001 C C
 F 3 "https://www.mouser.com/datasheet/2/307/en-b3w-779787.pdf" H 1000 3450 50  0001 C CNN
 F 4 "Omron" H 1000 3250 60  0001 C CNN "Manufacturer"
 	1    1000 3250
-	1    0    0    -1  
+	0    1    1    0   
 $EndComp
 Text Notes 900  3000 0    39   ~ 0
 MCU Reset
-$Comp
-L switches:SW_Push SW2
-U 1 1 5BE9BA9C
-P 1000 4150
-F 0 "SW2" H 1050 4250 50  0000 L CNN
-F 1 "B3W-1020" H 1000 4090 50  0000 C CNN
-F 2 "Buttons_Switches_THT:SW_TH_Tactile_Omron_B3F-10xx" H 1000 4350 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/307/en-b3w-779787.pdf" H 1000 4350 50  0001 C CNN
-F 4 "Omron" H 1000 4150 60  0001 C CNN "Manufacturer"
-	1    1000 4150
-	1    0    0    -1  
-$EndComp
 Text Notes 900  3950 0    39   ~ 0
 Alarm Clear
 $Comp
@@ -356,8 +344,6 @@ Wire Wire Line
 Wire Wire Line
 	750  4150 750  4300
 Wire Wire Line
-	800  3250 750  3250
-Wire Wire Line
 	750  3250 750  3400
 Wire Wire Line
 	1600 3250 1700 3250
@@ -592,4 +578,54 @@ Text Label 1200 4150 0    50   ~ 0
 SW2_L
 Text Label 1200 3250 0    50   ~ 0
 SW1_L
+$Comp
+L Omron:B3W-1000 SW2
+U 1 1 5C8459CA
+P 1000 4150
+F 0 "SW2" H 1050 4250 50  0000 L CNN
+F 1 "B3W-1020" H 1000 4090 50  0000 C CNN
+F 2 "Buttons_Switches_THT:SW_TH_Tactile_Omron_B3F-10xx" H 1000 4350 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/307/en-b3w-779787.pdf" H 1000 4350 50  0001 C CNN
+F 4 "Omron" H 1000 4150 60  0001 C CNN "Manufacturer"
+	1    1000 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	950  3950 800  3950
+Wire Wire Line
+	800  3950 800  4150
+Wire Wire Line
+	800  4150 800  4350
+Wire Wire Line
+	800  4350 950  4350
+Connection ~ 800  4150
+Wire Wire Line
+	1150 4350 1200 4350
+Wire Wire Line
+	1200 4350 1200 4150
+Wire Wire Line
+	1200 4150 1200 3950
+Wire Wire Line
+	1200 3950 1150 3950
+Connection ~ 1200 4150
+Wire Wire Line
+	1150 3050 1200 3050
+Wire Wire Line
+	1200 3050 1200 3250
+Wire Wire Line
+	1200 3250 1200 3450
+Wire Wire Line
+	1200 3450 1150 3450
+Connection ~ 1200 3250
+Wire Wire Line
+	950  3050 900  3050
+Wire Wire Line
+	900  3050 900  3250
+Wire Wire Line
+	900  3450 950  3450
+Wire Wire Line
+	750  3250 900  3250
+Connection ~ 900  3250
+Wire Wire Line
+	900  3250 900  3450
 $EndSCHEMATC
