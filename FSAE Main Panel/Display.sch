@@ -479,7 +479,7 @@ F 3 "" H 1200 6250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 5850 6100 2    60   Input ~ 0
-LED_5V+
+LED_+5V
 $Comp
 L power:GND #PWR0502
 U 1 1 5BEAF6F1
@@ -758,8 +758,6 @@ F 4 "4816P-1-680LF" V 8700 3450 60  0001 C CNN "Part Number"
 	1    8700 3450
 	-1   0    0    1   
 $EndComp
-Text Notes 7700 4400 0    35   ~ 0
-OSRAM LB M673\nVf = 3.7V, If = 20mA\n45mcd
 $Comp
 L Device:R_Pack08 RN507
 U 1 1 5BED2CCE
@@ -1572,10 +1570,6 @@ Entry Wire Line
 	1300 3500 1400 3600
 Entry Wire Line
 	1300 3600 1400 3700
-Wire Bus Line
-	4700 2900 1250 2900
-Text GLabel 1250 2900 0    39   Input ~ 0
-RPM_PWM
 Wire Wire Line
 	4850 3600 4800 3600
 Wire Wire Line
@@ -3187,28 +3181,109 @@ Wire Wire Line
 Wire Wire Line
 	1250 7400 3550 7400
 NoConn ~ -14750 5700
+Text Label 1400 3700 2    39   ~ 0
+~PWM_GREEN
+Connection ~ 3000 2900
+Wire Bus Line
+	3000 2900 1300 2900
+Entry Wire Line
+	5000 2550 5100 2450
+Entry Wire Line
+	5000 2400 5100 2300
+Entry Wire Line
+	5000 2250 5100 2150
+Entry Wire Line
+	5000 2100 5100 2000
+Text GLabel 5150 2000 2    39   Input ~ 0
+~PWM_GREEN
+Text Label 5100 2000 2    39   ~ 0
+~PWM_GREEN
+Text GLabel 5150 2150 2    39   Input ~ 0
+~PWM_YELLOW
+Text GLabel 5150 2300 2    39   Input ~ 0
+~PWM_RED
+Text GLabel 5150 2450 2    39   Input ~ 0
+~PWM_BLUE
+Text Label 5100 2150 2    39   ~ 0
+~PWM_YELLOW
+Text Label 5100 2300 2    39   ~ 0
+~PWM_RED
+Text Label 5100 2450 2    39   ~ 0
+~PWM_BLUE
+Wire Wire Line
+	5100 2450 5150 2450
+Wire Wire Line
+	5100 2300 5150 2300
+Wire Wire Line
+	5100 2150 5150 2150
+Wire Wire Line
+	5100 2000 5150 2000
+Wire Bus Line
+	3000 2900 4700 2900
+Wire Bus Line
+	5000 2900 4700 2900
+Connection ~ 4700 2900
+$Comp
+L Mechanical:Heatsink_Pad HS1
+U 1 1 5CCF152A
+P 6900 3850
+F 0 "HS1" V 7100 3900 50  0000 L CNN
+F 1 "Heatsink_Pad" V 7100 3300 50  0000 L CNN
+F 2 "Measurement_Points:Measurement_Point_Round-TH_Small" H 6912 3800 50  0001 C CNN
+F 3 "~" H 6912 3800 50  0001 C CNN
+	1    6900 3850
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7000 3850 2    50   Input ~ 0
+HEAT1
+$Comp
+L Mechanical:Heatsink_Pad HS2
+U 1 1 5CFF1846
+P 6900 4350
+F 0 "HS2" V 7100 4400 50  0000 L CNN
+F 1 "Heatsink_Pad" V 7050 3800 50  0000 L CNN
+F 2 "Measurement_Points:Measurement_Point_Round-TH_Small" H 6912 4300 50  0001 C CNN
+F 3 "~" H 6912 4300 50  0001 C CNN
+	1    6900 4350
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7000 4350 2    50   Input ~ 0
+HEAT2
+$Comp
+L Mechanical:Heatsink_Pad HS3
+U 1 1 5D0512E1
+P 6900 4800
+F 0 "HS3" V 7100 4850 50  0000 L CNN
+F 1 "Heatsink_Pad" V 7050 4250 50  0000 L CNN
+F 2 "Measurement_Points:Measurement_Point_Round-TH_Small" H 6912 4750 50  0001 C CNN
+F 3 "~" H 6912 4750 50  0001 C CNN
+	1    6900 4800
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7000 4800 2    50   Input ~ 0
+HEAT3
 Wire Bus Line
 	1300 2900 1300 3600
-Wire Bus Line
-	4700 2900 4700 3600
-Wire Bus Line
-	3000 2900 3000 3600
 Wire Wire Line
 	3000 5000 5950 5000
 Wire Bus Line
+	3000 2900 3000 3600
+Wire Bus Line
+	4700 2900 4700 3600
+Wire Bus Line
 	1300 5100 6600 5100
 Wire Bus Line
-	1200 3900 1200 5000
+	5000 2100 5000 2900
 Wire Bus Line
-	6250 3900 6250 5000
+	4550 3900 4550 5000
 Wire Bus Line
 	2850 3900 2850 5000
 Wire Bus Line
-	4550 3900 4550 5000
+	6250 3900 6250 5000
+Wire Bus Line
+	1200 3900 1200 5000
 Wire Bus Line
 	6600 3000 11100 3000
 Wire Bus Line
 	6450 2750 11100 2750
-Text Label 1400 3700 2    39   ~ 0
-~PWM_GREEN
 $EndSCHEMATC

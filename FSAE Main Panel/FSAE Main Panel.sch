@@ -179,8 +179,6 @@ Text GLabel 7150 4300 2    39   Input ~ 0
 GEAR_CLR
 Text GLabel 7150 4500 2    39   Input ~ 0
 GEAR_SET
-Text GLabel 7750 4800 2    39   Input ~ 0
-RPM_PWM
 Text GLabel 7150 3800 2    39   Input ~ 0
 USB_D+
 Text GLabel 7150 3900 2    39   Input ~ 0
@@ -364,14 +362,6 @@ Text Notes 7850 1250 0    60   ~ 0
 PB3 TX LED
 Text Notes 7850 1400 0    60   ~ 0
 RPM_PWM has 6 (4 if grouped by color) separate inputs
-Entry Wire Line
-	7550 4000 7650 4100
-Entry Wire Line
-	7550 4100 7650 4200
-Entry Wire Line
-	7550 4600 7650 4700
-Entry Wire Line
-	7550 4700 7650 4800
 Wire Wire Line
 	3200 1450 3550 1450
 Wire Wire Line
@@ -474,15 +464,13 @@ Wire Wire Line
 Wire Wire Line
 	7050 2400 7150 2400
 Wire Wire Line
-	7050 4000 7550 4000
+	7050 4000 7150 4000
 Wire Wire Line
-	7050 4100 7550 4100
+	7050 4100 7150 4100
 Wire Wire Line
-	7050 4600 7550 4600
+	7050 4600 7150 4600
 Wire Wire Line
-	7050 4700 7550 4700
-Wire Bus Line
-	7650 4800 7750 4800
+	7050 4700 7150 4700
 Wire Wire Line
 	3750 3600 3850 3600
 Wire Wire Line
@@ -513,14 +501,6 @@ Wire Wire Line
 	7150 4400 7050 4400
 Wire Wire Line
 	7050 4500 7150 4500
-Text Label 7100 4000 0    50   ~ 0
-~PWM_GREEN
-Text Label 7100 4100 0    50   ~ 0
-~PWM_YELLOW
-Text Label 7100 4600 0    50   ~ 0
-~PWM_RED
-Text Label 7100 4700 0    50   ~ 0
-~PWM_BLUE
 Wire Wire Line
 	3850 4200 3750 4200
 Text GLabel 7150 2100 2    39   Input ~ 0
@@ -559,6 +539,12 @@ NoConn ~ 3850 2300
 NoConn ~ 3850 2800
 NoConn ~ 3850 3800
 NoConn ~ 3750 4500
-Wire Bus Line
-	7650 4100 7650 4800
+Text GLabel 7150 4000 2    39   Input ~ 0
+~PWM_GREEN
+Text GLabel 7150 4100 2    39   Input ~ 0
+~PWM_YELLOW
+Text GLabel 7150 4600 2    39   Input ~ 0
+~PWM_RED
+Text GLabel 7150 4700 2    39   Input ~ 0
+~PWM_BLUE
 $EndSCHEMATC

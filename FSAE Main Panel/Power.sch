@@ -301,7 +301,7 @@ Wire Wire Line
 Wire Wire Line
 	5100 3300 5450 3300
 Text Notes 6200 5500 0    50   ~ 0
-Gate - 3\nSource - 2\nDrain - 1
+Gate - 1\nSource - 2\nDrain - 3
 Text GLabel 4400 2750 0    50   Input ~ 0
 CAN_V+
 Text GLabel 2150 4600 0    50   Input ~ 0
