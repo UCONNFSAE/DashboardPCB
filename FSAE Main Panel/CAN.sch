@@ -89,7 +89,7 @@ L Device:R R402
 U 1 1 5BE256E6
 P 6500 3600
 F 0 "R402" V 6580 3600 50  0000 C CNN
-F 1 "10k" V 6500 3600 50  0000 C CNN
+F 1 "16.9k" V 6500 3600 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206" V 6430 3600 50  0001 C CNN
 F 3 "" H 6500 3600 50  0001 C CNN
 	1    6500 3600
@@ -127,28 +127,23 @@ Wire Wire Line
 	6250 2800 5300 2800
 Wire Wire Line
 	7200 2400 7200 2700
-Connection ~ 6000 2400
 $Comp
 L Device:R R403
 U 1 1 5BE25A3B
-P 8000 3200
-F 0 "R403" V 8080 3200 50  0000 C CNN
-F 1 "120" V 8000 3200 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 7930 3200 50  0001 C CNN
-F 3 "" H 8000 3200 50  0001 C CNN
-	1    8000 3200
-	0    1    1    0   
+P 8050 3150
+F 0 "R403" V 8150 3150 50  0000 C CNN
+F 1 "120" V 8050 3150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7980 3150 50  0001 C CNN
+F 3 "" H 8050 3150 50  0001 C CNN
+	1    8050 3150
+	-1   0    0    1   
 $EndComp
 Text GLabel 8300 3000 2    39   Input ~ 0
 CAN_IN+
-Text GLabel 8300 3200 2    39   Input ~ 0
+Text GLabel 8300 3300 2    39   Input ~ 0
 CAN_IN-
 Wire Wire Line
-	7700 3000 8300 3000
-Wire Wire Line
-	7700 3200 7850 3200
-Wire Wire Line
-	8150 3200 8300 3200
+	7700 3000 8050 3000
 Text GLabel 3850 3100 0    39   Input ~ 0
 CAN_SCLK
 Text GLabel 3850 3000 0    39   Input ~ 0
@@ -171,8 +166,6 @@ Wire Wire Line
 	4700 2400 4700 2600
 Wire Wire Line
 	6500 3850 6500 4000
-Wire Wire Line
-	6000 2400 6350 2400
 $Comp
 L Device:Resonator Y401
 U 1 1 5C382AA1
@@ -251,7 +244,6 @@ F 4 "Ceramic 0.1uF 10V X7R 1206" H 2800 3050 50  0001 C CNN "Description"
 $EndComp
 Wire Wire Line
 	6350 2500 6350 2400
-Connection ~ 6350 2400
 Wire Wire Line
 	6350 2400 7200 2400
 Wire Wire Line
@@ -266,4 +258,26 @@ Wire Wire Line
 	2800 4350 3400 4350
 Wire Wire Line
 	2800 3150 2800 4350
+Connection ~ 8050 3000
+Wire Wire Line
+	8050 3000 8300 3000
+Wire Wire Line
+	8050 3300 8300 3300
+Wire Wire Line
+	8050 3300 7700 3300
+Wire Wire Line
+	7700 3300 7700 3200
+Connection ~ 8050 3300
+$Comp
+L power:+5V #PWR?
+U 1 1 5C932133
+P 6350 2400
+F 0 "#PWR?" H 6350 2250 50  0001 C CNN
+F 1 "+5V" H 6365 2573 50  0000 C CNN
+F 2 "" H 6350 2400 50  0001 C CNN
+F 3 "" H 6350 2400 50  0001 C CNN
+	1    6350 2400
+	1    0    0    -1  
+$EndComp
+Connection ~ 6350 2400
 $EndSCHEMATC
