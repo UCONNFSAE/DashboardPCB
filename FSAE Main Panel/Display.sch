@@ -81,9 +81,10 @@ P 6000 1100
 F 0 "D502" H 6250 1100 50  0000 L CNN
 F 1 "LG R971" H 5850 1250 50  0000 L CNN
 F 2 "LEDs:LED_1206" V 6000 1100 50  0001 C CNN
-F 3 "" V 6000 1100 50  0001 C CNN
-F 4 "OSRAM" H 6000 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 6000 1100 50  0001 C CNN
+F 4 "Kingbright" H 6000 1100 60  0001 C CNN "Manufacturer"
 F 5 "500-Green" H 5900 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    6000 1100
 	0    -1   -1   0   
 $EndComp
@@ -94,8 +95,8 @@ P 8550 1100
 F 0 "D518" H 8800 1100 50  0000 L CNN
 F 1 "LY R976" H 8400 1250 50  0000 L CNN
 F 2 "LEDs:LED_1206" V 8550 1100 50  0001 C CNN
-F 3 "" V 8550 1100 50  0001 C CNN
-F 4 "OSRAM" H 8550 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 8550 1100 50  0001 C CNN
+F 4 "Kingbright" H 8550 1100 60  0001 C CNN "Manufacturer"
 F 5 "8500-Yellow" H 8450 1150 50  0000 R CNN "Function"
 	1    8550 1100
 	0    -1   -1   0   
@@ -108,7 +109,7 @@ F 0 "D526" H 10150 1100 50  0000 L CNN
 F 1 "LS R976" H 9750 1250 50  0000 L CNN
 F 2 "LEDs:LED_1206" V 9900 1100 50  0001 C CNN
 F 3 "" V 9900 1100 50  0001 C CNN
-F 4 "OSRAM" H 9900 1100 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 9900 1100 60  0001 C CNN "Manufacturer"
 F 5 "12500-Red" H 9800 1150 50  0000 R CNN "Function"
 	1    9900 1100
 	0    -1   -1   0   
@@ -741,7 +742,7 @@ F 0 "D534" H 8650 4400 50  0000 L CNN
 F 1 "LB M673" H 8000 4350 50  0000 L CNN
 F 2 "LEDs:LED_1206" V 8400 4400 50  0001 C CNN
 F 3 "" V 8400 4400 50  0001 C CNN
-F 4 "OSRAM" H 8400 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 8400 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_1" H 8150 4450 50  0000 C CNN "Function"
 	1    8400 4400
 	0    1    1    0   
@@ -1602,7 +1603,7 @@ F 0 "D535" H 8800 4400 50  0000 L CNN
 F 1 "LB M673" H 8150 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 8550 4400 50  0001 C CNN
 F 3 "" V 8550 4400 50  0001 C CNN
-F 4 "OSRAM" H 8550 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 8550 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_2" H 8300 4450 50  0000 C CNN "Function"
 	1    8550 4400
 	0    1    1    0   
@@ -1615,7 +1616,7 @@ F 0 "D536" H 8950 4400 50  0000 L CNN
 F 1 "LB M673" H 8300 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 8700 4400 50  0001 C CNN
 F 3 "" V 8700 4400 50  0001 C CNN
-F 4 "OSRAM" H 8700 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 8700 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_3" H 8450 4450 50  0000 C CNN "Function"
 	1    8700 4400
 	0    1    1    0   
@@ -1628,7 +1629,7 @@ F 0 "D537" H 9100 4400 50  0000 L CNN
 F 1 "LB M673" H 8450 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 8850 4400 50  0001 C CNN
 F 3 "" V 8850 4400 50  0001 C CNN
-F 4 "OSRAM" H 8850 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 8850 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_4" H 8600 4450 50  0000 C CNN "Function"
 	1    8850 4400
 	0    1    1    0   
@@ -1641,7 +1642,7 @@ F 0 "D538" H 9250 4400 50  0000 L CNN
 F 1 "LB M673" H 8600 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9000 4400 50  0001 C CNN
 F 3 "" V 9000 4400 50  0001 C CNN
-F 4 "OSRAM" H 9000 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 9000 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_5" H 8750 4450 50  0000 C CNN "Function"
 	1    9000 4400
 	0    1    1    0   
@@ -1654,7 +1655,7 @@ F 0 "D539" H 9400 4400 50  0000 L CNN
 F 1 "LB M673" H 8750 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9150 4400 50  0001 C CNN
 F 3 "" V 9150 4400 50  0001 C CNN
-F 4 "OSRAM" H 9150 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 9150 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_6" H 8900 4450 50  0000 C CNN "Function"
 	1    9150 4400
 	0    1    1    0   
@@ -1667,7 +1668,7 @@ F 0 "D540" H 9550 4400 50  0000 L CNN
 F 1 "LB M673" H 8900 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9300 4400 50  0001 C CNN
 F 3 "" V 9300 4400 50  0001 C CNN
-F 4 "OSRAM" H 9300 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 9300 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_7" H 9050 4450 50  0000 C CNN "Function"
 	1    9300 4400
 	0    1    1    0   
@@ -1680,7 +1681,7 @@ F 0 "D541" H 9700 4400 50  0000 L CNN
 F 1 "LB M673" H 9050 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9450 4400 50  0001 C CNN
 F 3 "" V 9450 4400 50  0001 C CNN
-F 4 "OSRAM" H 9450 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 9450 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_8" H 9200 4450 50  0000 C CNN "Function"
 	1    9450 4400
 	0    1    1    0   
@@ -1693,7 +1694,7 @@ F 0 "D542" H 9850 4400 50  0000 L CNN
 F 1 "LB M673" H 9200 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9600 4400 50  0001 C CNN
 F 3 "" V 9600 4400 50  0001 C CNN
-F 4 "OSRAM" H 9600 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 9600 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_9" H 9350 4450 50  0000 C CNN "Function"
 	1    9600 4400
 	0    1    1    0   
@@ -1706,7 +1707,7 @@ F 0 "D543" H 10000 4400 50  0000 L CNN
 F 1 "LB M673" H 9350 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9750 4400 50  0001 C CNN
 F 3 "" V 9750 4400 50  0001 C CNN
-F 4 "OSRAM" H 9750 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 9750 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_10" H 9500 4450 50  0000 C CNN "Function"
 	1    9750 4400
 	0    1    1    0   
@@ -1719,7 +1720,7 @@ F 0 "D544" H 10150 4400 50  0000 L CNN
 F 1 "LB M673" H 9500 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9900 4400 50  0001 C CNN
 F 3 "" V 9900 4400 50  0001 C CNN
-F 4 "OSRAM" H 9900 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 9900 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_11" H 9650 4450 50  0000 C CNN "Function"
 	1    9900 4400
 	0    1    1    0   
@@ -1732,7 +1733,7 @@ F 0 "D545" H 10300 4400 50  0000 L CNN
 F 1 "LB M673" H 9650 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10050 4400 50  0001 C CNN
 F 3 "" V 10050 4400 50  0001 C CNN
-F 4 "OSRAM" H 10050 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 10050 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_12" H 9800 4450 50  0000 C CNN "Function"
 	1    10050 4400
 	0    1    1    0   
@@ -1745,7 +1746,7 @@ F 0 "D546" H 10450 4400 50  0000 L CNN
 F 1 "LB M673" H 9800 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10200 4400 50  0001 C CNN
 F 3 "" V 10200 4400 50  0001 C CNN
-F 4 "OSRAM" H 10200 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 10200 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_13" H 9950 4450 50  0000 C CNN "Function"
 	1    10200 4400
 	0    1    1    0   
@@ -1758,7 +1759,7 @@ F 0 "D547" H 10600 4400 50  0000 L CNN
 F 1 "LB M673" H 9950 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10350 4400 50  0001 C CNN
 F 3 "" V 10350 4400 50  0001 C CNN
-F 4 "OSRAM" H 10350 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 10350 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_14" H 10100 4450 50  0000 C CNN "Function"
 	1    10350 4400
 	0    1    1    0   
@@ -1771,7 +1772,7 @@ F 0 "D548" H 10750 4400 50  0000 L CNN
 F 1 "LB M673" H 10100 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10500 4400 50  0001 C CNN
 F 3 "" V 10500 4400 50  0001 C CNN
-F 4 "OSRAM" H 10500 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 10500 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_15" H 10250 4450 50  0000 C CNN "Function"
 	1    10500 4400
 	0    1    1    0   
@@ -1784,7 +1785,7 @@ F 0 "D549" H 10900 4400 50  0000 L CNN
 F 1 "LB M673" H 10250 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10650 4400 50  0001 C CNN
 F 3 "" V 10650 4400 50  0001 C CNN
-F 4 "OSRAM" H 10650 4400 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 10650 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_16" H 10400 4450 50  0000 C CNN "Function"
 	1    10650 4400
 	0    1    1    0   
@@ -1811,7 +1812,7 @@ F 0 "D527" H 10300 1100 50  0000 L CNN
 F 1 "LS R976" H 9900 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10050 1100 50  0001 C CNN
 F 3 "" V 10050 1100 50  0001 C CNN
-F 4 "OSRAM" H 10050 1100 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 10050 1100 60  0001 C CNN "Manufacturer"
 F 5 "13000-Red" H 9950 1150 50  0000 R CNN "Function"
 	1    10050 1100
 	0    -1   -1   0   
@@ -1824,7 +1825,7 @@ F 0 "D528" H 10450 1100 50  0000 L CNN
 F 1 "LS R976" H 10050 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10200 1100 50  0001 C CNN
 F 3 "" V 10200 1100 50  0001 C CNN
-F 4 "OSRAM" H 10200 1100 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 10200 1100 60  0001 C CNN "Manufacturer"
 F 5 "13500-Red" H 10100 1150 50  0000 R CNN "Function"
 	1    10200 1100
 	0    -1   -1   0   
@@ -1837,7 +1838,7 @@ F 0 "D529" H 10600 1100 50  0000 L CNN
 F 1 "LS R976" H 10200 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10350 1100 50  0001 C CNN
 F 3 "" V 10350 1100 50  0001 C CNN
-F 4 "OSRAM" H 10350 1100 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 10350 1100 60  0001 C CNN "Manufacturer"
 F 5 "14000-Red" H 10250 1150 50  0000 R CNN "Function"
 	1    10350 1100
 	0    -1   -1   0   
@@ -1850,7 +1851,7 @@ F 0 "D530" H 10750 1100 50  0000 L CNN
 F 1 "LS R976" H 10350 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10500 1100 50  0001 C CNN
 F 3 "" V 10500 1100 50  0001 C CNN
-F 4 "OSRAM" H 10500 1100 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 10500 1100 60  0001 C CNN "Manufacturer"
 F 5 "14500-Red" H 10400 1150 50  0000 R CNN "Function"
 	1    10500 1100
 	0    -1   -1   0   
@@ -1863,7 +1864,7 @@ F 0 "D531" H 10900 1100 50  0000 L CNN
 F 1 "LS R976" H 10500 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10650 1100 50  0001 C CNN
 F 3 "" V 10650 1100 50  0001 C CNN
-F 4 "OSRAM" H 10650 1100 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 10650 1100 60  0001 C CNN "Manufacturer"
 F 5 "15000-Red" H 10550 1150 50  0000 R CNN "Function"
 	1    10650 1100
 	0    -1   -1   0   
@@ -1876,7 +1877,7 @@ F 0 "D532" H 11050 1100 50  0000 L CNN
 F 1 "LS R976" H 10650 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10800 1100 50  0001 C CNN
 F 3 "" V 10800 1100 50  0001 C CNN
-F 4 "OSRAM" H 10800 1100 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 10800 1100 60  0001 C CNN "Manufacturer"
 F 5 "Spare-Red" H 10700 1150 50  0000 R CNN "Function"
 	1    10800 1100
 	0    -1   -1   0   
@@ -1889,7 +1890,7 @@ F 0 "D533" H 11200 1100 50  0000 L CNN
 F 1 "LS R976" H 10800 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10950 1100 50  0001 C CNN
 F 3 "" V 10950 1100 50  0001 C CNN
-F 4 "OSRAM" H 10950 1100 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 10950 1100 60  0001 C CNN "Manufacturer"
 F 5 "Spare-Red" H 10850 1150 50  0000 R CNN "Function"
 	1    10950 1100
 	0    -1   -1   0   
@@ -1901,8 +1902,8 @@ P 8700 1100
 F 0 "D519" H 8950 1100 50  0000 L CNN
 F 1 "LY R976" H 8550 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 8700 1100 50  0001 C CNN
-F 3 "" V 8700 1100 50  0001 C CNN
-F 4 "OSRAM" H 8700 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 8700 1100 50  0001 C CNN
+F 4 "Kingbright" H 8700 1100 60  0001 C CNN "Manufacturer"
 F 5 "9000-Yellow" H 8600 1150 50  0000 R CNN "Function"
 	1    8700 1100
 	0    -1   -1   0   
@@ -1914,8 +1915,8 @@ P 8850 1100
 F 0 "D520" H 9100 1100 50  0000 L CNN
 F 1 "LY R976" H 8700 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 8850 1100 50  0001 C CNN
-F 3 "" V 8850 1100 50  0001 C CNN
-F 4 "OSRAM" H 8850 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 8850 1100 50  0001 C CNN
+F 4 "Kingbright" H 8850 1100 60  0001 C CNN "Manufacturer"
 F 5 "9500-Yellow" H 8750 1150 50  0000 R CNN "Function"
 	1    8850 1100
 	0    -1   -1   0   
@@ -1927,8 +1928,8 @@ P 9000 1100
 F 0 "D521" H 9250 1100 50  0000 L CNN
 F 1 "LY R976" H 8850 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9000 1100 50  0001 C CNN
-F 3 "" V 9000 1100 50  0001 C CNN
-F 4 "OSRAM" H 9000 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 9000 1100 50  0001 C CNN
+F 4 "Kingbright" H 9000 1100 60  0001 C CNN "Manufacturer"
 F 5 "10000-Yellow" H 8900 1150 50  0000 R CNN "Function"
 	1    9000 1100
 	0    -1   -1   0   
@@ -1940,8 +1941,8 @@ P 9150 1100
 F 0 "D522" H 9400 1100 50  0000 L CNN
 F 1 "LY R976" H 9000 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9150 1100 50  0001 C CNN
-F 3 "" V 9150 1100 50  0001 C CNN
-F 4 "OSRAM" H 9150 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 9150 1100 50  0001 C CNN
+F 4 "Kingbright" H 9150 1100 60  0001 C CNN "Manufacturer"
 F 5 "10500-Yellow" H 9050 1150 50  0000 R CNN "Function"
 	1    9150 1100
 	0    -1   -1   0   
@@ -1953,8 +1954,8 @@ P 9300 1100
 F 0 "D523" H 9550 1100 50  0000 L CNN
 F 1 "LY R976" H 9150 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9300 1100 50  0001 C CNN
-F 3 "" V 9300 1100 50  0001 C CNN
-F 4 "OSRAM" H 9300 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 9300 1100 50  0001 C CNN
+F 4 "Kingbright" H 9300 1100 60  0001 C CNN "Manufacturer"
 F 5 "11000-Yellow" H 9200 1150 50  0000 R CNN "Function"
 	1    9300 1100
 	0    -1   -1   0   
@@ -1966,8 +1967,8 @@ P 9450 1100
 F 0 "D524" H 9700 1100 50  0000 L CNN
 F 1 "LY R976" H 9300 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9450 1100 50  0001 C CNN
-F 3 "" V 9450 1100 50  0001 C CNN
-F 4 "OSRAM" H 9450 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 9450 1100 50  0001 C CNN
+F 4 "Kingbright" H 9450 1100 60  0001 C CNN "Manufacturer"
 F 5 "11500-Yellow" H 9350 1150 50  0000 R CNN "Function"
 	1    9450 1100
 	0    -1   -1   0   
@@ -1979,8 +1980,8 @@ P 9600 1100
 F 0 "D525" H 9850 1100 50  0000 L CNN
 F 1 "LY R976" H 9450 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9600 1100 50  0001 C CNN
-F 3 "" V 9600 1100 50  0001 C CNN
-F 4 "OSRAM" H 9600 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 9600 1100 50  0001 C CNN
+F 4 "Kingbright" H 9600 1100 60  0001 C CNN "Manufacturer"
 F 5 "12000-Yellow" H 9500 1150 50  0000 R CNN "Function"
 	1    9600 1100
 	0    -1   -1   0   
@@ -2056,9 +2057,10 @@ P 6150 1100
 F 0 "D503" H 6400 1100 50  0000 L CNN
 F 1 "LG R971" H 6000 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 6150 1100 50  0001 C CNN
-F 3 "" V 6150 1100 50  0001 C CNN
-F 4 "OSRAM" H 6150 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 6150 1100 50  0001 C CNN
+F 4 "Kingbright" H 6150 1100 60  0001 C CNN "Manufacturer"
 F 5 "1000-Green" H 6050 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    6150 1100
 	0    -1   -1   0   
 $EndComp
@@ -2069,9 +2071,10 @@ P 6300 1100
 F 0 "D504" H 6550 1100 50  0000 L CNN
 F 1 "LG R971" H 6150 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 6300 1100 50  0001 C CNN
-F 3 "" V 6300 1100 50  0001 C CNN
-F 4 "OSRAM" H 6300 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 6300 1100 50  0001 C CNN
+F 4 "Kingbright" H 6300 1100 60  0001 C CNN "Manufacturer"
 F 5 "1500-Green" H 6200 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    6300 1100
 	0    -1   -1   0   
 $EndComp
@@ -2082,9 +2085,10 @@ P 6450 1100
 F 0 "D505" H 6700 1100 50  0000 L CNN
 F 1 "LG R971" H 6300 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 6450 1100 50  0001 C CNN
-F 3 "" V 6450 1100 50  0001 C CNN
-F 4 "OSRAM" H 6450 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 6450 1100 50  0001 C CNN
+F 4 "Kingbright" H 6450 1100 60  0001 C CNN "Manufacturer"
 F 5 "2000-Green" H 6350 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    6450 1100
 	0    -1   -1   0   
 $EndComp
@@ -2095,9 +2099,10 @@ P 6600 1100
 F 0 "D506" H 6850 1100 50  0000 L CNN
 F 1 "LG R971" H 6450 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 6600 1100 50  0001 C CNN
-F 3 "" V 6600 1100 50  0001 C CNN
-F 4 "OSRAM" H 6600 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 6600 1100 50  0001 C CNN
+F 4 "Kingbright" H 6600 1100 60  0001 C CNN "Manufacturer"
 F 5 "2500-Green" H 6500 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    6600 1100
 	0    -1   -1   0   
 $EndComp
@@ -2108,9 +2113,10 @@ P 6750 1100
 F 0 "D507" H 7000 1100 50  0000 L CNN
 F 1 "LG R971" H 6600 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 6750 1100 50  0001 C CNN
-F 3 "" V 6750 1100 50  0001 C CNN
-F 4 "OSRAM" H 6750 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 6750 1100 50  0001 C CNN
+F 4 "Kingbright" H 6750 1100 60  0001 C CNN "Manufacturer"
 F 5 "3000-Green" H 6650 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    6750 1100
 	0    -1   -1   0   
 $EndComp
@@ -2121,9 +2127,10 @@ P 6900 1100
 F 0 "D508" H 7150 1100 50  0000 L CNN
 F 1 "LG R971" H 6750 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 6900 1100 50  0001 C CNN
-F 3 "" V 6900 1100 50  0001 C CNN
-F 4 "OSRAM" H 6900 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 6900 1100 50  0001 C CNN
+F 4 "Kingbright" H 6900 1100 60  0001 C CNN "Manufacturer"
 F 5 "3500-Green" H 6800 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    6900 1100
 	0    -1   -1   0   
 $EndComp
@@ -2134,9 +2141,10 @@ P 7050 1100
 F 0 "D509" H 7300 1100 50  0000 L CNN
 F 1 "LG R971" H 6900 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 7050 1100 50  0001 C CNN
-F 3 "" V 7050 1100 50  0001 C CNN
-F 4 "OSRAM" H 7050 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 7050 1100 50  0001 C CNN
+F 4 "Kingbright" H 7050 1100 60  0001 C CNN "Manufacturer"
 F 5 "4000-Green" H 6950 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    7050 1100
 	0    -1   -1   0   
 $EndComp
@@ -2147,9 +2155,10 @@ P 7200 1100
 F 0 "D510" H 7450 1100 50  0000 L CNN
 F 1 "LG R971" H 7050 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 7200 1100 50  0001 C CNN
-F 3 "" V 7200 1100 50  0001 C CNN
-F 4 "OSRAM" H 7200 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 7200 1100 50  0001 C CNN
+F 4 "Kingbright" H 7200 1100 60  0001 C CNN "Manufacturer"
 F 5 "4500-Green" H 7100 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    7200 1100
 	0    -1   -1   0   
 $EndComp
@@ -2160,9 +2169,10 @@ P 7350 1100
 F 0 "D511" H 7600 1100 50  0000 L CNN
 F 1 "LG R971" H 7200 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 7350 1100 50  0001 C CNN
-F 3 "" V 7350 1100 50  0001 C CNN
-F 4 "OSRAM" H 7350 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 7350 1100 50  0001 C CNN
+F 4 "Kingbright" H 7350 1100 60  0001 C CNN "Manufacturer"
 F 5 "5000-Green" H 7250 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    7350 1100
 	0    -1   -1   0   
 $EndComp
@@ -2173,9 +2183,10 @@ P 7500 1100
 F 0 "D512" H 7750 1100 50  0000 L CNN
 F 1 "LG R971" H 7350 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 7500 1100 50  0001 C CNN
-F 3 "" V 7500 1100 50  0001 C CNN
-F 4 "OSRAM" H 7500 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 7500 1100 50  0001 C CNN
+F 4 "Kingbright" H 7500 1100 60  0001 C CNN "Manufacturer"
 F 5 "5500-Green" H 7400 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    7500 1100
 	0    -1   -1   0   
 $EndComp
@@ -2186,9 +2197,10 @@ P 7650 1100
 F 0 "D513" H 7900 1100 50  0000 L CNN
 F 1 "LG R971" H 7500 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 7650 1100 50  0001 C CNN
-F 3 "" V 7650 1100 50  0001 C CNN
-F 4 "OSRAM" H 7650 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 7650 1100 50  0001 C CNN
+F 4 "Kingbright" H 7650 1100 60  0001 C CNN "Manufacturer"
 F 5 "6000-Green" H 7550 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    7650 1100
 	0    -1   -1   0   
 $EndComp
@@ -2199,9 +2211,10 @@ P 7800 1100
 F 0 "D514" H 8050 1100 50  0000 L CNN
 F 1 "LG R971" H 7650 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 7800 1100 50  0001 C CNN
-F 3 "" V 7800 1100 50  0001 C CNN
-F 4 "OSRAM" H 7800 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 7800 1100 50  0001 C CNN
+F 4 "Kingbright" H 7800 1100 60  0001 C CNN "Manufacturer"
 F 5 "6500-Green" H 7700 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    7800 1100
 	0    -1   -1   0   
 $EndComp
@@ -2212,9 +2225,10 @@ P 7950 1100
 F 0 "D515" H 8200 1100 50  0000 L CNN
 F 1 "LG R971" H 7800 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 7950 1100 50  0001 C CNN
-F 3 "" V 7950 1100 50  0001 C CNN
-F 4 "OSRAM" H 7950 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 7950 1100 50  0001 C CNN
+F 4 "Kingbright" H 7950 1100 60  0001 C CNN "Manufacturer"
 F 5 "7000-Green" H 7850 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    7950 1100
 	0    -1   -1   0   
 $EndComp
@@ -2225,9 +2239,10 @@ P 8100 1100
 F 0 "D516" H 8350 1100 50  0000 L CNN
 F 1 "LG R971" H 7950 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 8100 1100 50  0001 C CNN
-F 3 "" V 8100 1100 50  0001 C CNN
-F 4 "OSRAM" H 8100 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 8100 1100 50  0001 C CNN
+F 4 "Kingbright" H 8100 1100 60  0001 C CNN "Manufacturer"
 F 5 "7500-Green" H 8000 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    8100 1100
 	0    -1   -1   0   
 $EndComp
@@ -2238,9 +2253,10 @@ P 8250 1100
 F 0 "D517" H 8500 1100 50  0000 L CNN
 F 1 "LG R971" H 8100 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 8250 1100 50  0001 C CNN
-F 3 "" V 8250 1100 50  0001 C CNN
-F 4 "OSRAM" H 8250 1100 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 8250 1100 50  0001 C CNN
+F 4 "Kingbright" H 8250 1100 60  0001 C CNN "Manufacturer"
 F 5 "8000-Green" H 8150 1150 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    8250 1100
 	0    -1   -1   0   
 $EndComp
@@ -2479,8 +2495,8 @@ P 1650 900
 F 0 "D550" H 1900 900 50  0000 L CNN
 F 1 "LY R976" H 1500 1050 50  0000 L CNN
 F 2 "LEDs:LED_1206" V 1650 900 50  0001 C CNN
-F 3 "" V 1650 900 50  0001 C CNN
-F 4 "OSRAM" H 1650 900 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 1650 900 50  0001 C CNN
+F 4 "Kingbright" H 1650 900 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 1550 950 50  0000 R CNN "Function"
 	1    1650 900 
 	0    -1   -1   0   
@@ -2492,8 +2508,8 @@ P 1800 900
 F 0 "D551" H 2050 900 50  0000 L CNN
 F 1 "LY R976" H 1650 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 1800 900 50  0001 C CNN
-F 3 "" V 1800 900 50  0001 C CNN
-F 4 "OSRAM" H 1800 900 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 1800 900 50  0001 C CNN
+F 4 "Kingbright" H 1800 900 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 1700 950 50  0001 R CNN "Function"
 	1    1800 900 
 	0    -1   -1   0   
@@ -2505,8 +2521,8 @@ P 1950 900
 F 0 "D552" H 2200 900 50  0000 L CNN
 F 1 "LY R976" H 1800 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 1950 900 50  0001 C CNN
-F 3 "" V 1950 900 50  0001 C CNN
-F 4 "OSRAM" H 1950 900 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 1950 900 50  0001 C CNN
+F 4 "Kingbright" H 1950 900 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 1850 950 50  0001 R CNN "Function"
 	1    1950 900 
 	0    -1   -1   0   
@@ -2518,8 +2534,8 @@ P 2100 900
 F 0 "D553" H 2350 900 50  0000 L CNN
 F 1 "LY R976" H 1950 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 2100 900 50  0001 C CNN
-F 3 "" V 2100 900 50  0001 C CNN
-F 4 "OSRAM" H 2100 900 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 2100 900 50  0001 C CNN
+F 4 "Kingbright" H 2100 900 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 2000 950 50  0001 R CNN "Function"
 	1    2100 900 
 	0    -1   -1   0   
@@ -2531,8 +2547,8 @@ P 2250 900
 F 0 "D554" H 2500 900 50  0000 L CNN
 F 1 "LY R976" H 2100 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 2250 900 50  0001 C CNN
-F 3 "" V 2250 900 50  0001 C CNN
-F 4 "OSRAM" H 2250 900 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 2250 900 50  0001 C CNN
+F 4 "Kingbright" H 2250 900 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 2150 950 50  0001 R CNN "Function"
 	1    2250 900 
 	0    -1   -1   0   
@@ -2544,8 +2560,8 @@ P 2400 900
 F 0 "D555" H 2650 900 50  0000 L CNN
 F 1 "LY R976" H 2250 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 2400 900 50  0001 C CNN
-F 3 "" V 2400 900 50  0001 C CNN
-F 4 "OSRAM" H 2400 900 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 2400 900 50  0001 C CNN
+F 4 "Kingbright" H 2400 900 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 2300 950 50  0001 R CNN "Function"
 	1    2400 900 
 	0    -1   -1   0   
@@ -2647,7 +2663,7 @@ F 0 "D556" H 3050 900 50  0000 L CNN
 F 1 "LS R976" H 2650 1050 50  0000 L CNN
 F 2 "LEDs:LED_1206" V 2800 900 50  0001 C CNN
 F 3 "" V 2800 900 50  0001 C CNN
-F 4 "OSRAM" H 2800 900 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 2800 900 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 2700 950 50  0000 R CNN "Function"
 	1    2800 900 
 	0    -1   -1   0   
@@ -2660,7 +2676,7 @@ F 0 "D557" H 3200 900 50  0000 L CNN
 F 1 "LS R976" H 2800 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 2950 900 50  0001 C CNN
 F 3 "" V 2950 900 50  0001 C CNN
-F 4 "OSRAM" H 2950 900 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 2950 900 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 2850 950 50  0001 R CNN "Function"
 	1    2950 900 
 	0    -1   -1   0   
@@ -2673,7 +2689,7 @@ F 0 "D558" H 3350 900 50  0000 L CNN
 F 1 "LS R976" H 2950 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 3100 900 50  0001 C CNN
 F 3 "" V 3100 900 50  0001 C CNN
-F 4 "OSRAM" H 3100 900 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 3100 900 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 3000 950 50  0001 R CNN "Function"
 	1    3100 900 
 	0    -1   -1   0   
@@ -2686,7 +2702,7 @@ F 0 "D559" H 3500 900 50  0000 L CNN
 F 1 "LS R976" H 3100 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 3250 900 50  0001 C CNN
 F 3 "" V 3250 900 50  0001 C CNN
-F 4 "OSRAM" H 3250 900 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 3250 900 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 3150 950 50  0001 R CNN "Function"
 	1    3250 900 
 	0    -1   -1   0   
@@ -2699,7 +2715,7 @@ F 0 "D560" H 3650 900 50  0000 L CNN
 F 1 "LS R976" H 3250 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 3400 900 50  0001 C CNN
 F 3 "" V 3400 900 50  0001 C CNN
-F 4 "OSRAM" H 3400 900 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 3400 900 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 3300 950 50  0001 R CNN "Function"
 	1    3400 900 
 	0    -1   -1   0   
@@ -2712,7 +2728,7 @@ F 0 "D561" H 3800 900 50  0000 L CNN
 F 1 "LS R976" H 3400 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 3550 900 50  0001 C CNN
 F 3 "" V 3550 900 50  0001 C CNN
-F 4 "OSRAM" H 3550 900 60  0001 C CNN "Manufacturer"
+F 4 "Kingbright" H 3550 900 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 3450 950 50  0001 R CNN "Function"
 	1    3550 900 
 	0    -1   -1   0   
@@ -2907,9 +2923,10 @@ P 5600 6300
 F 0 "D562" H 5850 6300 50  0000 L CNN
 F 1 "LG R971" H 5450 6450 50  0000 L CNN
 F 2 "LEDs:LED_1206" V 5600 6300 50  0001 C CNN
-F 3 "" V 5600 6300 50  0001 C CNN
-F 4 "OSRAM" H 5600 6300 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 5600 6300 50  0001 C CNN
+F 4 "Kingbright" H 5600 6300 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_A" H 5500 6350 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    5600 6300
 	1    0    0    -1  
 $EndComp
@@ -2920,9 +2937,10 @@ P 5600 6450
 F 0 "D563" H 5850 6450 50  0000 L CNN
 F 1 "LG R971" H 5450 6600 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 5600 6450 50  0001 C CNN
-F 3 "" V 5600 6450 50  0001 C CNN
-F 4 "OSRAM" H 5600 6450 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 5600 6450 50  0001 C CNN
+F 4 "Kingbright" H 5600 6450 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_B" H 5500 6500 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    5600 6450
 	1    0    0    -1  
 $EndComp
@@ -2933,9 +2951,10 @@ P 5600 6600
 F 0 "D564" H 5850 6600 50  0000 L CNN
 F 1 "LG R971" H 5450 6750 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 5600 6600 50  0001 C CNN
-F 3 "" V 5600 6600 50  0001 C CNN
-F 4 "OSRAM" H 5600 6600 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 5600 6600 50  0001 C CNN
+F 4 "Kingbright" H 5600 6600 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_C" H 5500 6650 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    5600 6600
 	1    0    0    -1  
 $EndComp
@@ -2946,9 +2965,10 @@ P 5600 6750
 F 0 "D565" H 5850 6750 50  0000 L CNN
 F 1 "LG R971" H 5450 6900 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 5600 6750 50  0001 C CNN
-F 3 "" V 5600 6750 50  0001 C CNN
-F 4 "OSRAM" H 5600 6750 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 5600 6750 50  0001 C CNN
+F 4 "Kingbright" H 5600 6750 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_D" H 5500 6800 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    5600 6750
 	1    0    0    -1  
 $EndComp
@@ -2959,9 +2979,10 @@ P 5600 6900
 F 0 "D566" H 5850 6900 50  0000 L CNN
 F 1 "LG R971" H 5450 7050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 5600 6900 50  0001 C CNN
-F 3 "" V 5600 6900 50  0001 C CNN
-F 4 "OSRAM" H 5600 6900 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 5600 6900 50  0001 C CNN
+F 4 "Kingbright" H 5600 6900 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_E" H 5500 6950 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    5600 6900
 	1    0    0    -1  
 $EndComp
@@ -2972,9 +2993,10 @@ P 5600 7050
 F 0 "D567" H 5850 7050 50  0000 L CNN
 F 1 "LG R971" H 5450 7200 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 5600 7050 50  0001 C CNN
-F 3 "" V 5600 7050 50  0001 C CNN
-F 4 "OSRAM" H 5600 7050 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 5600 7050 50  0001 C CNN
+F 4 "Kingbright" H 5600 7050 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_F" H 5500 7100 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    5600 7050
 	1    0    0    -1  
 $EndComp
@@ -3009,9 +3031,10 @@ P 5600 7200
 F 0 "D568" H 5850 7200 50  0000 L CNN
 F 1 "LG R971" H 5450 7350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 5600 7200 50  0001 C CNN
-F 3 "" V 5600 7200 50  0001 C CNN
-F 4 "OSRAM" H 5600 7200 60  0001 C CNN "Manufacturer"
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 5600 7200 50  0001 C CNN
+F 4 "Kingbright" H 5600 7200 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_G" H 5500 7250 50  0000 R CNN "Function"
+F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
 	1    5600 7200
 	1    0    0    -1  
 $EndComp
