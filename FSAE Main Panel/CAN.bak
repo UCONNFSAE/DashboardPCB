@@ -21,7 +21,10 @@ P 4700 3400
 F 0 "U401" H 4300 4175 50  0000 R CNN
 F 1 "MCP2515-I/ST" H 5450 4200 50  0000 R TNN
 F 2 "Housings_SOIC:SOIC-18W_7.5x11.6mm_Pitch1.27mm" H 4700 2500 50  0001 C CIN
-F 3 "" H 4800 2600 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MCP2515-Stand-Alone-CAN-Controller-with-SPI-20001801J.pdf" H 4800 2600 50  0001 C CNN
+F 4 "IC CAN CONTROLLER W/SPI 20TSSOP" H 0   0   50  0001 C CNN "Description"
+F 5 "Microchip" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "MCP2515-I/ST" H 0   0   50  0001 C CNN "Part Number"
 	1    4700 3400
 	1    0    0    -1  
 $EndComp
@@ -58,7 +61,10 @@ P 7200 3100
 F 0 "U402" H 6800 3450 50  0000 L CNN
 F 1 "MCP2551-I/SN" H 7300 3450 50  0000 L CNN
 F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 7200 2600 50  0001 C CIN
-F 3 "" H 7200 3100 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001667G.pdf" H 7200 3100 50  0001 C CNN
+F 4 "IC TRANSCEIVER CAN HI-SPD 8-SOIC" H 0   0   50  0001 C CNN "Description"
+F 5 "Microchip" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "MCP2551T-I/SN" H 0   0   50  0001 C CNN "Part Number"
 	1    7200 3100
 	1    0    0    -1  
 $EndComp
@@ -71,7 +77,10 @@ P 5800 4000
 F 0 "R401" V 5880 4000 50  0000 C CNN
 F 1 "10k" V 5800 4000 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206" V 5730 4000 50  0001 C CNN
-F 3 "" H 5800 4000 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 5800 4000 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/4W 1206" H 0   0   50  0001 C CNN "Description"
+F 5 "Stackpole" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "RMCF1206JT10K0" H 0   0   50  0001 C CNN "Part Number"
 	1    5800 4000
 	0    1    1    0   
 $EndComp
@@ -91,7 +100,10 @@ P 6500 3600
 F 0 "R402" V 6580 3600 50  0000 C CNN
 F 1 "16.9k" V 6500 3600 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206" V 6430 3600 50  0001 C CNN
-F 3 "" H 6500 3600 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6500 3600 50  0001 C CNN
+F 4 "RES 16.9K OHM 1% 1/4W 1206" H 0   0   50  0001 C CNN "Description"
+F 5 "Stackpole" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "RMCF1206FT16K9" H 0   0   50  0001 C CNN "Part Number"
 	1    6500 3600
 	1    0    0    -1  
 $EndComp
@@ -134,7 +146,10 @@ P 8050 3150
 F 0 "R403" V 8150 3150 50  0000 C CNN
 F 1 "120" V 8050 3150 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805" V 7980 3150 50  0001 C CNN
-F 3 "" H 8050 3150 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 8050 3150 50  0001 C CNN
+F 4 "RES 120 OHM 1% 1/8W 0805" H 0   0   50  0001 C CNN "Description"
+F 5 "Stackpole" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "RMCF0805FT120R" H 0   0   50  0001 C CNN "Part Number"
 	1    8050 3150
 	-1   0    0    1   
 $EndComp
@@ -173,7 +188,10 @@ P 3400 3700
 F 0 "Y401" H 3400 3948 50  0000 C CNN
 F 1 "Resonator" H 3400 3857 50  0000 C CNN
 F 2 "CSTNE16M0V530000R0:CSTNE16M0V530000R0" H 3375 3700 50  0001 C CNN
-F 3 "~" H 3375 3700 50  0001 C CNN
+F 3 "https://www.murata.com/en/products/productdata/8801162231838/SPEC-CSTNE16M0V530000R0.pdf" H 3375 3700 50  0001 C CNN
+F 4 "CER RES 16.0000MHZ 15PF SMD" H 0   0   50  0001 C CNN "Description"
+F 5 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "	CSTNE16M0V530000R0" H 0   0   50  0001 C CNN "Part Number"
 	1    3400 3700
 	-1   0    0    -1  
 $EndComp
@@ -223,8 +241,10 @@ AR Path="/5BE25053/5C806C3C" Ref="C401"  Part="1"
 F 0 "C401" H 6360 2670 50  0000 L CNN
 F 1 "100nF" H 6360 2520 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 6350 2600 50  0001 C CNN
-F 3 "" H 6350 2600 50  0001 C CNN
-F 4 "Ceramic 0.1uF 10V X7R 1206" H 6350 2600 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 6350 2600 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 1206" H 6350 2600 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    6350 2600
 	1    0    0    -1  
 $EndComp
@@ -237,8 +257,10 @@ AR Path="/5BE25053/5C8072C7" Ref="C402"  Part="1"
 F 0 "C402" H 2810 3120 50  0000 L CNN
 F 1 "100nF" H 2810 2970 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 2800 3050 50  0001 C CNN
-F 3 "" H 2800 3050 50  0001 C CNN
-F 4 "Ceramic 0.1uF 10V X7R 1206" H 2800 3050 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 2800 3050 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 1206" H 2800 3050 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    2800 3050
 	-1   0    0    1   
 $EndComp

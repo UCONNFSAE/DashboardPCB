@@ -19,10 +19,12 @@ L Device:R_Pack08 RN501
 U 1 1 5BE61583
 P 4400 6700
 F 0 "RN501" V 3900 6700 50  0000 C CNN
-F 1 "51 Ohm (8x)" V 4800 6700 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" V 4875 6700 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/54/800P-777115.pdf" H 4400 6700 50  0001 C CNN
-F 4 "4816P-1-510LF" V 4400 6700 60  0001 C CNN "Part Number"
+F 1 "150 Ohm (8x)" V 4800 6700 50  0000 C CNN
+F 2 "Bourns 4800P:Bourns 4800P SOM-16" V 4875 6700 50  0001 C CNN
+F 3 "https://www.bourns.com/docs/Product-Datasheets/4800P.pdf" H 4400 6700 50  0001 C CNN
+F 4 "4816P-1-151LF" V 4400 6700 60  0001 C CNN "Part Number"
+F 5 "RES ARRAY 8 RES 150 OHM 16SOIC" H 0   0   50  0001 C CNN "Description"
+F 6 "Bourns" H 0   0   50  0001 C CNN "Manufacturer"
 	1    4400 6700
 	0    -1   1    0   
 $EndComp
@@ -34,7 +36,9 @@ F 0 "U501" H 3050 7200 60  0000 C CNN
 F 1 "TLC6C598" H 3050 6200 60  0000 C CNN
 F 2 "Housings_SSOP:TSSOP-16_4.4x5mm_Pitch0.65mm" H 3150 6250 60  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tlc6c598.pdf" H 3150 6250 60  0001 C CNN
-F 4 "Texas Instruments" H 3050 6700 60  0001 C CNN "Manufacturer"
+F 4 "TI" H 3050 6700 60  0001 C CNN "Manufacturer"
+F 5 "IC LED DRIVER PS 50MA 16TSSOP" H 0   0   50  0001 C CNN "Description"
+F 6 "TLC6C598QPWRQ1" H 0   0   50  0001 C CNN "Part Number"
 	1    3050 6700
 	1    0    0    -1  
 $EndComp
@@ -51,8 +55,10 @@ P 1950 6500
 F 0 "C502" H 1975 6600 50  0000 L CNN
 F 1 "100nF" H 1975 6400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 1988 6350 50  0001 C CNN
-F 3 "" H 1950 6500 50  0001 C CNN
-F 4 "Ceramic 0.1uF 10V X7R 1206" H 1950 6500 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 1950 6500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 1206" H 1950 6500 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    1950 6500
 	1    0    0    -1  
 $EndComp
@@ -67,8 +73,10 @@ P 1700 6500
 F 0 "C501" H 1725 6600 50  0000 L CNN
 F 1 "1uF" H 1725 6400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 1738 6350 50  0001 C CNN
-F 3 "" H 1700 6500 50  0001 C CNN
-F 4 "Ceramic 1uF 25V X7R 1206" H 1700 6500 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf" H 1700 6500 50  0001 C CNN
+F 4 "CAP CER 1UF 25V X5R 1206" H 1700 6500 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C1206C105K3PACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    1700 6500
 	1    0    0    -1  
 $EndComp
@@ -79,12 +87,13 @@ L Device:LED_Small D502
 U 1 1 5BE84A41
 P 6000 1100
 F 0 "D502" H 6250 1100 50  0000 L CNN
-F 1 "LG R971" H 5850 1250 50  0000 L CNN
+F 1 "SM1206NPGC-IL" H 5850 1250 50  0000 L CNN
 F 2 "LEDs:LED_1206" V 6000 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 6000 1100 50  0001 C CNN
-F 4 "Kingbright" H 6000 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 6000 1100 50  0001 C CNN
+F 4 "Bivar" H 6000 1100 60  0001 C CNN "Manufacturer"
 F 5 "500-Green" H 5900 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    6000 1100
 	0    -1   -1   0   
 $EndComp
@@ -93,11 +102,13 @@ L Device:LED_Small D518
 U 1 1 5BE8AA2E
 P 8550 1100
 F 0 "D518" H 8800 1100 50  0000 L CNN
-F 1 "LY R976" H 8400 1250 50  0000 L CNN
+F 1 "SM1206NAC-IL" H 8400 1250 50  0000 L CNN
 F 2 "LEDs:LED_1206" V 8550 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 8550 1100 50  0001 C CNN
-F 4 "Kingbright" H 8550 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NAC-IL.pdf" V 8550 1100 50  0001 C CNN
+F 4 "Bivar" H 8550 1100 60  0001 C CNN "Manufacturer"
 F 5 "8500-Yellow" H 8450 1150 50  0000 R CNN "Function"
+F 6 "LED AMBER CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NAC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    8550 1100
 	0    -1   -1   0   
 $EndComp
@@ -106,10 +117,10 @@ L Device:LED_Small D526
 U 1 1 5BE8AF92
 P 9900 1100
 F 0 "D526" H 10150 1100 50  0000 L CNN
-F 1 "LS R976" H 9750 1250 50  0000 L CNN
+F 1 "SM1206NHC-IL" H 9750 1250 50  0000 L CNN
 F 2 "LEDs:LED_1206" V 9900 1100 50  0001 C CNN
-F 3 "" V 9900 1100 50  0001 C CNN
-F 4 "Kingbright" H 9900 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf" V 9900 1100 50  0001 C CNN
+F 4 "Bivar" H 9900 1100 60  0001 C CNN "Manufacturer"
 F 5 "12500-Red" H 9800 1150 50  0000 R CNN "Function"
 	1    9900 1100
 	0    -1   -1   0   
@@ -122,11 +133,14 @@ F 0 "U502" H 2000 5100 60  0000 C CNN
 F 1 "TLC6C5816" H 2000 3450 60  0000 C CNN
 F 2 "TLC6C5816:TLC6C5816" H 2050 3500 60  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tlc6c5816-q1.pdf" H 2050 3500 60  0001 C CNN
+F 4 "TLC6C5816 PROD VERSION" H 0   0   50  0001 C CNN "Description"
+F 5 "TI" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "TLC6C5816QPWPRQ1" H 0   0   50  0001 C CNN "Part Number"
 	1    2000 4200
 	1    0    0    -1  
 $EndComp
-Text Notes 4450 1900 0    39   ~ 0
-30 LED's\n4mm spacing\nGreen - LG R971\nVf = 2.2V, If = 20mA\n25mcd\nYellow - LY R976\nVf = 2.0V, If = 20mA\n280mcd\nRed LS R976\nVf = 2.0V If = 20mA\n180mcd\nTherefore: Limit Yellow\nto around 10mA!
+Text Notes 4400 1800 0    39   ~ 0
+32 LED's\n4mm spacing\nGreen - SM1206NPGC-IL\nVf = 3V, If = 20mA 1550mcd\nMin R: 100 Ohm\nYellow - SM1206NAC-IL\nVf = 2.1V, If = 20mA 1450mcd\nMin R: 145 Ohm\nRed SM1206NHC-IL\nVf = 2.1V If = 20mA 1250mcd\nMin R: 145 Ohm
 Text Label 1450 3800 2    39   ~ 0
 RPM_1
 Text Label 1450 3900 2    39   ~ 0
@@ -168,8 +182,10 @@ P 2550 3200
 F 0 "C504" H 2575 3300 50  0000 L CNN
 F 1 "100nF" H 2575 3100 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 2588 3050 50  0001 C CNN
-F 3 "" H 2550 3200 50  0001 C CNN
-F 4 "Ceramic 0.1uF 10V X7R 1206" H 2550 3200 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 2550 3200 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 1206" H 2550 3200 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    2550 3200
 	-1   0    0    1   
 $EndComp
@@ -180,8 +196,10 @@ P 1200 3200
 F 0 "C503" H 1225 3300 50  0000 L CNN
 F 1 "4.7uF" H 1225 3100 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 1238 3050 50  0001 C CNN
-F 3 "" H 1200 3200 50  0001 C CNN
-F 4 "Ceramic 4.7uF 10V X5R 1206" H 1200 3200 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf" H 1200 3200 50  0001 C CNN
+F 4 "CAP CER 4.7UF 25V X5R 1206" H 1200 3200 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C1206C475K3PACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    1200 3200
 	-1   0    0    1   
 $EndComp
@@ -225,6 +243,9 @@ F 0 "U503" H 3700 5100 60  0000 C CNN
 F 1 "TLC6C5816" H 3700 3450 60  0000 C CNN
 F 2 "TLC6C5816:TLC6C5816" H 3750 3500 60  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tlc6c5816-q1.pdf" H 3750 3500 60  0001 C CNN
+F 4 "TLC6C5816 PROD VERSION" H 0   0   50  0001 C CNN "Description"
+F 5 "TI" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "TLC6C5816QPWPRQ1" H 0   0   50  0001 C CNN "Part Number"
 	1    3700 4200
 	1    0    0    -1  
 $EndComp
@@ -302,6 +323,9 @@ F 0 "U504" H 5400 5100 60  0000 C CNN
 F 1 "TLC6C5816" H 5400 3450 60  0000 C CNN
 F 2 "TLC6C5816:TLC6C5816" H 5450 3500 60  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tlc6c5816-q1.pdf" H 5450 3500 60  0001 C CNN
+F 4 "TLC6C5816 PROD VERSION" H 0   0   50  0001 C CNN "Description"
+F 5 "TI" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "TLC6C5816QPWPRQ1" H 0   0   50  0001 C CNN "Part Number"
 	1    5400 4200
 	1    0    0    -1  
 $EndComp
@@ -386,8 +410,10 @@ P 4250 3200
 F 0 "C505" H 4275 3300 50  0000 L CNN
 F 1 "100nF" H 4275 3100 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 4288 3050 50  0001 C CNN
-F 3 "" H 4250 3200 50  0001 C CNN
-F 4 "Ceramic 0.1uF 10V X7R 1206" H 4250 3200 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 4250 3200 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 1206" H 4250 3200 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    4250 3200
 	-1   0    0    1   
 $EndComp
@@ -398,8 +424,10 @@ P 5950 3200
 F 0 "C506" H 5975 3300 50  0000 L CNN
 F 1 "100nF" H 5975 3100 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 5988 3050 50  0001 C CNN
-F 3 "" H 5950 3200 50  0001 C CNN
-F 4 "Ceramic 0.1uF 10V X7R 1206" H 5950 3200 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 5950 3200 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 1206" H 5950 3200 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    5950 3200
 	-1   0    0    1   
 $EndComp
@@ -499,10 +527,12 @@ L Device:R_Pack08 RN502
 U 1 1 5BEC333B
 P 6650 2300
 F 0 "RN502" V 6150 2300 50  0000 C CNN
-F 1 "151 Ohm (8x)" V 7050 2300 50  0000 C CNN
+F 1 "150 Ohm (8x)" V 7050 2300 50  0000 C CNN
 F 2 "Bourns 4800P:Bourns 4800P SOM-16" V 7125 2300 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/54/800P-777115.pdf" H 6650 2300 50  0001 C CNN
-F 4 "4816P-1-151" V 6650 2300 60  0001 C CNN "Part Number"
+F 3 "https://www.bourns.com/docs/Product-Datasheets/4800P.pdf" H 6650 2300 50  0001 C CNN
+F 4 "4816P-1-151LF" V 6650 2300 60  0001 C CNN "Part Number"
+F 5 "RES ARRAY 8 RES 150 OHM 16SOIC" H 0   0   50  0001 C CNN "Description"
+F 6 "Bourns" H 0   0   50  0001 C CNN "Manufacturer"
 	1    6650 2300
 	-1   0    0    -1  
 $EndComp
@@ -511,10 +541,12 @@ L Device:R_Pack08 RN503
 U 1 1 5BEC3775
 P 7850 2300
 F 0 "RN503" V 7350 2300 50  0000 C CNN
-F 1 "151 Ohm (8x)" V 8250 2300 50  0000 C CNN
+F 1 "150 Ohm (8x)" V 8250 2300 50  0000 C CNN
 F 2 "Bourns 4800P:Bourns 4800P SOM-16" V 8325 2300 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/54/800P-777115.pdf" H 7850 2300 50  0001 C CNN
-F 4 "4816P-1-151" V 7850 2300 60  0001 C CNN "Part Number"
+F 3 "https://www.bourns.com/docs/Product-Datasheets/4800P.pdf" H 7850 2300 50  0001 C CNN
+F 4 "4816P-1-151LF" V 7850 2300 60  0001 C CNN "Part Number"
+F 5 "RES ARRAY 8 RES 150 OHM 16SOIC" H 0   0   50  0001 C CNN "Description"
+F 6 "Bourns" H 0   0   50  0001 C CNN "Manufacturer"
 	1    7850 2300
 	-1   0    0    -1  
 $EndComp
@@ -523,10 +555,12 @@ L Device:R_Pack08 RN504
 U 1 1 5BEC381A
 P 9200 2300
 F 0 "RN504" V 8700 2300 50  0000 C CNN
-F 1 "220 Ohm (8x)" V 9600 2300 50  0000 C CNN
+F 1 "150 Ohm (8x)" V 9600 2300 50  0000 C CNN
 F 2 "Bourns 4800P:Bourns 4800P SOM-16" V 9675 2300 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/54/800P-777115.pdf" H 9200 2300 50  0001 C CNN
-F 4 "4816P-1-221LF" V 9200 2300 60  0001 C CNN "Part Number"
+F 3 "https://www.bourns.com/docs/Product-Datasheets/4800P.pdf" H 9200 2300 50  0001 C CNN
+F 4 "4816P-1-151LF" V 9200 2300 60  0001 C CNN "Part Number"
+F 5 "RES ARRAY 8 RES 150 OHM 16SOIC" H 0   0   50  0001 C CNN "Description"
+F 6 "Bourns" H 0   0   50  0001 C CNN "Manufacturer"
 	1    9200 2300
 	-1   0    0    -1  
 $EndComp
@@ -535,10 +569,12 @@ L Device:R_Pack08 RN505
 U 1 1 5BEC38CC
 P 10550 2300
 F 0 "RN505" V 10050 2300 50  0000 C CNN
-F 1 "180 Ohm (8x)" V 10950 2300 50  0000 C CNN
+F 1 "150 Ohm (8x)" V 10950 2300 50  0000 C CNN
 F 2 "Bourns 4800P:Bourns 4800P SOM-16" V 11025 2300 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/54/800P-777115.pdf" H 10550 2300 50  0001 C CNN
-F 4 "4816P-1-181LF" V 10550 2300 60  0001 C CNN "Part Number"
+F 3 "https://www.bourns.com/docs/Product-Datasheets/4800P.pdf" H 10550 2300 50  0001 C CNN
+F 4 "4816P-1-151LF" V 10550 2300 60  0001 C CNN "Part Number"
+F 5 "RES ARRAY 8 RES 150 OHM 16SOIC" H 0   0   50  0001 C CNN "Description"
+F 6 "Bourns" H 0   0   50  0001 C CNN "Manufacturer"
 	1    10550 2300
 	-1   0    0    -1  
 $EndComp
@@ -739,11 +775,13 @@ L Device:LED_Small D534
 U 1 1 5BED0325
 P 8400 4400
 F 0 "D534" H 8650 4400 50  0000 L CNN
-F 1 "LB M673" H 8000 4350 50  0000 L CNN
+F 1 "SM1206NBWC-IL" H 8000 4350 50  0000 L CNN
 F 2 "LEDs:LED_1206" V 8400 4400 50  0001 C CNN
-F 3 "" V 8400 4400 50  0001 C CNN
-F 4 "Kingbright" H 8400 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 8400 4400 50  0001 C CNN
+F 4 "Bivar" H 8400 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_1" H 8150 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    8400 4400
 	0    1    1    0   
 $EndComp
@@ -752,10 +790,12 @@ L Device:R_Pack08 RN506
 U 1 1 5BED0C4D
 P 8700 3450
 F 0 "RN506" V 8200 3450 50  0000 C CNN
-F 1 "68 Ohm (8x)" V 9100 3450 50  0000 C CNN
+F 1 "150 Ohm (8x)" V 9100 3450 50  0000 C CNN
 F 2 "Bourns 4800P:Bourns 4800P SOM-16" V 9175 3450 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/54/800P-777115.pdf" H 8700 3450 50  0001 C CNN
-F 4 "4816P-1-680LF" V 8700 3450 60  0001 C CNN "Part Number"
+F 3 "https://www.bourns.com/docs/Product-Datasheets/4800P.pdf" H 8700 3450 50  0001 C CNN
+F 4 "4816P-1-151LF" V 8700 3450 60  0001 C CNN "Part Number"
+F 5 "RES ARRAY 8 RES 150 OHM 16SOIC" H 0   0   50  0001 C CNN "Description"
+F 6 "Bourns" H 0   0   50  0001 C CNN "Manufacturer"
 	1    8700 3450
 	-1   0    0    1   
 $EndComp
@@ -764,10 +804,12 @@ L Device:R_Pack08 RN507
 U 1 1 5BED2CCE
 P 9900 3450
 F 0 "RN507" V 9400 3450 50  0000 C CNN
-F 1 "68 Ohm (8x)" V 10300 3450 50  0000 C CNN
+F 1 "150 Ohm (8x)" V 10300 3450 50  0000 C CNN
 F 2 "Bourns 4800P:Bourns 4800P SOM-16" V 10375 3450 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/54/800P-777115.pdf" H 9900 3450 50  0001 C CNN
-F 4 "4816P-1-680LF" V 9900 3450 60  0001 C CNN "Part Number"
+F 3 "https://www.bourns.com/docs/Product-Datasheets/4800P.pdf" H 9900 3450 50  0001 C CNN
+F 4 "4816P-1-151LF" V 9900 3450 60  0001 C CNN "Part Number"
+F 5 "RES ARRAY 8 RES 150 OHM 16SOIC" H 0   0   50  0001 C CNN "Description"
+F 6 "Bourns" H 0   0   50  0001 C CNN "Manufacturer"
 	1    9900 3450
 	-1   0    0    1   
 $EndComp
@@ -1600,11 +1642,13 @@ L Device:LED_Small D535
 U 1 1 5BEFB8D9
 P 8550 4400
 F 0 "D535" H 8800 4400 50  0000 L CNN
-F 1 "LB M673" H 8150 4350 50  0001 L CNN
+F 1 "SM1206NBWC-IL" H 8150 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 8550 4400 50  0001 C CNN
-F 3 "" V 8550 4400 50  0001 C CNN
-F 4 "Kingbright" H 8550 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 8550 4400 50  0001 C CNN
+F 4 "Bivar" H 8550 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_2" H 8300 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    8550 4400
 	0    1    1    0   
 $EndComp
@@ -1613,11 +1657,13 @@ L Device:LED_Small D536
 U 1 1 5BEFBABA
 P 8700 4400
 F 0 "D536" H 8950 4400 50  0000 L CNN
-F 1 "LB M673" H 8300 4350 50  0001 L CNN
+F 1 "SM1206NBWC-IL" H 8300 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 8700 4400 50  0001 C CNN
-F 3 "" V 8700 4400 50  0001 C CNN
-F 4 "Kingbright" H 8700 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 8700 4400 50  0001 C CNN
+F 4 "Bivar" H 8700 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_3" H 8450 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    8700 4400
 	0    1    1    0   
 $EndComp
@@ -1626,11 +1672,13 @@ L Device:LED_Small D537
 U 1 1 5BEFBC96
 P 8850 4400
 F 0 "D537" H 9100 4400 50  0000 L CNN
-F 1 "LB M673" H 8450 4350 50  0001 L CNN
+F 1 "SM1206NBWC-IL" H 8450 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 8850 4400 50  0001 C CNN
-F 3 "" V 8850 4400 50  0001 C CNN
-F 4 "Kingbright" H 8850 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 8850 4400 50  0001 C CNN
+F 4 "Bivar" H 8850 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_4" H 8600 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    8850 4400
 	0    1    1    0   
 $EndComp
@@ -1639,11 +1687,13 @@ L Device:LED_Small D538
 U 1 1 5BEFBD54
 P 9000 4400
 F 0 "D538" H 9250 4400 50  0000 L CNN
-F 1 "LB M673" H 8600 4350 50  0001 L CNN
+F 1 "SM1206NBWC-IL" H 8600 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9000 4400 50  0001 C CNN
-F 3 "" V 9000 4400 50  0001 C CNN
-F 4 "Kingbright" H 9000 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 9000 4400 50  0001 C CNN
+F 4 "Bivar" H 9000 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_5" H 8750 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    9000 4400
 	0    1    1    0   
 $EndComp
@@ -1652,11 +1702,13 @@ L Device:LED_Small D539
 U 1 1 5BEFBE15
 P 9150 4400
 F 0 "D539" H 9400 4400 50  0000 L CNN
-F 1 "LB M673" H 8750 4350 50  0001 L CNN
+F 1 "SM1206NBWC-IL" H 8750 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9150 4400 50  0001 C CNN
-F 3 "" V 9150 4400 50  0001 C CNN
-F 4 "Kingbright" H 9150 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 9150 4400 50  0001 C CNN
+F 4 "Bivar" H 9150 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_6" H 8900 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    9150 4400
 	0    1    1    0   
 $EndComp
@@ -1665,11 +1717,13 @@ L Device:LED_Small D540
 U 1 1 5BEFBED9
 P 9300 4400
 F 0 "D540" H 9550 4400 50  0000 L CNN
-F 1 "LB M673" H 8900 4350 50  0001 L CNN
+F 1 "SM1206NBWC-IL" H 8900 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9300 4400 50  0001 C CNN
-F 3 "" V 9300 4400 50  0001 C CNN
-F 4 "Kingbright" H 9300 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 9300 4400 50  0001 C CNN
+F 4 "Bivar" H 9300 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_7" H 9050 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    9300 4400
 	0    1    1    0   
 $EndComp
@@ -1678,11 +1732,13 @@ L Device:LED_Small D541
 U 1 1 5BEFBFA0
 P 9450 4400
 F 0 "D541" H 9700 4400 50  0000 L CNN
-F 1 "LB M673" H 9050 4350 50  0001 L CNN
+F 1 "SM1206NBWC-IL" H 9050 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9450 4400 50  0001 C CNN
-F 3 "" V 9450 4400 50  0001 C CNN
-F 4 "Kingbright" H 9450 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 9450 4400 50  0001 C CNN
+F 4 "Bivar" H 9450 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_8" H 9200 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    9450 4400
 	0    1    1    0   
 $EndComp
@@ -1691,11 +1747,13 @@ L Device:LED_Small D542
 U 1 1 5BEFC06A
 P 9600 4400
 F 0 "D542" H 9850 4400 50  0000 L CNN
-F 1 "LB M673" H 9200 4350 50  0001 L CNN
+F 1 "SM1206NBWC-IL" H 9200 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9600 4400 50  0001 C CNN
-F 3 "" V 9600 4400 50  0001 C CNN
-F 4 "Kingbright" H 9600 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 9600 4400 50  0001 C CNN
+F 4 "Bivar" H 9600 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_9" H 9350 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    9600 4400
 	0    1    1    0   
 $EndComp
@@ -1704,11 +1762,13 @@ L Device:LED_Small D543
 U 1 1 5BEFC137
 P 9750 4400
 F 0 "D543" H 10000 4400 50  0000 L CNN
-F 1 "LB M673" H 9350 4350 50  0001 L CNN
+F 1 "SM1206NBWC-IL" H 9350 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9750 4400 50  0001 C CNN
-F 3 "" V 9750 4400 50  0001 C CNN
-F 4 "Kingbright" H 9750 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 9750 4400 50  0001 C CNN
+F 4 "Bivar" H 9750 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_10" H 9500 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    9750 4400
 	0    1    1    0   
 $EndComp
@@ -1717,11 +1777,13 @@ L Device:LED_Small D544
 U 1 1 5BEFC207
 P 9900 4400
 F 0 "D544" H 10150 4400 50  0000 L CNN
-F 1 "LB M673" H 9500 4350 50  0001 L CNN
+F 1 "SM1206NBWC-IL" H 9500 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9900 4400 50  0001 C CNN
-F 3 "" V 9900 4400 50  0001 C CNN
-F 4 "Kingbright" H 9900 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 9900 4400 50  0001 C CNN
+F 4 "Bivar" H 9900 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_11" H 9650 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    9900 4400
 	0    1    1    0   
 $EndComp
@@ -1730,11 +1792,13 @@ L Device:LED_Small D545
 U 1 1 5BEFC2DA
 P 10050 4400
 F 0 "D545" H 10300 4400 50  0000 L CNN
-F 1 "LB M673" H 9650 4350 50  0001 L CNN
+F 1 "SM1206NBWC-IL" H 9650 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10050 4400 50  0001 C CNN
-F 3 "" V 10050 4400 50  0001 C CNN
-F 4 "Kingbright" H 10050 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 10050 4400 50  0001 C CNN
+F 4 "Bivar" H 10050 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_12" H 9800 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    10050 4400
 	0    1    1    0   
 $EndComp
@@ -1743,11 +1807,13 @@ L Device:LED_Small D546
 U 1 1 5BEFC3B0
 P 10200 4400
 F 0 "D546" H 10450 4400 50  0000 L CNN
-F 1 "LB M673" H 9800 4350 50  0001 L CNN
+F 1 "SM1206NBWC-IL" H 9800 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10200 4400 50  0001 C CNN
-F 3 "" V 10200 4400 50  0001 C CNN
-F 4 "Kingbright" H 10200 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 10200 4400 50  0001 C CNN
+F 4 "Bivar" H 10200 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_13" H 9950 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    10200 4400
 	0    1    1    0   
 $EndComp
@@ -1756,11 +1822,13 @@ L Device:LED_Small D547
 U 1 1 5BEFC489
 P 10350 4400
 F 0 "D547" H 10600 4400 50  0000 L CNN
-F 1 "LB M673" H 9950 4350 50  0001 L CNN
+F 1 "SM1206NBWC-IL" H 9950 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10350 4400 50  0001 C CNN
-F 3 "" V 10350 4400 50  0001 C CNN
-F 4 "Kingbright" H 10350 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 10350 4400 50  0001 C CNN
+F 4 "Bivar" H 10350 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_14" H 10100 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    10350 4400
 	0    1    1    0   
 $EndComp
@@ -1769,11 +1837,13 @@ L Device:LED_Small D548
 U 1 1 5BEFC565
 P 10500 4400
 F 0 "D548" H 10750 4400 50  0000 L CNN
-F 1 "LB M673" H 10100 4350 50  0001 L CNN
+F 1 "SM1206NBWC-IL" H 10100 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10500 4400 50  0001 C CNN
-F 3 "" V 10500 4400 50  0001 C CNN
-F 4 "Kingbright" H 10500 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 10500 4400 50  0001 C CNN
+F 4 "Bivar" H 10500 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_15" H 10250 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    10500 4400
 	0    1    1    0   
 $EndComp
@@ -1782,11 +1852,13 @@ L Device:LED_Small D549
 U 1 1 5BEFC644
 P 10650 4400
 F 0 "D549" H 10900 4400 50  0000 L CNN
-F 1 "LB M673" H 10250 4350 50  0001 L CNN
+F 1 "SM1206NBWC-IL" H 10250 4350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10650 4400 50  0001 C CNN
-F 3 "" V 10650 4400 50  0001 C CNN
-F 4 "Kingbright" H 10650 4400 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf" V 10650 4400 50  0001 C CNN
+F 4 "Bivar" H 10650 4400 60  0001 C CNN "Manufacturer"
 F 5 "Shift_16" H 10400 4450 50  0000 C CNN "Function"
+F 6 "LED BLUE CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NBWC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    10650 4400
 	0    1    1    0   
 $EndComp
@@ -1809,10 +1881,10 @@ L Device:LED_Small D527
 U 1 1 5BF0203B
 P 10050 1100
 F 0 "D527" H 10300 1100 50  0000 L CNN
-F 1 "LS R976" H 9900 1250 50  0001 L CNN
+F 1 "SM1206NHC-IL" H 9900 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10050 1100 50  0001 C CNN
-F 3 "" V 10050 1100 50  0001 C CNN
-F 4 "Kingbright" H 10050 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf" V 10050 1100 50  0001 C CNN
+F 4 "Bivar" H 10050 1100 60  0001 C CNN "Manufacturer"
 F 5 "13000-Red" H 9950 1150 50  0000 R CNN "Function"
 	1    10050 1100
 	0    -1   -1   0   
@@ -1822,10 +1894,10 @@ L Device:LED_Small D528
 U 1 1 5BF022AA
 P 10200 1100
 F 0 "D528" H 10450 1100 50  0000 L CNN
-F 1 "LS R976" H 10050 1250 50  0001 L CNN
+F 1 "SM1206NHC-IL" H 10050 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10200 1100 50  0001 C CNN
-F 3 "" V 10200 1100 50  0001 C CNN
-F 4 "Kingbright" H 10200 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf" V 10200 1100 50  0001 C CNN
+F 4 "Bivar" H 10200 1100 60  0001 C CNN "Manufacturer"
 F 5 "13500-Red" H 10100 1150 50  0000 R CNN "Function"
 	1    10200 1100
 	0    -1   -1   0   
@@ -1835,10 +1907,10 @@ L Device:LED_Small D529
 U 1 1 5BF0248E
 P 10350 1100
 F 0 "D529" H 10600 1100 50  0000 L CNN
-F 1 "LS R976" H 10200 1250 50  0001 L CNN
+F 1 "SM1206NHC-IL" H 10200 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10350 1100 50  0001 C CNN
-F 3 "" V 10350 1100 50  0001 C CNN
-F 4 "Kingbright" H 10350 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf" V 10350 1100 50  0001 C CNN
+F 4 "Bivar" H 10350 1100 60  0001 C CNN "Manufacturer"
 F 5 "14000-Red" H 10250 1150 50  0000 R CNN "Function"
 	1    10350 1100
 	0    -1   -1   0   
@@ -1848,10 +1920,10 @@ L Device:LED_Small D530
 U 1 1 5BF0263E
 P 10500 1100
 F 0 "D530" H 10750 1100 50  0000 L CNN
-F 1 "LS R976" H 10350 1250 50  0001 L CNN
+F 1 "SM1206NHC-IL" H 10350 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10500 1100 50  0001 C CNN
-F 3 "" V 10500 1100 50  0001 C CNN
-F 4 "Kingbright" H 10500 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf" V 10500 1100 50  0001 C CNN
+F 4 "Bivar" H 10500 1100 60  0001 C CNN "Manufacturer"
 F 5 "14500-Red" H 10400 1150 50  0000 R CNN "Function"
 	1    10500 1100
 	0    -1   -1   0   
@@ -1861,10 +1933,10 @@ L Device:LED_Small D531
 U 1 1 5BF0297B
 P 10650 1100
 F 0 "D531" H 10900 1100 50  0000 L CNN
-F 1 "LS R976" H 10500 1250 50  0001 L CNN
+F 1 "SM1206NHC-IL" H 10500 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10650 1100 50  0001 C CNN
-F 3 "" V 10650 1100 50  0001 C CNN
-F 4 "Kingbright" H 10650 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf" V 10650 1100 50  0001 C CNN
+F 4 "Bivar" H 10650 1100 60  0001 C CNN "Manufacturer"
 F 5 "15000-Red" H 10550 1150 50  0000 R CNN "Function"
 	1    10650 1100
 	0    -1   -1   0   
@@ -1874,10 +1946,10 @@ L Device:LED_Small D532
 U 1 1 5BF02A51
 P 10800 1100
 F 0 "D532" H 11050 1100 50  0000 L CNN
-F 1 "LS R976" H 10650 1250 50  0001 L CNN
+F 1 "SM1206NHC-IL" H 10650 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10800 1100 50  0001 C CNN
-F 3 "" V 10800 1100 50  0001 C CNN
-F 4 "Kingbright" H 10800 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf" V 10800 1100 50  0001 C CNN
+F 4 "Bivar" H 10800 1100 60  0001 C CNN "Manufacturer"
 F 5 "Spare-Red" H 10700 1150 50  0000 R CNN "Function"
 	1    10800 1100
 	0    -1   -1   0   
@@ -1887,10 +1959,10 @@ L Device:LED_Small D533
 U 1 1 5BF02B2A
 P 10950 1100
 F 0 "D533" H 11200 1100 50  0000 L CNN
-F 1 "LS R976" H 10800 1250 50  0001 L CNN
+F 1 "SM1206NHC-IL" H 10800 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 10950 1100 50  0001 C CNN
-F 3 "" V 10950 1100 50  0001 C CNN
-F 4 "Kingbright" H 10950 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf" V 10950 1100 50  0001 C CNN
+F 4 "Bivar" H 10950 1100 60  0001 C CNN "Manufacturer"
 F 5 "Spare-Red" H 10850 1150 50  0000 R CNN "Function"
 	1    10950 1100
 	0    -1   -1   0   
@@ -1900,11 +1972,13 @@ L Device:LED_Small D519
 U 1 1 5BF03209
 P 8700 1100
 F 0 "D519" H 8950 1100 50  0000 L CNN
-F 1 "LY R976" H 8550 1250 50  0001 L CNN
+F 1 "SM1206NAC-IL" H 8550 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 8700 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 8700 1100 50  0001 C CNN
-F 4 "Kingbright" H 8700 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NAC-IL.pdf" V 8700 1100 50  0001 C CNN
+F 4 "Bivar" H 8700 1100 60  0001 C CNN "Manufacturer"
 F 5 "9000-Yellow" H 8600 1150 50  0000 R CNN "Function"
+F 6 "LED AMBER CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NAC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    8700 1100
 	0    -1   -1   0   
 $EndComp
@@ -1913,11 +1987,13 @@ L Device:LED_Small D520
 U 1 1 5BF03466
 P 8850 1100
 F 0 "D520" H 9100 1100 50  0000 L CNN
-F 1 "LY R976" H 8700 1250 50  0001 L CNN
+F 1 "SM1206NAC-IL" H 8700 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 8850 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 8850 1100 50  0001 C CNN
-F 4 "Kingbright" H 8850 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NAC-IL.pdf" V 8850 1100 50  0001 C CNN
+F 4 "Bivar" H 8850 1100 60  0001 C CNN "Manufacturer"
 F 5 "9500-Yellow" H 8750 1150 50  0000 R CNN "Function"
+F 6 "LED AMBER CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NAC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    8850 1100
 	0    -1   -1   0   
 $EndComp
@@ -1926,11 +2002,13 @@ L Device:LED_Small D521
 U 1 1 5BF03536
 P 9000 1100
 F 0 "D521" H 9250 1100 50  0000 L CNN
-F 1 "LY R976" H 8850 1250 50  0001 L CNN
+F 1 "SM1206NAC-IL" H 8850 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9000 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 9000 1100 50  0001 C CNN
-F 4 "Kingbright" H 9000 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NAC-IL.pdf" V 9000 1100 50  0001 C CNN
+F 4 "Bivar" H 9000 1100 60  0001 C CNN "Manufacturer"
 F 5 "10000-Yellow" H 8900 1150 50  0000 R CNN "Function"
+F 6 "LED AMBER CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NAC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    9000 1100
 	0    -1   -1   0   
 $EndComp
@@ -1939,11 +2017,13 @@ L Device:LED_Small D522
 U 1 1 5BF03609
 P 9150 1100
 F 0 "D522" H 9400 1100 50  0000 L CNN
-F 1 "LY R976" H 9000 1250 50  0001 L CNN
+F 1 "SM1206NAC-IL" H 9000 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9150 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 9150 1100 50  0001 C CNN
-F 4 "Kingbright" H 9150 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NAC-IL.pdf" V 9150 1100 50  0001 C CNN
+F 4 "Bivar" H 9150 1100 60  0001 C CNN "Manufacturer"
 F 5 "10500-Yellow" H 9050 1150 50  0000 R CNN "Function"
+F 6 "LED AMBER CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NAC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    9150 1100
 	0    -1   -1   0   
 $EndComp
@@ -1952,11 +2032,13 @@ L Device:LED_Small D523
 U 1 1 5BF036DF
 P 9300 1100
 F 0 "D523" H 9550 1100 50  0000 L CNN
-F 1 "LY R976" H 9150 1250 50  0001 L CNN
+F 1 "SM1206NAC-IL" H 9150 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9300 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 9300 1100 50  0001 C CNN
-F 4 "Kingbright" H 9300 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NAC-IL.pdf" V 9300 1100 50  0001 C CNN
+F 4 "Bivar" H 9300 1100 60  0001 C CNN "Manufacturer"
 F 5 "11000-Yellow" H 9200 1150 50  0000 R CNN "Function"
+F 6 "LED AMBER CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NAC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    9300 1100
 	0    -1   -1   0   
 $EndComp
@@ -1965,11 +2047,13 @@ L Device:LED_Small D524
 U 1 1 5BF037B8
 P 9450 1100
 F 0 "D524" H 9700 1100 50  0000 L CNN
-F 1 "LY R976" H 9300 1250 50  0001 L CNN
+F 1 "SM1206NAC-IL" H 9300 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9450 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 9450 1100 50  0001 C CNN
-F 4 "Kingbright" H 9450 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NAC-IL.pdf" V 9450 1100 50  0001 C CNN
+F 4 "Bivar" H 9450 1100 60  0001 C CNN "Manufacturer"
 F 5 "11500-Yellow" H 9350 1150 50  0000 R CNN "Function"
+F 6 "LED AMBER CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NAC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    9450 1100
 	0    -1   -1   0   
 $EndComp
@@ -1978,11 +2062,13 @@ L Device:LED_Small D525
 U 1 1 5BF03BD5
 P 9600 1100
 F 0 "D525" H 9850 1100 50  0000 L CNN
-F 1 "LY R976" H 9450 1250 50  0001 L CNN
+F 1 "SM1206NAC-IL" H 9450 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 9600 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 9600 1100 50  0001 C CNN
-F 4 "Kingbright" H 9600 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NAC-IL.pdf" V 9600 1100 50  0001 C CNN
+F 4 "Bivar" H 9600 1100 60  0001 C CNN "Manufacturer"
 F 5 "12000-Yellow" H 9500 1150 50  0000 R CNN "Function"
+F 6 "LED AMBER CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NAC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    9600 1100
 	0    -1   -1   0   
 $EndComp
@@ -2055,12 +2141,13 @@ L Device:LED_Small D503
 U 1 1 5BF09CDB
 P 6150 1100
 F 0 "D503" H 6400 1100 50  0000 L CNN
-F 1 "LG R971" H 6000 1250 50  0001 L CNN
+F 1 "SM1206NPGC-IL" H 6000 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 6150 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 6150 1100 50  0001 C CNN
-F 4 "Kingbright" H 6150 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 6150 1100 50  0001 C CNN
+F 4 "Bivar" H 6150 1100 60  0001 C CNN "Manufacturer"
 F 5 "1000-Green" H 6050 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    6150 1100
 	0    -1   -1   0   
 $EndComp
@@ -2069,12 +2156,13 @@ L Device:LED_Small D504
 U 1 1 5BF09EB4
 P 6300 1100
 F 0 "D504" H 6550 1100 50  0000 L CNN
-F 1 "LG R971" H 6150 1250 50  0001 L CNN
+F 1 "SM1206NPGC-IL" H 6150 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 6300 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 6300 1100 50  0001 C CNN
-F 4 "Kingbright" H 6300 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 6300 1100 50  0001 C CNN
+F 4 "Bivar" H 6300 1100 60  0001 C CNN "Manufacturer"
 F 5 "1500-Green" H 6200 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    6300 1100
 	0    -1   -1   0   
 $EndComp
@@ -2083,12 +2171,13 @@ L Device:LED_Small D505
 U 1 1 5BF09F6C
 P 6450 1100
 F 0 "D505" H 6700 1100 50  0000 L CNN
-F 1 "LG R971" H 6300 1250 50  0001 L CNN
+F 1 "SM1206NPGC-IL" H 6300 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 6450 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 6450 1100 50  0001 C CNN
-F 4 "Kingbright" H 6450 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 6450 1100 50  0001 C CNN
+F 4 "Bivar" H 6450 1100 60  0001 C CNN "Manufacturer"
 F 5 "2000-Green" H 6350 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    6450 1100
 	0    -1   -1   0   
 $EndComp
@@ -2097,12 +2186,13 @@ L Device:LED_Small D506
 U 1 1 5BF0A027
 P 6600 1100
 F 0 "D506" H 6850 1100 50  0000 L CNN
-F 1 "LG R971" H 6450 1250 50  0001 L CNN
+F 1 "SM1206NPGC-IL" H 6450 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 6600 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 6600 1100 50  0001 C CNN
-F 4 "Kingbright" H 6600 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 6600 1100 50  0001 C CNN
+F 4 "Bivar" H 6600 1100 60  0001 C CNN "Manufacturer"
 F 5 "2500-Green" H 6500 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    6600 1100
 	0    -1   -1   0   
 $EndComp
@@ -2111,12 +2201,13 @@ L Device:LED_Small D507
 U 1 1 5BF0A0E5
 P 6750 1100
 F 0 "D507" H 7000 1100 50  0000 L CNN
-F 1 "LG R971" H 6600 1250 50  0001 L CNN
+F 1 "SM1206NPGC-IL" H 6600 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 6750 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 6750 1100 50  0001 C CNN
-F 4 "Kingbright" H 6750 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 6750 1100 50  0001 C CNN
+F 4 "Bivar" H 6750 1100 60  0001 C CNN "Manufacturer"
 F 5 "3000-Green" H 6650 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    6750 1100
 	0    -1   -1   0   
 $EndComp
@@ -2125,12 +2216,13 @@ L Device:LED_Small D508
 U 1 1 5BF0A1A6
 P 6900 1100
 F 0 "D508" H 7150 1100 50  0000 L CNN
-F 1 "LG R971" H 6750 1250 50  0001 L CNN
+F 1 "SM1206NPGC-IL" H 6750 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 6900 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 6900 1100 50  0001 C CNN
-F 4 "Kingbright" H 6900 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 6900 1100 50  0001 C CNN
+F 4 "Bivar" H 6900 1100 60  0001 C CNN "Manufacturer"
 F 5 "3500-Green" H 6800 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    6900 1100
 	0    -1   -1   0   
 $EndComp
@@ -2139,12 +2231,13 @@ L Device:LED_Small D509
 U 1 1 5BF0A26A
 P 7050 1100
 F 0 "D509" H 7300 1100 50  0000 L CNN
-F 1 "LG R971" H 6900 1250 50  0001 L CNN
+F 1 "SM1206NPGC-IL" H 6900 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 7050 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 7050 1100 50  0001 C CNN
-F 4 "Kingbright" H 7050 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 7050 1100 50  0001 C CNN
+F 4 "Bivar" H 7050 1100 60  0001 C CNN "Manufacturer"
 F 5 "4000-Green" H 6950 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    7050 1100
 	0    -1   -1   0   
 $EndComp
@@ -2153,12 +2246,13 @@ L Device:LED_Small D510
 U 1 1 5BF0A331
 P 7200 1100
 F 0 "D510" H 7450 1100 50  0000 L CNN
-F 1 "LG R971" H 7050 1250 50  0001 L CNN
+F 1 "SM1206NPGC-IL" H 7050 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 7200 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 7200 1100 50  0001 C CNN
-F 4 "Kingbright" H 7200 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 7200 1100 50  0001 C CNN
+F 4 "Bivar" H 7200 1100 60  0001 C CNN "Manufacturer"
 F 5 "4500-Green" H 7100 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    7200 1100
 	0    -1   -1   0   
 $EndComp
@@ -2167,12 +2261,13 @@ L Device:LED_Small D511
 U 1 1 5BF0A3FB
 P 7350 1100
 F 0 "D511" H 7600 1100 50  0000 L CNN
-F 1 "LG R971" H 7200 1250 50  0001 L CNN
+F 1 "SM1206NPGC-IL" H 7200 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 7350 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 7350 1100 50  0001 C CNN
-F 4 "Kingbright" H 7350 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 7350 1100 50  0001 C CNN
+F 4 "Bivar" H 7350 1100 60  0001 C CNN "Manufacturer"
 F 5 "5000-Green" H 7250 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    7350 1100
 	0    -1   -1   0   
 $EndComp
@@ -2181,12 +2276,13 @@ L Device:LED_Small D512
 U 1 1 5BF0A4C8
 P 7500 1100
 F 0 "D512" H 7750 1100 50  0000 L CNN
-F 1 "LG R971" H 7350 1250 50  0001 L CNN
+F 1 "SM1206NPGC-IL" H 7350 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 7500 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 7500 1100 50  0001 C CNN
-F 4 "Kingbright" H 7500 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 7500 1100 50  0001 C CNN
+F 4 "Bivar" H 7500 1100 60  0001 C CNN "Manufacturer"
 F 5 "5500-Green" H 7400 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    7500 1100
 	0    -1   -1   0   
 $EndComp
@@ -2195,12 +2291,13 @@ L Device:LED_Small D513
 U 1 1 5BF0A598
 P 7650 1100
 F 0 "D513" H 7900 1100 50  0000 L CNN
-F 1 "LG R971" H 7500 1250 50  0001 L CNN
+F 1 "SM1206NPGC-IL" H 7500 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 7650 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 7650 1100 50  0001 C CNN
-F 4 "Kingbright" H 7650 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 7650 1100 50  0001 C CNN
+F 4 "Bivar" H 7650 1100 60  0001 C CNN "Manufacturer"
 F 5 "6000-Green" H 7550 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    7650 1100
 	0    -1   -1   0   
 $EndComp
@@ -2209,12 +2306,13 @@ L Device:LED_Small D514
 U 1 1 5BF0A66B
 P 7800 1100
 F 0 "D514" H 8050 1100 50  0000 L CNN
-F 1 "LG R971" H 7650 1250 50  0001 L CNN
+F 1 "SM1206NPGC-IL" H 7650 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 7800 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 7800 1100 50  0001 C CNN
-F 4 "Kingbright" H 7800 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 7800 1100 50  0001 C CNN
+F 4 "Bivar" H 7800 1100 60  0001 C CNN "Manufacturer"
 F 5 "6500-Green" H 7700 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    7800 1100
 	0    -1   -1   0   
 $EndComp
@@ -2223,12 +2321,13 @@ L Device:LED_Small D515
 U 1 1 5BF0A741
 P 7950 1100
 F 0 "D515" H 8200 1100 50  0000 L CNN
-F 1 "LG R971" H 7800 1250 50  0001 L CNN
+F 1 "SM1206NPGC-IL" H 7800 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 7950 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 7950 1100 50  0001 C CNN
-F 4 "Kingbright" H 7950 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 7950 1100 50  0001 C CNN
+F 4 "Bivar" H 7950 1100 60  0001 C CNN "Manufacturer"
 F 5 "7000-Green" H 7850 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    7950 1100
 	0    -1   -1   0   
 $EndComp
@@ -2237,12 +2336,13 @@ L Device:LED_Small D516
 U 1 1 5BF0A81A
 P 8100 1100
 F 0 "D516" H 8350 1100 50  0000 L CNN
-F 1 "LG R971" H 7950 1250 50  0001 L CNN
+F 1 "SM1206NPGC-IL" H 7950 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 8100 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 8100 1100 50  0001 C CNN
-F 4 "Kingbright" H 8100 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 8100 1100 50  0001 C CNN
+F 4 "Bivar" H 8100 1100 60  0001 C CNN "Manufacturer"
 F 5 "7500-Green" H 8000 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    8100 1100
 	0    -1   -1   0   
 $EndComp
@@ -2251,12 +2351,13 @@ L Device:LED_Small D517
 U 1 1 5BF0B0D1
 P 8250 1100
 F 0 "D517" H 8500 1100 50  0000 L CNN
-F 1 "LG R971" H 8100 1250 50  0001 L CNN
+F 1 "SM1206NPGC-IL" H 8100 1250 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 8250 1100 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 8250 1100 50  0001 C CNN
-F 4 "Kingbright" H 8250 1100 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf" V 8250 1100 50  0001 C CNN
+F 4 "Bivar" H 8250 1100 60  0001 C CNN "Manufacturer"
 F 5 "8000-Green" H 8150 1150 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    8250 1100
 	0    -1   -1   0   
 $EndComp
@@ -2493,11 +2594,13 @@ L Device:LED_Small D550
 U 1 1 5C7E4ACB
 P 1650 900
 F 0 "D550" H 1900 900 50  0000 L CNN
-F 1 "LY R976" H 1500 1050 50  0000 L CNN
+F 1 "SM1206NAC-IL" H 1500 1050 50  0000 L CNN
 F 2 "LEDs:LED_1206" V 1650 900 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 1650 900 50  0001 C CNN
-F 4 "Kingbright" H 1650 900 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NAC-IL.pdf" V 1650 900 50  0001 C CNN
+F 4 "Bivar" H 1650 900 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 1550 950 50  0000 R CNN "Function"
+F 6 "LED AMBER CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NAC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    1650 900 
 	0    -1   -1   0   
 $EndComp
@@ -2506,11 +2609,13 @@ L Device:LED_Small D551
 U 1 1 5C7E5217
 P 1800 900
 F 0 "D551" H 2050 900 50  0000 L CNN
-F 1 "LY R976" H 1650 1050 50  0001 L CNN
+F 1 "SM1206NAC-IL" H 1650 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 1800 900 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 1800 900 50  0001 C CNN
-F 4 "Kingbright" H 1800 900 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NAC-IL.pdf" V 1800 900 50  0001 C CNN
+F 4 "Bivar" H 1800 900 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 1700 950 50  0001 R CNN "Function"
+F 6 "LED AMBER CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NAC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    1800 900 
 	0    -1   -1   0   
 $EndComp
@@ -2519,11 +2624,13 @@ L Device:LED_Small D552
 U 1 1 5C7E53BB
 P 1950 900
 F 0 "D552" H 2200 900 50  0000 L CNN
-F 1 "LY R976" H 1800 1050 50  0001 L CNN
+F 1 "SM1206NAC-IL" H 1800 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 1950 900 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 1950 900 50  0001 C CNN
-F 4 "Kingbright" H 1950 900 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NAC-IL.pdf" V 1950 900 50  0001 C CNN
+F 4 "Bivar" H 1950 900 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 1850 950 50  0001 R CNN "Function"
+F 6 "LED AMBER CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NAC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    1950 900 
 	0    -1   -1   0   
 $EndComp
@@ -2532,11 +2639,13 @@ L Device:LED_Small D553
 U 1 1 5C7E545B
 P 2100 900
 F 0 "D553" H 2350 900 50  0000 L CNN
-F 1 "LY R976" H 1950 1050 50  0001 L CNN
+F 1 "SM1206NAC-IL" H 1950 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 2100 900 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 2100 900 50  0001 C CNN
-F 4 "Kingbright" H 2100 900 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NAC-IL.pdf" V 2100 900 50  0001 C CNN
+F 4 "Bivar" H 2100 900 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 2000 950 50  0001 R CNN "Function"
+F 6 "LED AMBER CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NAC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    2100 900 
 	0    -1   -1   0   
 $EndComp
@@ -2545,11 +2654,13 @@ L Device:LED_Small D554
 U 1 1 5C7E54FD
 P 2250 900
 F 0 "D554" H 2500 900 50  0000 L CNN
-F 1 "LY R976" H 2100 1050 50  0001 L CNN
+F 1 "SM1206NAC-IL" H 2100 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 2250 900 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 2250 900 50  0001 C CNN
-F 4 "Kingbright" H 2250 900 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NAC-IL.pdf" V 2250 900 50  0001 C CNN
+F 4 "Bivar" H 2250 900 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 2150 950 50  0001 R CNN "Function"
+F 6 "LED AMBER CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NAC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    2250 900 
 	0    -1   -1   0   
 $EndComp
@@ -2558,11 +2669,13 @@ L Device:LED_Small D555
 U 1 1 5C7E55A1
 P 2400 900
 F 0 "D555" H 2650 900 50  0000 L CNN
-F 1 "LY R976" H 2250 1050 50  0001 L CNN
+F 1 "SM1206NAC-IL" H 2250 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 2400 900 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224SYCK-F01.pdf" V 2400 900 50  0001 C CNN
-F 4 "Kingbright" H 2400 900 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NAC-IL.pdf" V 2400 900 50  0001 C CNN
+F 4 "Bivar" H 2400 900 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 2300 950 50  0001 R CNN "Function"
+F 6 "LED AMBER CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 7 "SM1206NAC-IL" H 0   0   50  0001 C CNN "Part Number"
 	1    2400 900 
 	0    -1   -1   0   
 $EndComp
@@ -2571,10 +2684,12 @@ L Device:R_Pack08 RN508
 U 1 1 5C7E5A36
 P 1950 1700
 F 0 "RN508" V 1450 1700 50  0000 C CNN
-F 1 "220 Ohm (8x)" V 2350 1700 50  0000 C CNN
+F 1 "150 Ohm (8x)" V 2350 1700 50  0000 C CNN
 F 2 "Bourns 4800P:Bourns 4800P SOM-16" V 2425 1700 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/54/800P-777115.pdf" H 1950 1700 50  0001 C CNN
-F 4 "4816P-1-221LF" V 1950 1700 60  0001 C CNN "Part Number"
+F 3 "https://www.bourns.com/docs/Product-Datasheets/4800P.pdf" H 1950 1700 50  0001 C CNN
+F 4 "4816P-1-151LF" V 1950 1700 60  0001 C CNN "Part Number"
+F 5 "RES ARRAY 8 RES 150 OHM 16SOIC" H 0   0   50  0001 C CNN "Description"
+F 6 "Bourns" H 0   0   50  0001 C CNN "Manufacturer"
 	1    1950 1700
 	-1   0    0    -1  
 $EndComp
@@ -2648,10 +2763,12 @@ L Device:R_Pack08 RN509
 U 1 1 5CC4FE43
 P 3100 1700
 F 0 "RN509" V 2600 1700 50  0000 C CNN
-F 1 "180 Ohm (8x)" V 3500 1700 50  0000 C CNN
+F 1 "150 Ohm (8x)" V 3500 1700 50  0000 C CNN
 F 2 "Bourns 4800P:Bourns 4800P SOM-16" V 3575 1700 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/54/800P-777115.pdf" H 3100 1700 50  0001 C CNN
-F 4 "4816P-1-181LF" V 3100 1700 60  0001 C CNN "Part Number"
+F 3 "https://www.bourns.com/docs/Product-Datasheets/4800P.pdf" H 3100 1700 50  0001 C CNN
+F 4 "4816P-1-151LF" V 3100 1700 60  0001 C CNN "Part Number"
+F 5 "RES ARRAY 8 RES 150 OHM 16SOIC" H 0   0   50  0001 C CNN "Description"
+F 6 "Bourns" H 0   0   50  0001 C CNN "Manufacturer"
 	1    3100 1700
 	-1   0    0    -1  
 $EndComp
@@ -2660,10 +2777,10 @@ L Device:LED_Small D556
 U 1 1 5CC5038A
 P 2800 900
 F 0 "D556" H 3050 900 50  0000 L CNN
-F 1 "LS R976" H 2650 1050 50  0000 L CNN
+F 1 "SM1206NHC-IL" H 2650 1050 50  0000 L CNN
 F 2 "LEDs:LED_1206" V 2800 900 50  0001 C CNN
-F 3 "" V 2800 900 50  0001 C CNN
-F 4 "Kingbright" H 2800 900 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf" V 2800 900 50  0001 C CNN
+F 4 "Bivar" H 2800 900 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 2700 950 50  0000 R CNN "Function"
 	1    2800 900 
 	0    -1   -1   0   
@@ -2673,10 +2790,10 @@ L Device:LED_Small D557
 U 1 1 5CC509D8
 P 2950 900
 F 0 "D557" H 3200 900 50  0000 L CNN
-F 1 "LS R976" H 2800 1050 50  0001 L CNN
+F 1 "SM1206NHC-IL" H 2800 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 2950 900 50  0001 C CNN
-F 3 "" V 2950 900 50  0001 C CNN
-F 4 "Kingbright" H 2950 900 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf" V 2950 900 50  0001 C CNN
+F 4 "Bivar" H 2950 900 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 2850 950 50  0001 R CNN "Function"
 	1    2950 900 
 	0    -1   -1   0   
@@ -2686,10 +2803,10 @@ L Device:LED_Small D558
 U 1 1 5CC50B84
 P 3100 900
 F 0 "D558" H 3350 900 50  0000 L CNN
-F 1 "LS R976" H 2950 1050 50  0001 L CNN
+F 1 "SM1206NHC-IL" H 2950 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 3100 900 50  0001 C CNN
-F 3 "" V 3100 900 50  0001 C CNN
-F 4 "Kingbright" H 3100 900 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf" V 3100 900 50  0001 C CNN
+F 4 "Bivar" H 3100 900 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 3000 950 50  0001 R CNN "Function"
 	1    3100 900 
 	0    -1   -1   0   
@@ -2699,10 +2816,10 @@ L Device:LED_Small D559
 U 1 1 5CC50C34
 P 3250 900
 F 0 "D559" H 3500 900 50  0000 L CNN
-F 1 "LS R976" H 3100 1050 50  0001 L CNN
+F 1 "SM1206NHC-IL" H 3100 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 3250 900 50  0001 C CNN
-F 3 "" V 3250 900 50  0001 C CNN
-F 4 "Kingbright" H 3250 900 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf" V 3250 900 50  0001 C CNN
+F 4 "Bivar" H 3250 900 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 3150 950 50  0001 R CNN "Function"
 	1    3250 900 
 	0    -1   -1   0   
@@ -2712,10 +2829,10 @@ L Device:LED_Small D560
 U 1 1 5CC50CE6
 P 3400 900
 F 0 "D560" H 3650 900 50  0000 L CNN
-F 1 "LS R976" H 3250 1050 50  0001 L CNN
+F 1 "SM1206NHC-IL" H 3250 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 3400 900 50  0001 C CNN
-F 3 "" V 3400 900 50  0001 C CNN
-F 4 "Kingbright" H 3400 900 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf" V 3400 900 50  0001 C CNN
+F 4 "Bivar" H 3400 900 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 3300 950 50  0001 R CNN "Function"
 	1    3400 900 
 	0    -1   -1   0   
@@ -2725,10 +2842,10 @@ L Device:LED_Small D561
 U 1 1 5CC50D9A
 P 3550 900
 F 0 "D561" H 3800 900 50  0000 L CNN
-F 1 "LS R976" H 3400 1050 50  0001 L CNN
+F 1 "SM1206NHC-IL" H 3400 1050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 3550 900 50  0001 C CNN
-F 3 "" V 3550 900 50  0001 C CNN
-F 4 "Kingbright" H 3550 900 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf" V 3550 900 50  0001 C CNN
+F 4 "Bivar" H 3550 900 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 3450 950 50  0001 R CNN "Function"
 	1    3550 900 
 	0    -1   -1   0   
@@ -2896,7 +3013,10 @@ P 1550 2300
 F 0 "Q501" H 1755 2346 50  0000 L CNN
 F 1 "SI2308CDS-T1-GE3" H 1755 2255 50  0000 L CNN
 F 2 "TO_SOT_Packages_SMD:SOT-23" H 1750 2400 50  0001 C CNN
-F 3 "~" H 1550 2300 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/77744/si2308cds.pdf" H 1550 2300 50  0001 C CNN
+F 4 "MOSFET N-CH 60V 2.6A SOT23-3" H 0   0   50  0001 C CNN "Description"
+F 5 "Vishay" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "SI2308CDS-T1-GE3" H 0   0   50  0001 C CNN "Part Number"
 	1    1550 2300
 	1    0    0    -1  
 $EndComp
@@ -2907,7 +3027,10 @@ P 2700 2300
 F 0 "Q502" H 2905 2346 50  0000 L CNN
 F 1 "SI2308CDS-T1-GE3" H 2905 2255 50  0000 L CNN
 F 2 "TO_SOT_Packages_SMD:SOT-23" H 2900 2400 50  0001 C CNN
-F 3 "~" H 2700 2300 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/77744/si2308cds.pdf" H 2700 2300 50  0001 C CNN
+F 4 "MOSFET N-CH 60V 2.6A SOT23-3" H 0   0   50  0001 C CNN "Description"
+F 5 "Vishay" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "SI2308CDS-T1-GE3" H 0   0   50  0001 C CNN "Part Number"
 	1    2700 2300
 	1    0    0    -1  
 $EndComp
@@ -2921,12 +3044,13 @@ L Device:LED_Small D562
 U 1 1 5C942392
 P 5600 6300
 F 0 "D562" H 5850 6300 50  0000 L CNN
-F 1 "LG R971" H 5450 6450 50  0000 L CNN
+F 1 "SM1206NUWC-IL" H 5450 6450 50  0000 L CNN
 F 2 "LEDs:LED_1206" V 5600 6300 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 5600 6300 50  0001 C CNN
-F 4 "Kingbright" H 5600 6300 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NUWC-IL.pdf" V 5600 6300 50  0001 C CNN
+F 4 "Bivar" H 5600 6300 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_A" H 5500 6350 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NUWC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED WHITE DIFFUSED 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    5600 6300
 	1    0    0    -1  
 $EndComp
@@ -2935,12 +3059,13 @@ L Device:LED_Small D563
 U 1 1 5C9429B6
 P 5600 6450
 F 0 "D563" H 5850 6450 50  0000 L CNN
-F 1 "LG R971" H 5450 6600 50  0001 L CNN
+F 1 "SM1206NUWC-IL" H 5450 6600 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 5600 6450 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 5600 6450 50  0001 C CNN
-F 4 "Kingbright" H 5600 6450 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NUWC-IL.pdf" V 5600 6450 50  0001 C CNN
+F 4 "Bivar" H 5600 6450 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_B" H 5500 6500 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NUWC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED WHITE DIFFUSED 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    5600 6450
 	1    0    0    -1  
 $EndComp
@@ -2949,12 +3074,13 @@ L Device:LED_Small D564
 U 1 1 5C942F96
 P 5600 6600
 F 0 "D564" H 5850 6600 50  0000 L CNN
-F 1 "LG R971" H 5450 6750 50  0001 L CNN
+F 1 "SM1206NUWC-IL" H 5450 6750 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 5600 6600 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 5600 6600 50  0001 C CNN
-F 4 "Kingbright" H 5600 6600 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NUWC-IL.pdf" V 5600 6600 50  0001 C CNN
+F 4 "Bivar" H 5600 6600 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_C" H 5500 6650 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NUWC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED WHITE DIFFUSED 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    5600 6600
 	1    0    0    -1  
 $EndComp
@@ -2963,12 +3089,13 @@ L Device:LED_Small D565
 U 1 1 5C943054
 P 5600 6750
 F 0 "D565" H 5850 6750 50  0000 L CNN
-F 1 "LG R971" H 5450 6900 50  0001 L CNN
+F 1 "SM1206NUWC-IL" H 5450 6900 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 5600 6750 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 5600 6750 50  0001 C CNN
-F 4 "Kingbright" H 5600 6750 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NUWC-IL.pdf" V 5600 6750 50  0001 C CNN
+F 4 "Bivar" H 5600 6750 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_D" H 5500 6800 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NUWC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED WHITE DIFFUSED 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    5600 6750
 	1    0    0    -1  
 $EndComp
@@ -2977,12 +3104,13 @@ L Device:LED_Small D566
 U 1 1 5C943114
 P 5600 6900
 F 0 "D566" H 5850 6900 50  0000 L CNN
-F 1 "LG R971" H 5450 7050 50  0001 L CNN
+F 1 "SM1206NUWC-IL" H 5450 7050 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 5600 6900 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 5600 6900 50  0001 C CNN
-F 4 "Kingbright" H 5600 6900 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NUWC-IL.pdf" V 5600 6900 50  0001 C CNN
+F 4 "Bivar" H 5600 6900 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_E" H 5500 6950 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NUWC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED WHITE DIFFUSED 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    5600 6900
 	1    0    0    -1  
 $EndComp
@@ -2991,12 +3119,13 @@ L Device:LED_Small D567
 U 1 1 5C9431D6
 P 5600 7050
 F 0 "D567" H 5850 7050 50  0000 L CNN
-F 1 "LG R971" H 5450 7200 50  0001 L CNN
+F 1 "SM1206NUWC-IL" H 5450 7200 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 5600 7050 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 5600 7050 50  0001 C CNN
-F 4 "Kingbright" H 5600 7050 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NUWC-IL.pdf" V 5600 7050 50  0001 C CNN
+F 4 "Bivar" H 5600 7050 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_F" H 5500 7100 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NUWC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED WHITE DIFFUSED 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    5600 7050
 	1    0    0    -1  
 $EndComp
@@ -3029,12 +3158,13 @@ L Device:LED_Small D568
 U 1 1 5C9EBB7E
 P 5600 7200
 F 0 "D568" H 5850 7200 50  0000 L CNN
-F 1 "LG R971" H 5450 7350 50  0001 L CNN
+F 1 "SM1206NUWC-IL" H 5450 7350 50  0001 L CNN
 F 2 "LEDs:LED_1206" V 5600 7200 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/APD3224ZGCK-F01.pdf" V 5600 7200 50  0001 C CNN
-F 4 "Kingbright" H 5600 7200 60  0001 C CNN "Manufacturer"
+F 3 "https://www.bivar.com/Portals/0/Products/SM1206NUWC-IL.pdf" V 5600 7200 50  0001 C CNN
+F 4 "Bivar" H 5600 7200 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_G" H 5500 7250 50  0000 R CNN "Function"
-F 6 "APD3224ZGCK-F01" H 0   0   50  0001 C CNN "Part Number"
+F 6 "SM1206NUWC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 7 "LED WHITE DIFFUSED 1206 SMD" H 0   0   50  0001 C CNN "Description"
 	1    5600 7200
 	1    0    0    -1  
 $EndComp
@@ -3163,8 +3293,10 @@ P 5450 1200
 F 0 "C507" H 5475 1300 50  0000 L CNN
 F 1 "47uF" H 5475 1100 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 5488 1050 50  0001 C CNN
-F 3 "" H 5450 1200 50  0001 C CNN
-F 4 "Ceramic 47uF 10V X5R 1206" H 5450 1200 50  0001 C CNN "Description"
+F 3 "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT31CR61A476KE13-01.pdf" H 5450 1200 50  0001 C CNN
+F 4 "CAP CER 47UF 10V X5R 1206" H 5450 1200 50  0001 C CNN "Description"
+F 5 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "GRT31CR61A476KE13L" H 0   0   50  0001 C CNN "Part Number"
 	1    5450 1200
 	-1   0    0    1   
 $EndComp
@@ -3253,7 +3385,10 @@ P 6900 3850
 F 0 "HS1" V 7100 3900 50  0000 L CNN
 F 1 "Heatsink_Pad" V 7100 3300 50  0000 L CNN
 F 2 "Measurement_Points:Measurement_Point_Round-TH_Small" H 6912 3800 50  0001 C CNN
-F 3 "~" H 6912 3800 50  0001 C CNN
+F 3 "N/A" H 6912 3800 50  0001 C CNN
+F 4 "Pad for routing" H 0   0   50  0001 C CNN "Description"
+F 5 "N/A" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "N/A" H 0   0   50  0001 C CNN "Part Number"
 	1    6900 3850
 	0    -1   -1   0   
 $EndComp
@@ -3266,7 +3401,10 @@ P 6900 4350
 F 0 "HS2" V 7100 4400 50  0000 L CNN
 F 1 "Heatsink_Pad" V 7050 3800 50  0000 L CNN
 F 2 "Measurement_Points:Measurement_Point_Round-TH_Small" H 6912 4300 50  0001 C CNN
-F 3 "~" H 6912 4300 50  0001 C CNN
+F 3 "N/A" H 6912 4300 50  0001 C CNN
+F 4 "Pad for routing" H 0   0   50  0001 C CNN "Description"
+F 5 "N/A" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "N/A" H 0   0   50  0001 C CNN "Part Number"
 	1    6900 4350
 	0    -1   -1   0   
 $EndComp
@@ -3279,7 +3417,10 @@ P 6900 4800
 F 0 "HS3" V 7100 4850 50  0000 L CNN
 F 1 "Heatsink_Pad" V 7050 4250 50  0000 L CNN
 F 2 "Measurement_Points:Measurement_Point_Round-TH_Small" H 6912 4750 50  0001 C CNN
-F 3 "~" H 6912 4750 50  0001 C CNN
+F 3 "N/A" H 6912 4750 50  0001 C CNN
+F 4 "Pad for routing" H 0   0   50  0001 C CNN "Description"
+F 5 "N/A" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "N/A" H 0   0   50  0001 C CNN "Part Number"
 	1    6900 4800
 	0    -1   -1   0   
 $EndComp
@@ -3309,4 +3450,10 @@ Wire Bus Line
 	6600 3000 11100 3000
 Wire Bus Line
 	6450 2750 11100 2750
+Text Notes 500  1550 0    39   ~ 0
+2 x 6 LEDs\nTight Packed @ 60 degree rotations\nYellow - SM1206NAC-IL\nVf = 2.1V, If = 20mA 1450mcd\nMin R: 145 Ohm\nRed SM1206NHC-IL\nVf = 2.1V If = 20mA 1250mcd\nMin R: 145 Ohm
+Text Notes 6700 6350 0    39   ~ 0
+7 LEDs\nSegment Display\nWhite - SM1206NAC-IL\nVf = 2.1V, If = 20mA 1250mcd\nMin R: 145 Ohm\n
+Text Notes 7750 5350 0    39   ~ 0
+16 LEDs\nPlaced below RPM leds\nBlue - SM1206NBWC-IL\nVf = 3.1V, If = 20mA 950mcd\nMin R: 95 Ohm\n
 $EndSCHEMATC

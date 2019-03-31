@@ -21,7 +21,10 @@ P 5450 3400
 F 0 "U1" H 5450 1800 60  0000 C CNN
 F 1 "SAMD21G18A-AU" H 5450 5000 60  0000 C CNN
 F 2 "Housings_QFP:TQFP-48_7x7mm_Pitch0.5mm" H 2350 3000 60  0001 C CNN
-F 3 "" H 2350 3000 60  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/SAMD21-Family-DataSheet-DS40001882D.pdf" H 2350 3000 60  0001 C CNN
+F 4 "IC MCU 32BIT 256KB FLASH 48TQFP" H 0   0   50  0001 C CNN "Description"
+F 5 "Microchip" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "ATSAMD21G18A-AU" H 0   0   50  0001 C CNN "Part Number"
 	1    5450 3400
 	1    0    0    -1  
 $EndComp
@@ -225,7 +228,8 @@ P 2900 2450
 F 0 "L101" H 2975 2500 50  0000 L CNN
 F 1 "BLM41PG471SN1L" H 2975 2400 50  0000 L CNN
 F 2 "Inductors_SMD:L_1806" V 2830 2450 50  0001 C CNN
-F 3 "" H 2900 2450 50  0001 C CNN
+F 3 "https://www.murata.com/en-us/products/productdata/8796739862558/ENFA0007.pdf" H 2900 2450 50  0001 C CNN
+F 4 "BLM41PG471SN1L" H 0   0   50  0001 C CNN "Part Number"
 	1    2900 2450
 	-1   0    0    1   
 $EndComp
@@ -236,8 +240,11 @@ P 2900 2750
 F 0 "C102" H 2910 2820 50  0000 L CNN
 F 1 "10uF" H 2910 2670 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 2900 2750 50  0001 C CNN
-F 3 "" H 2900 2750 50  0001 C CNN
-F 4 "Ceramic 10uF 25V X5R 1206" H 2900 2750 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf" H 2900 2750 50  0001 C CNN
+F 4 "CAP CER 10UF 25V X5R 1206" H 2900 2750 50  0001 C CNN "Description"
+F 5 "CAP CER 10UF 25V X5R 1206" H 0   0   50  0001 C CNN "Function"
+F 6 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 7 "C1206C106M3PACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    2900 2750
 	1    0    0    -1  
 $EndComp
@@ -248,8 +255,10 @@ P 2650 2750
 F 0 "C101" H 2660 2820 50  0000 L CNN
 F 1 "100nF" H 2660 2670 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 2650 2750 50  0001 C CNN
-F 3 "" H 2650 2750 50  0001 C CNN
-F 4 "Ceramic 0.1uF 10V X7R 1206" H 2650 2750 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 2650 2750 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 1206" H 2650 2750 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    2650 2750
 	-1   0    0    -1  
 $EndComp
@@ -260,7 +269,10 @@ P 3650 1950
 F 0 "Y101" H 3650 2050 50  0000 C CNN
 F 1 "32.768kHz" H 3950 1900 39  0000 C CNN
 F 2 "MS1V-T1K:MS1V-T1K" H 3650 1950 50  0001 C CNN
-F 3 "" H 3650 1950 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/530/MS1V-T1K-1085690.pdf" H 3650 1950 50  0001 C CNN
+F 4 "Crystals 32.768 kHz 7.0 pF +/-20 PPM -40/+85C" H 0   0   50  0001 C CNN "Description"
+F 5 "Micro Crystal Switzerland" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "MS1V-T1K-32.768kHz" H 0   0   50  0001 C CNN "Part Number"
 	1    3650 1950
 	-1   0    0    -1  
 $EndComp
@@ -272,7 +284,9 @@ F 0 "C105" H 3760 1720 50  0000 L CNN
 F 1 "6.8pF" H 3760 1570 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 3750 1650 50  0001 C CNN
 F 3 "" H 3750 1650 50  0001 C CNN
-F 4 "Ceramic 6.8pF 50V C0G/NP0 0805" H 3750 1650 50  0001 C CNN "Description"
+F 4 "CAP CER 6.8PF 50V C0G/NP0 0805" H 3750 1650 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C0805C689J5GACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    3750 1650
 	1    0    0    -1  
 $EndComp
@@ -284,7 +298,9 @@ F 0 "C104" H 3560 1720 50  0000 L CNN
 F 1 "6.8pF" H 3560 1570 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 3550 1650 50  0001 C CNN
 F 3 "" H 3550 1650 50  0001 C CNN
-F 4 "Ceramic 6.8pF 50V C0G/NP0 0805" H 3550 1650 50  0001 C CNN "Description"
+F 4 "CAP CER 6.8PF 50V C0G/NP0 0805" H 3550 1650 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C0805C689J5GACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    3550 1650
 	-1   0    0    -1  
 $EndComp
@@ -295,8 +311,10 @@ P 3000 4000
 F 0 "C103" H 3010 4070 50  0000 L CNN
 F 1 "100nF" H 3010 3920 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 3000 4000 50  0001 C CNN
-F 3 "" H 3000 4000 50  0001 C CNN
-F 4 "Ceramic 0.1uF 10V X7R 1206" H 3000 4000 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 3000 4000 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 1206" H 3000 4000 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    3000 4000
 	0    -1   -1   0   
 $EndComp
@@ -307,8 +325,10 @@ P 7300 3600
 F 0 "C106" H 7310 3670 50  0000 L CNN
 F 1 "100nF" H 7310 3520 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 7300 3600 50  0001 C CNN
-F 3 "" H 7300 3600 50  0001 C CNN
-F 4 "Ceramic 0.1uF 10V X7R 1206" H 7300 3600 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 7300 3600 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 1206" H 7300 3600 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    7300 3600
 	0    -1   -1   0   
 $EndComp
@@ -319,8 +339,10 @@ P 7950 2500
 F 0 "C107" H 7960 2570 50  0000 L CNN
 F 1 "100nF" H 7960 2420 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 7950 2500 50  0001 C CNN
-F 3 "" H 7950 2500 50  0001 C CNN
-F 4 "Ceramic 0.1uF 10V X7R 1206" H 7950 2500 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 7950 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 1206" H 7950 2500 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    7950 2500
 	0    -1   -1   0   
 $EndComp
@@ -331,8 +353,10 @@ P 8100 2600
 F 0 "C108" H 8110 2670 50  0000 L CNN
 F 1 "100nF" H 8110 2520 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 8100 2600 50  0001 C CNN
-F 3 "" H 8100 2600 50  0001 C CNN
-F 4 "Ceramic 0.1uF 10V X7R" H 8100 2600 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 8100 2600 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 1206" H 8100 2600 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    8100 2600
 	0    -1   1    0   
 $EndComp
