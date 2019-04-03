@@ -12,6 +12,12 @@
 
 int data = 0;
 
+/*
+ * RCLK is held low before starting to shift in new registers. SRCK is held low normally. After each SER_IN bit, SRCK
+ * is brought high then back to low before next SER_IN bit. After all 24 SER_IN bits are clocked, pull RCLK high to
+ * apply the new data to the registers and output.
+ */
+
 void setup() {
   Wire.begin();
   
