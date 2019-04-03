@@ -21,7 +21,10 @@ P 1050 1250
 F 0 "J203" H 1050 1450 50  0000 C CNN
 F 1 "Conn_01x04" H 1050 950 50  0000 C CNN
 F 2 "Connectors_JST:JST_VH_B4PS-VH_2x4x3.96mm_Horizontal" H 1050 1250 50  0001 C CNN
-F 3 "" H 1050 1250 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eVH.pdf" H 1050 1250 50  0001 C CNN
+F 4 "CONN HEADER R/A 4POS 3.96MM" H 0   0   50  0001 C CNN "Description"
+F 5 "JST" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "B4PS-VH" H 0   0   50  0001 C CNN "Part Number"
 	1    1050 1250
 	-1   0    0    -1  
 $EndComp
@@ -49,9 +52,12 @@ L conn:Conn_01x06 J204
 U 1 1 5BE9B0A3
 P 1050 2250
 F 0 "J204" H 1050 2550 50  0000 C CNN
-F 1 "TE_84953-6_FPC" H 1050 1850 50  0000 C CNN
+F 1 "84953-6" H 1050 1850 50  0000 C CNN
 F 2 "Connectors_TE-Connectivity:TE_84953-6_1x06_P1.0mm_Horizontal" H 1050 2250 50  0001 C CNN
-F 3 "" H 1050 2250 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=84953&DocType=Customer+Drawing&DocLang=English" H 1050 2250 50  0001 C CNN
+F 4 "CONN FPC TOP 6POS 1.00MM R/A" H 0   0   50  0001 C CNN "Description"
+F 5 "TE" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "84953-6" H 0   0   50  0001 C CNN "Part Number"
 	1    1050 2250
 	-1   0    0    -1  
 $EndComp
@@ -95,8 +101,10 @@ P 1000 3250
 F 0 "SW1" H 1050 3350 50  0000 L CNN
 F 1 "B3W-1020" H 1000 3190 50  0000 C CNN
 F 2 "Buttons_Switches_THT:SW_TH_Tactile_Omron_B3F-10xx" H 1000 3450 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/307/en-b3w-779787.pdf" H 1000 3450 50  0001 C CNN
+F 3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3w.pdf" H 1000 3450 50  0001 C CNN
 F 4 "Omron" H 1000 3250 60  0001 C CNN "Manufacturer"
+F 5 "SWITCH TACTILE SPST-NO 0.05A 24V" H 0   0   50  0001 C CNN "Description"
+F 6 "B3W-1020" H 0   0   50  0001 C CNN "Part Number"
 	1    1000 3250
 	0    1    1    0   
 $EndComp
@@ -131,9 +139,12 @@ L Device:R R201
 U 1 1 5BE9BDD1
 P 1950 3250
 F 0 "R201" V 2030 3250 50  0000 C CNN
-F 1 "10K" V 1950 3250 50  0000 C CNN
+F 1 "10k" V 1950 3250 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206" V 1880 3250 50  0001 C CNN
-F 3 "" H 1950 3250 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1950 3250 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/4W 1206" H 0   0   50  0001 C CNN "Description"
+F 5 "Stackpole" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "RMCF1206JT10K0" H 0   0   50  0001 C CNN "Part Number"
 	1    1950 3250
 	0    1    1    0   
 $EndComp
@@ -146,8 +157,10 @@ P 1950 3050
 F 0 "C201" H 1960 3120 50  0000 L CNN
 F 1 "100pF" H 1960 2970 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 1950 3050 50  0001 C CNN
-F 3 "" H 1950 3050 50  0001 C CNN
-F 4 "Ceramic 100pF 10V X7R 0805" H 1950 3050 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf" H 1950 3050 50  0001 C CNN
+F 4 "CAP CER 100PF 10V X7R 0805" H 1950 3050 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C0805C101K8RAC7800" H 0   0   50  0001 C CNN "Part Number"
 	1    1950 3050
 	0    -1   -1   0   
 $EndComp
@@ -158,7 +171,10 @@ P 1450 3250
 F 0 "R202" V 1530 3250 50  0000 C CNN
 F 1 "330" V 1450 3250 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206" V 1380 3250 50  0001 C CNN
-F 3 "" H 1450 3250 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1450 3250 50  0001 C CNN
+F 4 "RES 330 OHM 5% 1/4W 1206" H 0   0   50  0001 C CNN "Description"
+F 5 "Stackpole" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "RMCF1206JT330R" H 0   0   50  0001 C CNN "Part Number"
 	1    1450 3250
 	0    1    1    0   
 $EndComp
@@ -167,9 +183,12 @@ L Device:R R203
 U 1 1 5BE9CBCA
 P 1950 4150
 F 0 "R203" V 2030 4150 50  0000 C CNN
-F 1 "10K" V 1950 4150 50  0000 C CNN
+F 1 "10k" V 1950 4150 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206" V 1880 4150 50  0001 C CNN
-F 3 "" H 1950 4150 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1950 4150 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/4W 1206" H 0   0   50  0001 C CNN "Description"
+F 5 "Stackpole" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "RMCF1206JT10K0" H 0   0   50  0001 C CNN "Part Number"
 	1    1950 4150
 	0    1    1    0   
 $EndComp
@@ -182,8 +201,10 @@ P 1950 3950
 F 0 "C202" H 1960 4020 50  0000 L CNN
 F 1 "100pF" H 1960 3870 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 1950 3950 50  0001 C CNN
-F 3 "" H 1950 3950 50  0001 C CNN
-F 4 "Ceramic 100pF 10V X7R 0805" H 1950 3950 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf" H 1950 3950 50  0001 C CNN
+F 4 "CAP CER 100PF 10V X7R 0805" H 1950 3950 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C0805C101K8RAC7800" H 0   0   50  0001 C CNN "Part Number"
 	1    1950 3950
 	0    -1   -1   0   
 $EndComp
@@ -194,7 +215,10 @@ P 1450 4150
 F 0 "R204" V 1530 4150 50  0000 C CNN
 F 1 "330" V 1450 4150 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206" V 1380 4150 50  0001 C CNN
-F 3 "" H 1450 4150 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1450 4150 50  0001 C CNN
+F 4 "RES 330 OHM 5% 1/4W 1206" H 0   0   50  0001 C CNN "Description"
+F 5 "Stackpole" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "RMCF1206JT330R" H 0   0   50  0001 C CNN "Part Number"
 	1    1450 4150
 	0    1    1    0   
 $EndComp
@@ -227,7 +251,10 @@ P 3200 2150
 F 0 "J201" H 3200 2450 50  0000 C CNN
 F 1 "USB Micro B" V 3300 2100 50  0000 C CNN
 F 2 "10118192-0001LF:10118192-0001LF" H 3200 2150 50  0001 C CNN
-F 3 "" H 3200 2150 50  0001 C CNN
+F 3 "https://www.amphenol-icc.com/media/wysiwyg/files/drawing/10118192.pdf" H 3200 2150 50  0001 C CNN
+F 4 "Micro USB" H 0   0   50  0001 C CNN "Description"
+F 5 "Amphenol" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "10118192-0001LF" H 0   0   50  0001 C CNN "Part Number"
 	1    3200 2150
 	-1   0    0    -1  
 $EndComp
@@ -249,8 +276,9 @@ P 5200 1950
 F 0 "L201" V 5350 1950 39  0000 C CNN
 F 1 "BLM41PG471SN1L" V 5400 1950 39  0000 C CNN
 F 2 "Inductors_SMD:L_1806" V 5130 1950 50  0001 C CNN
-F 3 "" H 5200 1950 50  0001 C CNN
+F 3 "https://www.murata.com/en-us/products/productdata/8796739862558/ENFA0007.pdf" H 5200 1950 50  0001 C CNN
 F 4 "470 Ohm Ferrite Bead 1806" V 5200 1950 50  0001 C CNN "Description"
+F 5 "BLM41PG471SN1L" V 5200 1950 50  0001 C CNN "Part Number"
 	1    5200 1950
 	0    1    -1   0   
 $EndComp
@@ -261,8 +289,10 @@ P 4450 2500
 F 0 "C203" H 4475 2600 50  0000 L CNN
 F 1 "4.7nF" H 4475 2400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 4488 2350 50  0001 C CNN
-F 3 "" H 4450 2500 50  0001 C CNN
-F 4 "Ceramic 4700pF 10V X7R 1206" H 4450 2500 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1090_X7R_ESD.pdf" H 4450 2500 50  0001 C CNN
+F 4 "CAP CER 1206 4.7NF 50V X7R 10%" H 4450 2500 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C1206C472K5RECAUTO" H 0   0   50  0001 C CNN "Part Number"
 	1    4450 2500
 	1    0    0    1   
 $EndComp
@@ -273,8 +303,10 @@ P 4300 1400
 F 0 "D201" H 4300 1700 39  0000 C CNN
 F 1 "PRTR5V0U2X" V 4300 1400 39  0000 C CNN
 F 2 "TO_SOT_Packages_SMD:SOT-143" H 4300 1400 60  0001 C CNN
-F 3 "" H 4300 1400 60  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PRTR5V0U2X.pdf" H 4300 1400 60  0001 C CNN
 F 4 "ESD Protection Diode" H 4300 1400 50  0001 C CNN "Description"
+F 5 "PRTR5V0U2X,215" H 4300 1400 50  0001 C CNN "Part Number"
+F 6 "Nexperia" H 0   0   50  0001 C CNN "Manufacturer"
 	1    4300 1400
 	0    -1   1    0   
 $EndComp
@@ -299,8 +331,10 @@ P 5600 2500
 F 0 "C204" H 5625 2600 50  0000 L CNN
 F 1 "4.7nF" H 5625 2400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 5638 2350 50  0001 C CNN
-F 3 "" H 5600 2500 50  0001 C CNN
-F 4 "Ceramic 4700pF 10V X7R 1206" H 5600 2500 50  0001 C CNN "Description"
+F 3 "https://content.kemet.com/datasheets/KEM_C1090_X7R_ESD.pdf" H 5600 2500 50  0001 C CNN
+F 4 "CAP CER 1206 4.7NF 50V X7R 10%" H 5600 2500 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "C1206C472K5RECAUTO" H 0   0   50  0001 C CNN "Part Number"
 	1    5600 2500
 	1    0    0    1   
 $EndComp
@@ -462,8 +496,10 @@ P 5950 1950
 F 0 "F201" V 5850 1950 50  0000 C CNN
 F 1 "MF-MSMF050-2" V 5750 1950 50  0000 C CNN
 F 2 "MF-MSMF050-2:MF-MSMF050-2" H 6000 1750 50  0001 L CNN
-F 3 "" H 5950 1950 50  0001 C CNN
+F 3 "https://www.bourns.com/docs/Product-Datasheets/mfmsmf.pdf" H 5950 1950 50  0001 C CNN
 F 4 "500mA Resettable Fuse 1812" V 5950 1950 50  0001 C CNN "Description"
+F 5 "MF-MSMF050-2" H 0   0   50  0001 C CNN "Part Number"
+F 6 "Bourns" H 0   0   50  0001 C CNN "Manufacturer"
 	1    5950 1950
 	0    1    1    0   
 $EndComp
@@ -478,7 +514,10 @@ P 3950 3750
 F 0 "J202" H 3950 4050 50  0000 C CNN
 F 1 "Cortex_Debug" H 3950 3450 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_2x05_Pitch1.27mm" H 4100 3750 39  0001 C CNN
-F 3 "" H 4100 3750 39  0001 C CNN
+F 3 "https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/20021111.pdf" H 4100 3750 39  0001 C CNN
+F 4 "Cortex Debug" H 0   0   50  0001 C CNN "Description"
+F 5 "Amphenol" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "20021111-00010T4LF" H 0   0   50  0001 C CNN "Part Number"
 	1    3950 3750
 	1    0    0    -1  
 $EndComp
@@ -585,8 +624,10 @@ P 1000 4150
 F 0 "SW2" H 1050 4250 50  0000 L CNN
 F 1 "B3W-1020" H 1000 4090 50  0000 C CNN
 F 2 "Buttons_Switches_THT:SW_TH_Tactile_Omron_B3F-10xx" H 1000 4350 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/307/en-b3w-779787.pdf" H 1000 4350 50  0001 C CNN
+F 3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3w.pdf" H 1000 4350 50  0001 C CNN
 F 4 "Omron" H 1000 4150 60  0001 C CNN "Manufacturer"
+F 5 "SWITCH TACTILE SPST-NO 0.05A 24V" H 0   0   50  0001 C CNN "Description"
+F 6 "B3W-1020" H 0   0   50  0001 C CNN "Part Number"
 	1    1000 4150
 	0    1    1    0   
 $EndComp

@@ -1,0 +1,61 @@
+Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet,Part Number,Manufacturer,Function,Output Current,Output Voltage
+1,"Unpolarized capacitor, small symbol",C_Small,C101 C103 C106 C107 C108 C303 C308 C401 C402 C502 C504 C505 C506,100nF,C_1206,13,https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf,C1206F104K3RACTU,KEMET,,,
+2,"Unpolarized capacitor, small symbol",C_Small,C201 C202,100pF,C_0805,2,https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf,C0805C101K8RAC7800,KEMET,,,
+3,"Polarized capacitor, US symbol",CP1,C306,100uF,CP_Tantalum_Case-D_EIA-7343-31_Reflow,1,http://datasheets.avx.com/TPS.pdf,TPSD107K010R0100,AVX,,,
+4,"Unpolarized capacitor, small symbol",C_Small,C102 C302,10uF,C_1206,2,https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf,C1206C106M3PACTU,KEMET,CAP CER 10UF 25V X5R 1206,,
+5,Unpolarized capacitor,C,C301 C307 C501,1uF,C_1206,3,https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf,C1206C105K3PACTU,KEMET,,,
+6,Unpolarized capacitor,C,C203 C204,4.7nF,C_1206,2,https://content.kemet.com/datasheets/KEM_C1090_X7R_ESD.pdf,C1206C472K5RECAUTO,KEMET,,,
+7,Unpolarized capacitor,C,C305 C503,4.7uF,C_1206,2,https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf,C1206C475K3PACTU,KEMET,,,
+8,Unpolarized capacitor,C,C304 C309 C507,47uF,C_1206,3,https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT31CR61A476KE13-01.pdf,GRT31CR61A476KE13L,Murata,,,
+9,"Unpolarized capacitor, small symbol",C_Small,C104 C105,6.8pF,C_0805,2,,C0805C689J5GACTU,KEMET,,,
+10,Diode,D,D301 D302,BYS10-45-E3/TR,D_SMA,2,http://www.vishay.com/docs/86013/bys10.pdf,BYS10-45-E3/TR,Vishay,,,
+11,,PRTR5V0U2X,D201,PRTR5V0U2X,SOT-143,1,https://assets.nexperia.com/documents/data-sheet/PRTR5V0U2X.pdf,"PRTR5V0U2X,215",Nexperia,,,
+12,"Light emitting diode, small symbol",LED_Small,D518 D519 D520 D521 D522 D523 D524 D525 D550 D551 D552 D553 D554 D555,SM1206NAC-IL,LED_1206,14,https://www.bivar.com/Portals/0/Products/SM1206NAC-IL.pdf,SM1206NAC-IL,Bivar,8500-Yellow 9000-Yellow 9500-Yellow 10000-Yellow 10500-Yellow 11000-Yellow 11500-Yellow 12000-Yellow High Temp,,
+13,"Light emitting diode, small symbol",LED_Small,D534 D535 D536 D537 D538 D539 D540 D541 D542 D543 D544 D545 D546 D547 D548 D549,SM1206NBWC-IL,LED_1206,16,https://www.bivar.com/Portals/0/Products/SM1206NBWC-IL.pdf,SM1206NBWC-IL,Bivar,Shift_1 Shift_2 Shift_3 Shift_4 Shift_5 Shift_6 Shift_7 Shift_8 Shift_9 Shift_10 Shift_11 Shift_12 Shift_13 Shift_14 Shift_15 Shift_16,,
+14,"Light emitting diode, small symbol",LED_Small,D526 D527 D528 D529 D530 D531 D532 D533 D556 D557 D558 D559 D560 D561,SM1206NHC-IL,LED_1206,14,https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf,,Bivar,12500-Red 13000-Red 13500-Red 14000-Red 14500-Red 15000-Red Spare-Red Oil Pressure,,
+15,"Light emitting diode, small symbol",LED_Small,D502 D503 D504 D505 D506 D507 D508 D509 D510 D511 D512 D513 D514 D515 D516 D517,SM1206NPGC-IL,LED_1206,16,https://www.bivar.com/Portals/0/Products/SM1206NPGC-IL.pdf,SM1206NPGC-IL,Bivar,500-Green 1000-Green 1500-Green 2000-Green 2500-Green 3000-Green 3500-Green 4000-Green 4500-Green 5000-Green 5500-Green 6000-Green 6500-Green 7000-Green 7500-Green 8000-Green,,
+16,"Light emitting diode, small symbol",LED_Small,D562 D563 D564 D565 D566 D567 D568,SM1206NUWC-IL,LED_1206,7,https://www.bivar.com/Portals/0/Products/SM1206NUWC-IL.pdf,SM1206NUWC-IL,Bivar,7Seg_A 7Seg_B 7Seg_C 7Seg_D 7Seg_E 7Seg_F 7Seg_G,,
+17,"Resettable fuse, polymeric positive temperature coefficient",Polyfuse,F201,MF-MSMF050-2,MF-MSMF050-2,1,https://www.bourns.com/docs/Product-Datasheets/mfmsmf.pdf,MF-MSMF050-2,Bourns,,,
+18,Heatsink with electrical connection,Heatsink_Pad,HS1 HS2 HS3,Heatsink_Pad,Measurement_Point_Round-TH_Small,3,N/A,N/A,N/A,,,
+19,"Generic connector, single row, 01x06",Conn_01x06,J204,84953-6,TE_84953-6_1x06_P1.0mm_Horizontal,1,https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=84953&DocType=Customer+Drawing&DocLang=English,84953-6,TE,,,
+20,"Generic connector, single row, 01x04",Conn_01x04,J203,Conn_01x04,JST_VH_B4PS-VH_2x4x3.96mm_Horizontal,1,http://www.jst-mfg.com/product/pdf/eng/eVH.pdf,B4PS-VH,JST,,,
+21,,Cortex_Debug,J202,Cortex_Debug,Pin_Header_Straight_2x05_Pitch1.27mm,1,https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/20021111.pdf,20021111-00010T4LF,Amphenol,,,
+22,"Generic connector, single row, 01x06",Conn_01x06,J201,USB Micro B,10118192-0001LF,1,https://www.amphenol-icc.com/media/wysiwyg/files/drawing/10118192.pdf,10118192-0001LF,Amphenol,,,
+23,Ferrite bead,Ferrite_Bead,L301 L302,742792310 Ferrite Bead,742792310,2,https://katalog.we-online.de/pbs/datasheet/742792310.pdf,742792310,Wurth,,,
+24,"Ferrite bead, small symbol",Ferrite_Bead_Small,L101,BLM41PG471SN1L,L_1806,1,https://www.murata.com/en-us/products/productdata/8796739862558/ENFA0007.pdf,BLM41PG471SN1L,,,,
+25,Ferrite bead,Ferrite_Bead,L201,BLM41PG471SN1L,L_1806,1,https://www.murata.com/en-us/products/productdata/8796739862558/ENFA0007.pdf,BLM41PG471SN1L,,,,
+26,"P-MOSFET transistor, gate/source/drain",Q_PMOS_GSD,Q301,IRLML6402TRPBF,SOT-23,1,https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c,IRLML6402TRPBF,Infineon,,,
+27,"N-MOSFET transistor, gate/source/drain",Q_NMOS_GSD,Q501 Q502,SI2308CDS-T1-GE3,SOT-23,2,http://www.vishay.com/docs/77744/si2308cds.pdf,SI2308CDS-T1-GE3,Vishay,,,
+28,Resistor,R,R201 R203 R401,10k,R_1206,3,https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf,RMCF1206JT10K0,Stackpole,,,
+29,Resistor,R,R403,120,R_0805,1,https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf,RMCF0805FT120R,Stackpole,,,
+30,Resistor,R,R402,16.9k,R_1206,1,https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf,RMCF1206FT16K9,Stackpole,,,
+31,Resistor,R,R202 R204,330,R_1206,2,https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf,RMCF1206JT330R,Stackpole,,,
+32,Resistor,R,R301 R302 R303,909,R_1206,3,https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf,RMCF1206FT909R,Stackpole,RES 909 OHM 1% 1/4W 1206,,
+33,"8 resistor network, parallel topology, DIP package",R_Pack08,RN501 RN502 RN503 RN504 RN505 RN506 RN507 RN508 RN509,150 Ohm (8x),Bourns 4800P SOM-16,9,https://www.bourns.com/docs/Product-Datasheets/4800P.pdf,4816P-1-151LF,Bourns,,,
+34,,B3W-1000,SW1 SW2,B3W-1020,SW_TH_Tactile_Omron_B3F-10xx,2,https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3w.pdf,B3W-1020,Omron,,,
+35,"3A 25V Linear Regulator, Fixed Output 5.0V, TO-220/TO-263",LM1085-5.0,U303,LM1085-5.0,TO-263-3_TabPin2_Tab,1,http://www.ti.com/lit/ds/symlink/lm1085.pdf,LM1085ISX-5.0/NOPB,TI,,,
+36,"Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263",uA7805,U301,LM7805,SOT-223-3_TabPin2,1,http://www.ti.com/lit/ds/symlink/lm340.pdf,LM7805MP/NOPB,TI,,,
+37,"Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263",uA7805,U304,LM7805,SOT-223-3_TabPin2,1,http://www.ti.com/lit/ds/symlink/lm340.pdf,LM7805MP/NOPB,TI,,,
+38,"150mA 16V Low-noise Low-dropout Regulator With Shutdown, 3.3V output voltage, SOT-23-5",LP2985-3.3,U302,LP2985-3.3,SOT-23-5,1,http://www.ti.com/lit/ds/symlink/lp2985-n.pdf,LP2985A-33DBVR,TI,,150mA,3.3V
+39,"Stand-Alone CAN Controller with SPI Interface, SOIC-18",MCP2515-xSO,U401,MCP2515-I/ST,SOIC-18W_7.5x11.6mm_Pitch1.27mm,1,http://ww1.microchip.com/downloads/en/DeviceDoc/MCP2515-Stand-Alone-CAN-Controller-with-SPI-20001801J.pdf,MCP2515-I/ST,Microchip,,,
+40,,MCP2551-I_SN,U402,MCP2551-I/SN,SOIC-8_3.9x4.9mm_Pitch1.27mm,1,http://ww1.microchip.com/downloads/en/DeviceDoc/20001667G.pdf,MCP2551T-I/SN,Microchip,,,
+41,,SAMD21G18A-AU,U1,SAMD21G18A-AU,TQFP-48_7x7mm_Pitch0.5mm,1,http://ww1.microchip.com/downloads/en/DeviceDoc/SAMD21-Family-DataSheet-DS40001882D.pdf,ATSAMD21G18A-AU,Microchip,,,
+42,16-Bit Line Driver Shift Register with Diagnostics,TLC6C5816,U502 U503 U504,TLC6C5816,TLC6C5816,3,http://www.ti.com/lit/ds/symlink/tlc6c5816-q1.pdf,TLC6C5816QPWPRQ1,TI,,,
+43,TLC6C598 Shift Register,TLC6C598,U501,TLC6C598,TSSOP-16_4.4x5mm_Pitch0.65mm,1,http://www.ti.com/lit/ds/symlink/tlc6c598.pdf,TLC6C598QPWRQ1,TI,,,
+44,"Two pin crystal, small symbol",Crystal_Small,Y101,32.768kHz,MS1V-T1K,1,https://www.mouser.com/datasheet/2/530/MS1V-T1K-1085690.pdf,MS1V-T1K-32.768kHz,Micro Crystal Switzerland,,,
+45,Three pin ceramic resonator,Resonator,Y401,Resonator,CSTNE16M0V530000R0,1,https://www.murata.com/en/products/productdata/8801162231838/SPEC-CSTNE16M0V530000R0.pdf,CSTNE16M0V530000R0,Murata,,,
+
+
+
+
+
+Component Groups:,45
+Component Count:,149
+Fitted Components:,149
+Number of PCBs:,1
+Total components:,149
+Schematic Version:,
+Schematic Date:,
+BoM Date:,3/31/2019 3:17:35 PM
+Schematic Source:,E:\Projects\GitHub\DashboardPCB\FSAE Main Panel\FSAE Main Panel.sch
+KiCad Version:,Eeschema (5.0.2)-1
