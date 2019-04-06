@@ -95,9 +95,11 @@ DWC_SCLK
 Text Notes 1100 1850 0    39   ~ 0
 Dashboard Warning Light Cluster
 $Comp
-L Omron:B3W-1000 SW1
+L FSAE-Main-Panel-rescue:B3W-1000-Omron SW1
 U 1 1 5BE9B978
 P 1000 3250
+AR Path="/5BE9B978" Ref="SW1"  Part="1" 
+AR Path="/5BD00E86/5BE9B978" Ref="SW1"  Part="1" 
 F 0 "SW1" H 1050 3350 50  0000 L CNN
 F 1 "B3W-1020" H 1000 3190 50  0000 C CNN
 F 2 "Buttons_Switches_THT:SW_TH_Tactile_Omron_B3F-10xx" H 1000 3450 50  0001 C CNN
@@ -618,9 +620,11 @@ SW2_L
 Text Label 1200 3250 0    50   ~ 0
 SW1_L
 $Comp
-L Omron:B3W-1000 SW2
+L FSAE-Main-Panel-rescue:B3W-1000-Omron SW2
 U 1 1 5C8459CA
 P 1000 4150
+AR Path="/5C8459CA" Ref="SW2"  Part="1" 
+AR Path="/5BD00E86/5C8459CA" Ref="SW2"  Part="1" 
 F 0 "SW2" H 1050 4250 50  0000 L CNN
 F 1 "B3W-1020" H 1000 4090 50  0000 C CNN
 F 2 "Buttons_Switches_THT:SW_TH_Tactile_Omron_B3F-10xx" H 1000 4350 50  0001 C CNN
