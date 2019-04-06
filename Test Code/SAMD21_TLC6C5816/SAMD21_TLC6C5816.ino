@@ -138,10 +138,10 @@ void TCC0_setup() {
   PORT->Group[PORTA].DIRSET.reg = PORT_PA20;      // Set pin as output
   PORT->Group[PORTA].OUTCLR.reg = PORT_PA20;      // Set pin to low
 
-  // Enable the port multiplexer for PA15
+  // Enable the port multiplexer for PA20
   PORT->Group[PORTA].PINCFG[20].reg |= PORT_PINCFG_PMUXEN;
 
-  // Connect TCC0 timer to PA20. Function F is TCC0/WO[6] for PA15.
+  // Connect TCC0 timer to PA20. Function F is TCC0/WO[6] for PA20.
   // PMUX = pin num / 2
   // Odd pin num (2*n + 1): use PMUXO
   // Even pin num (2*n): use PMUXE

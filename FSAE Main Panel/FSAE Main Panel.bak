@@ -506,8 +506,6 @@ Wire Wire Line
 Wire Wire Line
 	3850 4400 3750 4400
 Wire Wire Line
-	3750 4500 3850 4500
-Wire Wire Line
 	3850 4600 3750 4600
 Wire Wire Line
 	3750 4700 3850 4700
@@ -562,7 +560,7 @@ NoConn ~ 7050 2200
 NoConn ~ 3850 2300
 NoConn ~ 3850 2800
 NoConn ~ 3850 3800
-NoConn ~ 3750 4500
+NoConn ~ 3850 4500
 Text GLabel 7150 4000 2    39   Input ~ 0
 ~PWM_GREEN
 Text GLabel 7150 4100 2    39   Input ~ 0
