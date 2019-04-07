@@ -5,9 +5,13 @@
 #define GEAR_SET 10
 
 int frame_data[80];
+//int frame_data[] = {0,0,0,0,0,0,0,0, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 0,0,0,0,0,0,0,0, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 0,0,0,0,0,0,0,0, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1};
 int k = 0;
 
 void setup() {
+  //SerialUSB.begin(9600);
+  //while(!SerialUSB);
+  
   //HIGH TEMP
   PORT->Group[PORTA].PINCFG[3].reg &= ~PORT_PINCFG_PMUXEN;    //disable PMUX
   PORT->Group[PORTA].DIRSET.reg = PORT_PA03;      // Set pin as output
@@ -53,6 +57,8 @@ void setup() {
 }
 
 void loop() {
+  DATA_IN();
+  
   for(int i = 0; i < 58; i++) {
     DATA_IN();
     if(i == 0 || i == 16 || i == 34) {
@@ -65,15 +71,23 @@ void loop() {
     delay(100);
   }
   
+  
+  /*
+  for(int i = 0; i < 80; i++) {
+    SerialUSB.print(frame_data[i]);
+  }
+  SerialUSB.println("");
+  */
+  
   k = 0;
   clear_frame();
-  delay(100);
+  delay(500);
 }
 
 void DATA_IN() {
   PORT->Group[PORTA].OUTCLR.reg = PORT_PA12;
   delayMicroseconds(1);
-  for(int i = 0; i < 80; i++) {
+  for(int i = 79; i >= 0; i--) {
     if (frame_data[i] == 1) {
       digitalWrite(FRAME_IN, HIGH);
       delayMicroseconds(1);
@@ -139,7 +153,6 @@ void TCC0_setup() {
   while (TCC0->SYNCBUSY.bit.PER);
   //--------------------------------------------------------------------------------------------------
   //                                             PWM GREEN
-  // Set PWM signal to output 50% duty cycle
   // n for CC[n] is determined by n = x % 4 where x is from WO[x]
   TCC0->CC[1].reg = 480 * .95;
   while (TCC0->SYNCBUSY.bit.CC1);
@@ -157,10 +170,9 @@ void TCC0_setup() {
   PORT->Group[PORTA].PMUX[11].reg = PORT_PMUX_PMUXO_F;
   //--------------------------------------------------------------------------------------------------
   //                                              PWM YELLOW
-  // Set PWM signal to output 50% duty cycle
   // n for CC[n] is determined by n = x % 4 where x is from WO[x]
-  TCC0->CC[0].reg = 480 * .9;
-  while (TCC0->SYNCBUSY.bit.CC2);
+  TCC0->CC[0].reg = 480 * .95;
+  while (TCC0->SYNCBUSY.bit.CC0);
   
   // Configure PA22 to be output
   PORT->Group[PORTA].DIRSET.reg = PORT_PA22;      // Set pin as output
@@ -176,10 +188,9 @@ void TCC0_setup() {
   PORT->Group[PORTA].PMUX[11].reg = PORT_PMUX_PMUXE_F;
   //--------------------------------------------------------------------------------------------------
   //                                                PWM RED
-  // Set PWM signal to output 50% duty cycle
   // n for CC[n] is determined by n = x % 4 where x is from WO[x]
   TCC0->CC[3].reg = 480 * .95;
-  while (TCC0->SYNCBUSY.bit.CC2);
+  while (TCC0->SYNCBUSY.bit.CC3);
   
   // Configure PA17 to be output
   PORT->Group[PORTA].DIRSET.reg = PORT_PA17;      // Set pin as output
@@ -195,7 +206,6 @@ void TCC0_setup() {
   PORT->Group[PORTA].PMUX[8].reg = PORT_PMUX_PMUXO_F;
   //--------------------------------------------------------------------------------------------------
   //                                                PWM BLUE
-  // Set PWM signal to output 50% duty cycle
   // n for CC[n] is determined by n = x % 4 where x is from WO[x]
   TCC0->CC[2].reg = 480 * .95;
   while (TCC0->SYNCBUSY.bit.CC2);
@@ -214,10 +224,9 @@ void TCC0_setup() {
   PORT->Group[PORTA].PMUX[8].reg = PORT_PMUX_PMUXE_F;
   //--------------------------------------------------------------------------------------------------
   //                                                PWM GEAR
-  // Set PWM signal to output 50% duty cycle
   // n for CC[n] is determined by n = x % 4 where x is from WO[x]
   TCC0->CC[3].reg = 480 * .95;
-  while (TCC0->SYNCBUSY.bit.CC2);
+  while (TCC0->SYNCBUSY.bit.CC3);
   
   // Configure PA19 to be output
   PORT->Group[PORTA].DIRSET.reg = PORT_PA19;      // Set pin as output
