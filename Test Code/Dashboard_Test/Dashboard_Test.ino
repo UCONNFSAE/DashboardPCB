@@ -3,10 +3,18 @@
 #define FRAME_CLK 5
 #define GEAR_CLR 6
 #define GEAR_SET 10
+#define frame_size 80
 
-int frame_data[80];
-//int frame_data[] = {0,0,0,0,0,0,0,0, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 0,0,0,0,0,0,0,0, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 0,0,0,0,0,0,0,0, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1};
+int frame_data[frame_size];
+//int frame_data[] = {1,1,1,1,1,1,1,1, 0,0,0,0,0,0,0,0, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 0,0,0,0,0,0,0,0, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 0,0,0,0,0,0,0,0, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1};
 int k = 0;
+
+// 01111111 10000000 111111111 11111110 00000011 11111111 11111100 0000011 11111111 11111100
+// 11111111 10000000 111111111 11111110 00000011 11111111 11111100 0000011 11111111 11110000
+// 11111111 00000001 111111111 11111100 00000111 11111111 11111000 0000111 11111111 11110000
+// 11111111 00000001 111111111 11111110 00000011 11111111 11111000 0000111 11111111 11110000
+
+
 
 void setup() {
   //SerialUSB.begin(9600);
@@ -47,31 +55,32 @@ void setup() {
   digitalWrite(GEAR_CLR, LOW);    //initialize as low to clear registers
   digitalWrite(GEAR_SET, LOW);
 
-  for(int i = 0; i < 80; i++) {
+  for(int i = 0; i < frame_size; i++) {
     frame_data[i] = 0;
   }
 
   digitalWrite(GEAR_CLR, HIGH);
-
   TCC0_setup();
 }
 
 void loop() {
   DATA_IN();
-  
-  for(int i = 0; i < 58; i++) {
+
+  for(int i = 0; i < 55; i++) {
     DATA_IN();
-    if(i == 0 || i == 16 || i == 34) {
+    frame_data[k] = 1;
+    if(i == 8 || i == 24 || i == 40) {
       k += 8;
     }
+    
     else {
       k++;
     }
-    frame_data[k] = 1;
+    
+    
     delay(100);
   }
-  
-  
+
   /*
   for(int i = 0; i < 80; i++) {
     SerialUSB.print(frame_data[i]);
@@ -87,8 +96,8 @@ void loop() {
 void DATA_IN() {
   PORT->Group[PORTA].OUTCLR.reg = PORT_PA12;
   delayMicroseconds(1);
-  for(int i = 79; i >= 0; i--) {
-    if (frame_data[i] == 1) {
+  for(int i = frame_size - 1; i >= 0; i--) {
+    if(frame_data[i] == 1) {
       digitalWrite(FRAME_IN, HIGH);
       delayMicroseconds(1);
       digitalWrite(FRAME_CLK, HIGH);
@@ -98,7 +107,6 @@ void DATA_IN() {
       delayMicroseconds(1);
       digitalWrite(FRAME_IN, LOW);
       delayMicroseconds(1);
-
     }
 
     else {
@@ -107,7 +115,6 @@ void DATA_IN() {
       digitalWrite(FRAME_CLK, LOW);
       delayMicroseconds(1);
     }
-  
   }
   delayMicroseconds(1);  
   PORT->Group[PORTA].OUTSET.reg = PORT_PA12;
@@ -117,7 +124,7 @@ void DATA_IN() {
 }
 
 void clear_frame() {
-  for(int i = 0; i < 80; i++) {
+  for(int i = 0; i < frame_size; i++) {
     frame_data[i] = 0;
   }
 }
@@ -151,10 +158,13 @@ void TCC0_setup() {
   // Set the period (the number to count to (TOP) before resetting timer)
   TCC0->PER.reg = 479;    //100kHz frequency
   while (TCC0->SYNCBUSY.bit.PER);
+  
+  int duty_ratio = 480 * 0.97;
+  
   //--------------------------------------------------------------------------------------------------
   //                                             PWM GREEN
   // n for CC[n] is determined by n = x % 4 where x is from WO[x]
-  TCC0->CC[1].reg = 480 * .95;
+  TCC0->CC[1].reg = duty_ratio;
   while (TCC0->SYNCBUSY.bit.CC1);
 
   // Configure PA23 to be output
@@ -171,7 +181,8 @@ void TCC0_setup() {
   //--------------------------------------------------------------------------------------------------
   //                                              PWM YELLOW
   // n for CC[n] is determined by n = x % 4 where x is from WO[x]
-  TCC0->CC[0].reg = 480 * .95;
+  
+  TCC0->CC[0].reg = 480*.95;
   while (TCC0->SYNCBUSY.bit.CC0);
   
   // Configure PA22 to be output
@@ -185,11 +196,13 @@ void TCC0_setup() {
   // PMUX = pin num / 2
   // Odd pin num (2*n + 1): use PMUXO
   // Even pin num (2*n): use PMUXE
-  PORT->Group[PORTA].PMUX[11].reg = PORT_PMUX_PMUXE_F;
+  PORT->Group[PORTA].PMUX[11].reg |= PORT_PMUX_PMUXE_F;
+  
   //--------------------------------------------------------------------------------------------------
   //                                                PWM RED
   // n for CC[n] is determined by n = x % 4 where x is from WO[x]
-  TCC0->CC[3].reg = 480 * .95;
+  
+  TCC0->CC[3].reg = duty_ratio;
   while (TCC0->SYNCBUSY.bit.CC3);
   
   // Configure PA17 to be output
@@ -207,7 +220,7 @@ void TCC0_setup() {
   //--------------------------------------------------------------------------------------------------
   //                                                PWM BLUE
   // n for CC[n] is determined by n = x % 4 where x is from WO[x]
-  TCC0->CC[2].reg = 480 * .95;
+  TCC0->CC[2].reg = duty_ratio;
   while (TCC0->SYNCBUSY.bit.CC2);
   
   // Configure PA17 to be output
@@ -221,12 +234,12 @@ void TCC0_setup() {
   // PMUX = pin num / 2
   // Odd pin num (2*n + 1): use PMUXO
   // Even pin num (2*n): use PMUXE
-  PORT->Group[PORTA].PMUX[8].reg = PORT_PMUX_PMUXE_F;
+  PORT->Group[PORTA].PMUX[8].reg |= PORT_PMUX_PMUXE_F;
   //--------------------------------------------------------------------------------------------------
   //                                                PWM GEAR
   // n for CC[n] is determined by n = x % 4 where x is from WO[x]
-  TCC0->CC[3].reg = 480 * .95;
-  while (TCC0->SYNCBUSY.bit.CC3);
+  //TCC0->CC[3].reg = duty_ratio;
+  //while (TCC0->SYNCBUSY.bit.CC3);
   
   // Configure PA19 to be output
   PORT->Group[PORTA].DIRSET.reg = PORT_PA19;      // Set pin as output
@@ -235,7 +248,7 @@ void TCC0_setup() {
   // Enable the port multiplexer for PA19
   PORT->Group[PORTA].PINCFG[19].reg |= PORT_PINCFG_PMUXEN;
 
-  // Connect TCC0 timer to PA16. Function F is TCC0/WO[3] for PA19.
+  // Connect TCC0 timer to PA19. Function F is TCC0/WO[3] for PA19.
   // PMUX = pin num / 2
   // Odd pin num (2*n + 1): use PMUXO
   // Even pin num (2*n): use PMUXE
