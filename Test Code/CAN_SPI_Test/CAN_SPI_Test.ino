@@ -36,7 +36,7 @@ SPISettings Standard(2000000, MSBFIRST, SPI_MODE0);
 SPIClass CAN_SPI(&sercom0, CAN_MISO, CAN_SCK, CAN_MOSI, SPI_PAD_0_SCK_3, SERCOM_RX_PAD_1);
 
 void setup() {
-  
+
   pinMode(CAN_SS, OUTPUT);
   digitalWrite(CAN_SS, HIGH);
 
