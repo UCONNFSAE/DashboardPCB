@@ -11,6 +11,17 @@ int val = 0;
 void setup() {
   pinMode(MC, OUTPUT);
   digitalWrite(MC, LOW);
+  pinMode(SDA, OUTPUT);
+  pinMode(SCL, OUTPUT);
+
+  digitalWrite(SDA, HIGH);
+  delayMicroseconds(1);
+  for(int i = 0; i < 16; i++) {
+    digitalWrite(SCL, HIGH);
+    delayMicroseconds(1);
+    digitalWrite(SCL, LOW);
+    delayMicroseconds(1);
+  }
   Wire.begin();
 /*
   Wire.beginTransmission(0xFF);
@@ -35,18 +46,18 @@ void setup() {
 }
 
 void loop() {
-  /*
+  Wire.beginTransmission(device_address>>1);
+  Wire.write(0x02); // register address
+  Wire.write(0x01); // increment mode 1
+  Wire.write(0x03);
+  Wire.write(brightness);
+  Wire.write(brightness);
+  Wire.write(brightness);
   for(int i = 0; i <= 23; i++)
   {
-    Wire.write(PWM);
+    Wire.write(0x00);
   }
+  Wire.endTransmission();
 
-  Wire.write(0x00); // loopback to 0x06 register
-  delay(500);*/
-  Wire.beginTransmission(0xFF);
-  Wire.endTransmission();
-  Wire.beginTransmission(0xFF);
-  Wire.endTransmission();
-  Wire.beginTransmission(device_address);
-  delay(50);
+  delay(1000);
 }
