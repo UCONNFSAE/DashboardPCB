@@ -40,22 +40,8 @@ void setup() {
 
   SerialUSB.begin(115200);
   while(!SerialUSB);
-
-  //Serial.begin(115200);
-
-  //CAN.setSPI(&CAN_SPI);
-  //Changed the SPIClass used by the CAN Bus Shield from the default
-  //CAN_SPI.begin();
-
-  // Pin Peripheral must be manually changed after CAN_SPI.begin()
-  //pinPeripheral(CAN_MISO, PIO_SERCOM);
-  //pinPeripheral(CAN_SCK, PIO_SERCOM);
-  //pinPeripheral(CAN_MOSI, PIO_SERCOM);
-
-  //SerialUSB.println(CAN.begin(CAN_100KBPS));
-  //SerialUSB.println("Hello?");
   
-  while (CAN_OK != CAN.begin(CAN_1000KBPS)) {             // init can bus : baudrate = 500k
+  while (CAN_OK != CAN.begin(CAN_500KBPS)) {             // init can bus : baudrate = 500k
     //Serial.println("CAN BUS Shield init fail");
     SerialUSB.println("CAN BUS Shield init fail");
     SerialUSB.println("Init CAN BUS Shield again");
