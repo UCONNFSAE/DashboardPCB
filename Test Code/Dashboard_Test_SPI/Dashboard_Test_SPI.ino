@@ -1,6 +1,7 @@
 
 #include <SPI.h>
 #include "wiring_private.h"
+#include <mcp_can.h>
 
 #define FRAME_IN 2
 #define FRAME_CLK 5
@@ -8,48 +9,65 @@
 #define GEAR_SET 10
 
 /*
- * CAN_MISO / Arduino Pin ATN / PA13
- * CAN_MOSI / Arduino Pin 2 / PA14
- * CAN_SCK  / Arduino Pin 5 / PA15
+ * LED_MISO / Arduino Pin ATN / PA13
+ * LED_MOSI / Arduino Pin 2 / PA14
+ * LED_SCK  / Arduino Pin 5 / PA15
  */
 
-#define CAN_MISO  ATN
-#define CAN_SCK   5
-#define CAN_MOSI  2
+#define LED_MISO  ATN
+#define LED_SCK   5
+#define LED_MOSI  2
+
+/*
+ * CAN_MOSI / Arduino Pin A3 / PA4
+ * CAN_MISO / Arduino Pin A4 / PA5
+ * CAN_SCK  / Arduino Pin 9  / PA7
+ * CAN_CS   / Arduino Pin 8  / PA6
+ */
+
+#define CAN_MISO  18
+#define CAN_SCK   9
+#define CAN_MOSI  17
+#define CAN_CS    8
 
 // Override default SPI settings
-SPISettings SHIFT(5000000, LSBFIRST, SPI_MODE0);
+SPISettings SHIFT(5000000, MSBFIRST, SPI_MODE0);
 
-// Declare a new SPIClass specifically for the CAN Bus Controller
-SPIClass SHIFT_SPI(&sercom4, CAN_MISO, CAN_SCK, CAN_MOSI, SPI_PAD_2_SCK_3, SERCOM_RX_PAD_0);
+// Declare a new SPIClass specifically for the LED drivers
+SPIClass SHIFT_SPI(&sercom4, LED_MISO, LED_SCK, LED_MOSI, SPI_PAD_2_SCK_3, SERCOM_RX_PAD_0);
 
-int duty_ratio_g = 480 * 0.50;
-int duty_ratio_y = 480 * 0.30;
-int duty_ratio_r = 480 * 0.80;
-int duty_ratio_b = 480 * 0.30;
-int duty_ratio_w = 480 * 0.10;
+MCP_CAN CAN(CAN_CS);
 
-int8_t red = 0xFF;
-int8_t yellow = 0xFF;
-int8_t blue1 = 0xFF;
-int8_t blue2 = 0xFF;
-int8_t green1 = 0xFF;
-int8_t green2 = 0xFF;
-int8_t white = 0xFF;
+int duty_ratio_g = 480 * 0.50;  //0.5
+int duty_ratio_y = 480 * 0.30;  //0.3
+int duty_ratio_r = 480 * 0.80;  //0.8
+int duty_ratio_b = 480 * 0.30;  //0.3
+int duty_ratio_w = 480 * 0.10;  //0.1
+
+int8_t red = 1;
+int8_t yellow = 1;
+int8_t blue1 = 1;
+int8_t blue2 = 1;
+int8_t green1 = 1;
+int8_t green2 = 1;
+int8_t white = 1;
 
 void setup() {
   //SerialUSB.begin(9600);
   //while(!SerialUSB);
+
+  pinMode(CAN_CS, OUTPUT);
+  digitalWrite(CAN_CS, HIGH);
   
   //HIGH TEMP
   PORT->Group[PORTA].PINCFG[3].reg &= ~PORT_PINCFG_PMUXEN;    //disable PMUX
   PORT->Group[PORTA].DIRSET.reg = PORT_PA03;      // Set pin as output
-  PORT->Group[PORTA].OUTSET.reg = PORT_PA03;      // Set pin to low
+  PORT->Group[PORTA].OUTCLR.reg = PORT_PA03;      // Set pin to low
   
   //OIL PRESSURE
   PORT->Group[PORTB].PINCFG[8].reg &= ~PORT_PINCFG_PMUXEN;    //disable PMUX
   PORT->Group[PORTB].DIRSET.reg = PORT_PB08;      // Set pin as output
-  PORT->Group[PORTB].OUTSET.reg = PORT_PB08;      // Set pin to low
+  PORT->Group[PORTB].OUTCLR.reg = PORT_PB08;      // Set pin to low
   
   //RPM EN
   PORT->Group[PORTB].PINCFG[10].reg &= ~PORT_PINCFG_PMUXEN;   //disable PMUX
@@ -78,17 +96,53 @@ void setup() {
   
   SHIFT_SPI.begin();
 
-  // Pin Peripheral must be manually changed after CAN_SPI.begin()
-  pinPeripheral(CAN_SCK, PIO_SERCOM_ALT);
-  pinPeripheral(CAN_MOSI, PIO_SERCOM_ALT);
+  // Pin Peripheral must be manually changed after SHIFT_SPI.begin()
+  pinPeripheral(LED_SCK, PIO_SERCOM_ALT);
+  pinPeripheral(LED_MOSI, PIO_SERCOM_ALT);
 
-  //TCC0_setup();
-  //TCC2_setup();
+  while (CAN_OK != CAN.begin(CAN_500KBPS))
+  {
+    //SerialUSB.println("CAN Bus Failed to Initialize, Retrying...");
+    delay(100);
+  }
+  //SerialUSB.println("CAN BUS Initialized!");
+  
+  TCC0_setup();
+  TCC2_setup();
   
   digitalWrite(GEAR_CLR, HIGH);
+
+  for(int i = 0; i < 8; i++) {
+    red |= (red << 1);
+    yellow |= (yellow << 1);
+    blue1 |= (blue1 << 1);
+    blue2 |= (blue2 << 1);
+    green1 |= (green1 << 1);
+    green2 |= (green2 << 1);
+    white |= (white << 1);
+    send_frame();
+    delay(500);
+  }
+/*
+  int8_t red = 0x0F;
+  int8_t yellow = 0x0F;
+  int8_t blue1 = 0x0F;
+  int8_t blue2 = 0x0F;
+  int8_t green1 = 0x0F;
+  int8_t green2 = 0x0F;
+  int8_t white = 0x0F;
+  send_frame();
+  delay(1000);
+*/
 }
 
 void loop() {
+  send_frame();
+  delay(1000);
+  clear_all();
+}
+
+void send_frame() {
   PORT->Group[PORTA].OUTCLR.reg = PORT_PA12;  // RPM SET LOW
   SHIFT_SPI.beginTransaction(SHIFT);
   SHIFT_SPI.transfer(0x00);
@@ -106,8 +160,6 @@ void loop() {
   digitalWrite(GEAR_SET, HIGH);
   delayMicroseconds(1);
   digitalWrite(GEAR_SET, LOW);
-  delay(100);
-  clear_all();
 }
 
 void clear_all() {
@@ -208,15 +260,6 @@ void TCC0_setup() {
   // Enable output (start PWM)
   TCC0->CTRLA.reg |= (TCC_CTRLA_ENABLE);
   while (TCC0->SYNCBUSY.bit.ENABLE);              // Wait for synchronization
-}
-
-void TCC0_setup() {
-  TCC1->CTRLA.reg |= TCC_CTRLA_PRESCALER(TCC_CTRLA_PRESCALER_DIV1_VAL);
-
-  TCC1->WAVE.reg = TCC_WAVE_WAVEGEN_MFRQ;
-  while (TCC1->SYNCBUSY.bit.WAVE);
-  
-  TCC1->CC[0].reg = 
 }
 
 void TCC2_setup() { 
