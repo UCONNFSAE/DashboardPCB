@@ -31,18 +31,18 @@
 #define CAN_CS    8
 
 // Override default SPI settings
-SPISettings SHIFT(5000000, MSBFIRST, SPI_MODE0);
+SPISettings SHIFT(2000000, MSBFIRST, SPI_MODE0);
 
 // Declare a new SPIClass specifically for the LED drivers
 SPIClass SHIFT_SPI(&sercom4, LED_MISO, LED_SCK, LED_MOSI, SPI_PAD_2_SCK_3, SERCOM_RX_PAD_0);
 
 MCP_CAN CAN(CAN_CS);
 
-int duty_ratio_g = 480 * 0.50;  //0.5
-int duty_ratio_y = 480 * 0.30;  //0.3
-int duty_ratio_r = 480 * 0.80;  //0.8
-int duty_ratio_b = 480 * 0.30;  //0.3
-int duty_ratio_w = 480 * 0.10;  //0.1
+int duty_ratio_g = 480 * 0.95;  //0.5
+int duty_ratio_y = 480 * 0.95;  //0.3
+int duty_ratio_r = 480 * 0.95;  //0.8
+int duty_ratio_b = 480 * 0.95;  //0.3
+int duty_ratio_w = 480 * 0.95;  //0.1
 
 int8_t red = 1;
 int8_t yellow = 1;
@@ -51,6 +51,16 @@ int8_t blue2 = 1;
 int8_t green1 = 1;
 int8_t green2 = 1;
 int8_t white = 1;
+
+// gear display
+// 0, g, f, e, d, c, b, a
+int8_t n = 0b01010100;
+int8_t one = 0b00000110;
+int8_t two = 0b01010011;
+int8_t three = 0b01001111;
+int8_t four = 0b01100110;
+int8_t five = 0b00101101;
+int8_t six = 0b01111101;
 
 void setup() {
   //SerialUSB.begin(9600);
@@ -112,34 +122,138 @@ void setup() {
   
   digitalWrite(GEAR_CLR, HIGH);
 
-  for(int i = 0; i < 8; i++) {
-    red |= (red << 1);
-    yellow |= (yellow << 1);
-    blue1 |= (blue1 << 1);
-    blue2 |= (blue2 << 1);
-    green1 |= (green1 << 1);
-    green2 |= (green2 << 1);
-    white |= (white << 1);
-    send_frame();
-    delay(500);
-  }
-/*
-  int8_t red = 0x0F;
-  int8_t yellow = 0x0F;
-  int8_t blue1 = 0x0F;
-  int8_t blue2 = 0x0F;
-  int8_t green1 = 0x0F;
-  int8_t green2 = 0x0F;
-  int8_t white = 0x0F;
+  red = 0;
+  yellow = 0;
+  blue1 = 0;
+  blue2 = 0;
+  green1 = 0;
+  green2 = 0;
+  white = 0;
+
+  //send_frame();
+  //delay(1000);
+  //send_frame();
+  //delay(1000);
+
+  clear_all();
+  
+  red = 0b00000001;
+  yellow = 0b00000001;
+  blue1 = 0b00000001;
+  blue2 = 0b00000001;
+  green1 = 0b00000001;
+  green2 = 0b00000001;
+  white = 0b00000001;
+  send_frame();
+  delay(100);
+
+  red = 0b00000011;
+  yellow = 0b00000011;
+  blue1 = 0b00000011;
+  blue2 = 0b00000011;
+  green1 = 0b00000011;
+  green2 = 0b00000011;
+  white = 0b00000011;
+  send_frame();
+  delay(100);
+  
+  red = 0b00000111;
+  yellow = 0b00000111;
+  blue1 = 0b00000111;
+  blue2 = 0b00000111;
+  green1 = 0b00000111;
+  green2 = 0b00000111;
+  white = 0b00000111;
+  send_frame();
+  delay(100);
+
+  red = 0b00001111;
+  yellow = 0b00001111;
+  blue1 = 0b00001111;
+  blue2 = 0b00001111;
+  green1 = 0b00001111;
+  green2 = 0b00001111;
+  white = 0b00001111;
+  send_frame();
+  delay(100);
+
+  red = 0b00011111;
+  yellow = 0b00011111;
+  blue1 = 0b00011111;
+  blue2 = 0b00011111;
+  green1 = 0b00011111;
+  green2 = 0b00011111;
+  white = 0b00011111;
+  send_frame();
+  delay(100);
+
+  red = 0b00111111;
+  yellow = 0b00111111;
+  blue1 = 0b00111111;
+  blue2 = 0b00111111;
+  green1 = 0b00111111;
+  green2 = 0b00111111;
+  white = 0b00111111;
+  send_frame();
+  delay(100);
+
+  red = 0b01111111;
+  yellow = 0b01111111;
+  blue1 = 0b01111111;
+  blue2 = 0b01111111;
+  green1 = 0b01111111;
+  green2 = 0b01111111;
+  white = 0b01111111;
+  send_frame();
+  delay(100);
+
+  red = 0b11111111;
+  yellow = 0b11111111;
+  blue1 = 0b11111111;
+  blue2 = 0b11111111;
+  green1 = 0b11111111;
+  green2 = 0b11111111;
+  white = 0b11111111;
   send_frame();
   delay(1000);
-*/
+  
+  clear_all();
 }
 
 void loop() {
-  send_frame();
-  delay(1000);
-  clear_all();
+
+  unsigned char len = 0;
+  unsigned char buf[8];
+
+  if(CAN_MSGAVAIL == CAN.checkReceive()) {
+    CAN.readMsgBuf(&len, buf);
+    unsigned long canId = CAN.getCanId();
+    
+    if(canId = 0x60E) {
+      int gearA = buf[2];
+      int gearB = buf[3];
+      int GEAR = ((gearA * 256) + gearB - 2);
+      switch(GEAR) {
+        case 0:
+          white = n;
+        case 1:
+          white = 1;
+        case 2:
+          white = 2;
+        case 3:
+          white = 3;
+        case 4:
+          white = 4;
+        case 5:
+          white = 5;
+        case 6:
+          white = 6;
+        default:
+          break;
+      }
+      send_frame();
+    }
+  }
 }
 
 void send_frame() {
@@ -165,8 +279,8 @@ void send_frame() {
 void clear_all() {
   PORT->Group[PORTB].OUTCLR.reg = PORT_PB11;      // Set pin to low
   digitalWrite(GEAR_CLR, LOW);
-  delay(100);
-  PORT->Group[PORTB].OUTSET.reg = PORT_PB11;      // Set pin to low
+  delay(500);
+  PORT->Group[PORTB].OUTSET.reg = PORT_PB11;      // Set pin to high
   digitalWrite(GEAR_CLR, HIGH);
 }
 
