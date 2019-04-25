@@ -56,15 +56,15 @@ int8_t white = 1;
 // 0, g, f, e, d, c, b, a
 int8_t n = 0b01010100;
 int8_t one = 0b00000110;
-int8_t two = 0b01010011;
+int8_t two = 0b01011011;
 int8_t three = 0b01001111;
 int8_t four = 0b01100110;
-int8_t five = 0b00101101;
+int8_t five = 0b01101101;
 int8_t six = 0b01111101;
 
 void setup() {
-  //SerialUSB.begin(9600);
-  //while(!SerialUSB);
+  SerialUSB.begin(115200);
+  while(!SerialUSB);
 
   pinMode(CAN_CS, OUTPUT);
   digitalWrite(CAN_CS, HIGH);
@@ -110,12 +110,12 @@ void setup() {
   pinPeripheral(LED_SCK, PIO_SERCOM_ALT);
   pinPeripheral(LED_MOSI, PIO_SERCOM_ALT);
 
-  while (CAN_OK != CAN.begin(CAN_500KBPS))
+  while (CAN_OK != CAN.begin(CAN_1000KBPS))
   {
-    //SerialUSB.println("CAN Bus Failed to Initialize, Retrying...");
+    SerialUSB.println("CAN Bus Failed to Initialize, Retrying...");
     delay(100);
   }
-  //SerialUSB.println("CAN BUS Initialized!");
+  SerialUSB.println("CAN BUS Initialized!");
   
   TCC0_setup();
   TCC2_setup();
@@ -143,9 +143,9 @@ void setup() {
   blue2 = 0b00000001;
   green1 = 0b00000001;
   green2 = 0b00000001;
-  white = 0b00000001;
+  white = n;
   send_frame();
-  delay(100);
+  delay(1000);
 
   red = 0b00000011;
   yellow = 0b00000011;
@@ -153,9 +153,9 @@ void setup() {
   blue2 = 0b00000011;
   green1 = 0b00000011;
   green2 = 0b00000011;
-  white = 0b00000011;
+  white = one;
   send_frame();
-  delay(100);
+  delay(1000);
   
   red = 0b00000111;
   yellow = 0b00000111;
@@ -163,9 +163,9 @@ void setup() {
   blue2 = 0b00000111;
   green1 = 0b00000111;
   green2 = 0b00000111;
-  white = 0b00000111;
+  white = two;
   send_frame();
-  delay(100);
+  delay(1000);
 
   red = 0b00001111;
   yellow = 0b00001111;
@@ -173,9 +173,9 @@ void setup() {
   blue2 = 0b00001111;
   green1 = 0b00001111;
   green2 = 0b00001111;
-  white = 0b00001111;
+  white = three;
   send_frame();
-  delay(100);
+  delay(1000);
 
   red = 0b00011111;
   yellow = 0b00011111;
@@ -183,9 +183,9 @@ void setup() {
   blue2 = 0b00011111;
   green1 = 0b00011111;
   green2 = 0b00011111;
-  white = 0b00011111;
+  white = four;
   send_frame();
-  delay(100);
+  delay(1000);
 
   red = 0b00111111;
   yellow = 0b00111111;
@@ -193,9 +193,9 @@ void setup() {
   blue2 = 0b00111111;
   green1 = 0b00111111;
   green2 = 0b00111111;
-  white = 0b00111111;
+  white = five;
   send_frame();
-  delay(100);
+  delay(1000);
 
   red = 0b01111111;
   yellow = 0b01111111;
@@ -203,9 +203,9 @@ void setup() {
   blue2 = 0b01111111;
   green1 = 0b01111111;
   green2 = 0b01111111;
-  white = 0b01111111;
+  white = six;
   send_frame();
-  delay(100);
+  delay(1000);
 
   red = 0b11111111;
   yellow = 0b11111111;
@@ -218,39 +218,92 @@ void setup() {
   delay(1000);
   
   clear_all();
+  red = 0;
+  yellow = 0;
+  blue1 = 0;
+  blue2 = 0;
+  green1 = 0;
+  green2 = 0;
+  white = 0;
 }
 
 void loop() {
 
   unsigned char len = 0;
   unsigned char buf[8];
-
+  //SerialUSB.println(CAN.checkReceive());
   if(CAN_MSGAVAIL == CAN.checkReceive()) {
     CAN.readMsgBuf(&len, buf);
-    unsigned long canId = CAN.getCanId();
+    unsigned int canId = CAN.getCanId();
+    //SerialUSB.println(canId);
     
-    if(canId = 0x60E) {
-      int gearA = buf[2];
+    if(canId == 0x60E) {
+      
+      //int buf0 = buf[0];
+      //SerialUSB.println("");
+      //SerialUSB.print("buf0: ");
+      //SerialUSB.println(buf0, HEX);
+      //int buf1 = buf[1];
+      //SerialUSB.print("buf1: ");
+      //SerialUSB.println(buf1, HEX);
+      //int gearA = buf[2];
+      //SerialUSB.print("gearA: ");
+      //SerialUSB.println(gearA, HEX);
       int gearB = buf[3];
-      int GEAR = ((gearA * 256) + gearB - 2);
+      SerialUSB.print("gearB: ");
+      SerialUSB.println(gearB, HEX);
+      /*
+      int buf4 = buf[4];
+      SerialUSB.print("buf4: ");
+      SerialUSB.println(buf4, HEX);
+      int buf5 = buf[5];
+      SerialUSB.print("buf5: ");
+      SerialUSB.println(buf5, HEX);
+      int buf6 = buf[6];
+      SerialUSB.print("buf6: ");
+      SerialUSB.println(buf6, HEX);
+      int buf7 = buf[7];
+      SerialUSB.print("buf7: ");
+      SerialUSB.println(buf7, HEX);
+      */
+      //clear_all();
+      signed int GEAR = (gearB - 2);
+      SerialUSB.print("GEAR: ");
+      SerialUSB.println(GEAR);
       switch(GEAR) {
         case 0:
           white = n;
+          SerialUSB.println("NEUTRAL");
+          break;
         case 1:
-          white = 1;
+          white = one;
+          SerialUSB.println("FIRST");
+          break;
         case 2:
-          white = 2;
+          white = two;
+          SerialUSB.println("SECOND");
+          break;
         case 3:
-          white = 3;
+          white = three;
+          SerialUSB.println("THIRD");
+          break;
         case 4:
-          white = 4;
+          white = four;
+          SerialUSB.println("FORTH");
+          break;
         case 5:
-          white = 5;
+          white = five;
+          SerialUSB.println("FIFTH");
+          break;
         case 6:
-          white = 6;
+          white = six;
+          SerialUSB.println("SIXTH");
+          break;
         default:
+          SerialUSB.println("?????");
           break;
       }
+      SerialUSB.println("");
       send_frame();
     }
   }
