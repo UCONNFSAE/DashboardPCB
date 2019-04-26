@@ -63,8 +63,8 @@ int8_t five = 0b01101101;
 int8_t six = 0b01111101;
 
 void setup() {
-  SerialUSB.begin(115200);
-  while(!SerialUSB);
+  //SerialUSB.begin(115200);
+  //while(!SerialUSB);
 
   pinMode(CAN_CS, OUTPUT);
   digitalWrite(CAN_CS, HIGH);
@@ -112,10 +112,10 @@ void setup() {
 
   while (CAN_OK != CAN.begin(CAN_1000KBPS))
   {
-    SerialUSB.println("CAN Bus Failed to Initialize, Retrying...");
+    //SerialUSB.println("CAN Bus Failed to Initialize, Retrying...");
     delay(100);
   }
-  SerialUSB.println("CAN BUS Initialized!");
+  //SerialUSB.println("CAN BUS Initialized!");
   
   TCC0_setup();
   TCC2_setup();
@@ -233,9 +233,51 @@ void loop() {
   unsigned char buf[8];
   //SerialUSB.println(CAN.checkReceive());
   if(CAN_MSGAVAIL == CAN.checkReceive()) {
+    
     CAN.readMsgBuf(&len, buf);
     unsigned int canId = CAN.getCanId();
     //SerialUSB.println(canId);
+
+    if(canId == 1544){
+      int eopA = buf[0];
+      int eopB = buf[1];
+      int INT_EOP = (((eopA * 256) + eopB) * .0145037738);
+      
+      //SerialUSB.println("eopA: "); 
+      //SerialUSB.println(eopA);
+      //SerialUSB.println("eopB: ");
+      //SerialUSB.println(eopB);
+      //SerialUSB.println("Oil Pressure (PSI): ");
+      //SerialUSB.println(INT_EOP);
+      
+    }
+
+    if(canId == 1536){
+      int rpmA = buf[0];
+      int rpmB = buf[1];
+      int ENGINE_RPM = ((rpmA * 256) + rpmB);
+
+      //SerialUSB.println("rpmA: ");
+      //SerialUSB.println(rpmA);
+      //SerialUSB.println("rpmB: ");
+      //SerialUSB.println(rpmB);
+      //SerialUSB.println("Engine RPM: ");
+      //SerialUSB.println(ENGINE_RPM);
+      
+    }
+
+    if(canId == 1541){
+      int tempA = buf[2];
+      int tempB = buf[3];
+      int ENGINE_TEMP = ((tempA * 256) + tempB) / 10;
+
+      //SerialUSB.println("tempA: ");
+      //SerialUSB.println(tempA);
+      //SerialUSB.println("tempB: ");
+      //SerialUSB.println(tempB);
+      //SerialUSB.println("Engine Temp (C): ");
+      //SerialUSB.println(ENGINE_TEMP);
+    }
     
     if(canId == 0x60E) {
       
@@ -250,8 +292,8 @@ void loop() {
       //SerialUSB.print("gearA: ");
       //SerialUSB.println(gearA, HEX);
       int gearB = buf[3];
-      SerialUSB.print("gearB: ");
-      SerialUSB.println(gearB, HEX);
+      //SerialUSB.print("gearB: ");
+      //SerialUSB.println(gearB, HEX);
       /*
       int buf4 = buf[4];
       SerialUSB.print("buf4: ");
@@ -268,42 +310,42 @@ void loop() {
       */
       //clear_all();
       signed int GEAR = (gearB - 2);
-      SerialUSB.print("GEAR: ");
-      SerialUSB.println(GEAR);
+      //SerialUSB.print("GEAR: ");
+      //SerialUSB.println(GEAR);
       switch(GEAR) {
         case 0:
           white = n;
-          SerialUSB.println("NEUTRAL");
+          //SerialUSB.println("NEUTRAL");
           break;
         case 1:
           white = one;
-          SerialUSB.println("FIRST");
+          //SerialUSB.println("FIRST");
           break;
         case 2:
           white = two;
-          SerialUSB.println("SECOND");
+          //SerialUSB.println("SECOND");
           break;
         case 3:
           white = three;
-          SerialUSB.println("THIRD");
+          //SerialUSB.println("THIRD");
           break;
         case 4:
           white = four;
-          SerialUSB.println("FORTH");
+          //SerialUSB.println("FORTH");
           break;
         case 5:
           white = five;
-          SerialUSB.println("FIFTH");
+          //SerialUSB.println("FIFTH");
           break;
         case 6:
           white = six;
-          SerialUSB.println("SIXTH");
+          //SerialUSB.println("SIXTH");
           break;
         default:
-          SerialUSB.println("?????");
+          //SerialUSB.println("?????");
           break;
       }
-      SerialUSB.println("");
+      //SerialUSB.println("");
       send_frame();
     }
   }
