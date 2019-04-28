@@ -123,105 +123,6 @@ void setup() {
   TCC2_setup();
   
   digitalWrite(GEAR_CLR, HIGH);
-
-  red = 0;
-  yellow = 0;
-  blue_left = 0;
-  blue_right = 0;
-  green_left = 0;
-  green_right = 0;
-  white = 0;
-
-  clear_all();
-  
-  red = 0b00000001;
-  yellow = 0b00000001;
-  blue_left = 0b00000001;
-  blue_right = 0b00000001;
-  green_left = 0b00000001;
-  green_right = 0b00000001;
-  white = n;
-  send_frame();
-  delay(300);
-
-  red = 0b00000011;
-  yellow = 0b00000011;
-  blue_left = 0b00000011;
-  blue_right = 0b00000011;
-  green_left = 0b00000011;
-  green_right = 0b00000011;
-  white = one;
-  send_frame();
-  delay(300);
-  
-  red = 0b00000111;
-  yellow = 0b00000111;
-  blue_left = 0b00000111;
-  blue_right = 0b00000111;
-  green_left = 0b00000111;
-  green_right = 0b00000111;
-  white = two;
-  send_frame();
-  delay(300);
-
-  red = 0b00001111;
-  yellow = 0b00001111;
-  blue_left = 0b00001111;
-  blue_right = 0b00001111;
-  green_left = 0b00001111;
-  green_right = 0b00001111;
-  white = three;
-  send_frame();
-  delay(300);
-
-  red = 0b00011111;
-  yellow = 0b00011111;
-  blue_left = 0b00011111;
-  blue_right = 0b00011111;
-  green_left = 0b00011111;
-  green_right = 0b00011111;
-  white = four;
-  send_frame();
-  delay(300);
-
-  red = 0b00111111;
-  yellow = 0b00111111;
-  blue_left = 0b00111111;
-  blue_right = 0b00111111;
-  green_left = 0b00111111;
-  green_right = 0b00111111;
-  white = five;
-  send_frame();
-  delay(300);
-
-  red = 0b01111111;
-  yellow = 0b01111111;
-  blue_left = 0b01111111;
-  blue_right = 0b01111111;
-  green_left = 0b01111111;
-  green_right = 0b01111111;
-  white = six;
-  send_frame();
-  delay(300);
-
-  red = 0b11111111;
-  yellow = 0b11111111;
-  blue_left = 0b11111111;
-  blue_right = 0b11111111;
-  green_left = 0b11111111;
-  green_right = 0b11111111;
-  white = nine;
-  send_frame();
-  delay(500);
-  
-  clear_all();
-  red = 0;
-  yellow = 0;
-  blue_left = 0;
-  blue_right = 0;
-  green_left = 0;
-  green_right = 0;
-  white = 0;
 }
 
 void loop() {
@@ -501,8 +402,8 @@ void setRPM(int RPM) {
       green_right = 0b11111111;
       yellow = 0b11111111;
       red = 0;
-      blue_left = 0;
-      blue_right = 0;
+      blue_left = 0xFF;
+      blue_right = 0xFF;
     }
     else if(RPM <= 12000 && RPM > 11500) {
       green_left = 0b11111111;
@@ -568,6 +469,107 @@ void setRPM(int RPM) {
       blue_left = 0;
       blue_right = 0;
     }
+}
+
+void startupAnimation() {
+  red = 0;
+  yellow = 0;
+  blue_left = 0;
+  blue_right = 0;
+  green_left = 0;
+  green_right = 0;
+  white = 0;
+
+  clear_all();
+  
+  red = 0b00000001;
+  yellow = 0b00000001;
+  blue_left = 0b00000001;
+  blue_right = 0b00000001;
+  green_left = 0b00000001;
+  green_right = 0b00000001;
+  white = n;
+  send_frame();
+  delay(300);
+
+  red = 0b00000011;
+  yellow = 0b00000011;
+  blue_left = 0b00000011;
+  blue_right = 0b00000011;
+  green_left = 0b00000011;
+  green_right = 0b00000011;
+  white = one;
+  send_frame();
+  delay(300);
+  
+  red = 0b00000111;
+  yellow = 0b00000111;
+  blue_left = 0b00000111;
+  blue_right = 0b00000111;
+  green_left = 0b00000111;
+  green_right = 0b00000111;
+  white = two;
+  send_frame();
+  delay(300);
+
+  red = 0b00001111;
+  yellow = 0b00001111;
+  blue_left = 0b00001111;
+  blue_right = 0b00001111;
+  green_left = 0b00001111;
+  green_right = 0b00001111;
+  white = three;
+  send_frame();
+  delay(300);
+
+  red = 0b00011111;
+  yellow = 0b00011111;
+  blue_left = 0b00011111;
+  blue_right = 0b00011111;
+  green_left = 0b00011111;
+  green_right = 0b00011111;
+  white = four;
+  send_frame();
+  delay(300);
+
+  red = 0b00111111;
+  yellow = 0b00111111;
+  blue_left = 0b00111111;
+  blue_right = 0b00111111;
+  green_left = 0b00111111;
+  green_right = 0b00111111;
+  white = five;
+  send_frame();
+  delay(300);
+
+  red = 0b01111111;
+  yellow = 0b01111111;
+  blue_left = 0b01111111;
+  blue_right = 0b01111111;
+  green_left = 0b01111111;
+  green_right = 0b01111111;
+  white = six;
+  send_frame();
+  delay(300);
+
+  red = 0b11111111;
+  yellow = 0b11111111;
+  blue_left = 0b11111111;
+  blue_right = 0b11111111;
+  green_left = 0b11111111;
+  green_right = 0b11111111;
+  white = nine;
+  send_frame();
+  delay(500);
+  
+  clear_all();
+  red = 0;
+  yellow = 0;
+  blue_left = 0;
+  blue_right = 0;
+  green_left = 0;
+  green_right = 0;
+  white = 0;
 }
 
 void TCC0_setup() {
