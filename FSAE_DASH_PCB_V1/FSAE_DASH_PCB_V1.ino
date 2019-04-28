@@ -31,7 +31,7 @@
 #define CAN_CS    8
 
 // Override default SPI settings
-SPISettings SHIFT(2000000, MSBFIRST, SPI_MODE0);
+SPISettings SHIFT(5000000, MSBFIRST, SPI_MODE0);
 
 // Declare a new SPIClass specifically for the LED drivers
 SPIClass SHIFT_SPI(&sercom4, LED_MISO, LED_SCK, LED_MOSI, SPI_PAD_2_SCK_3, SERCOM_RX_PAD_0);
@@ -49,10 +49,10 @@ int duty_ratio_w = 480 * 0.50;  //0.1
 // RPM LED frame buffers
 int8_t red;
 int8_t yellow;
-int8_t blue1;
-int8_t blue2;
-int8_t green1;
-int8_t green2;
+int8_t blue_left;
+int8_t blue_right;
+int8_t green_left;
+int8_t green_right;
 int8_t white;
 
 // gear display
@@ -116,10 +116,8 @@ void setup() {
 
   while (CAN_OK != CAN.begin(CAN_1000KBPS))
   {
-    //SerialUSB.println("CAN Bus Failed to Initialize, Retrying...");
     delay(100);
   }
-  //SerialUSB.println("CAN BUS Initialized!");
   
   TCC0_setup();
   TCC2_setup();
@@ -128,101 +126,101 @@ void setup() {
 
   red = 0;
   yellow = 0;
-  blue1 = 0;
-  blue2 = 0;
-  green1 = 0;
-  green2 = 0;
+  blue_left = 0;
+  blue_right = 0;
+  green_left = 0;
+  green_right = 0;
   white = 0;
 
   clear_all();
   
   red = 0b00000001;
   yellow = 0b00000001;
-  blue1 = 0b00000001;
-  blue2 = 0b00000001;
-  green1 = 0b00000001;
-  green2 = 0b00000001;
+  blue_left = 0b00000001;
+  blue_right = 0b00000001;
+  green_left = 0b00000001;
+  green_right = 0b00000001;
   white = n;
   send_frame();
-  delay(250);
+  delay(300);
 
   red = 0b00000011;
   yellow = 0b00000011;
-  blue1 = 0b00000011;
-  blue2 = 0b00000011;
-  green1 = 0b00000011;
-  green2 = 0b00000011;
+  blue_left = 0b00000011;
+  blue_right = 0b00000011;
+  green_left = 0b00000011;
+  green_right = 0b00000011;
   white = one;
   send_frame();
-  delay(250);
+  delay(300);
   
   red = 0b00000111;
   yellow = 0b00000111;
-  blue1 = 0b00000111;
-  blue2 = 0b00000111;
-  green1 = 0b00000111;
-  green2 = 0b00000111;
+  blue_left = 0b00000111;
+  blue_right = 0b00000111;
+  green_left = 0b00000111;
+  green_right = 0b00000111;
   white = two;
   send_frame();
-  delay(250);
+  delay(300);
 
   red = 0b00001111;
   yellow = 0b00001111;
-  blue1 = 0b00001111;
-  blue2 = 0b00001111;
-  green1 = 0b00001111;
-  green2 = 0b00001111;
+  blue_left = 0b00001111;
+  blue_right = 0b00001111;
+  green_left = 0b00001111;
+  green_right = 0b00001111;
   white = three;
   send_frame();
-  delay(250);
+  delay(300);
 
   red = 0b00011111;
   yellow = 0b00011111;
-  blue1 = 0b00011111;
-  blue2 = 0b00011111;
-  green1 = 0b00011111;
-  green2 = 0b00011111;
+  blue_left = 0b00011111;
+  blue_right = 0b00011111;
+  green_left = 0b00011111;
+  green_right = 0b00011111;
   white = four;
   send_frame();
-  delay(250);
+  delay(300);
 
   red = 0b00111111;
   yellow = 0b00111111;
-  blue1 = 0b00111111;
-  blue2 = 0b00111111;
-  green1 = 0b00111111;
-  green2 = 0b00111111;
+  blue_left = 0b00111111;
+  blue_right = 0b00111111;
+  green_left = 0b00111111;
+  green_right = 0b00111111;
   white = five;
   send_frame();
-  delay(250);
+  delay(300);
 
   red = 0b01111111;
   yellow = 0b01111111;
-  blue1 = 0b01111111;
-  blue2 = 0b01111111;
-  green1 = 0b01111111;
-  green2 = 0b01111111;
+  blue_left = 0b01111111;
+  blue_right = 0b01111111;
+  green_left = 0b01111111;
+  green_right = 0b01111111;
   white = six;
   send_frame();
-  delay(250);
+  delay(300);
 
   red = 0b11111111;
   yellow = 0b11111111;
-  blue1 = 0b11111111;
-  blue2 = 0b11111111;
-  green1 = 0b11111111;
-  green2 = 0b11111111;
+  blue_left = 0b11111111;
+  blue_right = 0b11111111;
+  green_left = 0b11111111;
+  green_right = 0b11111111;
   white = nine;
   send_frame();
-  delay(250);
+  delay(500);
   
   clear_all();
   red = 0;
   yellow = 0;
-  blue1 = 0;
-  blue2 = 0;
-  green1 = 0;
-  green2 = 0;
+  blue_left = 0;
+  blue_right = 0;
+  green_left = 0;
+  green_right = 0;
   white = 0;
 }
 
@@ -230,289 +228,23 @@ void loop() {
 
   unsigned char len = 0;
   unsigned char buf[8];
-  //SerialUSB.println(CAN.checkReceive());
   if(CAN_MSGAVAIL == CAN.checkReceive()) {
     
     CAN.readMsgBuf(&len, buf);
     unsigned int canId = CAN.getCanId();
-    //SerialUSB.println(canId);
     
     if(canId == 1544){
       int eopA = buf[0];
       int eopB = buf[1];
-      int INT_EOP = (((eopA * 256) + eopB) * .0145037738);
-      
-      //SerialUSB.println("eopA: "); 
-      //SerialUSB.println(eopA);
-      //SerialUSB.println("eopB: ");
-      //SerialUSB.println(eopB);
-      //SerialUSB.println("Oil Pressure (PSI): ");
-      //SerialUSB.println(INT_EOP);
-      
+      int INT_EOP = (((eopA * 256) + eopB) * .0145037738);  // oil pressure in PSI
     }
 
     if(canId == 1536){
       int rpmA = buf[0];
       int rpmB = buf[1];
       int ENGINE_RPM = ((rpmA * 256) + rpmB);
-
-      if(ENGINE_RPM <= 500 && ENGINE_RPM > 0) {
-        green1 = 0b00000001;
-        green2 = 0;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 1000 && ENGINE_RPM > 500) {
-        green1 = 0b00000011;
-        green2 = 0;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 1500 && ENGINE_RPM > 1000) {
-        green1 = 0b00000111;
-        green2 = 0;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 2000 && ENGINE_RPM > 1500) {
-        green1 = 0b00001111;
-        green2 = 0;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 2500 && ENGINE_RPM > 2000) {
-        green1 = 0b00011111;
-        green2 = 0;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 3000 && ENGINE_RPM > 2500) {
-        green1 = 0b00111111;
-        green2 = 0;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 3500 && ENGINE_RPM > 3000) {
-        green1 = 0b01111111;
-        green2 = 0;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 4000 && ENGINE_RPM > 3500) {
-        green1 = 0b11111111;
-        green2 = 0;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 4500 && ENGINE_RPM > 4000) {
-        green1 = 0b11111111;
-        green2 = 0b00000001;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 5000 && ENGINE_RPM > 4500) {
-        green1 = 0b11111111;
-        green2 = 0b00000011;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 5500 && ENGINE_RPM > 5000) {
-        green1 = 0b11111111;
-        green2 = 0b00000111;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 6000 && ENGINE_RPM > 5500) {
-        green1 = 0b11111111;
-        green2 = 0b00001111;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 6500 && ENGINE_RPM > 6000) {
-        green1 = 0b11111111;
-        green2 = 0b00011111;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 7000 && ENGINE_RPM > 6500) {
-        green1 = 0b11111111;
-        green2 = 0b01111111;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 7500 && ENGINE_RPM > 7000) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 8000 && ENGINE_RPM > 7500) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0b00000001;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 8500 && ENGINE_RPM > 8000) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0b00000011;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 9000 && ENGINE_RPM > 8500) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0b00000111;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 9500 && ENGINE_RPM > 9000) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0b00001111;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 10000 && ENGINE_RPM > 9500) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0b00011111;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 10500 && ENGINE_RPM > 1000) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0b00111111;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 11000 && ENGINE_RPM > 10500) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0b01111111;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 11500 && ENGINE_RPM > 11000) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0b11111111;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-      else if(ENGINE_RPM <= 12000 && ENGINE_RPM > 11500) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0b11111111;
-        red = 0b00000001;
-        blue1 = 0xFF;
-        blue2 = 0xFF;
-      }
-      else if(ENGINE_RPM <= 12500 && ENGINE_RPM > 12000) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0b11111111;
-        red = 0b00000011;
-        blue1 = 0xFF;
-        blue2 = 0xFF;
-      }
-      else if(ENGINE_RPM <= 13000 && ENGINE_RPM > 12500) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0b11111111;
-        red = 0b00000111;
-        blue1 = 0xFF;
-        blue2 = 0xFF;
-      }
-      else if(ENGINE_RPM <= 13500 && ENGINE_RPM > 13000) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0b11111111;
-        red = 0b00001111;
-        blue1 = 0xFF;
-        blue2 = 0xFF;
-      }
-      else if(ENGINE_RPM <= 14000 && ENGINE_RPM > 13500) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0b11111111;
-        red = 0b00011111;
-        blue1 = 0xFF;
-        blue2 = 0xFF;
-      }
-      else if(ENGINE_RPM <= 14500 && ENGINE_RPM > 14000) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0b11111111;
-        red = 0b00111111;
-        blue1 = 0xFF;
-        blue2 = 0xFF;
-      }
-      else if(ENGINE_RPM <= 15000 && ENGINE_RPM > 14500) {
-        green1 = 0b11111111;
-        green2 = 0b11111111;
-        yellow = 0b11111111;
-        red = 0b11111111;
-        blue1 = 0xFF;
-        blue2 = 0xFF;
-      }
-      else if(ENGINE_RPM == 0) {
-        green1 = 0;
-        green2 = 0;
-        yellow = 0;
-        red = 0;
-        blue1 = 0;
-        blue2 = 0;
-      }
-        
+      setRPM(ENGINE_RPM);
       send_frame();
-      //SerialUSB.println("rpmA: ");
-      //SerialUSB.println(rpmA);
-      //SerialUSB.println("rpmB: ");
-      //SerialUSB.println(rpmB);
-      //SerialUSB.println("Engine RPM: ");
-      //SerialUSB.println(ENGINE_RPM);
-      
     }
 
     if(canId == 1541){
@@ -521,60 +253,39 @@ void loop() {
       int ENGINE_TEMP = ((tempA * 256) + tempB) / 10; // temperature in Celsius
       
       if(ENGINE_TEMP >= 100)
-        PORT->Group[PORTA].OUTSET.reg = PORT_PA03;      // Set pin to high
+        PORT->Group[PORTA].OUTSET.reg = PORT_PA03;      // Turn ECT warning LED on
       else
-        PORT->Group[PORTA].OUTCLR.reg = PORT_PA03;      // Set pin to low
-
-      //SerialUSB.println("tempA: ");
-      //SerialUSB.println(tempA);
-      //SerialUSB.println("tempB: ");
-      //SerialUSB.println(tempB);
-      //SerialUSB.println("Engine Temp (C): ");
-      //SerialUSB.println(ENGINE_TEMP);
+        PORT->Group[PORTA].OUTCLR.reg = PORT_PA03;      // Turn off
     }
     
     if(canId == 0x60E) {
       int gearB = buf[3];   // only need second byte since gear value will never go above a full byte value
-      //SerialUSB.print("gearB: ");
-      //SerialUSB.println(gearB, HEX);
-      
       int GEAR = (gearB - 2);
-      //SerialUSB.print("GEAR: ");
-      //SerialUSB.println(GEAR);
       switch(GEAR) {
         case 0:
           white = n;
-          //SerialUSB.println("NEUTRAL");
           break;
         case 1:
           white = one;
-          //SerialUSB.println("FIRST");
           break;
         case 2:
           white = two;
-          //SerialUSB.println("SECOND");
           break;
         case 3:
           white = three;
-          //SerialUSB.println("THIRD");
           break;
         case 4:
           white = four;
-          //SerialUSB.println("FORTH");
           break;
         case 5:
           white = five;
-          //SerialUSB.println("FIFTH");
           break;
         case 6:
           white = six;
-          //SerialUSB.println("SIXTH");
           break;
         default:
-          //SerialUSB.println("?????");
           break;
       }
-      //SerialUSB.println("");
       send_frame();
     }
   }
@@ -587,11 +298,11 @@ void send_frame() {
   SHIFT_SPI.transfer(red);
   SHIFT_SPI.transfer(yellow);
   SHIFT_SPI.transfer(0x00);
-  SHIFT_SPI.transfer(blue1);
-  SHIFT_SPI.transfer(blue2);
+  SHIFT_SPI.transfer(blue_right);
+  SHIFT_SPI.transfer(blue_left);
   SHIFT_SPI.transfer(0x00);
-  SHIFT_SPI.transfer(green2);
-  SHIFT_SPI.transfer(green1);
+  SHIFT_SPI.transfer(green_right);
+  SHIFT_SPI.transfer(green_left);
   SHIFT_SPI.transfer(white);
   SHIFT_SPI.endTransaction();
   PORT->Group[PORTA].OUTSET.reg = PORT_PA12;  // RPM SET HIGH
@@ -606,6 +317,257 @@ void clear_all() {
   delay(1);
   PORT->Group[PORTB].OUTSET.reg = PORT_PB11;      // Set pin to high
   digitalWrite(GEAR_CLR, HIGH);
+}
+
+void setRPM(int RPM) {
+  if(RPM <= 500 && RPM > 0) {
+        green_left = 0b00000001;
+        green_right = 0;
+        yellow = 0;
+        red = 0;
+        blue_left = 0;
+        blue_right = 0;
+      }
+    else if(RPM <= 1000 && RPM > 500) {
+      green_left = 0b00000011;
+      green_right = 0;
+      yellow = 0;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 1500 && RPM > 1000) {
+      green_left = 0b00000111;
+      green_right = 0;
+      yellow = 0;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 2000 && RPM > 1500) {
+      green_left = 0b00001111;
+      green_right = 0;
+      yellow = 0;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 2500 && RPM > 2000) {
+      green_left = 0b00011111;
+      green_right = 0;
+      yellow = 0;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 3000 && RPM > 2500) {
+      green_left = 0b00111111;
+      green_right = 0;
+      yellow = 0;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 3500 && RPM > 3000) {
+      green_left = 0b01111111;
+      green_right = 0;
+      yellow = 0;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 4000 && RPM > 3500) {
+      green_left = 0b11111111;
+      green_right = 0;
+      yellow = 0;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 4500 && RPM > 4000) {
+      green_left = 0b11111111;
+      green_right = 0b00000001;
+      yellow = 0;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 5000 && RPM > 4500) {
+      green_left = 0b11111111;
+      green_right = 0b00000011;
+      yellow = 0;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 5500 && RPM > 5000) {
+      green_left = 0b11111111;
+      green_right = 0b00000111;
+      yellow = 0;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 6000 && RPM > 5500) {
+      green_left = 0b11111111;
+      green_right = 0b00001111;
+      yellow = 0;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 6500 && RPM > 6000) {
+      green_left = 0b11111111;
+      green_right = 0b00011111;
+      yellow = 0;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 7000 && RPM > 6500) {
+      green_left = 0b11111111;
+      green_right = 0b01111111;
+      yellow = 0;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 7500 && RPM > 7000) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 8000 && RPM > 7500) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0b00000001;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 8500 && RPM > 8000) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0b00000011;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 9000 && RPM > 8500) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0b00000111;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 9500 && RPM > 9000) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0b00001111;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 10000 && RPM > 9500) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0b00011111;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 10500 && RPM > 1000) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0b00111111;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 11000 && RPM > 10500) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0b01111111;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 11500 && RPM > 11000) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0b11111111;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
+    else if(RPM <= 12000 && RPM > 11500) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0b11111111;
+      red = 0b00000001;
+      blue_left = 0xFF;
+      blue_right = 0xFF;
+    }
+    else if(RPM <= 12500 && RPM > 12000) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0b11111111;
+      red = 0b00000011;
+      blue_left = 0xFF;
+      blue_right = 0xFF;
+    }
+    else if(RPM <= 13000 && RPM > 12500) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0b11111111;
+      red = 0b00000111;
+      blue_left = 0xFF;
+      blue_right = 0xFF;
+    }
+    else if(RPM <= 13500 && RPM > 13000) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0b11111111;
+      red = 0b00001111;
+      blue_left = 0xFF;
+      blue_right = 0xFF;
+    }
+    else if(RPM <= 14000 && RPM > 13500) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0b11111111;
+      red = 0b00011111;
+      blue_left = 0xFF;
+      blue_right = 0xFF;
+    }
+    else if(RPM <= 14500 && RPM > 14000) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0b11111111;
+      red = 0b00111111;
+      blue_left = 0xFF;
+      blue_right = 0xFF;
+    }
+    else if(RPM <= 15000 && RPM > 14500) {
+      green_left = 0b11111111;
+      green_right = 0b11111111;
+      yellow = 0b11111111;
+      red = 0b11111111;
+      blue_left = 0xFF;
+      blue_right = 0xFF;
+    }
+    else if(RPM == 0) {
+      green_left = 0;
+      green_right = 0;
+      yellow = 0;
+      red = 0;
+      blue_left = 0;
+      blue_right = 0;
+    }
 }
 
 void TCC0_setup() {
@@ -638,8 +600,6 @@ void TCC0_setup() {
   TCC0->PER.reg = 479;    //100kHz frequency
   while (TCC0->SYNCBUSY.bit.PER);
 
-  int duty_ratio = 480 * 0.97;
-  
   //--------------------------------------------------------------------------------------------------
   //                                             PWM GREEN
   // n for CC[n] is determined by n = x % 4 where x is from WO[x]
@@ -757,8 +717,4 @@ void TCC2_setup() {
 
   TCC2->CTRLA.reg |= (TCC_CTRLA_ENABLE);
   while (TCC2->SYNCBUSY.bit.ENABLE);              // Wait for synchronization
-}
-
-void TCC1_Handler() {
-  
 }
