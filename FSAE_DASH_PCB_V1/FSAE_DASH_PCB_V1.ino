@@ -40,11 +40,11 @@ SPIClass SHIFT_SPI(&sercom4, LED_MISO, LED_SCK, LED_MOSI, SPI_PAD_2_SCK_3, SERCO
 MCP_CAN CAN(CAN_CS);
 
 // duty ratio of LEDs are (1-D)
-int duty_ratio_g = 480 * 0.80;  //0.5
-int duty_ratio_y = 480 * 0.80;  //0.3
+int duty_ratio_g = 480 * 0.70;  //0.5
+int duty_ratio_y = 480 * 0.40;  //0.3
 int duty_ratio_r = 480 * 0.80;  //0.8
-int duty_ratio_b = 480 * 0.80;  //0.3
-int duty_ratio_w = 480 * 0.50;  //0.1
+int duty_ratio_b = 480 * 0.70;  //0.3
+int duty_ratio_w = 480 * 0.20;  //0.1
 
 // RPM LED frame buffers
 int8_t red;
@@ -123,6 +123,8 @@ void setup() {
   TCC2_setup();
   
   digitalWrite(GEAR_CLR, HIGH);
+
+  startupAnimation();
 }
 
 void loop() {
@@ -402,6 +404,8 @@ void setRPM(int RPM) {
       green_right = 0b11111111;
       yellow = 0b11111111;
       red = 0;
+      //blue_left = 0;
+      //blue_right = 0;
       blue_left = 0xFF;
       blue_right = 0xFF;
     }
