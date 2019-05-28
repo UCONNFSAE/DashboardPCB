@@ -98,6 +98,11 @@ void setup() {
   PORT->Group[PORTB].DIRSET.reg = PORT_PB11;      // Set pin as output
   PORT->Group[PORTB].OUTCLR.reg = PORT_PB11;      // Set pin to low
 
+  //MASTER CAUTION
+  PORT->Group[PORTB].PINCFG[3].reg &= ~PORT_PINCFG_PMUXEN;   //disable PMUX
+  PORT->Group[PORTB].DIRSET.reg = PORT_PB03;      // Set pin as output
+  PORT->Group[PORTB].OUTSET.reg = PORT_PB03;      // Set pin to high
+
   pinMode(FRAME_IN, OUTPUT);
   pinMode(FRAME_CLK, OUTPUT);
   pinMode(GEAR_SET, OUTPUT);
@@ -135,6 +140,20 @@ void loop() {
     
     CAN.readMsgBuf(&len, buf);
     unsigned int canId = CAN.getCanId();
+
+    if(canId == 0x607){
+      int errorFlagL_U = buf[4];
+      int errorFlagL_L = buf[5];
+      int errorFlagH_U = buf[6];
+      int errorFlagH_L = buf[7];
+      int errorFlagL = (errorFlagL_U * 256) + errorFlagL_L;
+      int errorFlagH = (errorFlagH_U * 256) + errorFlagH_L;
+      int errorFlag = (errorFlagH * 256) + ErrorFlagL;
+      if(errorFlag > 0)
+        PORT->Group[PORTB].OUTCLR.reg = PORT_PB03;      // Set pin to low (turn on)
+      else
+        PORT->Group[PORTB].OUTSET.reg = PORT_PB03;      // Set pin to high (turn off)
+    }
     
     if(canId == 1544){
       int eopA = buf[0];
