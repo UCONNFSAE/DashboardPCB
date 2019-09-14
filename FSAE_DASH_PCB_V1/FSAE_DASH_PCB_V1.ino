@@ -66,12 +66,14 @@ int8_t five = 0b01101101;   // |     d     |
 int8_t six = 0b01111101;    // |___________|  
 int8_t nine = 0b011100111;
 
+int ENGINE_RPM = 0;
+
 void setup() {
   //SerialUSB.begin(115200);
   //while(!SerialUSB);
 
-  pinMode(CAN_CS, OUTPUT);
-  digitalWrite(CAN_CS, HIGH);
+  //pinMode(CAN_CS, OUTPUT);
+  //digitalWrite(CAN_CS, HIGH);
   
   //HIGH TEMP
   PORT->Group[PORTA].PINCFG[3].reg &= ~PORT_PINCFG_PMUXEN;    //disable PMUX
@@ -148,7 +150,7 @@ void loop() {
       int errorFlagH_L = buf[7];
       int errorFlagL = (errorFlagL_U * 256) + errorFlagL_L;
       int errorFlagH = (errorFlagH_U * 256) + errorFlagH_L;
-      int errorFlag = (errorFlagH * 256) + ErrorFlagL;
+      int errorFlag = (errorFlagH * 256) + errorFlagL;
       if(errorFlag > 0)
         PORT->Group[PORTB].OUTCLR.reg = PORT_PB03;      // Set pin to low (turn on)
       else
@@ -159,12 +161,21 @@ void loop() {
       int eopA = buf[0];
       int eopB = buf[1];
       int INT_EOP = (((eopA * 256) + eopB) * .0145037738);  // oil pressure in PSI
+
+      if(ENGINE_RPM == 0)
+        PORT->Group[PORTB].OUTCLR.reg = PORT_PB08;
+      else if(INT_EOP < 6 && ENGINE_RPM <= 4000)
+        PORT->Group[PORTB].OUTSET.reg = PORT_PB08;
+      else if(INT_EOP < (0.0058 * ENGINE_RPM - 17.2))
+        PORT->Group[PORTB].OUTSET.reg = PORT_PB08;
+      else
+        PORT->Group[PORTB].OUTCLR.reg = PORT_PB08;
     }
 
     if(canId == 1536){
       int rpmA = buf[0];
       int rpmB = buf[1];
-      int ENGINE_RPM = ((rpmA * 256) + rpmB);
+      ENGINE_RPM = ((rpmA * 256) + rpmB);
       setRPM(ENGINE_RPM);
       send_frame();
     }
@@ -174,7 +185,7 @@ void loop() {
       int tempB = buf[3];
       int ENGINE_TEMP = ((tempA * 256) + tempB) / 10; // temperature in Celsius
       
-      if(ENGINE_TEMP >= 100)
+      if(ENGINE_TEMP >= 105)
         PORT->Group[PORTA].OUTSET.reg = PORT_PA03;      // Turn ECT warning LED on
       else
         PORT->Group[PORTA].OUTCLR.reg = PORT_PA03;      // Turn off
