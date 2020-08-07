@@ -10,4 +10,10 @@ D TLC6C598 Shift Register
 K 8bit Shift Register
 $ENDCMP
 #
+$CMP TPS53513
+D TI 8-A Single Synchronous Step-Down Converter
+K Buck Controller Converter
+F http://www.ti.com/lit/ds/symlink/tps53513.pdf
+$ENDCMP
+#
 #End Doc Library

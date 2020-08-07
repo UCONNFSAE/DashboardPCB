@@ -1,0 +1,33 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CD40106
+D 6 Channel Schmitt Trigger Inverter
+K Schmitt Trigger
+F https://www.ti.com/lit/ds/symlink/cd40106b.pdf
+$ENDCMP
+#
+$CMP CD40106BM
+D 6 Channel Schmitt Trigger Inverter SOIC-14
+K Schmitt Trigger
+F https://www.ti.com/lit/ds/symlink/cd40106b.pdf
+$ENDCMP
+#
+$CMP CD40106BPWR
+D 6 Channel Schmitt Trigger Inverter TSSOP-14
+K Schmitt Trigger
+F https://www.ti.com/lit/ds/symlink/cd40106b.pdf
+$ENDCMP
+#
+$CMP MCP25625
+D CAN Controller with Integrated Transceiver
+K CAN
+F http://ww1.microchip.com/downloads/en/DeviceDoc/MCP25625-CAN-Controller-Data-Sheet-20005282C.pdf
+$ENDCMP
+#
+$CMP TLV741P
+D TI 3.3V LDO Linear regulator 1% SOT-23-5
+K LDO regulator
+F https://www.ti.com/lit/ds/symlink/tlv741p.pdf
+$ENDCMP
+#
+#End Doc Library

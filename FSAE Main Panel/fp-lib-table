@@ -7,6 +7,7 @@
   (lib (name MF-MSMF050-2)(type KiCad)(uri "$(KIPRJMOD)/Custom Libraries/MF-MSMF050-2.pretty")(options "")(descr ""))
   (lib (name CSTNE16M0V530000R0)(type KiCad)(uri "$(KIPRJMOD)/Custom Libraries/CSTNE16M0V530000R0.pretty")(options "")(descr ""))
   (lib (name TLC6C5816)(type KiCad)(uri "$(KIPRJMOD)/Custom Libraries/TLC6C5816.pretty")(options "")(descr ""))
-  (lib (name "Bourns 4800P")(type KiCad)(uri "$(KIPRJMOD)/Custom Libraries/Bourns 4800P SOM-16.pretty")(options "")(descr ""))
   (lib (name Texas_Additions)(type KiCad)(uri "${KIPRJMOD}/Custom Libraries/Texas_Additions.pretty")(options "")(descr ""))
+  (lib (name Wurth)(type KiCad)(uri "${KIPRJMOD}/Custom Libraries/Wurth.pretty")(options "")(descr ""))
+  (lib (name FSAE2020)(type KiCad)(uri "${KIPRJMOD}/Custom Libraries/FSAE2020.pretty")(options "")(descr ""))
 )

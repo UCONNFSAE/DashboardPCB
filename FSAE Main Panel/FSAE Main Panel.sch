@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:FSAE Main Panel-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -170,8 +170,6 @@ Text GLabel 3750 4200 0    39   Input ~ 0
 ~RPM_EN
 Text GLabel 3750 4300 0    39   Input ~ 0
 RPM_CLR
-Text GLabel 9950 2100 2    39   Input ~ 0
-RPM_IN
 Text GLabel 3750 4700 0    39   Input ~ 0
 FRAME_CLK
 Text GLabel 3750 4400 0    39   Input ~ 0
@@ -253,12 +251,12 @@ L Device:C_Small C101
 U 1 1 5BF9B0FF
 P 2650 2750
 F 0 "C101" H 2660 2820 50  0000 L CNN
-F 1 "100nF" H 2660 2670 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 2650 2750 50  0001 C CNN
-F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 2650 2750 50  0001 C CNN
-F 4 "CAP CER 0.1UF 25V X7R 1206" H 2650 2750 50  0001 C CNN "Description"
+F 1 "0.1uF" H 2660 2670 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2650 2750 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 2650 2750 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0603" H 2650 2750 50  0001 C CNN "Description"
 F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
-F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
+F 6 "C0603C104M4RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    2650 2750
 	-1   0    0    -1  
 $EndComp
@@ -309,12 +307,12 @@ L Device:C_Small C103
 U 1 1 5BF9B85D
 P 3000 4000
 F 0 "C103" H 3010 4070 50  0000 L CNN
-F 1 "100nF" H 3010 3920 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 3000 4000 50  0001 C CNN
-F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 3000 4000 50  0001 C CNN
-F 4 "CAP CER 0.1UF 25V X7R 1206" H 3000 4000 50  0001 C CNN "Description"
+F 1 "0.1uF" H 3010 3920 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3000 4000 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 3000 4000 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0603" H 3000 4000 50  0001 C CNN "Description"
 F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
-F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
+F 6 "C0603C104M4RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    3000 4000
 	0    -1   -1   0   
 $EndComp
@@ -323,12 +321,12 @@ L Device:C_Small C106
 U 1 1 5BF9B9F0
 P 7300 3600
 F 0 "C106" H 7310 3670 50  0000 L CNN
-F 1 "100nF" H 7310 3520 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 7300 3600 50  0001 C CNN
-F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 7300 3600 50  0001 C CNN
-F 4 "CAP CER 0.1UF 25V X7R 1206" H 7300 3600 50  0001 C CNN "Description"
+F 1 "0.1uF" H 7310 3520 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7300 3600 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 7300 3600 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0603" H 7300 3600 50  0001 C CNN "Description"
 F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
-F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
+F 6 "C0603C104M4RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    7300 3600
 	0    -1   -1   0   
 $EndComp
@@ -337,12 +335,12 @@ L Device:C_Small C107
 U 1 1 5BF9BC05
 P 7950 2500
 F 0 "C107" H 7960 2570 50  0000 L CNN
-F 1 "100nF" H 7960 2420 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 7950 2500 50  0001 C CNN
-F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 7950 2500 50  0001 C CNN
-F 4 "CAP CER 0.1UF 25V X7R 1206" H 7950 2500 50  0001 C CNN "Description"
+F 1 "0.1uF" H 7960 2420 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7950 2500 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 7950 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0603" H 7950 2500 50  0001 C CNN "Description"
 F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
-F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
+F 6 "C0603C104M4RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    7950 2500
 	0    -1   -1   0   
 $EndComp
@@ -351,12 +349,12 @@ L Device:C_Small C108
 U 1 1 5BF9BC3C
 P 8100 2600
 F 0 "C108" H 8110 2670 50  0000 L CNN
-F 1 "100nF" H 8110 2520 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 8100 2600 50  0001 C CNN
-F 3 "https://content.kemet.com/datasheets/KEM_C1012_X7R_OPENMODE_SMD.pdf" H 8100 2600 50  0001 C CNN
-F 4 "CAP CER 0.1UF 25V X7R 1206" H 8100 2600 50  0001 C CNN "Description"
+F 1 "0.1uF" H 8110 2520 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8100 2600 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 8100 2600 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0603" H 8100 2600 50  0001 C CNN "Description"
 F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
-F 6 "C1206F104K3RACTU" H 0   0   50  0001 C CNN "Part Number"
+F 6 "C0603C104M4RACTU" H 0   0   50  0001 C CNN "Part Number"
 	1    8100 2600
 	0    -1   1    0   
 $EndComp
@@ -369,7 +367,7 @@ CAN_MOSI
 Text GLabel 3750 3000 0    39   Input ~ 0
 CAN_MISO
 Text Notes 7850 800  0    60   ~ 0
-PA8 and PA9 (13+14) for I2C connection with Warning Panel
+PA8 and PA9 (13+14) for I2C expansion
 Text Notes 7850 950  0    60   ~ 0
 PA4 through PA7 (9-12) for SPI connection with CAN
 Text GLabel 7150 2300 2    39   Input ~ 0
@@ -385,7 +383,7 @@ PA27 RX LED
 Text Notes 7850 1250 0    60   ~ 0
 PB3 TX LED
 Text Notes 7850 1400 0    60   ~ 0
-RPM_PWM has 6 (4 if grouped by color) separate inputs
+RPM_PWM has 4 (grouped by color) separate inputs
 Wire Wire Line
 	3200 1450 3550 1450
 Wire Wire Line
@@ -525,10 +523,6 @@ Wire Wire Line
 	7050 4500 7150 4500
 Wire Wire Line
 	3850 4200 3750 4200
-Text GLabel 7150 2100 2    39   Input ~ 0
-~CHECK_ENGINE
-Wire Wire Line
-	7150 2100 7050 2100
 Text GLabel 3750 2400 0    39   Input ~ 0
 HIGH_TEMP
 Text GLabel 3750 2700 0    39   Input ~ 0
@@ -537,12 +531,8 @@ Wire Wire Line
 	3850 2400 3750 2400
 Wire Wire Line
 	3750 2700 3850 2700
-Wire Wire Line
-	9950 2100 9450 2100
 Text GLabel 3750 4600 0    39   Input ~ 0
 FRAME_IN
-Text GLabel 9450 2100 0    39   Input ~ 0
-GEAR_OUT
 Text Label 2950 2600 0    50   ~ 0
 VDDANA
 Text Label 3750 2100 0    50   ~ 0
@@ -568,5 +558,6 @@ Text GLabel 7150 4100 2    39   Input ~ 0
 Text GLabel 7150 4600 2    39   Input ~ 0
 ~PWM_RED
 Text GLabel 7150 4700 2    39   Input ~ 0
-~PWM_BLUE
+~SHIFT
+NoConn ~ 7050 2100
 $EndSCHEMATC

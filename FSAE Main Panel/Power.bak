@@ -96,36 +96,36 @@ Wire Wire Line
 $Comp
 L Device:C C305
 U 1 1 5BD92405
-P 8200 5200
-F 0 "C305" H 8225 5300 50  0000 L CNN
-F 1 "4.7uF" H 8225 5100 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 8238 5050 50  0001 C CNN
-F 3 "https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf" H 8200 5200 50  0001 C CNN
-F 4 "CAP CER 4.7UF 25V X5R 1206" H 8200 5200 50  0001 C CNN "Description"
-F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
-F 6 "C1206C475K3PACTU" H 0   0   50  0001 C CNN "Part Number"
-	1    8200 5200
+P 8550 5200
+F 0 "C305" H 8575 5300 50  0000 L CNN
+F 1 "4.7uF" H 8575 5100 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 8588 5050 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf" H 8550 5200 50  0001 C CNN
+F 4 "CAP CER 4.7UF 25V X5R 1206" H 8550 5200 50  0001 C CNN "Description"
+F 5 "KEMET" H 350 0   50  0001 C CNN "Manufacturer"
+F 6 "C1206C475K3PACTU" H 350 0   50  0001 C CNN "Part Number"
+	1    8550 5200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8050 4600 8200 4600
+	8050 4600 8550 4600
 Wire Wire Line
-	8200 4450 8200 4600
+	8550 4450 8550 4600
 Wire Wire Line
-	8200 5850 8200 5350
+	8550 5850 8550 5350
 Connection ~ 7650 5850
 $Comp
 L power:+3V3 #PWR0306
 U 1 1 5BD92411
-P 8200 4450
-F 0 "#PWR0306" H 8200 4300 50  0001 C CNN
-F 1 "+3V3" H 8200 4590 50  0000 C CNN
-F 2 "" H 8200 4450 50  0001 C CNN
-F 3 "" H 8200 4450 50  0001 C CNN
-	1    8200 4450
+P 8550 4450
+F 0 "#PWR0306" H 8550 4300 50  0001 C CNN
+F 1 "+3V3" H 8550 4590 50  0000 C CNN
+F 2 "" H 8550 4450 50  0001 C CNN
+F 3 "" H 8550 4450 50  0001 C CNN
+	1    8550 4450
 	1    0    0    -1  
 $EndComp
-Connection ~ 8200 4600
+Connection ~ 8550 4600
 Text GLabel 5750 5200 0    39   Input ~ 0
 USB_POWER
 Wire Wire Line
@@ -201,7 +201,7 @@ Wire Wire Line
 	4450 5350 4450 5850
 Connection ~ 4450 5850
 Wire Notes Line
-	8500 6250 8500 3800
+	8900 6250 8900 3800
 Wire Notes Line
 	1650 3800 1650 6250
 Text Notes 5200 3950 0    60   ~ 0
@@ -303,9 +303,7 @@ Wire Wire Line
 Wire Wire Line
 	7000 5850 7650 5850
 Wire Wire Line
-	7650 5850 8200 5850
-Wire Wire Line
-	8200 4600 8200 5050
+	8550 4600 8550 5050
 Wire Wire Line
 	6200 4600 6200 5200
 Wire Wire Line
@@ -332,8 +330,6 @@ Text GLabel 2150 4600 0    50   Input ~ 0
 CAN_V+
 Wire Wire Line
 	2300 4600 2150 4600
-NoConn ~ 8050 4700
-NoConn ~ 7250 4700
 Connection ~ 6200 5200
 $Comp
 L Device:Q_PMOS_GSD Q301
@@ -543,10 +539,6 @@ Wire Notes Line
 	11150 3750 7050 3750
 Wire Notes Line
 	7050 3750 7050 2200
-Wire Notes Line
-	8500 3800 1650 3800
-Wire Notes Line
-	1650 6250 8500 6250
 Text Notes 10000 2350 0    60   ~ 0
 DWC Power
 Connection ~ 5450 2750
@@ -599,4 +591,14 @@ Wire Wire Line
 	9200 2850 9200 3550
 Wire Wire Line
 	9500 2550 9800 2550
+Wire Wire Line
+	7250 4700 7250 4600
+Connection ~ 7250 4600
+Wire Notes Line
+	8900 3800 1650 3800
+Wire Notes Line
+	8900 6250 1650 6250
+Wire Wire Line
+	7650 5850 8550 5850
+NoConn ~ 8050 4700
 $EndSCHEMATC
