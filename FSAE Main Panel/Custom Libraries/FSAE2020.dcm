@@ -24,6 +24,11 @@ K Schmitt Trigger
 F https://www.ti.com/lit/ds/symlink/cd40106b.pdf
 $ENDCMP
 #
+$CMP LM2940
+D 1A Low Dropout regulator
+F https://www.ti.com/lit/ds/symlink/lp5907-q1.pdf
+$ENDCMP
+#
 $CMP MCP25625
 D CAN Controller with Integrated Transceiver
 K CAN

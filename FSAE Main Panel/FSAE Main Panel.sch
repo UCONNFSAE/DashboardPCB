@@ -21,7 +21,7 @@ P 5450 3400
 F 0 "U1" H 5450 1800 60  0000 C CNN
 F 1 "SAMD21G18A-AU" H 5450 5000 60  0000 C CNN
 F 2 "Housings_QFP:TQFP-48_7x7mm_Pitch0.5mm" H 2350 3000 60  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/SAMD21-Family-DataSheet-DS40001882D.pdf" H 2350 3000 60  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/SAM_D21_DA1_Family_DataSheet_DS40001882F.pdf" H 2350 3000 60  0001 C CNN
 F 4 "IC MCU 32BIT 256KB FLASH 48TQFP" H 0   0   50  0001 C CNN "Description"
 F 5 "Microchip" H 0   0   50  0001 C CNN "Manufacturer"
 F 6 "ATSAMD21G18A-AU" H 0   0   50  0001 C CNN "Part Number"
@@ -40,17 +40,6 @@ F 3 "" H 3650 1450 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:+3V3 #PWR0105
-U 1 1 5BCFEE2B
-P 3250 3900
-F 0 "#PWR0105" H 3250 3750 50  0001 C CNN
-F 1 "+3V3" H 3250 4040 50  0000 C CNN
-F 2 "" H 3250 3900 50  0001 C CNN
-F 3 "" H 3250 3900 50  0001 C CNN
-	1    3250 3900
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3V3 #PWR0109
 U 1 1 5BCFEE84
 P 7150 3500
@@ -59,17 +48,6 @@ F 1 "+3V3" H 7150 3640 50  0000 C CNN
 F 2 "" H 7150 3500 50  0001 C CNN
 F 3 "" H 7150 3500 50  0001 C CNN
 	1    7150 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR0112
-U 1 1 5BCFEEDD
-P 7750 2400
-F 0 "#PWR0112" H 7750 2250 50  0001 C CNN
-F 1 "+3V3" H 7750 2540 50  0000 C CNN
-F 2 "" H 7750 2400 50  0001 C CNN
-F 3 "" H 7750 2400 50  0001 C CNN
-	1    7750 2400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -145,19 +123,19 @@ F0 "External Interface" 60
 F1 "ExternalInterface.sch" 60
 $EndSheet
 $Sheet
-S 700  1200 800  300 
+S 700  1300 800  300 
 U 5BD8F69C
 F0 "Power" 60
 F1 "Power.sch" 60
 $EndSheet
 $Sheet
-S 700  1700 800  300 
+S 700  1900 800  300 
 U 5BE25053
 F0 "CAN" 60
 F1 "CAN.sch" 60
 $EndSheet
 $Sheet
-S 700  2200 800  300 
+S 700  2550 800  300 
 U 5BE60AE3
 F0 "Display" 60
 F1 "Display.sch" 60
@@ -182,17 +160,6 @@ Text GLabel 7150 3900 2    39   Input ~ 0
 USB_D-
 Text Notes 7850 650  0    60   ~ 0
 Pins that support I2C: PA8, PA9, PA12, PA13, PA16, PA17, PA22, PA23
-$Comp
-L power:+3.3V #PWR0102
-U 1 1 5BF9A879
-P 2900 2300
-F 0 "#PWR0102" H 2900 2150 50  0001 C CNN
-F 1 "+3.3V" H 2900 2440 50  0000 C CNN
-F 2 "" H 2900 2300 50  0001 C CNN
-F 3 "" H 2900 2300 50  0001 C CNN
-	1    2900 2300
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0106
 U 1 1 5BF9A928
@@ -301,15 +268,15 @@ $EndComp
 $Comp
 L Device:C_Small C107
 U 1 1 5BF9BC05
-P 7950 2500
-F 0 "C107" H 7960 2570 50  0000 L CNN
-F 1 "0.1uF" H 7960 2420 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 7950 2500 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 7950 2500 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0603" H 7950 2500 50  0001 C CNN "Description"
-F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
-F 6 "C0603C104M4RACTU" H 0   0   50  0001 C CNN "Part Number"
-	1    7950 2500
+P 8100 2300
+F 0 "C107" H 8110 2370 50  0000 L CNN
+F 1 "0.1uF" H 8110 2220 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8100 2300 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 8100 2300 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0603" H 8100 2300 50  0001 C CNN "Description"
+F 5 "KEMET" H 150 -200 50  0001 C CNN "Manufacturer"
+F 6 "C0603C104M4RACTU" H 150 -200 50  0001 C CNN "Part Number"
+	1    8100 2300
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -338,9 +305,9 @@ Text Notes 7850 800  0    60   ~ 0
 PA8 and PA9 (13+14) for I2C expansion
 Text Notes 7850 950  0    60   ~ 0
 PA4 through PA7 (9-12) for SPI connection with CAN
-Text GLabel 7150 2300 2    39   Input ~ 0
+Text GLabel 7450 2300 2    39   Input ~ 0
 SWDIO
-Text GLabel 7150 2400 2    39   Input ~ 0
+Text GLabel 7450 2400 2    39   Input ~ 0
 SWCLK
 Text Notes 7850 1100 0    60   ~ 0
 PA27 RX LED
@@ -363,11 +330,9 @@ Wire Wire Line
 Wire Wire Line
 	3750 1450 3750 1550
 Wire Wire Line
-	7750 2500 7750 2400
+	7750 2500 7750 2300
 Wire Wire Line
 	7050 2500 7750 2500
-Wire Wire Line
-	7750 2500 7850 2500
 Wire Wire Line
 	7150 3600 7150 3500
 Wire Wire Line
@@ -386,13 +351,8 @@ Wire Wire Line
 	7150 2700 7050 2700
 Wire Wire Line
 	3300 4100 3850 4100
-Connection ~ 7750 2500
 Wire Wire Line
-	8050 2500 8300 2500
-Wire Wire Line
-	8300 2500 8300 2600
-Wire Wire Line
-	7050 2600 8000 2600
+	7050 2600 7750 2600
 Wire Wire Line
 	8200 2600 8300 2600
 Wire Wire Line
@@ -439,10 +399,6 @@ Wire Wire Line
 Wire Wire Line
 	3550 2200 3850 2200
 Wire Wire Line
-	7150 2300 7050 2300
-Wire Wire Line
-	7050 2400 7150 2400
-Wire Wire Line
 	3750 3900 3850 3900
 Wire Wire Line
 	3750 3200 3850 3200
@@ -464,7 +420,7 @@ Text Label 3750 2100 0    50   ~ 0
 X32+
 Text Label 3750 2200 0    50   ~ 0
 X32-
-Text Label 7550 2600 0    50   ~ 0
+Text Label 7300 2600 0    50   ~ 0
 VCORE1
 Text GLabel 1850 5400 0    39   Input ~ 0
 ~PWM_GREEN
@@ -920,4 +876,104 @@ Text GLabel 1850 6200 0    39   Input ~ 0
 SWS4
 Text GLabel 1850 6500 0    39   Input ~ 0
 SWS1
+$Comp
+L power:+3.3VA #PWR?
+U 1 1 5F836DEC
+P 7600 1500
+F 0 "#PWR?" H 7600 1350 50  0001 C CNN
+F 1 "+3.3VA" H 7615 1673 50  0000 C CNN
+F 2 "" H 7600 1500 50  0001 C CNN
+F 3 "" H 7600 1500 50  0001 C CNN
+	1    7600 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3VA #PWR?
+U 1 1 5F837364
+P 3250 3900
+F 0 "#PWR?" H 3250 3750 50  0001 C CNN
+F 1 "+3.3VA" H 3265 4073 50  0000 C CNN
+F 2 "" H 3250 3900 50  0001 C CNN
+F 3 "" H 3250 3900 50  0001 C CNN
+	1    3250 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3VA #PWR?
+U 1 1 5F84F372
+P 2900 2300
+F 0 "#PWR?" H 2900 2150 50  0001 C CNN
+F 1 "+3.3VA" H 2915 2473 50  0000 C CNN
+F 2 "" H 2900 2300 50  0001 C CNN
+F 3 "" H 2900 2300 50  0001 C CNN
+	1    2900 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C109
+U 1 1 5F85069C
+P 8100 3000
+F 0 "C109" H 8110 3070 50  0000 L CNN
+F 1 "1uF" H 8110 2920 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8100 3000 50  0001 C CNN
+F 3 "" H 8100 3000 50  0001 C CNN
+F 4 "" H 8100 3000 50  0001 C CNN "Description"
+F 5 "KEMET" H 0   400 50  0001 C CNN "Manufacturer"
+F 6 "" H 0   400 50  0001 C CNN "Part Number"
+	1    8100 3000
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	8300 2600 8300 3000
+Wire Wire Line
+	8300 3000 8200 3000
+Wire Wire Line
+	8000 3000 7750 3000
+Wire Wire Line
+	7750 3000 7750 2600
+Connection ~ 7750 2600
+Wire Wire Line
+	7750 2600 8000 2600
+Wire Wire Line
+	8300 2300 8300 2600
+Wire Wire Line
+	8300 2300 8200 2300
+Wire Wire Line
+	7750 2300 8000 2300
+Connection ~ 7750 2300
+Text Label 3550 4600 0    50   ~ 0
+X16M+
+Text Label 3550 4700 0    50   ~ 0
+X16M-
+$Comp
+L Device:R R101
+U 1 1 5F86EC43
+P 7300 1800
+F 0 "R101" H 7370 1846 50  0000 L CNN
+F 1 "1k" H 7370 1755 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" V 7230 1800 50  0001 C CNN
+F 3 "~" H 7300 1800 50  0001 C CNN
+	1    7300 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 1650 7300 1500
+Wire Wire Line
+	7300 1500 7600 1500
+Wire Wire Line
+	7750 1500 7600 1500
+Wire Wire Line
+	7750 1500 7750 2300
+Connection ~ 7600 1500
+Wire Wire Line
+	7050 2300 7450 2300
+Wire Wire Line
+	7050 2400 7300 2400
+Wire Wire Line
+	7300 1950 7300 2400
+Connection ~ 7300 2400
+Wire Wire Line
+	7300 2400 7450 2400
+Text GLabel 1850 3700 0    39   Input ~ 0
+PGOOD
 $EndSCHEMATC
