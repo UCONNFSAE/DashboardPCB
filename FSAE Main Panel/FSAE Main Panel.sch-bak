@@ -31,13 +31,13 @@ $EndComp
 $Comp
 L power:GND #PWR0104
 U 1 1 5BC6953B
-P 3200 1600
-F 0 "#PWR0104" H 3200 1350 50  0001 C CNN
-F 1 "GND" H 3200 1450 50  0000 C CNN
-F 2 "" H 3200 1600 50  0001 C CNN
-F 3 "" H 3200 1600 50  0001 C CNN
-	1    3200 1600
-	1    0    0    -1  
+P 3650 1450
+F 0 "#PWR0104" H 3650 1200 50  0001 C CNN
+F 1 "GND" H 3650 1300 50  0000 C CNN
+F 2 "" H 3650 1450 50  0001 C CNN
+F 3 "" H 3650 1450 50  0001 C CNN
+	1    3650 1450
+	-1   0    0    1   
 $EndComp
 $Comp
 L power:+3V3 #PWR0105
@@ -166,20 +166,16 @@ Text GLabel 7150 2900 2    39   Input ~ 0
 ~RESET
 Text GLabel 3750 3900 0    39   Input ~ 0
 ~CLEAR
-Text GLabel 3750 4200 0    39   Input ~ 0
+Text GLabel 1850 3600 0    39   Input ~ 0
 ~RPM_EN
-Text GLabel 3750 4300 0    39   Input ~ 0
-RPM_CLR
-Text GLabel 3750 4700 0    39   Input ~ 0
+Text GLabel 1850 4150 0    39   Input ~ 0
+FRAME_CLR
+Text GLabel 1850 4550 0    39   Input ~ 0
 FRAME_CLK
-Text GLabel 3750 4400 0    39   Input ~ 0
-RPM_SET
-Text GLabel 7150 4400 2    39   Input ~ 0
+Text GLabel 1850 4050 0    39   Input ~ 0
+FRAME_SET
+Text GLabel 1850 5000 0    39   Input ~ 0
 ~PWM_WHITE
-Text GLabel 7150 4300 2    39   Input ~ 0
-GEAR_CLR
-Text GLabel 7150 4500 2    39   Input ~ 0
-GEAR_SET
 Text GLabel 7150 3800 2    39   Input ~ 0
 USB_D+
 Text GLabel 7150 3900 2    39   Input ~ 0
@@ -275,34 +271,6 @@ F 6 "MS1V-T1K-32.768kHz" H 0   0   50  0001 C CNN "Part Number"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C105
-U 1 1 5BF9B4E8
-P 3750 1650
-F 0 "C105" H 3760 1720 50  0000 L CNN
-F 1 "6.8pF" H 3760 1570 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 3750 1650 50  0001 C CNN
-F 3 "" H 3750 1650 50  0001 C CNN
-F 4 "CAP CER 6.8PF 50V C0G/NP0 0805" H 3750 1650 50  0001 C CNN "Description"
-F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
-F 6 "C0805C689J5GACTU" H 0   0   50  0001 C CNN "Part Number"
-	1    3750 1650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C104
-U 1 1 5BF9B519
-P 3550 1650
-F 0 "C104" H 3560 1720 50  0000 L CNN
-F 1 "6.8pF" H 3560 1570 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 3550 1650 50  0001 C CNN
-F 3 "" H 3550 1650 50  0001 C CNN
-F 4 "CAP CER 6.8PF 50V C0G/NP0 0805" H 3550 1650 50  0001 C CNN "Description"
-F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
-F 6 "C0805C689J5GACTU" H 0   0   50  0001 C CNN "Part Number"
-	1    3550 1650
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C103
 U 1 1 5BF9B85D
 P 3000 4000
@@ -374,23 +342,12 @@ Text GLabel 7150 2300 2    39   Input ~ 0
 SWDIO
 Text GLabel 7150 2400 2    39   Input ~ 0
 SWCLK
-Text GLabel 3750 3600 0    39   Input ~ 0
-DWC_SDI
-Text GLabel 3750 3700 0    39   Input ~ 0
-DWC_SCLK
 Text Notes 7850 1100 0    60   ~ 0
 PA27 RX LED
 Text Notes 7850 1250 0    60   ~ 0
 PB3 TX LED
-Text Notes 7850 1400 0    60   ~ 0
-RPM_PWM has 4 (grouped by color) separate inputs
 Wire Wire Line
-	3200 1450 3550 1450
-Wire Wire Line
-	3550 1450 3750 1450
-Wire Wire Line
-	3200 1450 3200 1600
-Connection ~ 3550 1450
+	3550 1450 3650 1450
 Connection ~ 3750 1950
 Connection ~ 3550 1950
 Wire Wire Line
@@ -486,27 +443,7 @@ Wire Wire Line
 Wire Wire Line
 	7050 2400 7150 2400
 Wire Wire Line
-	7050 4000 7150 4000
-Wire Wire Line
-	7050 4100 7150 4100
-Wire Wire Line
-	7050 4600 7150 4600
-Wire Wire Line
-	7050 4700 7150 4700
-Wire Wire Line
-	3750 3600 3850 3600
-Wire Wire Line
-	3850 3700 3750 3700
-Wire Wire Line
 	3750 3900 3850 3900
-Wire Wire Line
-	3750 4300 3850 4300
-Wire Wire Line
-	3850 4400 3750 4400
-Wire Wire Line
-	3850 4600 3750 4600
-Wire Wire Line
-	3750 4700 3850 4700
 Wire Wire Line
 	3750 3200 3850 3200
 Wire Wire Line
@@ -515,49 +452,472 @@ Wire Wire Line
 	3850 3000 3750 3000
 Wire Wire Line
 	3750 2900 3850 2900
-Wire Wire Line
-	7050 4300 7150 4300
-Wire Wire Line
-	7150 4400 7050 4400
-Wire Wire Line
-	7050 4500 7150 4500
-Wire Wire Line
-	3850 4200 3750 4200
-Text GLabel 3750 2400 0    39   Input ~ 0
+Text GLabel 1850 4250 0    39   Input ~ 0
 HIGH_TEMP
-Text GLabel 3750 2700 0    39   Input ~ 0
+Text GLabel 1850 4350 0    39   Input ~ 0
 OIL_PRES
-Wire Wire Line
-	3850 2400 3750 2400
-Wire Wire Line
-	3750 2700 3850 2700
-Text GLabel 3750 4600 0    39   Input ~ 0
+Text GLabel 1850 4450 0    39   Input ~ 0
 FRAME_IN
 Text Label 2950 2600 0    50   ~ 0
 VDDANA
 Text Label 3750 2100 0    50   ~ 0
-XIN+
+X32+
 Text Label 3750 2200 0    50   ~ 0
-XIN-
+X32-
 Text Label 7550 2600 0    50   ~ 0
 VCORE1
-NoConn ~ 7050 4200
-NoConn ~ 7050 3200
-NoConn ~ 7050 3100
-NoConn ~ 7050 3000
-NoConn ~ 7050 2800
-NoConn ~ 7050 2200
-NoConn ~ 3850 2300
-NoConn ~ 3850 2800
-NoConn ~ 3850 3800
-NoConn ~ 3850 4500
-Text GLabel 7150 4000 2    39   Input ~ 0
+Text GLabel 1850 5400 0    39   Input ~ 0
 ~PWM_GREEN
-Text GLabel 7150 4100 2    39   Input ~ 0
+Text GLabel 1850 5300 0    39   Input ~ 0
 ~PWM_YELLOW
-Text GLabel 7150 4600 2    39   Input ~ 0
+Text GLabel 1850 4800 0    39   Input ~ 0
 ~PWM_RED
-Text GLabel 7150 4700 2    39   Input ~ 0
+Text GLabel 1850 4700 0    39   Input ~ 0
 ~SHIFT
-NoConn ~ 7050 2100
+Text Notes 4050 5700 0    50   ~ 0
+At 16MHz MCU requires\nCload<= 20pF and ESR <= 60ohm\nMax startup time:\n14500 cycles = 907uS\nCload = [(5.9pF + Clext) * (3.2pf + Clext)] / (9.1pF + 2*Clext) + 1.3pF\nCload = 8.0pf if we use 9.1pF Cext
+$Comp
+L Device:Crystal_GND24 Y102
+U 1 1 5F7B1203
+P 3250 5400
+F 0 "Y102" H 3550 5450 50  0000 L CNN
+F 1 "16MHz" H 3550 5350 50  0000 L CNN
+F 2 "Crystals:Crystal_SMD_5032-4pin_5.0x3.2mm" H 3250 5400 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/122/ecx_53b-1479911.pdf" H 3250 5400 50  0001 C CNN
+F 4 "Crystals 16.000MHZ 8pF 10ppm -20C +70C" H 3250 5400 50  0001 C CNN "Description"
+F 5 "XC1839CT-ND" H 3250 5400 50  0001 C CNN "Digikey P/N"
+F 6 "ECS" H 3250 5400 50  0001 C CNN "Manufacturer"
+F 7 "ECS-160-8-30B-CKM" H 3250 5400 50  0001 C CNN "Part Number"
+	1    3250 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F7B3062
+P 3250 5200
+F 0 "#PWR?" H 3250 4950 50  0001 C CNN
+F 1 "GND" H 3250 5050 50  0000 C CNN
+F 2 "" H 3250 5200 50  0001 C CNN
+F 3 "" H 3250 5200 50  0001 C CNN
+	1    3250 5200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F7B3B16
+P 3250 5600
+F 0 "#PWR?" H 3250 5350 50  0001 C CNN
+F 1 "GND" H 3250 5450 50  0000 C CNN
+F 2 "" H 3250 5600 50  0001 C CNN
+F 3 "" H 3250 5600 50  0001 C CNN
+	1    3250 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C109
+U 1 1 5F7B872A
+P 3050 5900
+F 0 "C109" H 3142 5946 50  0000 L CNN
+F 1 "9.1pF" H 3142 5855 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402_NoSilk" H 3050 5900 50  0001 C CNN
+F 3 "~" H 3050 5900 50  0001 C CNN
+F 4 "CAP CER 9.1PF 50V C0G/NP0 0402" H 3050 5900 50  0001 C CNN "Description"
+F 5 "399-14287-1-ND" H 3050 5900 50  0001 C CNN "Digikey P/N"
+F 6 "KEMET" H 3050 5900 50  0001 C CNN "Manufacturer"
+F 7 "C0402C919C5GAC7867" H 3050 5900 50  0001 C CNN "Part Number"
+	1    3050 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C110
+U 1 1 5F7BA778
+P 3450 5900
+F 0 "C110" H 3542 5946 50  0000 L CNN
+F 1 "9.1pF" H 3542 5855 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402_NoSilk" H 3450 5900 50  0001 C CNN
+F 3 "~" H 3450 5900 50  0001 C CNN
+F 4 "CAP CER 9.1PF 50V C0G/NP0 0402" H 3450 5900 50  0001 C CNN "Description"
+F 5 "399-14287-1-ND" H 3450 5900 50  0001 C CNN "Digikey P/N"
+F 6 "KEMET" H 3450 5900 50  0001 C CNN "Manufacturer"
+F 7 "C0402C919C5GAC7867" H 3450 5900 50  0001 C CNN "Part Number"
+	1    3450 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 5400 3450 5400
+Wire Wire Line
+	3450 5400 3450 5800
+Wire Wire Line
+	3100 5400 3050 5400
+Wire Wire Line
+	3050 5400 3050 5800
+Wire Wire Line
+	3450 5400 3450 4700
+Wire Wire Line
+	3450 4700 3850 4700
+Connection ~ 3450 5400
+Wire Wire Line
+	3050 4600 3050 5400
+Wire Wire Line
+	3050 4600 3850 4600
+Connection ~ 3050 5400
+$Comp
+L power:GND #PWR?
+U 1 1 5F7C92E5
+P 3250 6150
+F 0 "#PWR?" H 3250 5900 50  0001 C CNN
+F 1 "GND" H 3250 6000 50  0000 C CNN
+F 2 "" H 3250 6150 50  0001 C CNN
+F 3 "" H 3250 6150 50  0001 C CNN
+	1    3250 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 6000 3450 6150
+Wire Wire Line
+	3450 6150 3250 6150
+Wire Wire Line
+	3250 6150 3050 6150
+Wire Wire Line
+	3050 6150 3050 6000
+Connection ~ 3250 6150
+$Comp
+L Device:C_Small C104
+U 1 1 5F7CEB1D
+P 3750 1650
+F 0 "C104" H 3842 1696 50  0000 L CNN
+F 1 "9.1pF" H 3842 1605 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402_NoSilk" H 3750 1650 50  0001 C CNN
+F 3 "~" H 3750 1650 50  0001 C CNN
+F 4 "CAP CER 9.1PF 50V C0G/NP0 0402" H 3750 1650 50  0001 C CNN "Description"
+F 5 "399-14287-1-ND" H 3750 1650 50  0001 C CNN "Digikey P/N"
+F 6 "KEMET" H 3750 1650 50  0001 C CNN "Manufacturer"
+F 7 "C0402C919C5GAC7867" H 3750 1650 50  0001 C CNN "Part Number"
+	1    3750 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C103
+U 1 1 5F7CF5CF
+P 3550 1650
+F 0 "C103" H 3250 1700 50  0000 L CNN
+F 1 "9.1pF" H 3250 1600 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402_NoSilk" H 3550 1650 50  0001 C CNN
+F 3 "~" H 3550 1650 50  0001 C CNN
+F 4 "CAP CER 9.1PF 50V C0G/NP0 0402" H 3550 1650 50  0001 C CNN "Description"
+F 5 "399-14287-1-ND" H 3550 1650 50  0001 C CNN "Digikey P/N"
+F 6 "KEMET" H 3550 1650 50  0001 C CNN "Manufacturer"
+F 7 "C0402C919C5GAC7867" H 3550 1650 50  0001 C CNN "Part Number"
+	1    3550 1650
+	1    0    0    -1  
+$EndComp
+Connection ~ 3650 1450
+Wire Wire Line
+	3650 1450 3750 1450
+Text GLabel 1850 5700 0    39   Input ~ 0
+CAL_IN
+Text GLabel 1850 5800 0    39   Input ~ 0
+CAL_a
+Text GLabel 1850 5900 0    39   Input ~ 0
+CAL_b
+Text GLabel 1850 6000 0    39   Input ~ 0
+CAL_c
+Wire Notes Line style solid rgb(194, 0, 9)
+	6200 7000 600  7000
+Text Notes 5200 7250 0    50   ~ 0
+DWC 16bits
+Text Notes 4000 7250 0    50   ~ 0
+GEAR 8bits
+Text Notes 3200 7250 0    50   ~ 0
+RED 8bits
+Text Notes 2350 7250 0    50   ~ 0
+YELLOW 8bits
+Text Notes 1150 7250 0    50   ~ 0
+GREEN 16bits
+Wire Notes Line style solid rgb(194, 0, 9)
+	6200 7000 6200 7100
+Wire Notes Line rgb(194, 0, 9)
+	6100 7000 6100 7100
+Wire Notes Line rgb(194, 0, 9)
+	6000 7000 6000 7100
+Wire Notes Line rgb(194, 0, 9)
+	5900 7000 5900 7100
+Wire Notes Line rgb(194, 0, 9)
+	5800 7000 5800 7100
+Wire Notes Line rgb(194, 0, 9)
+	5700 7000 5700 7100
+Wire Notes Line rgb(194, 0, 9)
+	5600 7000 5600 7100
+Wire Notes Line rgb(194, 0, 9)
+	5500 7000 5500 7100
+Wire Notes Line rgb(194, 0, 9)
+	5400 7000 5400 7100
+Wire Notes Line rgb(194, 0, 9)
+	5300 7000 5300 7100
+Wire Notes Line rgb(194, 0, 9)
+	5200 7000 5200 7100
+Wire Notes Line rgb(194, 0, 9)
+	5100 7000 5100 7100
+Wire Notes Line rgb(194, 0, 9)
+	5000 7000 5000 7100
+Wire Notes Line rgb(194, 0, 9)
+	4900 7000 4900 7100
+Wire Notes Line rgb(194, 0, 9)
+	4800 7000 4800 7100
+Wire Notes Line rgb(194, 0, 9)
+	4700 7000 4700 7100
+Wire Notes Line rgb(194, 0, 9)
+	4500 7000 4500 7100
+Wire Notes Line rgb(194, 0, 9)
+	4400 7000 4400 7100
+Wire Notes Line rgb(194, 0, 9)
+	4300 7000 4300 7100
+Wire Notes Line rgb(194, 0, 9)
+	4200 7000 4200 7100
+Wire Notes Line rgb(194, 0, 9)
+	4100 7000 4100 7100
+Wire Notes Line rgb(194, 0, 9)
+	4000 7000 4000 7100
+Wire Notes Line rgb(194, 0, 9)
+	3900 7000 3900 7100
+Wire Notes Line rgb(194, 0, 9)
+	3700 7000 3700 7100
+Wire Notes Line rgb(194, 0, 9)
+	3600 7000 3600 7100
+Wire Notes Line rgb(194, 0, 9)
+	3500 7000 3500 7100
+Wire Notes Line rgb(194, 0, 9)
+	3400 7000 3400 7100
+Wire Notes Line rgb(194, 0, 9)
+	3300 7000 3300 7100
+Wire Notes Line rgb(194, 0, 9)
+	3200 7000 3200 7100
+Wire Notes Line rgb(194, 0, 9)
+	3100 7000 3100 7100
+Wire Notes Line rgb(194, 0, 9)
+	2900 7000 2900 7100
+Wire Notes Line rgb(194, 0, 9)
+	2800 7000 2800 7100
+Wire Notes Line rgb(194, 0, 9)
+	2700 7000 2700 7100
+Wire Notes Line rgb(194, 0, 9)
+	2600 7000 2600 7100
+Wire Notes Line rgb(194, 0, 9)
+	2500 7000 2500 7100
+Wire Notes Line rgb(194, 0, 9)
+	2400 7000 2400 7100
+Wire Notes Line rgb(194, 0, 9)
+	2300 7000 2300 7100
+Text Notes 4500 7100 2    50   ~ 0
+g
+Text Notes 6200 7100 2    50   ~ 0
+16
+Text Notes 6100 7100 2    50   ~ 0
+15
+Text Notes 6000 7100 2    50   ~ 0
+14
+Text Notes 5900 7100 2    50   ~ 0
+13
+Text Notes 5800 7100 2    50   ~ 0
+12
+Text Notes 5700 7100 2    50   ~ 0
+11
+Text Notes 5600 7100 2    50   ~ 0
+10
+Text Notes 5500 7100 2    50   ~ 0
+9
+Text Notes 5400 7100 2    50   ~ 0
+8
+Text Notes 5300 7100 2    50   ~ 0
+7
+Text Notes 5200 7100 2    50   ~ 0
+6
+Text Notes 5100 7100 2    50   ~ 0
+5
+Text Notes 5000 7100 2    50   ~ 0
+4
+Text Notes 4900 7100 2    50   ~ 0
+3
+Text Notes 4800 7100 2    50   ~ 0
+2
+Text Notes 4700 7100 2    50   ~ 0
+1
+Text Notes 6650 7450 2    50   ~ 0
+First Bit Shifted Out
+Wire Notes Line
+	4150 6200 4450 6200
+Wire Notes Line
+	4400 6500 4100 6500
+Wire Notes Line
+	4050 6800 4350 6800
+Wire Notes Line
+	4450 6200 4350 6800
+Wire Notes Line
+	4150 6200 4050 6800
+Text Notes 4300 6150 0    50   ~ 0
+a
+Text Notes 4450 6350 0    50   ~ 0
+b
+Text Notes 4400 6700 0    50   ~ 0
+c
+Text Notes 4200 6800 0    50   ~ 0
+d
+Text Notes 3950 6700 0    50   ~ 0
+e
+Text Notes 4050 6350 0    50   ~ 0
+f
+Text Notes 4250 6450 0    50   ~ 0
+g
+Text Notes 4600 7100 2    50   ~ 0
+x
+Text Notes 4400 7100 2    50   ~ 0
+f
+Text Notes 4300 7100 2    50   ~ 0
+e
+Text Notes 4200 7100 2    50   ~ 0
+d
+Text Notes 4100 7100 2    50   ~ 0
+c
+Text Notes 4000 7100 2    50   ~ 0
+b
+Text Notes 3900 7100 2    50   ~ 0
+a
+Wire Notes Line style solid rgb(0, 255, 0)
+	4600 7000 4600 7100
+Wire Notes Line style solid rgb(0, 255, 0)
+	3800 7000 3800 7100
+Text Notes 3800 7100 2    50   ~ 0
+x
+Text Notes 3700 7100 2    50   ~ 0
+x
+Text Notes 3600 7100 2    50   ~ 0
+15
+Text Notes 3400 7100 2    50   ~ 0
+14
+Text Notes 3200 7100 2    50   ~ 0
+13
+Text Notes 3000 7100 2    50   ~ 0
+12
+Wire Notes Line style solid rgb(0, 255, 0)
+	2200 7000 2200 7100
+Wire Notes Line style solid rgb(0, 255, 0)
+	3000 7000 3000 7100
+Wire Notes Line rgb(194, 0, 9)
+	2100 7000 2100 7100
+Wire Notes Line rgb(194, 0, 9)
+	2000 7000 2000 7100
+Wire Notes Line rgb(194, 0, 9)
+	1900 7000 1900 7100
+Wire Notes Line rgb(194, 0, 9)
+	1800 7000 1800 7100
+Wire Notes Line rgb(194, 0, 9)
+	1700 7000 1700 7100
+Wire Notes Line rgb(194, 0, 9)
+	1600 7000 1600 7100
+Wire Notes Line rgb(194, 0, 9)
+	1500 7000 1500 7100
+Wire Notes Line rgb(194, 0, 9)
+	1400 7000 1400 7100
+Wire Notes Line rgb(194, 0, 9)
+	1300 7000 1300 7100
+Wire Notes Line rgb(194, 0, 9)
+	1200 7000 1200 7100
+Wire Notes Line rgb(194, 0, 9)
+	1100 7000 1100 7100
+Wire Notes Line rgb(194, 0, 9)
+	1000 7000 1000 7100
+Wire Notes Line rgb(194, 0, 9)
+	900  7000 900  7100
+Text Notes 2800 7100 2    50   ~ 0
+11
+Text Notes 2600 7100 2    50   ~ 0
+10
+Text Notes 2400 7100 2    50   ~ 0
+9
+Text Notes 2200 7100 2    50   ~ 0
+8
+Text Notes 2000 7100 2    50   ~ 0
+7
+Text Notes 1800 7100 2    50   ~ 0
+6
+Text Notes 1600 7100 2    50   ~ 0
+5
+Text Notes 1400 7100 2    50   ~ 0
+4
+Text Notes 1200 7100 2    50   ~ 0
+3
+Text Notes 1000 7100 2    50   ~ 0
+2
+Text Notes 800  7100 2    50   ~ 0
+1
+Wire Notes Line rgb(194, 0, 9)
+	800  7000 800  7100
+Wire Notes Line rgb(194, 0, 9)
+	700  7000 700  7100
+Wire Notes Line style solid rgb(194, 0, 9)
+	6200 7100 600  7100
+Wire Notes Line style solid rgb(194, 0, 9)
+	600  7000 600  7100
+Wire Notes Line
+	1750 7200 2150 7200
+Wire Notes Line
+	2200 7100 2200 7300
+Wire Notes Line
+	1050 7200 650  7200
+Wire Notes Line
+	600  7300 600  7100
+Wire Notes Line
+	3000 7100 3000 7300
+Wire Notes Line
+	3800 7100 3800 7300
+Wire Notes Line
+	4600 7100 4600 7300
+Wire Notes Line
+	2250 7200 2300 7200
+Wire Notes Line
+	2900 7200 2950 7200
+Wire Notes Line
+	3050 7200 3150 7200
+Wire Notes Line
+	3850 7200 3950 7200
+Wire Notes Line
+	4450 7200 4550 7200
+Wire Notes Line
+	4650 7200 5150 7200
+Wire Notes Line
+	6200 7100 6200 7300
+Wire Notes Line
+	5650 7200 6150 7200
+Wire Notes Line
+	3650 7200 3750 7200
+Wire Notes Line
+	3800 6800 3800 7000
+Wire Notes Line
+	600  6800 600  7000
+Text Notes 3050 6950 2    50   ~ 0
+On = High, Off = Low. LED Every 500 RPM
+Text Notes 2200 7250 3    50   ~ 0
+8,000 RPM
+Text Notes 3000 7250 3    50   ~ 0
+12,000 RPM
+Text Notes 700  7300 3    50   ~ 0
+500 RPM
+Text Notes 2300 7250 3    50   ~ 0
+8,500 RPM
+Text Notes 3100 7250 3    50   ~ 0
+12,500 RPM
+Text Notes 1300 6700 2    50   ~ 0
+Last Bit Shifted Out
+Wire Notes Line
+	3100 6900 3750 6900
+Wire Notes Line
+	650  6900 1300 6900
+Text GLabel 1850 6400 0    39   Input ~ 0
+SWS2
+Text GLabel 1850 6300 0    39   Input ~ 0
+SWS3
+Text GLabel 1850 6200 0    39   Input ~ 0
+SWS4
+Text GLabel 1850 6500 0    39   Input ~ 0
+SWS1
 $EndSCHEMATC

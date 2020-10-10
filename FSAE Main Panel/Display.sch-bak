@@ -64,8 +64,8 @@ F 6 "" H 0   0   50  0001 C CNN "Part Number"
 	1    1700 6500
 	1    0    0    -1  
 $EndComp
-Text Notes 6700 6450 0    60   ~ 0
-To drive shift register fed LED arrays:\nUsing Shift Clock SRCK (FRAME_SCLK) shift in\n8 bit code corresponding to desired\ndigit on SER_IN (GEAR_IN).\nOnce all 8 bits are in shift register\ntransfer them to the buffer by toggling\nRegister Clock RCK (FRAME_RCLK).\nTo clear buffer pull ~CLR~ (FRAME_CLR)\nHold ~G~ Low to enable lights (~GEAR_PWM~)\nlow.
+Text Notes 9000 4250 0    60   ~ 0
+To drive shift register fed LED arrays:\nUsing Shift Clock FRAME_SCLK shift in\nbit code corresponding to desired\nlights and digits on FRAME_IN.\nOnce all bits are in shift register\ntransfer them to the output buffer by toggling\nRegister Clock FRAME_SET\nTo clear register pull FRAME_CLR low\nHold ~G~ Low to enable lights\nModulate ~G~ with ~PWM_White~\n~PWM_Green~, ~PWM_Red~, or\n~PWM_Yellow~ to control brightness
 $Comp
 L Device:LED_Small D502
 U 1 1 5BE84A41
@@ -334,7 +334,7 @@ Text GLabel 1500 5200 0    39   Input ~ 0
 Text GLabel 1500 5300 0    39   Input ~ 0
 FRAME_CLR
 Text GLabel 1500 5050 0    39   Input ~ 0
-RPM_IN
+FRAME_IN
 Text GLabel 1500 5500 0    39   Input ~ 0
 FRAME_CLK
 Text GLabel 1500 5400 0    39   Input ~ 0
@@ -895,7 +895,7 @@ Entry Wire Line
 Entry Wire Line
 	1800 3600 1900 3700
 Wire Wire Line
-	5200 4200 5200 3900
+	5300 4200 5300 3900
 Wire Wire Line
 	3650 3600 3600 3600
 Wire Wire Line
@@ -2077,7 +2077,7 @@ Wire Wire Line
 Wire Wire Line
 	3550 7400 3550 7050
 Text GLabel 1250 7400 0    39   Input ~ 0
-GEAR_OUT
+FRAME_OUT
 NoConn ~ -14750 5700
 Text Label 1900 3700 2    39   ~ 0
 ~PWM_GREEN
@@ -2093,7 +2093,7 @@ Text GLabel 4900 2350 1    39   Input ~ 0
 ~PWM_YELLOW
 Text GLabel 5050 2350 1    39   Input ~ 0
 ~PWM_RED
-Text GLabel 5200 3750 1    39   Input ~ 0
+Text GLabel 5300 3750 1    39   Input ~ 0
 ~SHIFT
 Text Label 4900 2400 3    39   ~ 0
 ~PWM_YELLOW
@@ -3130,15 +3130,15 @@ Text Notes 7900 4950 0    50   ~ 0
 $Comp
 L Device:Q_NMOS_GSD Q503
 U 1 1 5F1D9444
-P 5450 4200
-F 0 "Q503" H 5655 4246 50  0000 L CNN
-F 1 "SI2308CDS-T1-GE3" H 5655 4155 50  0001 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 5650 4300 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/77744/si2308cds.pdf" H 5450 4200 50  0001 C CNN
-F 4 "MOSFET N-CH 60V 2.6A SOT23-3" H 2750 1900 50  0001 C CNN "Description"
-F 5 "Vishay" H 2750 1900 50  0001 C CNN "Manufacturer"
-F 6 "SI2308CDS-T1-GE3" H 2750 1900 50  0001 C CNN "Part Number"
-	1    5450 4200
+P 5550 4200
+F 0 "Q503" H 5755 4246 50  0000 L CNN
+F 1 "SI2308CDS-T1-GE3" H 5755 4155 50  0001 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5750 4300 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/77744/si2308cds.pdf" H 5550 4200 50  0001 C CNN
+F 4 "MOSFET N-CH 60V 2.6A SOT23-3" H 2850 1900 50  0001 C CNN "Description"
+F 5 "Vishay" H 2850 1900 50  0001 C CNN "Manufacturer"
+F 6 "SI2308CDS-T1-GE3" H 2850 1900 50  0001 C CNN "Part Number"
+	1    5550 4200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -3158,16 +3158,16 @@ Wire Wire Line
 	7650 3950 7650 3700
 Connection ~ 7650 3950
 Wire Wire Line
-	5200 4200 5250 4200
+	5300 4200 5350 4200
 $Comp
 L power:GND #PWR?
 U 1 1 5F3AC113
-P 5550 4400
-F 0 "#PWR?" H 5550 4150 50  0001 C CNN
-F 1 "GND" H 5555 4227 50  0000 C CNN
-F 2 "" H 5550 4400 50  0001 C CNN
-F 3 "" H 5550 4400 50  0001 C CNN
-	1    5550 4400
+P 5650 4400
+F 0 "#PWR?" H 5650 4150 50  0001 C CNN
+F 1 "GND" H 5655 4227 50  0000 C CNN
+F 2 "" H 5650 4400 50  0001 C CNN
+F 3 "" H 5650 4400 50  0001 C CNN
+	1    5650 4400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -3198,23 +3198,23 @@ $EndComp
 Wire Wire Line
 	5950 4200 5950 3900
 Wire Wire Line
-	5950 3900 5200 3900
+	5950 3900 5300 3900
 Wire Wire Line
-	5550 4000 5550 3700
+	5650 4000 5650 3700
 Entry Wire Line
-	5550 3700 5650 3600
+	5650 3700 5750 3600
 Wire Wire Line
 	6250 4000 6250 3700
 Entry Wire Line
 	6250 3700 6350 3600
 Connection ~ 6600 3600
-Text Label 5550 3850 1    35   ~ 0
+Text Label 5650 3850 1    35   ~ 0
 SFT_1
 Text Label 6250 3850 1    35   ~ 0
 SFT_2
 Wire Wire Line
-	5200 3900 5200 3750
-Connection ~ 5200 3900
+	5300 3900 5300 3750
+Connection ~ 5300 3900
 Wire Wire Line
 	600  5600 600  6750
 Wire Wire Line
@@ -3313,7 +3313,7 @@ Wire Bus Line
 Wire Bus Line
 	3500 2900 3500 3600
 Wire Bus Line
-	5650 3600 6600 3600
+	5750 3600 6600 3600
 Wire Bus Line
 	1800 5100 6600 5100
 Wire Bus Line

@@ -14,13 +14,13 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-NoConn ~ 12150 -2550
+NoConn ~ 7300 1600
 Wire Notes Line
-	13000 -1000 5750 -1000
+	8150 3150 900  3150
 Wire Notes Line
-	13000 -3450 5750 -3450
+	8150 700  900  700 
 Wire Wire Line
-	11350 -2550 11350 -2650
+	6500 1600 6500 1500
 Wire Wire Line
 	9900 -3950 10200 -3950
 Connection ~ 9900 -3950
@@ -44,9 +44,9 @@ F 6 "GRT31CR61A476KE13L" H 4100 -7250 50  0001 C CNN "Part Number"
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
-	11150 -3500 11150 -5050
+	6300 650  6300 -900
 Wire Notes Line
-	15250 -3500 11150 -3500
+	10400 650  6300 650 
 Wire Notes Line
 	15250 -5050 15250 -3500
 Wire Notes Line
@@ -83,25 +83,25 @@ F 7 "RMCF1206FT909R" H 4100 -7250 50  0001 C CNN "Part Number"
 	1    10200 -4250
 	1    0    0    -1  
 $EndComp
-Connection ~ 9050 -1400
+Connection ~ 4200 2750
 Wire Wire Line
-	9050 -1900 9050 -1400
-Connection ~ 9050 -2650
+	4200 2250 4200 2750
+Connection ~ 4200 1500
 Wire Wire Line
-	9050 -2200 9050 -2650
+	4200 1950 4200 1500
 $Comp
 L Device:R R301
 U 1 1 5D092241
-P 9050 -2050
-F 0 "R301" H 9120 -2004 50  0000 L CNN
-F 1 "909" H 9120 -2095 50  0000 L CNN
-F 2 "Resistors_SMD:R_1206" V 8980 -2050 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 9050 -2050 50  0001 C CNN
-F 4 "RES 909 OHM 1% 1/4W 1206" H 4100 -7250 50  0001 C CNN "Description"
-F 5 "RES 909 OHM 1% 1/4W 1206" H 4100 -7250 50  0001 C CNN "Function"
-F 6 "Stackpole" H 4100 -7250 50  0001 C CNN "Manufacturer"
-F 7 "RMCF1206FT909R" H 4100 -7250 50  0001 C CNN "Part Number"
-	1    9050 -2050
+P 4200 2100
+F 0 "R301" H 4270 2146 50  0000 L CNN
+F 1 "909" H 4270 2055 50  0000 L CNN
+F 2 "Resistors_SMD:R_1206" V 4130 2100 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 4200 2100 50  0001 C CNN
+F 4 "RES 909 OHM 1% 1/4W 1206" H -750 -3100 50  0001 C CNN "Description"
+F 5 "RES 909 OHM 1% 1/4W 1206" H -750 -3100 50  0001 C CNN "Function"
+F 6 "Stackpole" H -750 -3100 50  0001 C CNN "Manufacturer"
+F 7 "RMCF1206FT909R" H -750 -3100 50  0001 C CNN "Part Number"
+	1    4200 2100
 	1    0    0    -1  
 $EndComp
 Text GLabel 11600 -4700 0    50   Input ~ 0
@@ -109,29 +109,29 @@ CAN_V+
 $Comp
 L Device:Q_PMOS_GSD Q301
 U 1 1 5BD96D6D
-P 10100 -2150
-F 0 "Q301" H 10300 -2100 50  0000 L CNN
-F 1 "IRLML6402TRPBF" H 10300 -2200 39  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 10300 -2050 50  0001 C CNN
-F 3 "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c" H 10100 -2150 50  0001 C CNN
-F 4 "MOSFET P-CH 20V 3.7A SOT-23" H 10100 -2150 50  0001 C CNN "Description"
-F 5 "Infineon" H 4100 -7250 50  0001 C CNN "Manufacturer"
-F 6 "IRLML6402TRPBF" H 4100 -7250 50  0001 C CNN "Part Number"
-	1    10100 -2150
+P 5250 2000
+F 0 "Q301" H 5450 2050 50  0000 L CNN
+F 1 "IRLML6402TRPBF" H 5450 1950 39  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5450 2100 50  0001 C CNN
+F 3 "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c" H 5250 2000 50  0001 C CNN
+F 4 "MOSFET P-CH 20V 3.7A SOT-23" H 5250 2000 50  0001 C CNN "Description"
+F 5 "Infineon" H -750 -3100 50  0001 C CNN "Manufacturer"
+F 6 "IRLML6402TRPBF" H -750 -3100 50  0001 C CNN "Part Number"
+	1    5250 2000
 	0    -1   1    0   
 $EndComp
 Text GLabel 5550 -5200 0    50   Input ~ 0
 CAN_V+
 Text GLabel 5900 -5900 0    50   Input ~ 0
 CAN_V+
-Text Notes 10300 -1750 0    50   ~ 0
+Text Notes 5450 2400 0    50   ~ 0
 Gate - 1\nSource - 2\nDrain - 3
 Wire Wire Line
 	9200 -3950 9200 -3900
 Wire Wire Line
 	8600 -4500 8900 -4500
 Wire Wire Line
-	10300 -2650 10300 -2050
+	5450 1500 5450 2100
 Text Notes 9150 -4850 0    60   ~ 0
 LED Power
 Text GLabel 14350 -6100 2    60   Input ~ 0
@@ -204,571 +204,686 @@ $EndComp
 Connection ~ 8600 -4500
 Wire Wire Line
 	8500 -4500 8600 -4500
-Text Notes 9300 -3300 0    60   ~ 0
+Text Notes 4450 850  0    60   ~ 0
 MCU Power
 Wire Notes Line
-	5750 -3450 5750 -1000
+	900  700  900  3150
 Wire Notes Line
-	13000 -1000 13000 -3450
+	8150 3150 8150 700 
 Wire Wire Line
-	8550 -1400 9050 -1400
+	3700 2750 4200 2750
 Wire Wire Line
-	8550 -1900 8550 -1400
+	3700 2250 3700 2750
 Wire Wire Line
-	8550 -2650 9050 -2650
+	3700 1500 4200 1500
 Wire Wire Line
-	8550 -2200 8550 -2650
+	3700 1950 3700 1500
 $Comp
 L Device:C C303
 U 1 1 5BFAC037
-P 8550 -2050
-F 0 "C303" H 8575 -1950 50  0000 L CNN
-F 1 "0.1uF" H 8575 -2150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 8588 -2200 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 8550 -2050 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0603" H 8550 -2050 50  0001 C CNN "Description"
-F 5 "KEMET" H 4100 -7250 50  0001 C CNN "Manufacturer"
-F 6 "C0603C104M4RACTU" H 4100 -7250 50  0001 C CNN "Part Number"
-	1    8550 -2050
+P 3700 2100
+F 0 "C303" H 3725 2200 50  0000 L CNN
+F 1 "0.1uF" H 3725 2000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3738 1950 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 3700 2100 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0603" H 3700 2100 50  0001 C CNN "Description"
+F 5 "KEMET" H -750 -3100 50  0001 C CNN "Manufacturer"
+F 6 "C0603C104M4RACTU" H -750 -3100 50  0001 C CNN "Part Number"
+	1    3700 2100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9050 -1400 10800 -1400
-Connection ~ 10800 -1400
+	4200 2750 5950 2750
+Connection ~ 5950 2750
 Wire Wire Line
-	10800 -1300 10800 -1400
+	5950 2850 5950 2750
 $Comp
 L power:GND #PWR0305
 U 1 1 5BD92372
-P 10800 -1300
-F 0 "#PWR0305" H 10800 -1550 50  0001 C CNN
-F 1 "GND" H 10800 -1450 50  0000 C CNN
-F 2 "" H 10800 -1300 50  0001 C CNN
-F 3 "" H 10800 -1300 50  0001 C CNN
-	1    10800 -1300
+P 5950 2850
+F 0 "#PWR0305" H 5950 2600 50  0001 C CNN
+F 1 "GND" H 5950 2700 50  0000 C CNN
+F 2 "" H 5950 2850 50  0001 C CNN
+F 3 "" H 5950 2850 50  0001 C CNN
+	1    5950 2850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10100 -2650 10100 -2350
+	5250 1500 5250 1800
 Wire Wire Line
-	9050 -2650 10100 -2650
+	4200 1500 5250 1500
 Wire Wire Line
-	10100 -2650 10300 -2650
-Connection ~ 10100 -2650
-Connection ~ 10300 -2650
+	5250 1500 5450 1500
+Connection ~ 5250 1500
+Connection ~ 5450 1500
 Wire Wire Line
-	10300 -2800 10300 -2650
+	5450 1350 5450 1500
 Wire Wire Line
-	10500 -2050 10500 -2650
-Connection ~ 10300 -2050
+	5650 2100 5650 1500
+Connection ~ 5450 2100
 Wire Wire Line
-	10300 -2050 10500 -2050
+	5450 2100 5650 2100
 Wire Wire Line
-	9850 -2050 9900 -2050
-Text GLabel 9850 -2050 0    39   Input ~ 0
+	5000 2100 5050 2100
+Text GLabel 5000 2100 0    39   Input ~ 0
 USB_POWER
 $Comp
 L power:+3V3 #PWR0306
 U 1 1 5BD92411
-P 12650 -2800
-F 0 "#PWR0306" H 12650 -2950 50  0001 C CNN
-F 1 "+3V3" H 12650 -2660 50  0000 C CNN
-F 2 "" H 12650 -2800 50  0001 C CNN
-F 3 "" H 12650 -2800 50  0001 C CNN
-	1    12650 -2800
+P 7800 1350
+F 0 "#PWR0306" H 7800 1200 50  0001 C CNN
+F 1 "+3V3" H 7800 1490 50  0000 C CNN
+F 2 "" H 7800 1350 50  0001 C CNN
+F 3 "" H 7800 1350 50  0001 C CNN
+	1    7800 1350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	12650 -1400 12650 -1900
+	7800 2750 7800 2250
 Wire Wire Line
-	12650 -2650 12650 -2200
+	7800 1500 7800 1950
 Wire Wire Line
-	12650 -2800 12650 -2650
-Connection ~ 12650 -2650
+	7800 1350 7800 1500
+Connection ~ 7800 1500
 Wire Wire Line
-	12150 -2650 12650 -2650
+	7300 1500 7800 1500
 $Comp
 L Device:C C305
 U 1 1 5BD92405
-P 12650 -2050
-F 0 "C305" H 12675 -1950 50  0000 L CNN
-F 1 "4.7uF" H 12675 -2150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 12688 -2200 50  0001 C CNN
-F 3 "https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf" H 12650 -2050 50  0001 C CNN
-F 4 "CAP CER 4.7UF 25V X5R 1206" H 12650 -2050 50  0001 C CNN "Description"
-F 5 "KEMET" H 4450 -7250 50  0001 C CNN "Manufacturer"
-F 6 "C1206C475K3PACTU" H 4450 -7250 50  0001 C CNN "Part Number"
-	1    12650 -2050
+P 7800 2100
+F 0 "C305" H 7825 2200 50  0000 L CNN
+F 1 "4.7uF" H 7825 2000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 7838 1950 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf" H 7800 2100 50  0001 C CNN
+F 4 "CAP CER 4.7UF 25V X5R 1206" H 7800 2100 50  0001 C CNN "Description"
+F 5 "KEMET" H -400 -3100 50  0001 C CNN "Manufacturer"
+F 6 "C1206C475K3PACTU" H -400 -3100 50  0001 C CNN "Part Number"
+	1    7800 2100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	11100 -1400 11100 -1900
+	6250 2750 6250 2250
 Wire Wire Line
-	11100 -2650 11100 -2200
+	6250 1500 6250 1950
 Wire Wire Line
-	10800 -1400 11100 -1400
-Connection ~ 11100 -1400
+	5950 2750 6250 2750
+Connection ~ 6250 2750
 Wire Wire Line
-	11750 -1400 12650 -1400
+	6900 2750 7800 2750
 Wire Wire Line
-	11100 -1400 11750 -1400
-Connection ~ 11750 -1400
+	6250 2750 6900 2750
+Connection ~ 6900 2750
 Wire Wire Line
-	11750 -1400 11750 -2250
+	6900 2750 6900 1900
 Wire Wire Line
-	11100 -2650 11350 -2650
+	6250 1500 6500 1500
 Wire Wire Line
-	10500 -2650 11100 -2650
-Connection ~ 11100 -2650
+	5650 1500 6250 1500
+Connection ~ 6250 1500
 $Comp
 L Device:C C304
 U 1 1 5BD923BD
-P 11100 -2050
-F 0 "C304" H 11125 -1950 50  0000 L CNN
-F 1 "47uF" H 11125 -2150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 11138 -2200 50  0001 C CNN
-F 3 "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT31CR61A476KE13-01.pdf" H 11100 -2050 50  0001 C CNN
-F 4 "CAP CER 47UF 10V X5R 1206" H 11100 -2050 50  0001 C CNN "Description"
-F 5 "Murata" H 4100 -7250 50  0001 C CNN "Manufacturer"
-F 6 "GRT31CR61A476KE13L" H 4100 -7250 50  0001 C CNN "Part Number"
-	1    11100 -2050
+P 6250 2100
+F 0 "C304" H 6275 2200 50  0000 L CNN
+F 1 "47uF" H 6275 2000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 6288 1950 50  0001 C CNN
+F 3 "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT31CR61A476KE13-01.pdf" H 6250 2100 50  0001 C CNN
+F 4 "CAP CER 47UF 10V X5R 1206" H 6250 2100 50  0001 C CNN "Description"
+F 5 "Murata" H -750 -3100 50  0001 C CNN "Manufacturer"
+F 6 "GRT31CR61A476KE13L" H -750 -3100 50  0001 C CNN "Part Number"
+	1    6250 2100
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR0304
 U 1 1 5BD923A9
-P 10300 -2800
-F 0 "#PWR0304" H 10300 -2950 50  0001 C CNN
-F 1 "+5V" H 10300 -2660 50  0000 C CNN
-F 2 "" H 10300 -2800 50  0001 C CNN
-F 3 "" H 10300 -2800 50  0001 C CNN
-	1    10300 -2800
+P 5450 1350
+F 0 "#PWR0304" H 5450 1200 50  0001 C CNN
+F 1 "+5V" H 5450 1490 50  0000 C CNN
+F 2 "" H 5450 1350 50  0001 C CNN
+F 3 "" H 5450 1350 50  0001 C CNN
+	1    5450 1350
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
-U 1 1 5E69A64A
-P 8150 5950
-F 0 "C?" H 8265 5996 50  0000 L CNN
-F 1 "47uF" H 8265 5905 50  0000 L CNN
-F 2 "" H 8188 5800 50  0001 C CNN
-F 3 "~" H 8150 5950 50  0001 C CNN
-	1    8150 5950
-	1    0    0    -1  
+L Device:C C308
+U 1 1 5E7CA97B
+P 7750 5250
+F 0 "C308" H 7865 5296 50  0000 L CNN
+F 1 "100uF" H 7865 5205 50  0000 L CNN
+F 2 "" H 7788 5100 50  0001 C CNN
+F 3 "~" H 7750 5250 50  0001 C CNN
+	1    7750 5250
+	-1   0    0    -1  
 $EndComp
+Wire Wire Line
+	7200 5050 7200 5100
+Wire Wire Line
+	6750 5050 7200 5050
+Wire Wire Line
+	6750 5050 6750 5100
+Connection ~ 6750 5050
+Wire Wire Line
+	6200 5050 6750 5050
+Wire Wire Line
+	1550 5050 1550 6000
+Wire Wire Line
+	1950 6000 2300 6000
 $Comp
-L Device:C C?
-U 1 1 5E69AAC6
-P 7650 5950
-F 0 "C?" H 7765 5996 50  0000 L CNN
-F 1 "2.2uF" H 7765 5905 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 7688 5800 50  0001 C CNN
-F 3 "~" H 7650 5950 50  0001 C CNN
-	1    7650 5950
-	1    0    0    -1  
+L Device:C C304
+U 1 1 5E78D695
+P 1950 5200
+F 0 "C304" H 2065 5246 50  0000 L CNN
+F 1 "2.2uF" H 2065 5155 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1988 5050 50  0001 C CNN
+F 3 "~" H 1950 5200 50  0001 C CNN
+	1    1950 5200
+	-1   0    0    -1  
 $EndComp
-$Comp
-L Device:C C?
-U 1 1 5E69B100
-P 7150 5950
-F 0 "C?" H 7265 5996 50  0000 L CNN
-F 1 "2200pF" H 7265 5905 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 7188 5800 50  0001 C CNN
-F 3 "~" H 7150 5950 50  0001 C CNN
-	1    7150 5950
-	1    0    0    -1  
-$EndComp
-$Comp
-L TI_Additions:TPS53513 U?
-U 1 1 5E69B698
-P 5650 5100
-F 0 "U?" H 5650 5965 50  0000 C CNN
-F 1 "TPS53513" H 5650 5874 50  0000 C CNN
-F 2 "Texas_Additions:VQFN-CLIP-28-4.5x3.5mm" H 5600 6050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tps53513.pdf" H 5600 6050 50  0001 C CNN
-	1    5650 5100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5E69C75A
-P 6050 6750
-F 0 "R?" V 6257 6750 50  0000 C CNN
-F 1 "36.5k" V 6166 6750 50  0000 C CNN
-F 2 "" V 5980 6750 50  0001 C CNN
-F 3 "~" H 6050 6750 50  0001 C CNN
-	1    6050 6750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:L L?
-U 1 1 5E69CDAB
-P 4500 5300
-F 0 "L?" V 4690 5300 50  0000 C CNN
-F 1 "6uH" V 4599 5300 50  0000 C CNN
-F 2 "" H 4500 5300 50  0001 C CNN
-F 3 "~" H 4500 5300 50  0001 C CNN
-	1    4500 5300
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5E69D367
-P 4250 5000
-F 0 "C?" H 4365 5046 50  0000 L CNN
-F 1 "0.1uF" H 4365 4955 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 4288 4850 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 4250 5000 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0603" H 4250 5000 50  0001 C CNN "Description"
-F 5 "KEMET" H 4250 5000 50  0001 C CNN "Manufacturer"
-F 6 "C0603C104M4RACTU" H 4250 5000 50  0001 C CNN "Part Number"
-	1    4250 5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5E69D7F3
-P 3700 5500
-F 0 "C?" H 3815 5546 50  0000 L CNN
-F 1 "15uF" H 3815 5455 50  0000 L CNN
-F 2 "" H 3738 5350 50  0001 C CNN
-F 3 "~" H 3700 5500 50  0001 C CNN
-	1    3700 5500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5E69DD50
-P 3250 5500
-F 0 "C?" H 3365 5546 50  0000 L CNN
-F 1 "86uF" H 3365 5455 50  0000 L CNN
-F 2 "" H 3288 5350 50  0001 C CNN
-F 3 "~" H 3250 5500 50  0001 C CNN
-	1    3250 5500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6200 5600 6400 5600
-Wire Wire Line
-	6400 5600 6400 5700
-Wire Wire Line
-	6400 5800 6200 5800
-Wire Wire Line
-	6200 5700 6400 5700
-Connection ~ 6400 5700
-Wire Wire Line
-	6400 5700 6400 5800
-Wire Wire Line
-	6400 5700 7150 5700
-Wire Wire Line
-	8150 5700 8150 5800
-Wire Wire Line
-	7650 5800 7650 5700
-Connection ~ 7650 5700
-Wire Wire Line
-	7650 5700 8150 5700
-Wire Wire Line
-	7150 5800 7150 5700
-Connection ~ 7150 5700
-Wire Wire Line
-	7150 5700 7650 5700
-Wire Wire Line
-	6200 5400 6400 5400
-Wire Wire Line
-	6400 5400 6400 5600
-Connection ~ 6400 5600
-Wire Wire Line
-	6200 4800 6750 4800
-Wire Wire Line
-	6750 4800 6750 6750
-Wire Wire Line
-	6750 6750 6200 6750
-Wire Wire Line
-	5100 5400 5000 5400
-Wire Wire Line
-	5000 5400 5000 5500
-Wire Wire Line
-	5000 5800 5100 5800
-Wire Wire Line
-	5100 5500 5000 5500
-Connection ~ 5000 5500
-Wire Wire Line
-	5000 5500 5000 5600
-Wire Wire Line
-	5100 5600 5000 5600
-Connection ~ 5000 5600
-Wire Wire Line
-	5000 5600 5000 5700
-Wire Wire Line
-	5100 5700 5000 5700
-Connection ~ 5000 5700
-Wire Wire Line
-	5000 5700 5000 5800
-Wire Wire Line
-	5000 5800 5000 6250
-Wire Wire Line
-	5000 6750 5900 6750
-Connection ~ 5000 5800
-Wire Wire Line
-	5100 5300 4850 5300
-Wire Wire Line
-	5100 5000 4850 5000
-Wire Wire Line
-	4850 5000 4850 5100
-Connection ~ 4850 5300
-Wire Wire Line
-	4850 5300 4650 5300
-Wire Wire Line
-	5100 5100 4850 5100
-Connection ~ 4850 5100
-Wire Wire Line
-	4850 5100 4850 5200
-Wire Wire Line
-	5100 5200 4850 5200
-Connection ~ 4850 5200
-Wire Wire Line
-	4850 5200 4850 5300
-Wire Wire Line
-	4350 5300 4250 5300
-Wire Wire Line
-	4250 5300 4250 5150
-Wire Wire Line
-	5100 4800 4250 4800
-Wire Wire Line
-	4250 4800 4250 4850
-NoConn ~ 5100 4900
-NoConn ~ 6200 5500
-NoConn ~ 6200 4700
-$Comp
-L Device:R R?
-U 1 1 5E6D0936
-P 4250 5650
-F 0 "R?" H 4320 5696 50  0000 L CNN
-F 1 "86.6k" H 4320 5605 50  0000 L CNN
-F 2 "" V 4180 5650 50  0001 C CNN
-F 3 "~" H 4250 5650 50  0001 C CNN
-	1    4250 5650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5E6D1499
-P 4250 6050
-F 0 "R?" H 4320 6096 50  0000 L CNN
-F 1 "11.8k" H 4320 6005 50  0000 L CNN
-F 2 "" V 4180 6050 50  0001 C CNN
-F 3 "~" H 4250 6050 50  0001 C CNN
-	1    4250 6050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4250 5900 4250 5850
-Wire Wire Line
-	4250 5850 4900 5850
-Wire Wire Line
-	4900 5850 4900 6500
-Wire Wire Line
-	4900 6500 6700 6500
-Wire Wire Line
-	6700 6500 6700 5000
-Wire Wire Line
-	6700 5000 6200 5000
-Connection ~ 4250 5850
-Wire Wire Line
-	4250 5850 4250 5800
-Wire Wire Line
-	4250 5300 4250 5500
-Connection ~ 4250 5300
-$Comp
-L Device:R R?
-U 1 1 5E6EC027
-P 7350 5150
-F 0 "R?" H 7280 5104 50  0000 R CNN
-F 1 "100" H 7280 5195 50  0000 R CNN
-F 2 "" V 7280 5150 50  0001 C CNN
-F 3 "~" H 7350 5150 50  0001 C CNN
-	1    7350 5150
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5E6F6588
-P 7100 4700
-F 0 "R?" H 7170 4746 50  0000 L CNN
-F 1 "100k" H 7170 4655 50  0000 L CNN
-F 2 "" V 7030 4700 50  0001 C CNN
-F 3 "~" H 7100 4700 50  0001 C CNN
-	1    7100 4700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6200 5300 7100 5300
-Wire Wire Line
-	7100 5300 7100 4850
-Connection ~ 7100 5300
-Wire Wire Line
-	7100 5300 7350 5300
-Wire Wire Line
-	5100 4600 4900 4600
-Wire Wire Line
-	4900 4600 4900 4150
-Wire Wire Line
-	4900 4150 7100 4150
-Wire Wire Line
-	7100 4150 7100 4550
-Wire Wire Line
-	7350 5000 7250 5000
-Wire Wire Line
-	7250 5000 7250 5200
-Wire Wire Line
-	6200 5200 7250 5200
-$Comp
-L Device:R R?
-U 1 1 5E70FFEB
-P 8150 5150
-F 0 "R?" H 8080 5104 50  0000 R CNN
-F 1 "249k" H 8080 5195 50  0000 R CNN
-F 2 "" V 8080 5150 50  0001 C CNN
-F 3 "~" H 8150 5150 50  0001 C CNN
-	1    8150 5150
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5E7104A8
-P 8900 5150
-F 0 "R?" H 8970 5196 50  0000 L CNN
-F 1 "47.5k" H 8970 5105 50  0000 L CNN
-F 2 "" V 8830 5150 50  0001 C CNN
-F 3 "~" H 8900 5150 50  0001 C CNN
-	1    8900 5150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6200 4500 6600 4500
-Wire Wire Line
-	6600 4500 6600 4600
-Wire Wire Line
-	6600 6250 7150 6250
-Wire Wire Line
-	7150 6250 7150 6100
-Wire Wire Line
-	7150 6250 7650 6250
-Wire Wire Line
-	7650 6250 7650 6100
-Connection ~ 7150 6250
-Wire Wire Line
-	7650 6250 8150 6250
-Wire Wire Line
-	8150 6250 8150 6100
-Connection ~ 7650 6250
-Wire Wire Line
-	6200 4600 6600 4600
-Connection ~ 6600 4600
-Wire Wire Line
-	6600 4600 6600 5100
-Wire Wire Line
-	6200 5100 6600 5100
-Connection ~ 6600 5100
-Wire Wire Line
-	6600 5100 6600 6250
-Wire Wire Line
-	6600 6250 5000 6250
-Connection ~ 6600 6250
-Connection ~ 5000 6250
-Wire Wire Line
-	5000 6250 5000 6750
-Wire Wire Line
-	5000 6250 4250 6250
-Wire Wire Line
-	4250 6250 4250 6200
-$Comp
-L Mechanical:Heatsink_Pad HS4
-U 1 1 5E74A199
-P 5650 6150
-F 0 "HS4" H 5508 6097 50  0000 R CNN
-F 1 "Heatsink_Pad" H 5508 6188 50  0000 R CNN
-F 2 "" H 5662 6100 50  0001 C CNN
-F 3 "~" H 5662 6100 50  0001 C CNN
-	1    5650 6150
-	-1   0    0    1   
-$EndComp
-Connection ~ 8150 6250
-Connection ~ 7350 5300
-Wire Wire Line
-	7350 5300 8150 5300
-Wire Wire Line
-	8150 5000 8150 4900
-Wire Wire Line
-	8150 4900 8350 4900
-Wire Wire Line
-	8900 4900 8900 5000
-Wire Wire Line
-	8350 4900 8350 4200
-Wire Wire Line
-	8350 4200 5000 4200
-Wire Wire Line
-	5000 4200 5000 4500
-Wire Wire Line
-	5000 4500 5100 4500
-Connection ~ 8350 4900
-Wire Wire Line
-	8350 4900 8900 4900
 $Comp
 L power:GND #PWR?
 U 1 1 5E786715
-P 7150 6250
-F 0 "#PWR?" H 7150 6000 50  0001 C CNN
-F 1 "GND" H 7155 6077 50  0000 C CNN
-F 2 "" H 7150 6250 50  0001 C CNN
-F 3 "" H 7150 6250 50  0001 C CNN
-	1    7150 6250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5E78D695
-P 8500 5450
-F 0 "C?" H 8615 5496 50  0000 L CNN
-F 1 "2.2uF" H 8615 5405 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 8538 5300 50  0001 C CNN
-F 3 "~" H 8500 5450 50  0001 C CNN
-	1    8500 5450
-	1    0    0    -1  
+P 1550 6000
+F 0 "#PWR?" H 1550 5750 50  0001 C CNN
+F 1 "GND" H 1555 5827 50  0000 C CNN
+F 2 "" H 1550 6000 50  0001 C CNN
+F 3 "" H 1550 6000 50  0001 C CNN
+	1    1550 6000
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	8150 5300 8500 5300
-Connection ~ 8150 5300
+	2100 4650 1550 4650
 Wire Wire Line
-	8500 5600 8500 6250
+	5450 4250 5350 4250
 Wire Wire Line
-	8500 6250 8150 6250
+	5450 3950 5450 4250
 Wire Wire Line
-	8150 5700 9400 5700
-Connection ~ 8150 5700
+	2100 3950 5450 3950
 Wire Wire Line
-	8900 5300 8900 5600
+	2100 4650 2100 3950
 Wire Wire Line
-	8900 5600 8500 5600
-Connection ~ 8500 5600
+	1550 4650 1550 4750
+Connection ~ 2100 4650
 Wire Wire Line
-	4250 5300 3700 5300
+	2300 4650 2100 4650
 Wire Wire Line
-	3700 5300 3700 5350
-Wire Wire Line
-	3700 5300 3250 5300
-Wire Wire Line
-	3250 5300 3250 5350
-Connection ~ 3700 5300
+	2300 4750 2300 4650
 $Comp
-L Device:C C?
-U 1 1 5E7CA97B
-P 2700 5500
-F 0 "C?" H 2815 5546 50  0000 L CNN
-F 1 "100uF" H 2815 5455 50  0000 L CNN
-F 2 "" H 2738 5350 50  0001 C CNN
-F 3 "~" H 2700 5500 50  0001 C CNN
-	1    2700 5500
+L Mechanical:Heatsink_Pad HS4
+U 1 1 5E74A199
+P 4650 6000
+F 0 "HS4" H 4508 5947 50  0000 R CNN
+F 1 "Heatsink_Pad" H 4508 6038 50  0000 R CNN
+F 2 "" H 4662 5950 50  0001 C CNN
+F 3 "~" H 4662 5950 50  0001 C CNN
+	1    4650 6000
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6200 6000 6200 5950
+Wire Wire Line
+	5450 6000 6200 6000
+Wire Wire Line
+	5450 6000 5450 6500
+Connection ~ 5450 6000
+Wire Wire Line
+	3850 4850 3850 6000
+Wire Wire Line
+	4250 4850 3850 4850
+Connection ~ 3850 4850
+Wire Wire Line
+	3850 4350 3850 4850
+Wire Wire Line
+	4250 4350 3850 4350
+Wire Wire Line
+	2300 6000 2300 5850
+Connection ~ 2300 6000
+Wire Wire Line
+	2800 6000 2300 6000
+Wire Wire Line
+	2800 6000 2800 5850
+Connection ~ 2800 6000
+Wire Wire Line
+	3300 6000 2800 6000
+Connection ~ 3300 6000
+Wire Wire Line
+	3300 6000 3300 5850
+Wire Wire Line
+	3850 6000 3300 6000
+Connection ~ 3850 4350
+Wire Wire Line
+	3850 4250 3850 4350
+Wire Wire Line
+	4250 4250 3850 4250
+$Comp
+L Device:R R304
+U 1 1 5E7104A8
+P 1550 4900
+F 0 "R304" H 1620 4946 50  0000 L CNN
+F 1 "301k" H 1620 4855 50  0000 L CNN
+F 2 "" V 1480 4900 50  0001 C CNN
+F 3 "~" H 1550 4900 50  0001 C CNN
+	1    1550 4900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 5050 1950 5050
+Connection ~ 2300 5050
+$Comp
+L Device:R R303
+U 1 1 5E70FFEB
+P 2300 4900
+F 0 "R303" H 2230 4854 50  0000 R CNN
+F 1 "1k" H 2230 4945 50  0000 R CNN
+F 2 "" V 2230 4900 50  0001 C CNN
+F 3 "~" H 2300 4900 50  0001 C CNN
+	1    2300 4900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4250 4950 3200 4950
+Wire Wire Line
+	3200 4750 3200 4950
+Wire Wire Line
+	3100 4750 3200 4750
+Wire Wire Line
+	3350 3900 3350 4300
+Wire Wire Line
+	5550 3900 3350 3900
+Wire Wire Line
+	5550 4350 5550 3900
+Wire Wire Line
+	5350 4350 5550 4350
+Wire Wire Line
+	3350 5050 3350 4600
+Connection ~ 3350 5050
+Wire Wire Line
+	4250 5050 3350 5050
+$Comp
+L Device:R R305
+U 1 1 5E6F6588
+P 3350 4450
+F 0 "R305" H 3420 4496 50  0000 L CNN
+F 1 "100k" H 3420 4405 50  0000 L CNN
+F 2 "" V 3280 4450 50  0001 C CNN
+F 3 "~" H 3350 4450 50  0001 C CNN
+	1    3350 4450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 5050 2300 5050
+Wire Wire Line
+	3350 5050 3100 5050
+Connection ~ 3100 5050
+$Comp
+L Device:R R302
+U 1 1 5E6EC027
+P 3100 4900
+F 0 "R302" H 3030 4854 50  0000 R CNN
+F 1 "100m" H 3030 4945 50  0000 R CNN
+F 2 "" V 3030 4900 50  0001 C CNN
+F 3 "~" H 3100 4900 50  0001 C CNN
+	1    3100 4900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6200 5050 6200 5250
+Wire Wire Line
+	6200 5600 6200 5550
+Wire Wire Line
+	3750 4750 4250 4750
+Wire Wire Line
+	3750 6250 3750 4750
+Wire Wire Line
+	5550 6250 3750 6250
+Wire Wire Line
+	5550 5600 5550 6250
+Wire Wire Line
+	6200 5600 5550 5600
+Connection ~ 6200 5600
+Wire Wire Line
+	6200 5650 6200 5600
+$Comp
+L Device:R R307
+U 1 1 5E6D1499
+P 6200 5800
+F 0 "R307" H 6270 5846 50  0000 L CNN
+F 1 "11.8k" H 6270 5755 50  0000 L CNN
+F 2 "" V 6130 5800 50  0001 C CNN
+F 3 "~" H 6200 5800 50  0001 C CNN
+	1    6200 5800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R306
+U 1 1 5E6D0936
+P 6200 5400
+F 0 "R306" H 6270 5446 50  0000 L CNN
+F 1 "86.6k" H 6270 5355 50  0000 L CNN
+F 2 "" V 6130 5400 50  0001 C CNN
+F 3 "~" H 6200 5400 50  0001 C CNN
+	1    6200 5400
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 4250 4450
+NoConn ~ 4250 5250
+NoConn ~ 5350 4650
+Wire Wire Line
+	5350 4550 6200 4550
+Connection ~ 6200 5050
+Wire Wire Line
+	6200 5050 6200 4850
+Wire Wire Line
+	6100 5050 6200 5050
+Wire Wire Line
+	5600 4950 5600 5050
+Wire Wire Line
+	5350 4950 5600 4950
+Connection ~ 5600 4950
+Wire Wire Line
+	5600 4850 5600 4950
+Wire Wire Line
+	5350 4850 5600 4850
+Wire Wire Line
+	5600 5050 5800 5050
+Connection ~ 5600 4850
+Wire Wire Line
+	5600 4750 5600 4850
+Wire Wire Line
+	5350 4750 5600 4750
+Connection ~ 5600 5050
+Wire Wire Line
+	5350 5050 5600 5050
+Wire Wire Line
+	5350 5450 5450 5450
+Connection ~ 5450 5450
+Wire Wire Line
+	5450 5350 5450 5450
+Wire Wire Line
+	5350 5350 5450 5350
+Connection ~ 5450 5350
+Wire Wire Line
+	5450 5250 5450 5350
+Wire Wire Line
+	5350 5250 5450 5250
+Wire Wire Line
+	5450 5550 5450 6000
+Wire Wire Line
+	5450 5450 5450 5550
+Connection ~ 5450 5550
+Wire Wire Line
+	5450 5550 5350 5550
+Connection ~ 5450 5250
+Wire Wire Line
+	5450 5150 5450 5250
+Wire Wire Line
+	5350 5150 5450 5150
+Wire Wire Line
+	3700 6500 4250 6500
+Wire Wire Line
+	3700 4550 3700 6500
+Wire Wire Line
+	4250 4550 3700 4550
+Wire Wire Line
+	4250 5150 4050 5150
+Wire Wire Line
+	3300 5550 3300 5450
+Wire Wire Line
+	3300 5450 2800 5450
+Connection ~ 2800 5450
+Wire Wire Line
+	2800 5550 2800 5450
+Wire Wire Line
+	2300 5450 1050 5450
+Wire Wire Line
+	2800 5450 2300 5450
+Connection ~ 2300 5450
+Wire Wire Line
+	2300 5450 2300 5550
+Connection ~ 3300 5450
+Wire Wire Line
+	4050 5450 3300 5450
+Wire Wire Line
+	4050 5450 4050 5550
+Connection ~ 4050 5450
+Wire Wire Line
+	4250 5450 4050 5450
+Wire Wire Line
+	4050 5550 4250 5550
+Wire Wire Line
+	4050 5150 4050 5350
+Wire Wire Line
+	4050 5350 4050 5450
+Connection ~ 4050 5350
+Wire Wire Line
+	4250 5350 4050 5350
+$Comp
+L Device:C C307
+U 1 1 5E69DD50
+P 7200 5250
+F 0 "C307" H 7315 5296 50  0000 L CNN
+F 1 "22uF" H 7315 5205 50  0000 L CNN
+F 2 "" H 7238 5100 50  0001 C CNN
+F 3 "~" H 7200 5250 50  0001 C CNN
+	1    7200 5250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C306
+U 1 1 5E69D7F3
+P 6750 5250
+F 0 "C306" H 6865 5296 50  0000 L CNN
+F 1 "2.2uF" H 6865 5205 50  0000 L CNN
+F 2 "" H 6788 5100 50  0001 C CNN
+F 3 "~" H 6750 5250 50  0001 C CNN
+	1    6750 5250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C305
+U 1 1 5E69D367
+P 6200 4700
+F 0 "C305" H 5850 4750 50  0000 L CNN
+F 1 "0.1uF" H 5850 4650 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6238 4550 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 6200 4700 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0603" H 6200 4700 50  0001 C CNN "Description"
+F 5 "KEMET" H 6200 4700 50  0001 C CNN "Manufacturer"
+F 6 "C0603C104M4RACTU" H 6200 4700 50  0001 C CNN "Part Number"
+	1    6200 4700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:L L301
+U 1 1 5E69CDAB
+P 5950 5050
+F 0 "L301" V 6140 5050 50  0000 C CNN
+F 1 "1.8uH" V 6049 5050 50  0000 C CNN
+F 2 "FSAE2020:SRP1238A" H 5950 5050 50  0001 C CNN
+F 3 "https://www.bourns.com/docs/product-datasheets/srp1238a.pdf" H 5950 5050 50  0001 C CNN
+F 4 "FIXED IND 1.8UH 17A 7 MOHM SMD" H 5950 5050 50  0001 C CNN "Description"
+F 5 "SRP1238A-1R8MCT-ND" H 5950 5050 50  0001 C CNN "Digikey P/N"
+F 6 "Bourns" H 5950 5050 50  0001 C CNN "Manufacturer"
+F 7 "SRP1238A-1R8M" H 5950 5050 50  0001 C CNN "Part Number"
+	1    5950 5050
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R301
+U 1 1 5E69C75A
+P 4400 6500
+F 0 "R301" V 4607 6500 50  0000 C CNN
+F 1 "41.2k" V 4516 6500 50  0000 C CNN
+F 2 "" V 4330 6500 50  0001 C CNN
+F 3 "~" H 4400 6500 50  0001 C CNN
+	1    4400 6500
+	0    1    -1   0   
+$EndComp
+$Comp
+L TI_Additions:TPS53513 U301
+U 1 1 5E69B698
+P 4800 4850
+F 0 "U301" H 4800 5715 50  0000 C CNN
+F 1 "TPS53513" H 4800 5624 50  0000 C CNN
+F 2 "Texas_Additions:VQFN-CLIP-28-4.5x3.5mm" H 4750 5800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tps53513.pdf" H 4750 5800 50  0001 C CNN
+	1    4800 4850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C303
+U 1 1 5E69B100
+P 3300 5700
+F 0 "C303" H 3415 5746 50  0000 L CNN
+F 1 "2200pF" H 3415 5655 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3338 5550 50  0001 C CNN
+F 3 "~" H 3300 5700 50  0001 C CNN
+	1    3300 5700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C302
+U 1 1 5E69AAC6
+P 2800 5700
+F 0 "C302" H 2915 5746 50  0000 L CNN
+F 1 "2.2uF" H 2915 5655 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2838 5550 50  0001 C CNN
+F 3 "~" H 2800 5700 50  0001 C CNN
+	1    2800 5700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C301
+U 1 1 5E69A64A
+P 2300 5700
+F 0 "C301" H 2415 5746 50  0000 L CNN
+F 1 "22uF" H 2415 5655 50  0000 L CNN
+F 2 "" H 2338 5550 50  0001 C CNN
+F 3 "~" H 2300 5700 50  0001 C CNN
+	1    2300 5700
+	-1   0    0    -1  
+$EndComp
+Text GLabel 1050 5450 0    39   Input ~ 0
+CAN_V+
+Wire Wire Line
+	5700 4450 5350 4450
+Text Notes 6650 4350 2    50   ~ 0
+EN Pin limit Max 7V input
+Wire Wire Line
+	1550 6000 1950 6000
+Connection ~ 1950 6000
+Wire Wire Line
+	1950 5350 1950 6000
+Text Notes 1150 4450 0    50   ~ 0
+R301 = Rtrip\nR302 = Rmode\nR303 = Rfh\nR304 = Rfl\nR305 = Rpgood\nR306 = Rfbt\nR307 = Rfbb\n\nC304 = Creg\nC305 = Cbst\n
+Wire Wire Line
+	7200 5050 7750 5050
+Wire Wire Line
+	7750 5050 7750 5100
+Connection ~ 7200 5050
+Wire Wire Line
+	6750 6000 6750 5400
+Wire Wire Line
+	7200 5400 7200 6000
+Text Notes 3850 7150 0    50   ~ 0
+Overcurrent Protection\n(Units not meaningful? EQ per datasheet)\nIocp = (R301 * 10uA) / (47.2mOhm) + 1/(2*L*fsw) * (13.4V-5V)*5V/13.4V\nIocp = 41.2kOhm * 10uA / 47.2mOhm + 1/(2*1.8uH*1M) * 3.134V\nIocp = 8.729 + 0.87055 = 9.66\nIocp = 9.66A
+Text Notes 2400 7500 0    50   ~ 0
+Low voltage protection\nVlvp = Vout * 0.68\nVlvp = 5V * 0.68 = 3.4V\n\nHigh Voltage Protection\nVhvp = Vout * 1.2 = 6V\n\nHigh Temp Protection\n140C Shutdown\n\nUndervoltage Lockout\nVin <= 3.95V, reset at 4.35V\n\nSwitching Frequency:\nfsw = 1Mhz
+Wire Wire Line
+	4250 4650 3800 4650
+Wire Wire Line
+	3800 4650 3800 3850
+Wire Wire Line
+	3800 3850 6750 3850
+Wire Wire Line
+	6750 3850 6750 5050
+Text GLabel 8100 5050 2    39   Input ~ 0
+LED_+5V
+Wire Wire Line
+	8100 5050 7750 5050
+Connection ~ 7750 5050
+Wire Wire Line
+	6200 6000 6750 6000
+Wire Wire Line
+	7750 5400 7750 6000
+Connection ~ 6200 6000
+Connection ~ 7200 6000
+Wire Wire Line
+	7200 6000 7750 6000
+Connection ~ 6750 6000
+Wire Wire Line
+	6750 6000 7200 6000
+$Comp
+L power:GND #PWR?
+U 1 1 5F916719
+P 7750 6000
+F 0 "#PWR?" H 7750 5750 50  0001 C CNN
+F 1 "GND" H 7755 5827 50  0000 C CNN
+F 2 "" H 7750 6000 50  0001 C CNN
+F 3 "" H 7750 6000 50  0001 C CNN
+	1    7750 6000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 6500 5450 6500
+$Comp
+L power:GND #PWR?
+U 1 1 5F917C89
+P 4900 5900
+F 0 "#PWR?" H 4900 5650 50  0001 C CNN
+F 1 "GND" H 4905 5727 50  0000 C CNN
+F 2 "" H 4900 5900 50  0001 C CNN
+F 3 "" H 4900 5900 50  0001 C CNN
+	1    4900 5900
 	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 5900 4650 5850
+Wire Wire Line
+	4650 5850 4800 5850
+Wire Wire Line
+	4900 5850 4900 5900
+Wire Wire Line
+	4800 5800 4800 5850
+Connection ~ 4800 5850
+Wire Wire Line
+	4800 5850 4900 5850
+Connection ~ 7750 6000
+Connection ~ 1550 6000
+Text Label 5700 5600 0    50   ~ 0
+FB
+Text Label 5650 5050 0    50   ~ 0
+Vsw
+Text Label 5500 4550 0    50   ~ 0
+Vbst
+Text Label 2450 5050 0    50   ~ 0
+Vreg
+Text Label 2150 3950 0    50   ~ 0
+Vrf
+Text Label 3400 4950 0    50   ~ 0
+Vmode
+Text Label 3750 6500 0    50   ~ 0
+Vtrip
+Text Notes 8000 5550 0    50   ~ 0
+C308 target:\n97.725uF\n1uOhm
+Text Notes 6900 4900 0    50   ~ 0
+Ltarg = 3/(Imax * 1M) * (Vinmax -Vout) * Vout/Vinmax\nLtarg = 3/5A *1M * 13.4V-5V *5V/13.4V\nLtarg = 1.88uH\n\nResr target < 9.6mOhm
+Wire Wire Line
+	3350 3900 3350 3850
+Wire Wire Line
+	3350 3850 2850 3850
+Connection ~ 3350 3900
+Text GLabel 2850 3850 0    39   Input ~ 0
+PGOOD
+$Comp
+L power:+5V #PWR?
+U 1 1 5F9792B9
+P 5700 4450
+F 0 "#PWR?" H 5700 4300 50  0001 C CNN
+F 1 "+5V" H 5700 4590 50  0000 C CNN
+F 2 "" H 5700 4450 50  0001 C CNN
+F 3 "" H 5700 4450 50  0001 C CNN
+	1    5700 4450
+	0    1    1    0   
 $EndComp
 $EndSCHEMATC

@@ -64,8 +64,8 @@ F 6 "" H 0   0   50  0001 C CNN "Part Number"
 	1    1700 6500
 	1    0    0    -1  
 $EndComp
-Text Notes 6700 6450 0    60   ~ 0
-To drive shift register fed LED arrays:\nUsing Shift Clock SRCK (FRAME_SCLK) shift in\n8 bit code corresponding to desired\ndigit on SER_IN (GEAR_IN).\nOnce all 8 bits are in shift register\ntransfer them to the buffer by toggling\nRegister Clock RCK (FRAME_RCLK).\nTo clear buffer pull ~CLR~ (FRAME_CLR)\nHold ~G~ Low to enable lights (~GEAR_PWM~)\nlow.
+Text Notes 9000 4250 0    60   ~ 0
+To drive shift register fed LED arrays:\nUsing Shift Clock FRAME_SCLK shift in\nbit code corresponding to desired\nlights and digits on FRAME_IN.\nOnce all bits are in shift register\ntransfer them to the output buffer by toggling\nRegister Clock FRAME_SET\nTo clear register pull FRAME_CLR low\nHold ~G~ Low to enable lights\nModulate ~G~ with ~PWM_White~\n~PWM_Green~, ~PWM_Red~, or\n~PWM_Yellow~ to control brightness
 $Comp
 L Device:LED_Small D502
 U 1 1 5BE84A41
@@ -334,7 +334,7 @@ Text GLabel 1500 5200 0    39   Input ~ 0
 Text GLabel 1500 5300 0    39   Input ~ 0
 FRAME_CLR
 Text GLabel 1500 5050 0    39   Input ~ 0
-RPM_IN
+FRAME_IN
 Text GLabel 1500 5500 0    39   Input ~ 0
 FRAME_CLK
 Text GLabel 1500 5400 0    39   Input ~ 0
@@ -2077,7 +2077,7 @@ Wire Wire Line
 Wire Wire Line
 	3550 7400 3550 7050
 Text GLabel 1250 7400 0    39   Input ~ 0
-GEAR_OUT
+FRAME_OUT
 NoConn ~ -14750 5700
 Text Label 1900 3700 2    39   ~ 0
 ~PWM_GREEN

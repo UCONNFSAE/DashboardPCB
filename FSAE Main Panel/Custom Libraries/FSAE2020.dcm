@@ -1,5 +1,11 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP 74HC238
+D 1x3:8 CMOS 3 to 8 line NonInverting Decoder
+K Decoder
+F https://www.ti.com/lit/ds/symlink/cd74hc138.pdf
+$ENDCMP
+#
 $CMP CD40106
 D 6 Channel Schmitt Trigger Inverter
 K Schmitt Trigger
@@ -22,6 +28,27 @@ $CMP MCP25625
 D CAN Controller with Integrated Transceiver
 K CAN
 F http://ww1.microchip.com/downloads/en/DeviceDoc/MCP25625-CAN-Controller-Data-Sheet-20005282C.pdf
+$ENDCMP
+#
+$CMP SN74HCS595
+D 8 Bit Serial to Paralell Shift Register
+K Shift register
+F https://www.ti.com/lit/ds/symlink/sn74hcs595-q1.pdf
+$ENDCMP
+#
+$CMP SN74HCS595BQB
+D 8 Bit Serial to Paralell Shift Register WQFN-16
+K Shift register
+$ENDCMP
+#
+$CMP SN74HCS595D
+D 8 Bit Serial to Paralell Shift Register SOIC-16
+K Shift register
+$ENDCMP
+#
+$CMP SN74HCS595PW
+D 8 Bit Serial to Paralell Shift Register TSSOP-16
+K Shift Register TSSOP
 $ENDCMP
 #
 $CMP TLV741P
