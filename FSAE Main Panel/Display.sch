@@ -25,6 +25,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/tlc6c598.pdf" H 3150 6250 60  0001 C CNN
 F 4 "TI" H 3050 6700 60  0001 C CNN "Manufacturer"
 F 5 "IC LED DRIVER PS 50MA 16TSSOP" H 0   0   50  0001 C CNN "Description"
 F 6 "TLC6C598QPWRQ1" H 0   0   50  0001 C CNN "Part Number"
+F 7 "296-36199-1-ND" H 3050 6700 50  0001 C CNN "Digikey P/N"
 	1    3050 6700
 	1    0    0    -1  
 $EndComp
@@ -41,10 +42,11 @@ P 1950 6500
 F 0 "C502" H 1975 6600 50  0000 L CNN
 F 1 "0.1uF" H 1975 6400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 1988 6350 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 1950 6500 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0603" H 1950 6500 50  0001 C CNN "Description"
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104K5RACAUTO.pdf" H 1950 6500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 50V X7R 0603" H 1950 6500 50  0001 C CNN "Description"
 F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
-F 6 "C0603C104M4RACTU" H 0   0   50  0001 C CNN "Part Number"
+F 6 "C0603C104K5RACAUTO" H 0   0   50  0001 C CNN "Part Number"
+F 7 "399-6856-1-ND" H 1950 6500 50  0001 C CNN "Digikey P/N"
 	1    1950 6500
 	1    0    0    -1  
 $EndComp
@@ -57,14 +59,15 @@ P 1700 6500
 F 0 "C501" H 1725 6600 50  0000 L CNN
 F 1 "1uF" H 1725 6400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 1738 6350 50  0001 C CNN
-F 3 "https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf" H 1700 6500 50  0001 C CNN
-F 4 "" H 1700 6500 50  0001 C CNN "Description"
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C472K5RACAUTO.pdf" H 1700 6500 50  0001 C CNN
+F 4 "CAP CER 0603 1UF 16V X7R 10%" H 1700 6500 50  0001 C CNN "Description"
 F 5 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
-F 6 "" H 0   0   50  0001 C CNN "Part Number"
+F 6 "C0603C105K4RACAUTO" H 0   0   50  0001 C CNN "Part Number"
+F 7 "399-17704-1-ND" H 1700 6500 50  0001 C CNN "Digikey P/N"
 	1    1700 6500
 	1    0    0    -1  
 $EndComp
-Text Notes 9000 4250 0    60   ~ 0
+Text Notes 8950 6400 0    60   ~ 0
 To drive shift register fed LED arrays:\nUsing Shift Clock FRAME_SCLK shift in\nbit code corresponding to desired\nlights and digits on FRAME_IN.\nOnce all bits are in shift register\ntransfer them to the output buffer by toggling\nRegister Clock FRAME_SET\nTo clear register pull FRAME_CLR low\nHold ~G~ Low to enable lights\nModulate ~G~ with ~PWM_White~\n~PWM_Green~, ~PWM_Red~, or\n~PWM_Yellow~ to control brightness
 $Comp
 L Device:LED_Small D502
@@ -78,6 +81,7 @@ F 4 "Bivar" H 6000 1100 60  0001 C CNN "Manufacturer"
 F 5 "500-Green" H 5900 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 6000 1100 50  0001 C CNN "Digikey P/N"
 	1    6000 1100
 	0    -1   -1   0   
 $EndComp
@@ -93,6 +97,7 @@ F 4 "Bivar" H 8550 1100 60  0001 C CNN "Manufacturer"
 F 5 "8500-Yellow" H 8450 1150 50  0000 R CNN "Function"
 F 6 "LED YELLOW CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 F 7 "SM1206NYC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 8 "492-1947-1-ND" H 8550 1100 50  0001 C CNN "Digikey P/N"
 	1    8550 1100
 	0    -1   -1   0   
 $EndComp
@@ -108,6 +113,7 @@ F 4 "Bivar" H 9900 1100 60  0001 C CNN "Manufacturer"
 F 5 "12500-Red" H 9800 1150 50  0000 R CNN "Function"
 F 6 "LED RED CLEAR 1206 SMD" H 9900 1100 50  0001 C CNN "Description"
 F 7 "SM1206NHC-IL" H 9900 1100 50  0001 C CNN "Part Number"
+F 8 "492-1944-1-ND" H 9900 1100 50  0001 C CNN "Digikey P/N"
 	1    9900 1100
 	0    -1   -1   0   
 $EndComp
@@ -119,9 +125,10 @@ F 0 "U502" H 2500 5100 60  0000 C CNN
 F 1 "TLC6C5816" H 2500 3450 60  0000 C CNN
 F 2 "TLC6C5816:TLC6C5816" H 2550 3500 60  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tlc6c5816-q1.pdf" H 2550 3500 60  0001 C CNN
-F 4 "TLC6C5816 PROD VERSION" H 500 0   50  0001 C CNN "Description"
+F 4 "Automotive power logic 16-bit Shift Register LED driver" H 500 0   50  0001 C CNN "Description"
 F 5 "TI" H 500 0   50  0001 C CNN "Manufacturer"
 F 6 "TLC6C5816QPWPRQ1" H 500 0   50  0001 C CNN "Part Number"
+F 7 "296-51674-1-ND" H 2500 4200 50  0001 C CNN "Digikey P/N"
 	1    2500 4200
 	1    0    0    -1  
 $EndComp
@@ -168,10 +175,11 @@ P 3050 3200
 F 0 "C504" H 3075 3300 50  0000 L CNN
 F 1 "0.1uF" H 3075 3100 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 3088 3050 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 3050 3200 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0603" H 3050 3200 50  0001 C CNN "Description"
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104K5RACAUTO.pdf" H 3050 3200 50  0001 C CNN
+F 4 "CAP CER 0.1UF 50V X7R 0603" H 3050 3200 50  0001 C CNN "Description"
 F 5 "KEMET" H 500 0   50  0001 C CNN "Manufacturer"
-F 6 "C0603C104M4RACTU" H 500 0   50  0001 C CNN "Part Number"
+F 6 "C0603C104K5RACAUTO" H 500 0   50  0001 C CNN "Part Number"
+F 7 "399-6856-1-ND" H 3050 3200 50  0001 C CNN "Digikey P/N"
 	1    3050 3200
 	-1   0    0    1   
 $EndComp
@@ -215,9 +223,10 @@ F 0 "U503" H 4200 5100 60  0000 C CNN
 F 1 "TLC6C5816" H 4200 3450 60  0000 C CNN
 F 2 "TLC6C5816:TLC6C5816" H 4250 3500 60  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tlc6c5816-q1.pdf" H 4250 3500 60  0001 C CNN
-F 4 "TLC6C5816 PROD VERSION" H 500 0   50  0001 C CNN "Description"
+F 4 "Automotive power logic 16-bit Shift Register LED driver" H 500 0   50  0001 C CNN "Description"
 F 5 "TI" H 500 0   50  0001 C CNN "Manufacturer"
 F 6 "TLC6C5816QPWPRQ1" H 500 0   50  0001 C CNN "Part Number"
+F 7 "296-51674-1-ND" H 4200 4200 50  0001 C CNN "Digikey P/N"
 	1    4200 4200
 	1    0    0    -1  
 $EndComp
@@ -300,10 +309,11 @@ P 4750 3200
 F 0 "C505" H 4775 3300 50  0000 L CNN
 F 1 "0.1uF" H 4775 3100 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 4788 3050 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 4750 3200 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0603" H 4750 3200 50  0001 C CNN "Description"
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104K5RACAUTO.pdf" H 4750 3200 50  0001 C CNN
+F 4 "CAP CER 0.1UF 50V X7R 0603" H 4750 3200 50  0001 C CNN "Description"
 F 5 "KEMET" H 500 0   50  0001 C CNN "Manufacturer"
-F 6 "C0603C104M4RACTU" H 500 0   50  0001 C CNN "Part Number"
+F 6 "C0603C104K5RACAUTO" H 500 0   50  0001 C CNN "Part Number"
+F 7 "399-6856-1-ND" H 4750 3200 50  0001 C CNN "Digikey P/N"
 	1    4750 3200
 	-1   0    0    1   
 $EndComp
@@ -560,36 +570,28 @@ RPM_32
 $Comp
 L Device:LED_Small D534
 U 1 1 5BED0325
-P 7200 5000
-F 0 "D534" H 7450 5000 50  0000 L CNN
-F 1 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H 6850 4850 50  0001 L CNN
-F 2 "" V 7200 5000 50  0001 C CNN
-F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-6030625/LCB%20G6SP_EN.pdf" V 7200 5000 50  0001 C CNN
-F 4 "OSRAM" H 7200 5000 60  0001 C CNN "Manufacturer"
-F 5 "Shift_1" H 6950 5050 50  0000 C CNN "Function"
-F 6 "Blue LED Indication - Discrete 3.3V 6-PLCC" H -1200 600 50  0001 C CNN "Description"
-F 7 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H -1200 600 50  0001 C CNN "Part Number"
-F 8 "475-3674-1-ND" H 7200 5000 50  0001 C CNN "Digikey P/N"
-	1    7200 5000
-	0    1    1    0   
+P 8050 3750
+F 0 "D534" H 8300 3750 50  0000 L CNN
+F 1 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H 7700 3600 50  0001 L CNN
+F 2 "FSAE2020:LCB_G6SP" V 8050 3750 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-6030625/LCB%20G6SP_EN.pdf" V 8050 3750 50  0001 C CNN
+F 4 "OSRAM" H 8050 3750 60  0001 C CNN "Manufacturer"
+F 5 "Shift_1" H 7800 3800 50  0000 C CNN "Function"
+F 6 "Blue LED Indication - Discrete 3.3V 6-PLCC" H -350 -650 50  0001 C CNN "Description"
+F 7 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H -350 -650 50  0001 C CNN "Part Number"
+F 8 "475-3674-1-ND" H 8050 3750 50  0001 C CNN "Digikey P/N"
+	1    8050 3750
+	0    -1   -1   0   
 $EndComp
-Text Label 7200 4500 3    35   ~ 0
+Text Label 8050 4250 1    35   ~ 0
 B1
-Text Label 7350 4500 3    35   ~ 0
+Text Label 7900 4250 1    35   ~ 0
 B2
-Text Label 7500 4500 3    35   ~ 0
+Text Label 7750 4250 1    35   ~ 0
 B3
-Text Label 7650 4500 3    35   ~ 0
+Text Label 7600 4250 1    35   ~ 0
 B4
-Entry Wire Line
-	7100 3600 7200 3700
-Entry Wire Line
-	7550 3600 7650 3700
-Text Label 7200 3900 1    35   ~ 0
-SFT_1
-Text Label 7650 3900 1    35   ~ 0
-SFT_2
-Text GLabel 7850 5200 2    60   Input ~ 0
+Text GLabel 7400 3550 0    60   Input ~ 0
 LED_+5V
 Wire Wire Line
 	3550 6650 3800 6650
@@ -868,18 +870,18 @@ Wire Wire Line
 	10650 900  10650 1000
 Connection ~ 10500 900 
 Wire Wire Line
-	7200 5200 7350 5200
+	8050 3550 7900 3550
 Wire Wire Line
-	7200 5200 7200 5100
+	8050 3550 8050 3650
 Wire Wire Line
-	7350 5100 7350 5200
-Connection ~ 7350 5200
+	7900 3650 7900 3550
+Connection ~ 7900 3550
 Wire Wire Line
-	7500 5100 7500 5200
-Connection ~ 7500 5200
+	7750 3650 7750 3550
+Connection ~ 7750 3550
 Wire Wire Line
-	7650 5100 7650 5200
-Connection ~ 7650 5200
+	7600 3650 7600 3550
+Connection ~ 7600 3550
 Wire Wire Line
 	10800 900  10800 1000
 Connection ~ 10650 900 
@@ -890,22 +892,10 @@ Entry Wire Line
 	3500 3500 3600 3600
 Entry Wire Line
 	3500 3600 3600 3700
-Entry Wire Line
-	1800 3500 1900 3600
-Entry Wire Line
-	1800 3600 1900 3700
-Wire Wire Line
-	5300 4200 5300 3900
 Wire Wire Line
 	3650 3600 3600 3600
 Wire Wire Line
 	3650 3700 3600 3700
-Wire Wire Line
-	1950 3600 1900 3600
-Wire Wire Line
-	1950 3700 1900 3700
-Text Label 1900 3600 2    39   ~ 0
-~PWM_GREEN
 Text Label 3600 3600 2    39   ~ 0
 ~PWM_YELLOW
 Text Label 3600 3700 2    39   ~ 0
@@ -913,50 +903,50 @@ Text Label 3600 3700 2    39   ~ 0
 $Comp
 L Device:LED_Small D535
 U 1 1 5BEFB8D9
-P 7350 5000
-F 0 "D535" H 7600 5000 50  0000 L CNN
-F 1 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H 6950 4950 50  0001 L CNN
-F 2 "" V 7350 5000 50  0001 C CNN
-F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-6030625/LCB%20G6SP_EN.pdf" V 7350 5000 50  0001 C CNN
-F 4 "OSRAM" H 7350 5000 60  0001 C CNN "Manufacturer"
-F 5 "Shift_2" H 7100 5050 50  0000 C CNN "Function"
-F 6 "Blue LED Indication - Discrete 3.3V 6-PLCC" H -1200 600 50  0001 C CNN "Description"
-F 7 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H -1200 600 50  0001 C CNN "Part Number"
-F 8 "475-3674-1-ND" H 7350 5000 50  0001 C CNN "Digikey P/N"
-	1    7350 5000
-	0    1    1    0   
+P 7900 3750
+F 0 "D535" H 8150 3750 50  0000 L CNN
+F 1 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H 7500 3700 50  0001 L CNN
+F 2 "FSAE2020:LCB_G6SP" V 7900 3750 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-6030625/LCB%20G6SP_EN.pdf" V 7900 3750 50  0001 C CNN
+F 4 "OSRAM" H 7900 3750 60  0001 C CNN "Manufacturer"
+F 5 "Shift_2" H 7650 3800 50  0000 C CNN "Function"
+F 6 "Blue LED Indication - Discrete 3.3V 6-PLCC" H -650 -650 50  0001 C CNN "Description"
+F 7 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H -650 -650 50  0001 C CNN "Part Number"
+F 8 "475-3674-1-ND" H 7900 3750 50  0001 C CNN "Digikey P/N"
+	1    7900 3750
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:LED_Small D536
 U 1 1 5BEFBABA
-P 7500 5000
-F 0 "D536" H 7750 5000 50  0000 L CNN
-F 1 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H 7100 4950 50  0001 L CNN
-F 2 "" V 7500 5000 50  0001 C CNN
-F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-6030625/LCB%20G6SP_EN.pdf" V 7500 5000 50  0001 C CNN
-F 4 "OSRAM" H 7500 5000 60  0001 C CNN "Manufacturer"
-F 5 "Shift_3" H 7250 5050 50  0000 C CNN "Function"
-F 6 "Blue LED Indication - Discrete 3.3V 6-PLCC" H -1200 600 50  0001 C CNN "Description"
-F 7 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H -1200 600 50  0001 C CNN "Part Number"
-F 8 "475-3674-1-ND" H 7500 5000 50  0001 C CNN "Digikey P/N"
-	1    7500 5000
-	0    1    1    0   
+P 7750 3750
+F 0 "D536" H 8000 3750 50  0000 L CNN
+F 1 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H 7350 3700 50  0001 L CNN
+F 2 "FSAE2020:LCB_G6SP" V 7750 3750 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-6030625/LCB%20G6SP_EN.pdf" V 7750 3750 50  0001 C CNN
+F 4 "OSRAM" H 7750 3750 60  0001 C CNN "Manufacturer"
+F 5 "Shift_3" H 7500 3800 50  0000 C CNN "Function"
+F 6 "Blue LED Indication - Discrete 3.3V 6-PLCC" H -950 -650 50  0001 C CNN "Description"
+F 7 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H -950 -650 50  0001 C CNN "Part Number"
+F 8 "475-3674-1-ND" H 7750 3750 50  0001 C CNN "Digikey P/N"
+	1    7750 3750
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:LED_Small D537
 U 1 1 5BEFBC96
-P 7650 5000
-F 0 "D537" H 7900 5000 50  0000 L CNN
-F 1 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H 7250 4950 50  0001 L CNN
-F 2 "" V 7650 5000 50  0001 C CNN
-F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-6030625/LCB%20G6SP_EN.pdf" V 7650 5000 50  0001 C CNN
-F 4 "OSRAM" H 7650 5000 60  0001 C CNN "Manufacturer"
-F 5 "Shift_4" H 7400 5050 50  0000 C CNN "Function"
-F 6 "Blue LED Indication - Discrete 3.3V 6-PLCC" H -1200 600 50  0001 C CNN "Description"
-F 7 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H -1200 600 50  0001 C CNN "Part Number"
-F 8 "475-3674-1-ND" H 7650 5000 50  0001 C CNN "Digikey P/N"
-	1    7650 5000
-	0    1    1    0   
+P 7600 3750
+F 0 "D537" H 7850 3750 50  0000 L CNN
+F 1 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H 7200 3700 50  0001 L CNN
+F 2 "FSAE2020:LCB_G6SP" V 7600 3750 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-6030625/LCB%20G6SP_EN.pdf" V 7600 3750 50  0001 C CNN
+F 4 "OSRAM" H 7600 3750 60  0001 C CNN "Manufacturer"
+F 5 "Shift_4" H 7350 3800 50  0000 C CNN "Function"
+F 6 "Blue LED Indication - Discrete 3.3V 6-PLCC" H -1250 -650 50  0001 C CNN "Description"
+F 7 "LCB G6SP-DBFA-4J5L-0-140-R18-Z" H -1250 -650 50  0001 C CNN "Part Number"
+F 8 "475-3674-1-ND" H 7600 3750 50  0001 C CNN "Digikey P/N"
+	1    7600 3750
+	0    -1   -1   0   
 $EndComp
 Text Label 5150 6300 0    39   ~ 0
 a
@@ -984,6 +974,7 @@ F 4 "Bivar" H 10050 1100 60  0001 C CNN "Manufacturer"
 F 5 "13000-Red" H 9950 1150 50  0000 R CNN "Function"
 F 6 "LED RED CLEAR 1206 SMD" H 10050 1100 50  0001 C CNN "Description"
 F 7 "SM1206NHC-IL" H 10050 1100 50  0001 C CNN "Part Number"
+F 8 "492-1944-1-ND" H 10050 1100 50  0001 C CNN "Digikey P/N"
 	1    10050 1100
 	0    -1   -1   0   
 $EndComp
@@ -999,6 +990,7 @@ F 4 "Bivar" H 10200 1100 60  0001 C CNN "Manufacturer"
 F 5 "13500-Red" H 10100 1150 50  0000 R CNN "Function"
 F 6 "LED RED CLEAR 1206 SMD" H 10200 1100 50  0001 C CNN "Description"
 F 7 "SM1206NHC-IL" H 10200 1100 50  0001 C CNN "Part Number"
+F 8 "492-1944-1-ND" H 10200 1100 50  0001 C CNN "Digikey P/N"
 	1    10200 1100
 	0    -1   -1   0   
 $EndComp
@@ -1014,6 +1006,7 @@ F 4 "Bivar" H 10350 1100 60  0001 C CNN "Manufacturer"
 F 5 "14000-Red" H 10250 1150 50  0000 R CNN "Function"
 F 6 "LED RED CLEAR 1206 SMD" H 10350 1100 50  0001 C CNN "Description"
 F 7 "SM1206NHC-IL" H 10350 1100 50  0001 C CNN "Part Number"
+F 8 "492-1944-1-ND" H 10350 1100 50  0001 C CNN "Digikey P/N"
 	1    10350 1100
 	0    -1   -1   0   
 $EndComp
@@ -1029,6 +1022,7 @@ F 4 "Bivar" H 10500 1100 60  0001 C CNN "Manufacturer"
 F 5 "14500-Red" H 10400 1150 50  0000 R CNN "Function"
 F 6 "LED RED CLEAR 1206 SMD" H 10500 1100 50  0001 C CNN "Description"
 F 7 "SM1206NHC-IL" H 10500 1100 50  0001 C CNN "Part Number"
+F 8 "492-1944-1-ND" H 10500 1100 50  0001 C CNN "Digikey P/N"
 	1    10500 1100
 	0    -1   -1   0   
 $EndComp
@@ -1044,6 +1038,7 @@ F 4 "Bivar" H 10650 1100 60  0001 C CNN "Manufacturer"
 F 5 "15000-Red" H 10550 1150 50  0000 R CNN "Function"
 F 6 "LED RED CLEAR 1206 SMD" H 10650 1100 50  0001 C CNN "Description"
 F 7 "SM1206NHC-IL" H 10650 1100 50  0001 C CNN "Part Number"
+F 8 "492-1944-1-ND" H 10650 1100 50  0001 C CNN "Digikey P/N"
 	1    10650 1100
 	0    -1   -1   0   
 $EndComp
@@ -1059,6 +1054,7 @@ F 4 "Bivar" H 10800 1100 60  0001 C CNN "Manufacturer"
 F 5 "Spare-Red" H 10700 1150 50  0000 R CNN "Function"
 F 6 "LED RED CLEAR 1206 SMD" H 10800 1100 50  0001 C CNN "Description"
 F 7 "SM1206NHC-IL" H 10800 1100 50  0001 C CNN "Part Number"
+F 8 "492-1944-1-ND" H 10800 1100 50  0001 C CNN "Digikey P/N"
 	1    10800 1100
 	0    -1   -1   0   
 $EndComp
@@ -1074,6 +1070,7 @@ F 4 "Bivar" H 10950 1100 60  0001 C CNN "Manufacturer"
 F 5 "Spare-Red" H 10850 1150 50  0000 R CNN "Function"
 F 6 "LED RED CLEAR 1206 SMD" H 10950 1100 50  0001 C CNN "Description"
 F 7 "SM1206NHC-IL" H 10950 1100 50  0001 C CNN "Part Number"
+F 8 "492-1944-1-ND" H 10950 1100 50  0001 C CNN "Digikey P/N"
 	1    10950 1100
 	0    -1   -1   0   
 $EndComp
@@ -1089,6 +1086,7 @@ F 4 "Bivar" H 8700 1100 60  0001 C CNN "Manufacturer"
 F 5 "9000-Yellow" H 8600 1150 50  0000 R CNN "Function"
 F 6 "LED YELLOW CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 F 7 "SM1206NYC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 8 "492-1947-1-ND" H 8700 1100 50  0001 C CNN "Digikey P/N"
 	1    8700 1100
 	0    -1   -1   0   
 $EndComp
@@ -1104,6 +1102,7 @@ F 4 "Bivar" H 8850 1100 60  0001 C CNN "Manufacturer"
 F 5 "9500-Yellow" H 8750 1150 50  0000 R CNN "Function"
 F 6 "LED YELLOW CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 F 7 "SM1206NYC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 8 "492-1947-1-ND" H 8850 1100 50  0001 C CNN "Digikey P/N"
 	1    8850 1100
 	0    -1   -1   0   
 $EndComp
@@ -1119,6 +1118,7 @@ F 4 "Bivar" H 9000 1100 60  0001 C CNN "Manufacturer"
 F 5 "10000-Yellow" H 8900 1150 50  0000 R CNN "Function"
 F 6 "LED YELLOW CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 F 7 "SM1206NYC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 8 "492-1947-1-ND" H 9000 1100 50  0001 C CNN "Digikey P/N"
 	1    9000 1100
 	0    -1   -1   0   
 $EndComp
@@ -1134,6 +1134,7 @@ F 4 "Bivar" H 9150 1100 60  0001 C CNN "Manufacturer"
 F 5 "10500-Yellow" H 9050 1150 50  0000 R CNN "Function"
 F 6 "LED YELLOW CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 F 7 "SM1206NYC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 8 "492-1947-1-ND" H 9150 1100 50  0001 C CNN "Digikey P/N"
 	1    9150 1100
 	0    -1   -1   0   
 $EndComp
@@ -1149,6 +1150,7 @@ F 4 "Bivar" H 9300 1100 60  0001 C CNN "Manufacturer"
 F 5 "11000-Yellow" H 9200 1150 50  0000 R CNN "Function"
 F 6 "LED YELLOW CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 F 7 "SM1206NYC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 8 "492-1947-1-ND" H 9300 1100 50  0001 C CNN "Digikey P/N"
 	1    9300 1100
 	0    -1   -1   0   
 $EndComp
@@ -1164,6 +1166,7 @@ F 4 "Bivar" H 9450 1100 60  0001 C CNN "Manufacturer"
 F 5 "11500-Yellow" H 9350 1150 50  0000 R CNN "Function"
 F 6 "LED YELLOW CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 F 7 "SM1206NYC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 8 "492-1947-1-ND" H 9450 1100 50  0001 C CNN "Digikey P/N"
 	1    9450 1100
 	0    -1   -1   0   
 $EndComp
@@ -1179,6 +1182,7 @@ F 4 "Bivar" H 9600 1100 60  0001 C CNN "Manufacturer"
 F 5 "12000-Yellow" H 9500 1150 50  0000 R CNN "Function"
 F 6 "LED YELLOW CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
 F 7 "SM1206NYC-IL" H 0   0   50  0001 C CNN "Part Number"
+F 8 "492-1947-1-ND" H 9600 1100 50  0001 C CNN "Digikey P/N"
 	1    9600 1100
 	0    -1   -1   0   
 $EndComp
@@ -1194,6 +1198,7 @@ F 4 "Bivar" H 6150 1100 60  0001 C CNN "Manufacturer"
 F 5 "1000-Green" H 6050 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 6150 1100 50  0001 C CNN "Digikey P/N"
 	1    6150 1100
 	0    -1   -1   0   
 $EndComp
@@ -1209,6 +1214,7 @@ F 4 "Bivar" H 6300 1100 60  0001 C CNN "Manufacturer"
 F 5 "1500-Green" H 6200 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 6300 1100 50  0001 C CNN "Digikey P/N"
 	1    6300 1100
 	0    -1   -1   0   
 $EndComp
@@ -1224,6 +1230,7 @@ F 4 "Bivar" H 6450 1100 60  0001 C CNN "Manufacturer"
 F 5 "2000-Green" H 6350 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 6450 1100 50  0001 C CNN "Digikey P/N"
 	1    6450 1100
 	0    -1   -1   0   
 $EndComp
@@ -1239,6 +1246,7 @@ F 4 "Bivar" H 6600 1100 60  0001 C CNN "Manufacturer"
 F 5 "2500-Green" H 6500 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 6600 1100 50  0001 C CNN "Digikey P/N"
 	1    6600 1100
 	0    -1   -1   0   
 $EndComp
@@ -1254,6 +1262,7 @@ F 4 "Bivar" H 6750 1100 60  0001 C CNN "Manufacturer"
 F 5 "3000-Green" H 6650 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 6750 1100 50  0001 C CNN "Digikey P/N"
 	1    6750 1100
 	0    -1   -1   0   
 $EndComp
@@ -1269,6 +1278,7 @@ F 4 "Bivar" H 6900 1100 60  0001 C CNN "Manufacturer"
 F 5 "3500-Green" H 6800 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 6900 1100 50  0001 C CNN "Digikey P/N"
 	1    6900 1100
 	0    -1   -1   0   
 $EndComp
@@ -1284,6 +1294,7 @@ F 4 "Bivar" H 7050 1100 60  0001 C CNN "Manufacturer"
 F 5 "4000-Green" H 6950 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 7050 1100 50  0001 C CNN "Digikey P/N"
 	1    7050 1100
 	0    -1   -1   0   
 $EndComp
@@ -1299,6 +1310,7 @@ F 4 "Bivar" H 7200 1100 60  0001 C CNN "Manufacturer"
 F 5 "4500-Green" H 7100 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 7200 1100 50  0001 C CNN "Digikey P/N"
 	1    7200 1100
 	0    -1   -1   0   
 $EndComp
@@ -1314,6 +1326,7 @@ F 4 "Bivar" H 7350 1100 60  0001 C CNN "Manufacturer"
 F 5 "5000-Green" H 7250 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 7350 1100 50  0001 C CNN "Digikey P/N"
 	1    7350 1100
 	0    -1   -1   0   
 $EndComp
@@ -1329,6 +1342,7 @@ F 4 "Bivar" H 7500 1100 60  0001 C CNN "Manufacturer"
 F 5 "5500-Green" H 7400 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 7500 1100 50  0001 C CNN "Digikey P/N"
 	1    7500 1100
 	0    -1   -1   0   
 $EndComp
@@ -1344,6 +1358,7 @@ F 4 "Bivar" H 7650 1100 60  0001 C CNN "Manufacturer"
 F 5 "6000-Green" H 7550 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 7650 1100 50  0001 C CNN "Digikey P/N"
 	1    7650 1100
 	0    -1   -1   0   
 $EndComp
@@ -1359,6 +1374,7 @@ F 4 "Bivar" H 7800 1100 60  0001 C CNN "Manufacturer"
 F 5 "6500-Green" H 7700 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 7800 1100 50  0001 C CNN "Digikey P/N"
 	1    7800 1100
 	0    -1   -1   0   
 $EndComp
@@ -1374,6 +1390,7 @@ F 4 "Bivar" H 7950 1100 60  0001 C CNN "Manufacturer"
 F 5 "7000-Green" H 7850 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 7950 1100 50  0001 C CNN "Digikey P/N"
 	1    7950 1100
 	0    -1   -1   0   
 $EndComp
@@ -1389,6 +1406,7 @@ F 4 "Bivar" H 8100 1100 60  0001 C CNN "Manufacturer"
 F 5 "7500-Green" H 8000 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 8100 1100 50  0001 C CNN "Digikey P/N"
 	1    8100 1100
 	0    -1   -1   0   
 $EndComp
@@ -1404,6 +1422,7 @@ F 4 "Bivar" H 8250 1100 60  0001 C CNN "Manufacturer"
 F 5 "8000-Green" H 8150 1150 50  0000 R CNN "Function"
 F 6 "SM1206NPGC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED GREEN CLEAR 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1945-1-ND" H 8250 1100 50  0001 C CNN "Digikey P/N"
 	1    8250 1100
 	0    -1   -1   0   
 $EndComp
@@ -1528,9 +1547,9 @@ Wire Wire Line
 Wire Wire Line
 	10500 900  10650 900 
 Wire Wire Line
-	7350 5200 7500 5200
+	7900 3550 7750 3550
 Wire Wire Line
-	7500 5200 7650 5200
+	7750 3550 7600 3550
 Wire Wire Line
 	10650 900  10800 900 
 Wire Wire Line
@@ -1551,6 +1570,7 @@ F 4 "Bivar" H 1650 950 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 1550 1050 50  0000 R CNN "Function"
 F 6 "LED YELLOW CLEAR 1206 SMD" H 0   50  50  0001 C CNN "Description"
 F 7 "SM1206NYC-IL" H 0   50  50  0001 C CNN "Part Number"
+F 8 "492-1947-1-ND" H 1650 950 50  0001 C CNN "Digikey P/N"
 	1    1650 950 
 	0    -1   -1   0   
 $EndComp
@@ -1566,6 +1586,7 @@ F 4 "Bivar" H 1800 950 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 1700 1000 50  0001 R CNN "Function"
 F 6 "LED YELLOW CLEAR 1206 SMD" H 0   50  50  0001 C CNN "Description"
 F 7 "SM1206NYC-IL" H 0   50  50  0001 C CNN "Part Number"
+F 8 "492-1947-1-ND" H 1800 950 50  0001 C CNN "Digikey P/N"
 	1    1800 950 
 	0    -1   -1   0   
 $EndComp
@@ -1581,6 +1602,7 @@ F 4 "Bivar" H 1950 950 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 1850 1000 50  0001 R CNN "Function"
 F 6 "LED YELLOW CLEAR 1206 SMD" H 0   50  50  0001 C CNN "Description"
 F 7 "SM1206NYC-IL" H 0   50  50  0001 C CNN "Part Number"
+F 8 "492-1947-1-ND" H 1950 950 50  0001 C CNN "Digikey P/N"
 	1    1950 950 
 	0    -1   -1   0   
 $EndComp
@@ -1596,6 +1618,7 @@ F 4 "Bivar" H 2100 950 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 2000 1000 50  0001 R CNN "Function"
 F 6 "LED YELLOW CLEAR 1206 SMD" H 0   50  50  0001 C CNN "Description"
 F 7 "SM1206NYC-IL" H 0   50  50  0001 C CNN "Part Number"
+F 8 "492-1947-1-ND" H 2100 950 50  0001 C CNN "Digikey P/N"
 	1    2100 950 
 	0    -1   -1   0   
 $EndComp
@@ -1611,6 +1634,7 @@ F 4 "Bivar" H 2250 950 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 2150 1000 50  0001 R CNN "Function"
 F 6 "LED YELLOW CLEAR 1206 SMD" H 0   50  50  0001 C CNN "Description"
 F 7 "SM1206NYC-IL" H 0   50  50  0001 C CNN "Part Number"
+F 8 "492-1947-1-ND" H 2250 950 50  0001 C CNN "Digikey P/N"
 	1    2250 950 
 	0    -1   -1   0   
 $EndComp
@@ -1626,6 +1650,7 @@ F 4 "Bivar" H 2400 950 60  0001 C CNN "Manufacturer"
 F 5 "High Temp" H 2300 1000 50  0001 R CNN "Function"
 F 6 "LED YELLOW CLEAR 1206 SMD" H 0   50  50  0001 C CNN "Description"
 F 7 "SM1206NYC-IL" H 0   50  50  0001 C CNN "Part Number"
+F 8 "492-1947-1-ND" H 2400 950 50  0001 C CNN "Digikey P/N"
 	1    2400 950 
 	0    -1   -1   0   
 $EndComp
@@ -1680,6 +1705,7 @@ F 4 "Bivar" H 2800 950 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 2700 1050 50  0000 R CNN "Function"
 F 6 "LED RED CLEAR 1206 SMD" H 2800 950 50  0001 C CNN "Description"
 F 7 "SM1206NHC-IL" H 2800 950 50  0001 C CNN "Part Number"
+F 8 "492-1944-1-ND" H 2800 950 50  0001 C CNN "Digikey P/N"
 	1    2800 950 
 	0    -1   -1   0   
 $EndComp
@@ -1695,6 +1721,7 @@ F 4 "Bivar" H 2950 950 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 2850 1000 50  0001 R CNN "Function"
 F 6 "LED RED CLEAR 1206 SMD" H 2950 950 50  0001 C CNN "Description"
 F 7 "SM1206NHC-IL" H 2950 950 50  0001 C CNN "Part Number"
+F 8 "492-1944-1-ND" H 2950 950 50  0001 C CNN "Digikey P/N"
 	1    2950 950 
 	0    -1   -1   0   
 $EndComp
@@ -1710,6 +1737,7 @@ F 4 "Bivar" H 3100 950 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 3000 1000 50  0001 R CNN "Function"
 F 6 "LED RED CLEAR 1206 SMD" H 3100 950 50  0001 C CNN "Description"
 F 7 "SM1206NHC-IL" H 3100 950 50  0001 C CNN "Part Number"
+F 8 "492-1944-1-ND" H 3100 950 50  0001 C CNN "Digikey P/N"
 	1    3100 950 
 	0    -1   -1   0   
 $EndComp
@@ -1725,6 +1753,7 @@ F 4 "Bivar" H 3250 950 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 3150 1000 50  0001 R CNN "Function"
 F 6 "LED RED CLEAR 1206 SMD" H 3250 950 50  0001 C CNN "Description"
 F 7 "SM1206NHC-IL" H 3250 950 50  0001 C CNN "Part Number"
+F 8 "492-1944-1-ND" H 3250 950 50  0001 C CNN "Digikey P/N"
 	1    3250 950 
 	0    -1   -1   0   
 $EndComp
@@ -1740,6 +1769,7 @@ F 4 "Bivar" H 3400 950 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 3300 1000 50  0001 R CNN "Function"
 F 6 "LED RED CLEAR 1206 SMD" H 3400 950 50  0001 C CNN "Description"
 F 7 "SM1206NHC-IL" H 3400 950 50  0001 C CNN "Part Number"
+F 8 "492-1944-1-ND" H 3400 950 50  0001 C CNN "Digikey P/N"
 	1    3400 950 
 	0    -1   -1   0   
 $EndComp
@@ -1755,6 +1785,7 @@ F 4 "Bivar" H 3550 950 60  0001 C CNN "Manufacturer"
 F 5 "Oil Pressure" H 3450 1000 50  0001 R CNN "Function"
 F 6 "LED RED CLEAR 1206 SMD" H 3550 950 50  0001 C CNN "Description"
 F 7 "SM1206NHC-IL" H 3550 950 50  0001 C CNN "Part Number"
+F 8 "492-1944-1-ND" H 3550 950 50  0001 C CNN "Digikey P/N"
 	1    3550 950 
 	0    -1   -1   0   
 $EndComp
@@ -1841,6 +1872,7 @@ F 3 "http://www.vishay.com/docs/77744/si2308cds.pdf" H 1550 2350 50  0001 C CNN
 F 4 "MOSFET N-CH 60V 2.6A SOT23-3" H 0   50  50  0001 C CNN "Description"
 F 5 "Vishay" H 0   50  50  0001 C CNN "Manufacturer"
 F 6 "SI2308CDS-T1-GE3" H 0   50  50  0001 C CNN "Part Number"
+F 7 "SI2308CDS-T1-GE3CT-ND" H 1550 2350 50  0001 C CNN "Digikey P/N"
 	1    1550 2350
 	1    0    0    -1  
 $EndComp
@@ -1855,6 +1887,7 @@ F 3 "http://www.vishay.com/docs/77744/si2308cds.pdf" H 2700 2350 50  0001 C CNN
 F 4 "MOSFET N-CH 60V 2.6A SOT23-3" H 0   50  50  0001 C CNN "Description"
 F 5 "Vishay" H 0   50  50  0001 C CNN "Manufacturer"
 F 6 "SI2308CDS-T1-GE3" H 0   50  50  0001 C CNN "Part Number"
+F 7 "SI2308CDS-T1-GE3CT-ND" H 2700 2350 50  0001 C CNN "Digikey P/N"
 	1    2700 2350
 	1    0    0    -1  
 $EndComp
@@ -1875,6 +1908,7 @@ F 4 "Bivar" H 5600 6300 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_A" H 5500 6350 50  0000 R CNN "Function"
 F 6 "SM1206NUWC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED WHITE DIFFUSED 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1946-1-ND" H 5600 6300 50  0001 C CNN "Digikey P/N"
 	1    5600 6300
 	1    0    0    -1  
 $EndComp
@@ -1890,6 +1924,7 @@ F 4 "Bivar" H 5600 6450 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_B" H 5500 6500 50  0000 R CNN "Function"
 F 6 "SM1206NUWC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED WHITE DIFFUSED 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1946-1-ND" H 5600 6450 50  0001 C CNN "Digikey P/N"
 	1    5600 6450
 	1    0    0    -1  
 $EndComp
@@ -1905,6 +1940,7 @@ F 4 "Bivar" H 5600 6600 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_C" H 5500 6650 50  0000 R CNN "Function"
 F 6 "SM1206NUWC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED WHITE DIFFUSED 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1946-1-ND" H 5600 6600 50  0001 C CNN "Digikey P/N"
 	1    5600 6600
 	1    0    0    -1  
 $EndComp
@@ -1920,6 +1956,7 @@ F 4 "Bivar" H 5600 6750 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_D" H 5500 6800 50  0000 R CNN "Function"
 F 6 "SM1206NUWC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED WHITE DIFFUSED 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1946-1-ND" H 5600 6750 50  0001 C CNN "Digikey P/N"
 	1    5600 6750
 	1    0    0    -1  
 $EndComp
@@ -1935,6 +1972,7 @@ F 4 "Bivar" H 5600 6900 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_E" H 5500 6950 50  0000 R CNN "Function"
 F 6 "SM1206NUWC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED WHITE DIFFUSED 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1946-1-ND" H 5600 6900 50  0001 C CNN "Digikey P/N"
 	1    5600 6900
 	1    0    0    -1  
 $EndComp
@@ -1950,6 +1988,7 @@ F 4 "Bivar" H 5600 7050 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_F" H 5500 7100 50  0000 R CNN "Function"
 F 6 "SM1206NUWC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED WHITE DIFFUSED 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1946-1-ND" H 5600 7050 50  0001 C CNN "Digikey P/N"
 	1    5600 7050
 	1    0    0    -1  
 $EndComp
@@ -1989,6 +2028,7 @@ F 4 "Bivar" H 5600 7200 60  0001 C CNN "Manufacturer"
 F 5 "7Seg_G" H 5500 7250 50  0000 R CNN "Function"
 F 6 "SM1206NUWC-IL" H 0   0   50  0001 C CNN "Part Number"
 F 7 "LED WHITE DIFFUSED 1206 SMD" H 0   0   50  0001 C CNN "Description"
+F 8 "492-1946-1-ND" H 5600 7200 50  0001 C CNN "Digikey P/N"
 	1    5600 7200
 	1    0    0    -1  
 $EndComp
@@ -2079,36 +2119,30 @@ Wire Wire Line
 Text GLabel 1250 7400 0    39   Input ~ 0
 FRAME_OUT
 NoConn ~ -14750 5700
-Text Label 1900 3700 2    39   ~ 0
-~PWM_GREEN
-Wire Bus Line
-	3500 2900 1800 2900
 Entry Wire Line
-	4900 2800 4800 2900
-Text GLabel 4750 2350 1    39   Input ~ 0
+	4850 2550 4950 2650
+Text GLabel 4400 2700 0    39   Input ~ 0
 ~PWM_GREEN
-Text Label 4750 2400 3    39   ~ 0
+Text Label 4450 2700 0    39   ~ 0
 ~PWM_GREEN
-Text GLabel 4900 2350 1    39   Input ~ 0
+Text GLabel 4400 2550 0    39   Input ~ 0
 ~PWM_YELLOW
-Text GLabel 5050 2350 1    39   Input ~ 0
+Text GLabel 4400 2400 0    39   Input ~ 0
 ~PWM_RED
-Text GLabel 5300 3750 1    39   Input ~ 0
-~SHIFT
-Text Label 4900 2400 3    39   ~ 0
+Text Label 4450 2550 0    39   ~ 0
 ~PWM_YELLOW
 Wire Wire Line
-	5050 2800 5050 2350
+	4850 2400 4400 2400
 Wire Wire Line
-	4900 2800 4900 2350
+	4850 2550 4400 2550
 Wire Wire Line
-	4750 2800 4750 2350
+	4850 2700 4400 2700
 Text Notes 750  1800 0    39   ~ 0
 2 x 6 LEDs\nTight Packed\n@ 60 degree rotations
 Text Notes 6200 7500 0    39   ~ 0
 7 LEDs\nSegment Display\nWhite - SM1206NUWC-IL\nVf = 3.1V, 750mcd\nIf = 20mA Ifp = 100mA\nMin R: 95 Ohm\n
-Text Notes 7900 4650 0    39   ~ 0
-Blue - SM1206NBWC-IL\nVf = 3.1V,  950mcd @ 470nm\nIf = 20mA, Ifp = 100mA\nMin R: 95 Ohm\n
+Text Notes 9700 5050 2    39   ~ 0
+Blue - G6SP-DBFA\nVf = 3.3V, 7200mcd @ 450nm\nIf = 160mA\nMin R: 11 Ohm\n
 Wire Wire Line
 	4750 4800 4750 5600
 Wire Wire Line
@@ -2124,6 +2158,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1650 1750 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 1650 1750 50  0001 C CNN "Description"
 F 5 "Stackpole" H 1650 1750 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 1650 1750 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 1650 1750 50  0001 C CNN "Digikey P/N"
 	1    1650 1750
 	1    0    0    -1  
 $EndComp
@@ -2142,6 +2177,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1800 1750 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 1800 1750 50  0001 C CNN "Description"
 F 5 "Stackpole" H 1800 1750 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 1800 1750 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 1800 1750 50  0001 C CNN "Digikey P/N"
 	1    1800 1750
 	1    0    0    -1  
 $EndComp
@@ -2156,6 +2192,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1950 1750 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 1950 1750 50  0001 C CNN "Description"
 F 5 "Stackpole" H 1950 1750 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 1950 1750 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 1950 1750 50  0001 C CNN "Digikey P/N"
 	1    1950 1750
 	1    0    0    -1  
 $EndComp
@@ -2170,6 +2207,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 2100 1750 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 2100 1750 50  0001 C CNN "Description"
 F 5 "Stackpole" H 2100 1750 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 2100 1750 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 2100 1750 50  0001 C CNN "Digikey P/N"
 	1    2100 1750
 	1    0    0    -1  
 $EndComp
@@ -2184,6 +2222,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 2250 1750 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 2250 1750 50  0001 C CNN "Description"
 F 5 "Stackpole" H 2250 1750 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 2250 1750 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 2250 1750 50  0001 C CNN "Digikey P/N"
 	1    2250 1750
 	1    0    0    -1  
 $EndComp
@@ -2198,6 +2237,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 2400 1750 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 2400 1750 50  0001 C CNN "Description"
 F 5 "Stackpole" H 2400 1750 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 2400 1750 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 2400 1750 50  0001 C CNN "Digikey P/N"
 	1    2400 1750
 	1    0    0    -1  
 $EndComp
@@ -2241,6 +2281,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 2800 1750 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 2800 1750 50  0001 C CNN "Description"
 F 5 "Stackpole" H 2800 1750 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 2800 1750 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 2800 1750 50  0001 C CNN "Digikey P/N"
 	1    2800 1750
 	1    0    0    -1  
 $EndComp
@@ -2255,6 +2296,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 2950 1750 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 2950 1750 50  0001 C CNN "Description"
 F 5 "Stackpole" H 2950 1750 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 2950 1750 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 2950 1750 50  0001 C CNN "Digikey P/N"
 	1    2950 1750
 	1    0    0    -1  
 $EndComp
@@ -2269,6 +2311,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 3100 1750 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 3100 1750 50  0001 C CNN "Description"
 F 5 "Stackpole" H 3100 1750 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 3100 1750 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 3100 1750 50  0001 C CNN "Digikey P/N"
 	1    3100 1750
 	1    0    0    -1  
 $EndComp
@@ -2283,6 +2326,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 3250 1750 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 3250 1750 50  0001 C CNN "Description"
 F 5 "Stackpole" H 3250 1750 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 3250 1750 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 3250 1750 50  0001 C CNN "Digikey P/N"
 	1    3250 1750
 	1    0    0    -1  
 $EndComp
@@ -2297,6 +2341,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 3400 1750 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 3400 1750 50  0001 C CNN "Description"
 F 5 "Stackpole" H 3400 1750 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 3400 1750 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 3400 1750 50  0001 C CNN "Digikey P/N"
 	1    3400 1750
 	1    0    0    -1  
 $EndComp
@@ -2311,6 +2356,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 3550 1750 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 3550 1750 50  0001 C CNN "Description"
 F 5 "Stackpole" H 3550 1750 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 3550 1750 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 3550 1750 50  0001 C CNN "Digikey P/N"
 	1    3550 1750
 	1    0    0    -1  
 $EndComp
@@ -2354,6 +2400,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6000 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 6000 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 6000 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 6000 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 6000 2100 50  0001 C CNN "Digikey P/N"
 	1    6000 2100
 	1    0    0    -1  
 $EndComp
@@ -2368,6 +2415,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6150 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 6150 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 6150 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 6150 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 6150 2100 50  0001 C CNN "Digikey P/N"
 	1    6150 2100
 	1    0    0    -1  
 $EndComp
@@ -2382,6 +2430,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6300 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 6300 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 6300 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 6300 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 6300 2100 50  0001 C CNN "Digikey P/N"
 	1    6300 2100
 	1    0    0    -1  
 $EndComp
@@ -2396,6 +2445,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6450 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 6450 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 6450 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 6450 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 6450 2100 50  0001 C CNN "Digikey P/N"
 	1    6450 2100
 	1    0    0    -1  
 $EndComp
@@ -2410,6 +2460,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6600 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 6600 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 6600 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 6600 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 6600 2100 50  0001 C CNN "Digikey P/N"
 	1    6600 2100
 	1    0    0    -1  
 $EndComp
@@ -2424,6 +2475,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6750 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 6750 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 6750 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 6750 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 6750 2100 50  0001 C CNN "Digikey P/N"
 	1    6750 2100
 	1    0    0    -1  
 $EndComp
@@ -2438,6 +2490,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6900 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 6900 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 6900 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 6900 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 6900 2100 50  0001 C CNN "Digikey P/N"
 	1    6900 2100
 	1    0    0    -1  
 $EndComp
@@ -2452,6 +2505,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 7050 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 7050 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 7050 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 7050 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 7050 2100 50  0001 C CNN "Digikey P/N"
 	1    7050 2100
 	1    0    0    -1  
 $EndComp
@@ -2466,6 +2520,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 7200 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 7200 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 7200 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 7200 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 7200 2100 50  0001 C CNN "Digikey P/N"
 	1    7200 2100
 	1    0    0    -1  
 $EndComp
@@ -2480,6 +2535,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 7350 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 7350 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 7350 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 7350 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 7350 2100 50  0001 C CNN "Digikey P/N"
 	1    7350 2100
 	1    0    0    -1  
 $EndComp
@@ -2494,6 +2550,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 7500 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 7500 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 7500 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 7500 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 7500 2100 50  0001 C CNN "Digikey P/N"
 	1    7500 2100
 	1    0    0    -1  
 $EndComp
@@ -2508,6 +2565,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 7650 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 7650 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 7650 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 7650 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 7650 2100 50  0001 C CNN "Digikey P/N"
 	1    7650 2100
 	1    0    0    -1  
 $EndComp
@@ -2522,6 +2580,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 7800 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 7800 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 7800 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 7800 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 7800 2100 50  0001 C CNN "Digikey P/N"
 	1    7800 2100
 	1    0    0    -1  
 $EndComp
@@ -2536,6 +2595,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 7950 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 7950 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 7950 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 7950 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 7950 2100 50  0001 C CNN "Digikey P/N"
 	1    7950 2100
 	1    0    0    -1  
 $EndComp
@@ -2550,6 +2610,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 8100 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 8100 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 8100 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 8100 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 8100 2100 50  0001 C CNN "Digikey P/N"
 	1    8100 2100
 	1    0    0    -1  
 $EndComp
@@ -2564,6 +2625,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 8250 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 8250 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 8250 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 8250 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 8250 2100 50  0001 C CNN "Digikey P/N"
 	1    8250 2100
 	1    0    0    -1  
 $EndComp
@@ -2640,6 +2702,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 8550 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 8550 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 8550 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 8550 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 8550 2100 50  0001 C CNN "Digikey P/N"
 	1    8550 2100
 	1    0    0    -1  
 $EndComp
@@ -2654,6 +2717,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 8700 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 8700 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 8700 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 8700 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 8700 2100 50  0001 C CNN "Digikey P/N"
 	1    8700 2100
 	1    0    0    -1  
 $EndComp
@@ -2668,6 +2732,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 8850 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 8850 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 8850 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 8850 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 8850 2100 50  0001 C CNN "Digikey P/N"
 	1    8850 2100
 	1    0    0    -1  
 $EndComp
@@ -2682,6 +2747,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 9000 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 9000 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 9000 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 9000 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 9000 2100 50  0001 C CNN "Digikey P/N"
 	1    9000 2100
 	1    0    0    -1  
 $EndComp
@@ -2696,6 +2762,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 9150 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 9150 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 9150 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 9150 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 9150 2100 50  0001 C CNN "Digikey P/N"
 	1    9150 2100
 	1    0    0    -1  
 $EndComp
@@ -2710,6 +2777,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 9300 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 9300 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 9300 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 9300 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 9300 2100 50  0001 C CNN "Digikey P/N"
 	1    9300 2100
 	1    0    0    -1  
 $EndComp
@@ -2724,6 +2792,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 9450 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 9450 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 9450 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 9450 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 9450 2100 50  0001 C CNN "Digikey P/N"
 	1    9450 2100
 	1    0    0    -1  
 $EndComp
@@ -2738,6 +2807,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 9600 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 9600 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 9600 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 9600 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 9600 2100 50  0001 C CNN "Digikey P/N"
 	1    9600 2100
 	1    0    0    -1  
 $EndComp
@@ -2784,6 +2854,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 9900 2100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 9900 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 9900 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 9900 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 9900 2100 50  0001 C CNN "Digikey P/N"
 	1    9900 2100
 	1    0    0    -1  
 $EndComp
@@ -2798,6 +2869,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 10050 2100 50  0001 C
 F 4 "RES 120 OHM 1% 1/10W 0603" H 10050 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 10050 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 10050 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 10050 2100 50  0001 C CNN "Digikey P/N"
 	1    10050 2100
 	1    0    0    -1  
 $EndComp
@@ -2812,6 +2884,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 10200 2100 50  0001 C
 F 4 "RES 120 OHM 1% 1/10W 0603" H 10200 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 10200 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 10200 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 10200 2100 50  0001 C CNN "Digikey P/N"
 	1    10200 2100
 	1    0    0    -1  
 $EndComp
@@ -2826,6 +2899,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 10350 2100 50  0001 C
 F 4 "RES 120 OHM 1% 1/10W 0603" H 10350 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 10350 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 10350 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 10350 2100 50  0001 C CNN "Digikey P/N"
 	1    10350 2100
 	1    0    0    -1  
 $EndComp
@@ -2840,6 +2914,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 10500 2100 50  0001 C
 F 4 "RES 120 OHM 1% 1/10W 0603" H 10500 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 10500 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 10500 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 10500 2100 50  0001 C CNN "Digikey P/N"
 	1    10500 2100
 	1    0    0    -1  
 $EndComp
@@ -2854,6 +2929,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 10650 2100 50  0001 C
 F 4 "RES 120 OHM 1% 1/10W 0603" H 10650 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 10650 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 10650 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 10650 2100 50  0001 C CNN "Digikey P/N"
 	1    10650 2100
 	1    0    0    -1  
 $EndComp
@@ -2868,6 +2944,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 10800 2100 50  0001 C
 F 4 "RES 120 OHM 1% 1/10W 0603" H 10800 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 10800 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 10800 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 10800 2100 50  0001 C CNN "Digikey P/N"
 	1    10800 2100
 	1    0    0    -1  
 $EndComp
@@ -2882,6 +2959,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 10950 2100 50  0001 C
 F 4 "RES 120 OHM 1% 1/10W 0603" H 10950 2100 50  0001 C CNN "Description"
 F 5 "Stackpole" H 10950 2100 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 10950 2100 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 10950 2100 50  0001 C CNN "Digikey P/N"
 	1    10950 2100
 	1    0    0    -1  
 $EndComp
@@ -2920,71 +2998,75 @@ Wire Wire Line
 $Comp
 L Device:R_Small R534
 U 1 1 6175B6A7
-P 7200 4350
-F 0 "R534" V 7250 4450 50  0000 L CNN
-F 1 "11" V 7100 4300 50  0000 L CNN
-F 2 "Resistors_SMD:R_1210" H 7200 4350 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/20035/dcrcwe3.pdf" H 7200 4350 50  0001 C CNN
-F 4 "RES SMD 11 OHM 1% 1/2W 1210" H 7200 4350 50  0001 C CNN "Description"
-F 5 "Vishay" H 7200 4350 50  0001 C CNN "Manufacturer"
-F 6 "CRCW121011R0FKEA" H 7200 4350 50  0001 C CNN "Part Number"
-	1    7200 4350
-	1    0    0    -1  
+P 8050 4400
+F 0 "R534" V 8100 4500 50  0000 L CNN
+F 1 "11" V 7950 4350 50  0000 L CNN
+F 2 "Resistors_SMD:R_1210" H 8050 4400 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/20035/dcrcwe3.pdf" H 8050 4400 50  0001 C CNN
+F 4 "RES SMD 11 OHM 1% 1/2W 1210" H 8050 4400 50  0001 C CNN "Description"
+F 5 "Vishay" H 8050 4400 50  0001 C CNN "Manufacturer"
+F 6 "CRCW121011R0FKEA" H 8050 4400 50  0001 C CNN "Part Number"
+F 7 "541-11.0AACT-ND" H 8050 4400 50  0001 C CNN "Digikey P/N"
+	1    8050 4400
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R_Small R535
 U 1 1 6175C13C
-P 7350 4350
-F 0 "R535" V 7400 4450 50  0000 L CNN
-F 1 "11" V 7250 4300 50  0001 L CNN
-F 2 "Resistors_SMD:R_1210" H 7350 4350 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/20035/dcrcwe3.pdf" H 7350 4350 50  0001 C CNN
-F 4 "RES SMD 11 OHM 1% 1/2W 1210" H 7350 4350 50  0001 C CNN "Description"
-F 5 "Vishay" H 7350 4350 50  0001 C CNN "Manufacturer"
-F 6 "CRCW121011R0FKEA" H 7350 4350 50  0001 C CNN "Part Number"
-	1    7350 4350
-	1    0    0    -1  
+P 7900 4400
+F 0 "R535" V 7950 4500 50  0000 L CNN
+F 1 "11" V 7800 4350 50  0001 L CNN
+F 2 "Resistors_SMD:R_1210" H 7900 4400 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/20035/dcrcwe3.pdf" H 7900 4400 50  0001 C CNN
+F 4 "RES SMD 11 OHM 1% 1/2W 1210" H 7900 4400 50  0001 C CNN "Description"
+F 5 "Vishay" H 7900 4400 50  0001 C CNN "Manufacturer"
+F 6 "CRCW121011R0FKEA" H 7900 4400 50  0001 C CNN "Part Number"
+F 7 "541-11.0AACT-ND" H 7900 4400 50  0001 C CNN "Digikey P/N"
+	1    7900 4400
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R_Small R536
 U 1 1 6175C466
-P 7500 4350
-F 0 "R536" V 7550 4450 50  0000 L CNN
-F 1 "11" V 7400 4300 50  0001 L CNN
-F 2 "Resistors_SMD:R_1210" H 7500 4350 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/20035/dcrcwe3.pdf" H 7500 4350 50  0001 C CNN
-F 4 "RES SMD 11 OHM 1% 1/2W 1210" H 7500 4350 50  0001 C CNN "Description"
-F 5 "Vishay" H 7500 4350 50  0001 C CNN "Manufacturer"
-F 6 "CRCW121011R0FKEA" H 7500 4350 50  0001 C CNN "Part Number"
-	1    7500 4350
-	1    0    0    -1  
+P 7750 4400
+F 0 "R536" V 7800 4500 50  0000 L CNN
+F 1 "11" V 7650 4350 50  0001 L CNN
+F 2 "Resistors_SMD:R_1210" H 7750 4400 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/20035/dcrcwe3.pdf" H 7750 4400 50  0001 C CNN
+F 4 "RES SMD 11 OHM 1% 1/2W 1210" H 7750 4400 50  0001 C CNN "Description"
+F 5 "Vishay" H 7750 4400 50  0001 C CNN "Manufacturer"
+F 6 "CRCW121011R0FKEA" H 7750 4400 50  0001 C CNN "Part Number"
+F 7 "541-11.0AACT-ND" H 7750 4400 50  0001 C CNN "Digikey P/N"
+	1    7750 4400
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R_Small R537
 U 1 1 6175C662
-P 7650 4350
-F 0 "R537" V 7700 4450 50  0000 L CNN
-F 1 "11" V 7550 4300 50  0001 L CNN
-F 2 "Resistors_SMD:R_1210" H 7650 4350 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/20035/dcrcwe3.pdf" H 7650 4350 50  0001 C CNN
-F 4 "RES SMD 11 OHM 1% 1/2W 1210" H 7650 4350 50  0001 C CNN "Description"
-F 5 "Vishay" H 7650 4350 50  0001 C CNN "Manufacturer"
-F 6 "CRCW121011R0FKEA" H 7650 4350 50  0001 C CNN "Part Number"
-	1    7650 4350
-	1    0    0    -1  
+P 7600 4400
+F 0 "R537" V 7650 4500 50  0000 L CNN
+F 1 "11" V 7500 4350 50  0001 L CNN
+F 2 "Resistors_SMD:R_1210" H 7600 4400 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/20035/dcrcwe3.pdf" H 7600 4400 50  0001 C CNN
+F 4 "RES SMD 11 OHM 1% 1/2W 1210" H 7600 4400 50  0001 C CNN "Description"
+F 5 "Vishay" H 7600 4400 50  0001 C CNN "Manufacturer"
+F 6 "CRCW121011R0FKEA" H 7600 4400 50  0001 C CNN "Part Number"
+F 7 "541-11.0AACT-ND" H 7600 4400 50  0001 C CNN "Digikey P/N"
+	1    7600 4400
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	7200 3700 7200 3950
+	8050 5050 8050 4800
 Wire Wire Line
-	7350 3950 7350 4250
+	7900 4800 7900 4500
 Wire Wire Line
-	7200 4450 7200 4900
+	8050 4300 8050 3850
 Wire Wire Line
-	7350 4900 7350 4450
+	7900 3850 7900 4300
 Wire Wire Line
-	7500 4450 7500 4900
+	7750 4300 7750 3850
 Wire Wire Line
-	7650 4900 7650 4450
+	7600 3850 7600 4300
 $Comp
 L Device:R_Small R562
 U 1 1 622F4D1D
@@ -2996,6 +3078,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 4850 6300 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 4850 6300 50  0001 C CNN "Description"
 F 5 "Stackpole" H 4850 6300 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 4850 6300 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 4850 6300 50  0001 C CNN "Digikey P/N"
 	1    4850 6300
 	0    1    1    0   
 $EndComp
@@ -3010,6 +3093,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 4850 6450 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 4850 6450 50  0001 C CNN "Description"
 F 5 "Stackpole" H 4850 6450 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 4850 6450 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 4850 6450 50  0001 C CNN "Digikey P/N"
 	1    4850 6450
 	0    1    1    0   
 $EndComp
@@ -3024,6 +3108,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 4850 6600 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 4850 6600 50  0001 C CNN "Description"
 F 5 "Stackpole" H 4850 6600 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 4850 6600 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 4850 6600 50  0001 C CNN "Digikey P/N"
 	1    4850 6600
 	0    1    1    0   
 $EndComp
@@ -3038,6 +3123,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 4850 6750 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 4850 6750 50  0001 C CNN "Description"
 F 5 "Stackpole" H 4850 6750 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 4850 6750 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 4850 6750 50  0001 C CNN "Digikey P/N"
 	1    4850 6750
 	0    1    1    0   
 $EndComp
@@ -3052,6 +3138,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 4850 6900 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 4850 6900 50  0001 C CNN "Description"
 F 5 "Stackpole" H 4850 6900 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 4850 6900 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 4850 6900 50  0001 C CNN "Digikey P/N"
 	1    4850 6900
 	0    1    1    0   
 $EndComp
@@ -3066,6 +3153,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 4850 7050 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 4850 7050 50  0001 C CNN "Description"
 F 5 "Stackpole" H 4850 7050 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 4850 7050 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 4850 7050 50  0001 C CNN "Digikey P/N"
 	1    4850 7050
 	0    1    1    0   
 $EndComp
@@ -3080,6 +3168,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 4850 7200 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H 4850 7200 50  0001 C CNN "Description"
 F 5 "Stackpole" H 4850 7200 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H 4850 7200 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 4850 7200 50  0001 C CNN "Digikey P/N"
 	1    4850 7200
 	0    1    1    0   
 $EndComp
@@ -3125,96 +3214,22 @@ Text Notes 3750 1450 0    39   ~ 0
 Yellow - SM1206NYC-IL\nVf = 2.0V, 1000mcd @ 590nm\nIf = 25mA, Ifp = 100mA\nMin R: 120 Ohm
 Text Notes 3750 1750 0    39   ~ 0
 Red SM1206NHC-IL\nVf = 2.1V, 1250mcd @ 630nm\nIf = 25mA, Ifp = 100mA\nMin R: 116 Ohm
-Text Notes 7900 4950 0    50   ~ 0
+Text Notes 10100 4750 2    50   ~ 0
 4 High Power LEDs\nPlaced to Left and Right of Tach
-$Comp
-L Device:Q_NMOS_GSD Q503
-U 1 1 5F1D9444
-P 5550 4200
-F 0 "Q503" H 5755 4246 50  0000 L CNN
-F 1 "SI2308CDS-T1-GE3" H 5755 4155 50  0001 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 5750 4300 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/77744/si2308cds.pdf" H 5550 4200 50  0001 C CNN
-F 4 "MOSFET N-CH 60V 2.6A SOT23-3" H 2850 1900 50  0001 C CNN "Description"
-F 5 "Vishay" H 2850 1900 50  0001 C CNN "Manufacturer"
-F 6 "SI2308CDS-T1-GE3" H 2850 1900 50  0001 C CNN "Part Number"
-	1    5550 4200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	7650 5200 7850 5200
+	7600 3550 7400 3550
 Wire Wire Line
-	7350 3950 7200 3950
-Connection ~ 7200 3950
+	7900 4800 8050 4800
+Connection ~ 8050 4800
 Wire Wire Line
-	7200 3950 7200 4250
+	8050 4800 8050 4500
 Wire Wire Line
-	7500 4250 7500 3950
+	7750 4500 7750 4800
 Wire Wire Line
-	7500 3950 7650 3950
+	7750 4800 7600 4800
 Wire Wire Line
-	7650 3950 7650 4250
-Wire Wire Line
-	7650 3950 7650 3700
-Connection ~ 7650 3950
-Wire Wire Line
-	5300 4200 5350 4200
-$Comp
-L power:GND #PWR?
-U 1 1 5F3AC113
-P 5650 4400
-F 0 "#PWR?" H 5650 4150 50  0001 C CNN
-F 1 "GND" H 5655 4227 50  0000 C CNN
-F 2 "" H 5650 4400 50  0001 C CNN
-F 3 "" H 5650 4400 50  0001 C CNN
-	1    5650 4400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Q_NMOS_GSD Q504
-U 1 1 5F3AD87F
-P 6150 4200
-F 0 "Q504" H 6355 4246 50  0000 L CNN
-F 1 "SI2308CDS-T1-GE3" H 6355 4155 50  0001 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 6350 4300 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/77744/si2308cds.pdf" H 6150 4200 50  0001 C CNN
-F 4 "MOSFET N-CH 60V 2.6A SOT23-3" H 3450 1900 50  0001 C CNN "Description"
-F 5 "Vishay" H 3450 1900 50  0001 C CNN "Manufacturer"
-F 6 "SI2308CDS-T1-GE3" H 3450 1900 50  0001 C CNN "Part Number"
-	1    6150 4200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F3AE0C1
-P 6250 4400
-F 0 "#PWR?" H 6250 4150 50  0001 C CNN
-F 1 "GND" H 6255 4227 50  0000 C CNN
-F 2 "" H 6250 4400 50  0001 C CNN
-F 3 "" H 6250 4400 50  0001 C CNN
-	1    6250 4400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5950 4200 5950 3900
-Wire Wire Line
-	5950 3900 5300 3900
-Wire Wire Line
-	5650 4000 5650 3700
-Entry Wire Line
-	5650 3700 5750 3600
-Wire Wire Line
-	6250 4000 6250 3700
-Entry Wire Line
-	6250 3700 6350 3600
-Connection ~ 6600 3600
-Text Label 5650 3850 1    35   ~ 0
-SFT_1
-Text Label 6250 3850 1    35   ~ 0
-SFT_2
-Wire Wire Line
-	5300 3900 5300 3750
-Connection ~ 5300 3900
+	7600 4800 7600 4500
+Connection ~ 7600 4800
 Wire Wire Line
 	600  5600 600  6750
 Wire Wire Line
@@ -3236,10 +3251,11 @@ P 3300 3200
 F 0 "C506" H 3325 3300 50  0000 L CNN
 F 1 "1uF" H 3325 3100 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 3338 3050 50  0001 C CNN
-F 3 "https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf" H 3300 3200 50  0001 C CNN
-F 4 "" H 3300 3200 50  0001 C CNN "Description"
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C472K5RACAUTO.pdf" H 3300 3200 50  0001 C CNN
+F 4 "CAP CER 0603 1UF 16V X7R 10%" H 3300 3200 50  0001 C CNN "Description"
 F 5 "KEMET" H 1600 -3300 50  0001 C CNN "Manufacturer"
-F 6 "" H 1600 -3300 50  0001 C CNN "Part Number"
+F 6 "C0603C105K4RACAUTO" H 1600 -3300 50  0001 C CNN "Part Number"
+F 7 "399-17704-1-ND" H 3300 3200 50  0001 C CNN "Digikey P/N"
 	1    3300 3200
 	1    0    0    -1  
 $EndComp
@@ -3260,10 +3276,11 @@ P 5000 3200
 F 0 "C507" H 5025 3300 50  0000 L CNN
 F 1 "1uF" H 5025 3100 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 5038 3050 50  0001 C CNN
-F 3 "https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf" H 5000 3200 50  0001 C CNN
-F 4 "" H 5000 3200 50  0001 C CNN "Description"
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C472K5RACAUTO.pdf" H 5000 3200 50  0001 C CNN
+F 4 "CAP CER 0603 1UF 16V X7R 10%" H 5000 3200 50  0001 C CNN "Description"
 F 5 "KEMET" H 3300 -3300 50  0001 C CNN "Manufacturer"
-F 6 "" H 3300 -3300 50  0001 C CNN "Part Number"
+F 6 "C0603C105K4RACAUTO" H 3300 -3300 50  0001 C CNN "Part Number"
+F 7 "399-17704-1-ND" H 5000 3200 50  0001 C CNN "Digikey P/N"
 	1    5000 3200
 	1    0    0    -1  
 $EndComp
@@ -3280,15 +3297,14 @@ Connection ~ 4900 3500
 Wire Wire Line
 	7200 1200 7200 2000
 Connection ~ 6600 2750
-Text Label 5050 2400 3    39   ~ 0
+Text Label 4450 2400 0    39   ~ 0
 ~PWM_RED
 Entry Wire Line
-	5050 2800 4950 2900
+	4850 2400 4950 2500
 Entry Wire Line
-	4750 2800 4650 2900
+	4850 2700 4950 2800
 Connection ~ 3050 3500
 Connection ~ 4750 3500
-Connection ~ 3500 2900
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5F590229
@@ -3302,22 +3318,111 @@ F 3 "" H 1500 3000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1500 3000 1900 3000
+Connection ~ 3500 2900
 Wire Bus Line
-	6600 3600 6600 5100
+	3500 2900 1800 2900
+Wire Wire Line
+	1950 3600 1900 3600
 Wire Bus Line
-	6600 2750 6600 3600
+	3500 2900 4950 2900
+Wire Wire Line
+	1950 3700 1900 3700
+Entry Wire Line
+	1800 3600 1900 3700
+Entry Wire Line
+	1800 3500 1900 3600
+Text Label 1900 3700 2    39   ~ 0
+~PWM_GREEN
+Text Label 1900 3600 2    39   ~ 0
+~PWM_GREEN
 Wire Bus Line
-	6600 3600 7550 3600
+	6600 2750 6600 5100
+Wire Wire Line
+	7600 4800 7600 5050
+Wire Wire Line
+	7900 5550 7850 5550
+Text GLabel 7100 5800 3    39   Input ~ 0
+SHIFT2
+$Comp
+L Device:Q_NMOS_GSD Q503
+U 1 1 5F1D9444
+P 7350 5550
+F 0 "Q503" H 7555 5596 50  0000 L CNN
+F 1 "SI2308CDS-T1-GE3" H 7555 5505 50  0001 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 7550 5650 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/77744/si2308cds.pdf" H 7350 5550 50  0001 C CNN
+F 4 "MOSFET N-CH 60V 2.6A SOT23-3" H 4650 3250 50  0001 C CNN "Description"
+F 5 "Vishay" H 4650 3250 50  0001 C CNN "Manufacturer"
+F 6 "SI2308CDS-T1-GE3" H 4650 3250 50  0001 C CNN "Part Number"
+F 7 "SI2308CDS-T1-GE3CT-ND" H 7350 5550 50  0001 C CNN "Digikey P/N"
+	1    7350 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 5800 7100 5550
+Text GLabel 7850 5850 3    39   Input ~ 0
+SHIFT1
+Text Label 8050 5050 1    35   ~ 0
+SFT_2
+Text Label 7600 5050 1    35   ~ 0
+SFT_1
+Wire Wire Line
+	8200 5350 8200 5050
+Wire Wire Line
+	7450 5350 7450 5050
+Wire Wire Line
+	7850 5550 7850 5850
+$Comp
+L power:GND #PWR?
+U 1 1 5F3AE0C1
+P 8200 5750
+F 0 "#PWR?" H 8200 5500 50  0001 C CNN
+F 1 "GND" H 8205 5577 50  0000 C CNN
+F 2 "" H 8200 5750 50  0001 C CNN
+F 3 "" H 8200 5750 50  0001 C CNN
+	1    8200 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q504
+U 1 1 5F3AD87F
+P 8100 5550
+F 0 "Q504" H 8305 5596 50  0000 L CNN
+F 1 "SI2308CDS-T1-GE3" H 8305 5505 50  0001 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 8300 5650 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/77744/si2308cds.pdf" H 8100 5550 50  0001 C CNN
+F 4 "MOSFET N-CH 60V 2.6A SOT23-3" H 5400 3250 50  0001 C CNN "Description"
+F 5 "Vishay" H 5400 3250 50  0001 C CNN "Manufacturer"
+F 6 "SI2308CDS-T1-GE3" H 5400 3250 50  0001 C CNN "Part Number"
+F 7 "SI2308CDS-T1-GE3CT-ND" H 8100 5550 50  0001 C CNN "Digikey P/N"
+	1    8100 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F3AC113
+P 7450 5750
+F 0 "#PWR?" H 7450 5500 50  0001 C CNN
+F 1 "GND" H 7455 5577 50  0000 C CNN
+F 2 "" H 7450 5750 50  0001 C CNN
+F 3 "" H 7450 5750 50  0001 C CNN
+	1    7450 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 5550 7150 5550
+Wire Wire Line
+	7450 5050 7600 5050
+Wire Wire Line
+	8050 5050 8200 5050
 Wire Bus Line
 	1800 2900 1800 3600
 Wire Bus Line
 	3500 2900 3500 3600
 Wire Bus Line
-	5750 3600 6600 3600
-Wire Bus Line
 	1800 5100 6600 5100
 Wire Bus Line
-	3500 2900 4950 2900
+	4950 2500 4950 2900
 Wire Bus Line
 	6100 2750 6600 2750
 Wire Bus Line

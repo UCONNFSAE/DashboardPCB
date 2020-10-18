@@ -25,6 +25,7 @@ F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 4000 3100 50  0001 C 
 F 4 "RES 120 OHM 1% 1/10W 0603" H -4050 -50 50  0001 C CNN "Description"
 F 5 "Stackpole" H -4050 -50 50  0001 C CNN "Manufacturer"
 F 6 "RMCF0603FT120R" H -4050 -50 50  0001 C CNN "Part Number"
+F 7 "RMCF0603FT120RCT-ND" H 4000 3100 50  0001 C CNN "Digikey P/N"
 	1    4000 3100
 	1    0    0    -1  
 $EndComp
@@ -37,17 +38,6 @@ Wire Wire Line
 Wire Wire Line
 	4000 2950 4350 2950
 Connection ~ 4000 2950
-$Comp
-L FSAE2020:MCP25625 U401
-U 1 1 5E919748
-P 5200 3500
-F 0 "U401" H 5200 4415 50  0000 C CNN
-F 1 "MCP25625" H 5200 4324 50  0000 C CNN
-F 2 "FSAE2020:SSOP-28_5.3x10.2mm_Pitch0.65mm" H 5500 4450 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MCP25625-CAN-Controller-Data-Sheet-20005282C.pdf" H 5800 4350 50  0001 C CNN
-	1    5200 3500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4600 3050 4350 3050
 Wire Wire Line
@@ -66,11 +56,11 @@ L power:+5V #PWR?
 U 1 1 5E922F19
 P 7350 2850
 F 0 "#PWR?" H 7350 2700 50  0001 C CNN
-F 1 "+5V" H 7365 3023 50  0000 C CNN
+F 1 "+5V" V 7350 3000 50  0000 L CNN
 F 2 "" H 7350 2850 50  0001 C CNN
 F 3 "" H 7350 2850 50  0001 C CNN
 	1    7350 2850
-	1    0    0    -1  
+	0    1    1    0   
 $EndComp
 $Comp
 L Device:C_Small C?
@@ -81,10 +71,11 @@ AR Path="/5BE25053/5E92F8D5" Ref="C405"  Part="1"
 F 0 "C405" H 6710 3070 50  0000 L CNN
 F 1 "0.1uF" H 6710 2920 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 6700 3000 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 6700 3000 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0603" H 6700 3000 50  0001 C CNN "Description"
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104K5RACAUTO.pdf" H 6700 3000 50  0001 C CNN
+F 4 "CAP CER 0.1UF 50V X7R 0603" H 6700 3000 50  0001 C CNN "Description"
 F 5 "KEMET" H 350 400 50  0001 C CNN "Manufacturer"
-F 6 "C0603C104M4RACTU" H 350 400 50  0001 C CNN "Part Number"
+F 6 "C0603C104K5RACAUTO" H 350 400 50  0001 C CNN "Part Number"
+F 7 "399-6856-1-ND" H 6700 3000 50  0001 C CNN "Digikey P/N"
 	1    6700 3000
 	1    0    0    -1  
 $EndComp
@@ -97,22 +88,12 @@ AR Path="/5BE25053/5E9324DB" Ref="C404"  Part="1"
 F 0 "C404" H 7110 3070 50  0000 L CNN
 F 1 "1uF" H 7110 2920 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 7100 3000 50  0001 C CNN
-F 3 "" H 7100 3000 50  0001 C CNN
-F 4 "" H 7100 3000 50  0001 C CNN "Description"
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C472K5RACAUTO.pdf" H 7100 3000 50  0001 C CNN
+F 4 "CAP CER 0603 1UF 16V X7R 10%" H 7100 3000 50  0001 C CNN "Description"
 F 5 "KEMET" H 750 400 50  0001 C CNN "Manufacturer"
-F 6 "C0603C105K4RACTU" H 750 400 50  0001 C CNN "Part Number"
+F 6 "C0603C105K4RACAUTO" H 750 400 50  0001 C CNN "Part Number"
+F 7 "399-17704-1-ND" H 7100 3000 50  0001 C CNN "Digikey P/N"
 	1    7100 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5E9360E9
-P 7350 3150
-F 0 "#PWR?" H 7350 2900 50  0001 C CNN
-F 1 "GND" H 7350 3000 50  0000 C CNN
-F 2 "" H 7350 3150 50  0001 C CNN
-F 3 "" H 7350 3150 50  0001 C CNN
-	1    7350 3150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -121,9 +102,6 @@ Wire Wire Line
 	6700 3150 7100 3150
 Wire Wire Line
 	7100 3100 7100 3150
-Connection ~ 7100 3150
-Wire Wire Line
-	7100 3150 7350 3150
 Wire Wire Line
 	6700 3100 6700 3150
 Wire Wire Line
@@ -145,10 +123,11 @@ AR Path="/5BE25053/5E942078" Ref="C403"  Part="1"
 F 0 "C403" H 4310 2370 50  0000 L CNN
 F 1 "0.1uF" H 4310 2220 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 4300 2300 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 4300 2300 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0603" H 4300 2300 50  0001 C CNN "Description"
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104K5RACAUTO.pdf" H 4300 2300 50  0001 C CNN
+F 4 "CAP CER 0.1UF 50V X7R 0603" H 4300 2300 50  0001 C CNN "Description"
 F 5 "KEMET" H -2050 -300 50  0001 C CNN "Manufacturer"
-F 6 "C0603C104M4RACTU" H -2050 -300 50  0001 C CNN "Part Number"
+F 6 "C0603C104K5RACAUTO" H -2050 -300 50  0001 C CNN "Part Number"
+F 7 "399-6856-1-ND" H 4300 2300 50  0001 C CNN "Digikey P/N"
 	1    4300 2300
 	1    0    0    -1  
 $EndComp
@@ -172,80 +151,78 @@ $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 5E9467AC
-P 6700 3900
+P 7100 3900
 AR Path="/5E9467AC" Ref="C?"  Part="1" 
 AR Path="/5BE25053/5E9467AC" Ref="C402"  Part="1" 
-F 0 "C402" H 6710 3970 50  0000 L CNN
-F 1 "0.1uF" H 6710 3820 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 6700 3900 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 6700 3900 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0603" H 6700 3900 50  0001 C CNN "Description"
-F 5 "KEMET" H 350 1300 50  0001 C CNN "Manufacturer"
-F 6 "C0603C104M4RACTU" H 350 1300 50  0001 C CNN "Part Number"
-	1    6700 3900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5800 3750 6700 3750
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5E948EC6
-P 7350 3750
-F 0 "#PWR?" H 7350 3600 50  0001 C CNN
-F 1 "+3.3V" H 7350 3890 50  0000 C CNN
-F 2 "" H 7350 3750 50  0001 C CNN
-F 3 "" H 7350 3750 50  0001 C CNN
-	1    7350 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5E949E20
-P 7350 4100
-F 0 "#PWR?" H 7350 3850 50  0001 C CNN
-F 1 "GND" H 7350 3950 50  0000 C CNN
-F 2 "" H 7350 4100 50  0001 C CNN
-F 3 "" H 7350 4100 50  0001 C CNN
-	1    7350 4100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 5E94A1F7
-P 7100 3900
-AR Path="/5E94A1F7" Ref="C?"  Part="1" 
-AR Path="/5BE25053/5E94A1F7" Ref="C401"  Part="1" 
-F 0 "C401" H 7110 3970 50  0000 L CNN
-F 1 "1uF" H 7110 3820 50  0000 L CNN
+F 0 "C402" H 7110 3970 50  0000 L CNN
+F 1 "0.1uF" H 7110 3820 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 7100 3900 50  0001 C CNN
-F 3 "" H 7100 3900 50  0001 C CNN
-F 4 "" H 7100 3900 50  0001 C CNN "Description"
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104K5RACAUTO.pdf" H 7100 3900 50  0001 C CNN
+F 4 "CAP CER 0.1UF 50V X7R 0603" H 7100 3900 50  0001 C CNN "Description"
 F 5 "KEMET" H 750 1300 50  0001 C CNN "Manufacturer"
-F 6 "C0603C105K4RACTU" H 750 1300 50  0001 C CNN "Part Number"
+F 6 "C0603C104K5RACAUTO" H 750 1300 50  0001 C CNN "Part Number"
+F 7 "399-6856-1-ND" H 7100 3900 50  0001 C CNN "Digikey P/N"
 	1    7100 3900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6700 3750 6700 3800
-Wire Wire Line
-	6700 3750 7100 3750
+	5800 3750 7100 3750
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E948EC6
+P 7750 3750
+F 0 "#PWR?" H 7750 3600 50  0001 C CNN
+F 1 "+3.3V" V 7750 3900 50  0000 L CNN
+F 2 "" H 7750 3750 50  0001 C CNN
+F 3 "" H 7750 3750 50  0001 C CNN
+	1    7750 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E949E20
+P 7750 4050
+F 0 "#PWR?" H 7750 3800 50  0001 C CNN
+F 1 "GND" V 7750 3750 50  0000 L CNN
+F 2 "" H 7750 4050 50  0001 C CNN
+F 3 "" H 7750 4050 50  0001 C CNN
+	1    7750 4050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E94A1F7
+P 7500 3900
+AR Path="/5E94A1F7" Ref="C?"  Part="1" 
+AR Path="/5BE25053/5E94A1F7" Ref="C401"  Part="1" 
+F 0 "C401" H 7510 3970 50  0000 L CNN
+F 1 "1uF" H 7510 3820 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7500 3900 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C472K5RACAUTO.pdf" H 7500 3900 50  0001 C CNN
+F 4 "CAP CER 0603 1UF 16V X7R 10%" H 7500 3900 50  0001 C CNN "Description"
+F 5 "KEMET" H 1150 1300 50  0001 C CNN "Manufacturer"
+F 6 "C0603C105K4RACAUTO" H 1150 1300 50  0001 C CNN "Part Number"
+F 7 "399-17704-1-ND" H 7500 3900 50  0001 C CNN "Digikey P/N"
+	1    7500 3900
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	7100 3750 7100 3800
-Connection ~ 6700 3750
 Wire Wire Line
-	7100 3750 7350 3750
+	7100 3750 7500 3750
+Wire Wire Line
+	7500 3750 7500 3800
 Connection ~ 7100 3750
 Wire Wire Line
-	7350 4100 7350 4050
+	7500 3750 7750 3750
+Connection ~ 7500 3750
 Wire Wire Line
-	7350 4050 7100 4050
+	7500 4050 7500 4000
+Wire Wire Line
+	7500 4050 7100 4050
 Wire Wire Line
 	7100 4050 7100 4000
-Wire Wire Line
-	7100 4050 6700 4050
-Wire Wire Line
-	6700 4050 6700 4000
-Connection ~ 7100 4050
+Connection ~ 7500 4050
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5E95133C
@@ -299,62 +276,32 @@ $EndComp
 $Comp
 L Device:R R403
 U 1 1 5E97721E
-P 7200 4500
-F 0 "R403" V 7300 4500 50  0000 C CNN
-F 1 "10k" V 7200 4500 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 7130 4500 50  0001 C CNN
-F 3 "" H 7200 4500 50  0001 C CNN
-F 4 "" H 1400 500 50  0001 C CNN "Description"
-F 5 "" H 1400 500 50  0001 C CNN "Manufacturer"
-F 6 "" H 1400 500 50  0001 C CNN "Part Number"
-	1    7200 4500
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5E978919
-P 7450 4500
-F 0 "#PWR?" H 7450 4350 50  0001 C CNN
-F 1 "+3.3V" V 7450 4700 50  0000 C CNN
-F 2 "" H 7450 4500 50  0001 C CNN
-F 3 "" H 7450 4500 50  0001 C CNN
-	1    7450 4500
+P 7550 4750
+F 0 "R403" V 7650 4750 50  0000 C CNN
+F 1 "10k" V 7550 4750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7480 4750 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 7550 4750 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/10W 0603" H 1750 750 50  0001 C CNN "Description"
+F 5 "Stackpole" H 1750 750 50  0001 C CNN "Manufacturer"
+F 6 "RMCF0603JT10K0" H 1750 750 50  0001 C CNN "Part Number"
+F 7 "RMCF0603JT10K0CT-ND" H 7550 4750 50  0001 C CNN "Digikey P/N"
+	1    7550 4750
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5800 3850 6100 3850
-Text GLabel 6050 4450 3    39   Input ~ 0
+	5800 3850 6600 3850
+Text GLabel 6100 3950 2    39   Input ~ 0
 CAN_CS
-Wire Wire Line
-	5800 4150 5850 4150
-Wire Wire Line
-	5850 4150 5850 4450
-Wire Wire Line
-	5800 4050 5950 4050
-Wire Wire Line
-	5950 4050 5950 4450
-Wire Wire Line
-	5800 3950 6050 3950
-Wire Wire Line
-	6050 3950 6050 4450
-Text GLabel 5950 4450 3    39   Input ~ 0
+Text GLabel 6100 4050 2    39   Input ~ 0
 CAN_MISO
-Text GLabel 5850 4450 3    39   Input ~ 0
+Text GLabel 6100 4150 2    39   Input ~ 0
 CAN_MOSI
-Text GLabel 4600 4450 3    39   Input ~ 0
+Text GLabel 4350 4150 0    39   Input ~ 0
 CAN_SCLK
-Wire Wire Line
-	4600 4450 4600 4350
-Wire Wire Line
-	4600 4350 4550 4350
-Wire Wire Line
-	4550 4350 4550 4150
-Wire Wire Line
-	4550 4150 4600 4150
-Text GLabel 4500 4450 3    39   Input ~ 0
+Text GLabel 4350 4050 0    39   Input ~ 0
 CAN_INT
 Wire Wire Line
-	4500 4050 4600 4050
+	4350 4050 4600 4050
 NoConn ~ 4600 3850
 NoConn ~ 4600 3950
 NoConn ~ 4600 3350
@@ -362,220 +309,307 @@ NoConn ~ 4600 3450
 NoConn ~ 5800 3350
 NoConn ~ 5800 3450
 Wire Wire Line
-	4500 4050 4500 4450
-Wire Wire Line
 	4600 3250 4450 3250
 Wire Wire Line
-	4450 3250 4450 3450
+	4450 3250 4450 3350
 Wire Wire Line
-	4450 3450 3300 3450
+	4450 3350 3300 3350
 $Comp
 L power:GND #PWR?
 U 1 1 5E9A1488
-P 2850 3450
-F 0 "#PWR?" H 2850 3200 50  0001 C CNN
-F 1 "GND" H 2850 3300 50  0000 C CNN
-F 2 "" H 2850 3450 50  0001 C CNN
-F 3 "" H 2850 3450 50  0001 C CNN
-	1    2850 3450
+P 2850 3350
+F 0 "#PWR?" H 2850 3100 50  0001 C CNN
+F 1 "GND" H 2850 3200 50  0000 C CNN
+F 2 "" H 2850 3350 50  0001 C CNN
+F 3 "" H 2850 3350 50  0001 C CNN
+	1    2850 3350
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R404
 U 1 1 5E9A1800
-P 3150 3450
-F 0 "R?" V 3230 3450 50  0000 C CNN
-F 1 "10k" V 3150 3450 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 3080 3450 50  0001 C CNN
-F 3 "" H 3150 3450 50  0001 C CNN
-F 4 "" H -2650 -550 50  0001 C CNN "Description"
-F 5 "" H -2650 -550 50  0001 C CNN "Manufacturer"
-F 6 "" H -2650 -550 50  0001 C CNN "Part Number"
-	1    3150 3450
+P 3150 3350
+F 0 "R404" V 3230 3350 50  0000 C CNN
+F 1 "10k" V 3150 3350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3080 3350 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 3150 3350 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/10W 0603" H -2650 -650 50  0001 C CNN "Description"
+F 5 "Stackpole" H -2650 -650 50  0001 C CNN "Manufacturer"
+F 6 "RMCF0603JT10K0" H -2650 -650 50  0001 C CNN "Part Number"
+F 7 "RMCF0603JT10K0CT-ND" H 3150 3350 50  0001 C CNN "Digikey P/N"
+	1    3150 3350
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3000 3450 2850 3450
+	3000 3350 2850 3350
 Wire Wire Line
-	7450 4500 7400 4500
+	7750 4750 7750 5000
 Wire Wire Line
-	7400 4500 7400 4750
+	7750 5000 7700 5000
 Wire Wire Line
-	7400 4750 7350 4750
-Connection ~ 7400 4500
-Wire Wire Line
-	7400 4500 7350 4500
+	7750 4750 7700 4750
 $Comp
 L Device:R R402
 U 1 1 5E9B0F45
-P 6250 3850
-F 0 "R402" V 6350 3850 50  0000 C CNN
-F 1 "1k" V 6250 3850 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 6180 3850 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6250 3850 50  0001 C CNN
-F 4 "RES 10K OHM 5% 1/4W 1206" H 450 -150 50  0001 C CNN "Description"
-F 5 "Stackpole" H 450 -150 50  0001 C CNN "Manufacturer"
-F 6 "RMCF1206JT10K0" H 450 -150 50  0001 C CNN "Part Number"
-	1    6250 3850
+P 6800 4750
+F 0 "R402" V 6900 4750 50  0000 C CNN
+F 1 "1k" V 6800 4750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 6730 4750 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6800 4750 50  0001 C CNN
+F 4 "RES 1K OHM 5% 1/10W 0603" H 1000 750 50  0001 C CNN "Description"
+F 5 "Stackpole" H 1000 750 50  0001 C CNN "Manufacturer"
+F 6 "RMCF0603JT1K00" H 1000 750 50  0001 C CNN "Part Number"
+F 7 "RMCF0603JT1K00CT-ND" H 6800 4750 50  0001 C CNN "Digikey P/N"
+	1    6800 4750
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6400 3850 6400 4500
+	6950 4750 7050 4750
 Wire Wire Line
-	6400 4500 7000 4500
+	7050 4750 7350 4750
 Wire Wire Line
-	7050 4750 7000 4750
+	7400 5000 7350 5000
 Wire Wire Line
-	7000 4750 7000 4500
-Connection ~ 7000 4500
+	7350 5000 7350 4750
+Connection ~ 7350 4750
 Wire Wire Line
-	7000 4500 7050 4500
+	7350 4750 7400 4750
 Wire Wire Line
-	6400 4500 6400 4600
-Connection ~ 6400 4500
+	7050 4750 7050 4850
+Connection ~ 7050 4750
 $Comp
 L Device:C_Small C?
 U 1 1 5E9B9D37
-P 6400 4700
+P 7050 4950
 AR Path="/5E9B9D37" Ref="C?"  Part="1" 
 AR Path="/5BE25053/5E9B9D37" Ref="C406"  Part="1" 
-F 0 "C406" H 6410 4770 50  0000 L CNN
-F 1 "0.1uF" H 6410 4620 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 6400 4700 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/datasheet/C0603C104M4RACTU.pdf" H 6400 4700 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0603" H 6400 4700 50  0001 C CNN "Description"
-F 5 "KEMET" H 50  2100 50  0001 C CNN "Manufacturer"
-F 6 "C0603C104M4RACTU" H 50  2100 50  0001 C CNN "Part Number"
-	1    6400 4700
+F 0 "C406" H 7060 5020 50  0000 L CNN
+F 1 "0.1uF" H 7060 4870 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7050 4950 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104K5RACAUTO.pdf" H 7050 4950 50  0001 C CNN
+F 4 "CAP CER 0.1UF 50V X7R 0603" H 7050 4950 50  0001 C CNN "Description"
+F 5 "KEMET" H 700 2350 50  0001 C CNN "Manufacturer"
+F 6 "C0603C104K5RACAUTO" H 700 2350 50  0001 C CNN "Part Number"
+F 7 "399-6856-1-ND" H 7050 4950 50  0001 C CNN "Digikey P/N"
+	1    7050 4950
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5E9BA3B7
-P 6400 4900
-F 0 "#PWR?" H 6400 4650 50  0001 C CNN
-F 1 "GND" H 6400 4750 50  0000 C CNN
-F 2 "" H 6400 4900 50  0001 C CNN
-F 3 "" H 6400 4900 50  0001 C CNN
-	1    6400 4900
+P 7050 5150
+F 0 "#PWR?" H 7050 4900 50  0001 C CNN
+F 1 "GND" H 7050 5000 50  0000 C CNN
+F 2 "" H 7050 5150 50  0001 C CNN
+F 3 "" H 7050 5150 50  0001 C CNN
+	1    7050 5150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6400 4900 6400 4800
+	7050 5150 7050 5050
 $Comp
 L Device:D D401
 U 1 1 5E9AD6EB
-P 7200 4750
-F 0 "D401" H 7200 4850 50  0000 C CNN
-F 1 "D" H 7100 4700 50  0000 C CNN
-F 2 "" H 7200 4750 50  0001 C CNN
-F 3 "~" H 7200 4750 50  0001 C CNN
-	1    7200 4750
+P 7550 5000
+F 0 "D401" H 7550 5100 50  0000 C CNN
+F 1 "D" H 7450 4950 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-123F" H 7550 5000 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/MBR230S1F.pdf" H 7550 5000 50  0001 C CNN
+F 4 "DIODE SCHOTTKY 30V 2A SOD123F" H 7550 5000 50  0001 C CNN "Description"
+F 5 "MBR230S1F-7DICT-ND" H 7550 5000 50  0001 C CNN "Digikey P/N"
+F 6 "Diodes Inc" H 7550 5000 50  0001 C CNN "Manufacturer"
+F 7 "MBR230S1F-7" H 7550 5000 50  0001 C CNN "Part Number"
+	1    7550 5000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3600 3650 4600 3650
+$Comp
+L FSAE2020:MCP25625 U401
+U 1 1 5E919748
+P 5200 3500
+F 0 "U401" H 5200 4415 50  0000 C CNN
+F 1 "MCP25625" H 5200 4324 50  0000 C CNN
+F 2 "FSAE2020:SSOP-28_5.3x10.2mm_Pitch0.65mm" H 5500 4450 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MCP25625-CAN-Controller-Data-Sheet-20005282C.pdf" H 5800 4350 50  0001 C CNN
+F 4 "1/1 Transceiver - CANbus 28-SSOP" H 5200 3500 50  0001 C CNN "Description"
+F 5 "MCP25625T-E/SSCT-ND" H 5200 3500 50  0001 C CNN "Digikey P/N"
+F 6 "Microchip" H 5200 3500 50  0001 C CNN "Manufacturer"
+F 7 "MCP25625T-E/SS" H 5200 3500 50  0001 C CNN "Part Number"
+	1    5200 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4050 6100 4050
+Wire Wire Line
+	5800 4150 6100 4150
+Wire Wire Line
+	5800 3950 6100 3950
+Wire Wire Line
+	4350 4150 4600 4150
+$Comp
+L Device:Crystal_GND24 Y?
+U 1 1 5F95467F
+P 3400 4250
+AR Path="/5F95467F" Ref="Y?"  Part="1" 
+AR Path="/5BE25053/5F95467F" Ref="Y401"  Part="1" 
+F 0 "Y401" H 3700 4300 50  0000 L CNN
+F 1 "16MHz" H 3700 4200 50  0000 L CNN
+F 2 "Crystals:Crystal_SMD_5032-4pin_5.0x3.2mm" H 3400 4250 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/122/ecx_53b-1479911.pdf" H 3400 4250 50  0001 C CNN
+F 4 "Crystals 16.000MHZ 8pF 10ppm -20C +70C" H 3400 4250 50  0001 C CNN "Description"
+F 5 "XC1839CT-ND" H 3400 4250 50  0001 C CNN "Digikey P/N"
+F 6 "ECS" H 3400 4250 50  0001 C CNN "Manufacturer"
+F 7 "ECS-160-8-30B-CKM" H 3400 4250 50  0001 C CNN "Part Number"
+	1    3400 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F954685
+P 3400 4050
+F 0 "#PWR?" H 3400 3800 50  0001 C CNN
+F 1 "GND" H 3400 3900 50  0000 C CNN
+F 2 "" H 3400 4050 50  0001 C CNN
+F 3 "" H 3400 4050 50  0001 C CNN
+	1    3400 4050
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:Crystal_GND24 Y401
-U 1 1 5E9C33D0
-P 2800 4100
-F 0 "Y401" V 2600 4250 50  0000 L CNN
-F 1 "FL16Mhz" V 2500 4200 50  0000 L CNN
-F 2 "" H 2800 4100 50  0001 C CNN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/Pericom%20PDFs/FL1600043_VerC.pdf" H 2800 4100 50  0001 C CNN
-	1    2800 4100
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 5E9C460F
-P 2400 4450
-AR Path="/5E9C460F" Ref="C?"  Part="1" 
-AR Path="/5BE25053/5E9C460F" Ref="C408"  Part="1" 
-F 0 "C408" H 2410 4520 50  0000 L CNN
-F 1 "12pF" H 2410 4370 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 2400 4450 50  0001 C CNN
-F 3 "" H 2400 4450 50  0001 C CNN
-F 4 "CAP CER 12PF 50V C0G/NP0 0603" H 2400 4450 50  0001 C CNN "Description"
-F 5 "Samsung" H -3950 1850 50  0001 C CNN "Manufacturer"
-F 6 "CL10C120FB8NNNC" H -3950 1850 50  0001 C CNN "Part Number"
-	1    2400 4450
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 5E9C4ADA
-P 2400 3650
-AR Path="/5E9C4ADA" Ref="C?"  Part="1" 
-AR Path="/5BE25053/5E9C4ADA" Ref="C407"  Part="1" 
-F 0 "C407" H 2410 3720 50  0000 L CNN
-F 1 "12pF" H 2410 3570 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 2400 3650 50  0001 C CNN
-F 3 "" H 2400 3650 50  0001 C CNN
-F 4 "CAP CER 12PF 50V C0G/NP0 0603" H 2400 3650 50  0001 C CNN "Description"
-F 5 "Samsung" H -3950 1050 50  0001 C CNN "Manufacturer"
-F 6 "CL10C120FB8NNNC" H -3950 1050 50  0001 C CNN "Part Number"
-	1    2400 3650
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2800 3950 2800 3650
-Wire Wire Line
-	2800 3650 2500 3650
-$Comp
 L power:GND #PWR?
-U 1 1 5E9C6A38
-P 2250 4750
-F 0 "#PWR?" H 2250 4500 50  0001 C CNN
-F 1 "GND" H 2250 4600 50  0000 C CNN
-F 2 "" H 2250 4750 50  0001 C CNN
-F 3 "" H 2250 4750 50  0001 C CNN
-	1    2250 4750
+U 1 1 5F95468B
+P 3400 4450
+F 0 "#PWR?" H 3400 4200 50  0001 C CNN
+F 1 "GND" H 3400 4300 50  0000 C CNN
+F 2 "" H 3400 4450 50  0001 C CNN
+F 3 "" H 3400 4450 50  0001 C CNN
+	1    3400 4450
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
-U 1 1 5E9C7017
-P 3150 4750
-F 0 "#PWR?" H 3150 4500 50  0001 C CNN
-F 1 "GND" H 3150 4600 50  0000 C CNN
-F 2 "" H 3150 4750 50  0001 C CNN
-F 3 "" H 3150 4750 50  0001 C CNN
-	1    3150 4750
+L Device:C_Small C?
+U 1 1 5F954695
+P 3200 4750
+AR Path="/5F954695" Ref="C?"  Part="1" 
+AR Path="/5BE25053/5F954695" Ref="C408"  Part="1" 
+F 0 "C408" H 3292 4796 50  0000 L CNN
+F 1 "9.1pF" H 3292 4705 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402_NoSilk" H 3200 4750 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/datasheet/C0402C919C5GAC7867.pdf" H 3200 4750 50  0001 C CNN
+F 4 "CAP CER 9.1PF 50V C0G/NP0 0402" H 3200 4750 50  0001 C CNN "Description"
+F 5 "399-14287-1-ND" H 3200 4750 50  0001 C CNN "Digikey P/N"
+F 6 "KEMET" H 3200 4750 50  0001 C CNN "Manufacturer"
+F 7 "C0402C919C5GAC7867" H 3200 4750 50  0001 C CNN "Part Number"
+	1    3200 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5F95469F
+P 3600 4750
+AR Path="/5F95469F" Ref="C?"  Part="1" 
+AR Path="/5BE25053/5F95469F" Ref="C407"  Part="1" 
+F 0 "C407" H 3692 4796 50  0000 L CNN
+F 1 "9.1pF" H 3692 4705 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402_NoSilk" H 3600 4750 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/datasheet/C0402C919C5GAC7867.pdf" H 3600 4750 50  0001 C CNN
+F 4 "CAP CER 9.1PF 50V C0G/NP0 0402" H 3600 4750 50  0001 C CNN "Description"
+F 5 "399-14287-1-ND" H 3600 4750 50  0001 C CNN "Digikey P/N"
+F 6 "KEMET" H 3600 4750 50  0001 C CNN "Manufacturer"
+F 7 "C0402C919C5GAC7867" H 3600 4750 50  0001 C CNN "Part Number"
+	1    3600 4750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3000 4100 3150 4100
+	3550 4250 3600 4250
 Wire Wire Line
-	2800 4250 2800 4450
+	3600 4250 3600 4650
 Wire Wire Line
-	2800 4450 2500 4450
+	3250 4250 3200 4250
 Wire Wire Line
-	2300 3650 2250 3650
+	3200 4250 3200 4650
+Connection ~ 3600 4250
 Wire Wire Line
-	2250 3650 2250 4100
+	3200 3550 3200 4250
+Connection ~ 3200 4250
+$Comp
+L power:GND #PWR?
+U 1 1 5F9546AD
+P 3400 5000
+F 0 "#PWR?" H 3400 4750 50  0001 C CNN
+F 1 "GND" H 3400 4850 50  0000 C CNN
+F 2 "" H 3400 5000 50  0001 C CNN
+F 3 "" H 3400 5000 50  0001 C CNN
+	1    3400 5000
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	2250 4450 2300 4450
-Connection ~ 2250 4100
+	3600 4850 3600 5000
 Wire Wire Line
-	2250 4100 2250 4450
+	3600 5000 3400 5000
 Wire Wire Line
-	2600 4100 2250 4100
+	3400 5000 3200 5000
 Wire Wire Line
-	3150 4100 3150 4750
+	3200 5000 3200 4850
+Connection ~ 3400 5000
 Wire Wire Line
-	2250 4450 2250 4750
-Connection ~ 2250 4450
+	3600 3650 3600 4250
 Wire Wire Line
-	2800 4450 3600 4450
+	3200 3550 4600 3550
+Text GLabel 2600 3650 0    39   Input ~ 0
+GCLK_0
 Wire Wire Line
-	3600 4450 3600 3650
+	3050 3650 3600 3650
+Connection ~ 3600 3650
+$Comp
+L Device:R R405
+U 1 1 5F8DE636
+P 2900 3650
+F 0 "R405" V 2980 3650 50  0000 C CNN
+F 1 "0" V 2900 3650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2830 3650 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 2900 3650 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/10W 0603" H -2900 -350 50  0001 C CNN "Description"
+F 5 "Stackpole" H -2900 -350 50  0001 C CNN "Manufacturer"
+F 6 "RMCF0603ZT0R00" H -2900 -350 50  0001 C CNN "Part Number"
+F 7 "RMCF0603ZT0R00CT-ND" H 2900 3650 50  0001 C CNN "Digikey P/N"
+	1    2900 3650
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	3600 3650 4600 3650
-Connection ~ 2800 4450
+	2750 3650 2600 3650
+Text Notes 1000 4100 0    50   ~ 0
+Ideally Gclk_0 at 16MHz is routed out from the MCU\nand the Y401 oscilator circut is left unpopulated.\nRemove the jumper resistor R405 elsewise.
 Wire Wire Line
-	4600 3550 3500 3550
+	6600 3850 6600 4750
 Wire Wire Line
-	3500 3550 3500 3650
+	6600 4750 6650 4750
 Wire Wire Line
-	3500 3650 2800 3650
-Connection ~ 2800 3650
+	7500 4050 7750 4050
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6020E097
+P 7750 4750
+F 0 "#PWR?" H 7750 4600 50  0001 C CNN
+F 1 "+3.3V" V 7750 4900 50  0000 L CNN
+F 2 "" H 7750 4750 50  0001 C CNN
+F 3 "" H 7750 4750 50  0001 C CNN
+	1    7750 4750
+	0    1    1    0   
+$EndComp
+Connection ~ 7750 4750
+$Comp
+L power:GND #PWR?
+U 1 1 60213558
+P 7350 3150
+F 0 "#PWR?" H 7350 2900 50  0001 C CNN
+F 1 "GND" V 7350 2850 50  0000 L CNN
+F 2 "" H 7350 3150 50  0001 C CNN
+F 3 "" H 7350 3150 50  0001 C CNN
+	1    7350 3150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7100 3150 7350 3150
+Connection ~ 7100 3150
 $EndSCHEMATC
