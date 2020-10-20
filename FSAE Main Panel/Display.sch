@@ -343,7 +343,7 @@ Text GLabel 1500 5200 0    39   Input ~ 0
 ~RPM_EN
 Text GLabel 1500 5300 0    39   Input ~ 0
 FRAME_CLR
-Text GLabel 1500 5050 0    39   Input ~ 0
+Text GLabel 1250 6750 0    39   Input ~ 0
 FRAME_IN
 Text GLabel 1500 5500 0    39   Input ~ 0
 FRAME_CLK
@@ -829,8 +829,6 @@ Connection ~ 1900 3000
 Wire Wire Line
 	3050 3500 3200 3500
 Wire Wire Line
-	3500 4600 3650 4600
-Wire Wire Line
 	3650 4800 3600 4800
 Wire Wire Line
 	3600 4800 3600 5200
@@ -862,10 +860,6 @@ Wire Wire Line
 Connection ~ 1850 5300
 Wire Wire Line
 	1950 4600 1800 4600
-Wire Wire Line
-	1800 4600 1800 5050
-Wire Wire Line
-	1800 5050 1500 5050
 Wire Wire Line
 	10650 900  10650 1000
 Connection ~ 10500 900 
@@ -2111,12 +2105,8 @@ fI
 Text Label 4200 7200 0    50   ~ 0
 gI
 Wire Wire Line
-	3500 4600 3500 4800
-Wire Wire Line
-	3500 4800 3050 4800
-Wire Wire Line
 	3550 7400 3550 7050
-Text GLabel 1250 7400 0    39   Input ~ 0
+Text GLabel 1500 5800 0    39   Input ~ 0
 FRAME_OUT
 NoConn ~ -14750 5700
 Entry Wire Line
@@ -2143,8 +2133,6 @@ Text Notes 6200 7500 0    39   ~ 0
 7 LEDs\nSegment Display\nWhite - SM1206NUWC-IL\nVf = 3.1V, 750mcd\nIf = 20mA Ifp = 100mA\nMin R: 95 Ohm\n
 Text Notes 9700 5050 2    39   ~ 0
 Blue - G6SP-DBFA\nVf = 3.3V, 7200mcd @ 450nm\nIf = 160mA\nMin R: 11 Ohm\n
-Wire Wire Line
-	4750 4800 4750 5600
 Wire Wire Line
 	5250 900  6000 900 
 $Comp
@@ -3209,7 +3197,7 @@ Wire Wire Line
 Wire Wire Line
 	4050 6000 4050 6450
 Text Notes 5200 1250 0    50   ~ 0
-32 LED's\n4mm spacing
+32 LED's\nequal spacing
 Text Notes 3750 1450 0    39   ~ 0
 Yellow - SM1206NYC-IL\nVf = 2.0V, 1000mcd @ 590nm\nIf = 25mA, Ifp = 100mA\nMin R: 120 Ohm
 Text Notes 3750 1750 0    39   ~ 0
@@ -3231,13 +3219,7 @@ Wire Wire Line
 	7600 4800 7600 4500
 Connection ~ 7600 4800
 Wire Wire Line
-	600  5600 600  6750
-Wire Wire Line
-	600  6750 2200 6750
-Wire Wire Line
-	600  5600 4750 5600
-Wire Wire Line
-	1250 7400 3550 7400
+	1250 6750 2200 6750
 Wire Wire Line
 	1250 6100 3650 6100
 Wire Wire Line
@@ -3344,10 +3326,10 @@ Wire Wire Line
 Text GLabel 7100 5800 3    39   Input ~ 0
 SHIFT2
 $Comp
-L Device:Q_NMOS_GSD Q503
+L Device:Q_NMOS_GSD Q504
 U 1 1 5F1D9444
 P 7350 5550
-F 0 "Q503" H 7555 5596 50  0000 L CNN
+F 0 "Q504" H 7555 5596 50  0000 L CNN
 F 1 "SI2308CDS-T1-GE3" H 7555 5505 50  0001 L CNN
 F 2 "TO_SOT_Packages_SMD:SOT-23" H 7550 5650 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/77744/si2308cds.pdf" H 7350 5550 50  0001 C CNN
@@ -3384,10 +3366,10 @@ F 3 "" H 8200 5750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Q_NMOS_GSD Q504
+L Device:Q_NMOS_GSD Q503
 U 1 1 5F3AD87F
 P 8100 5550
-F 0 "Q504" H 8305 5596 50  0000 L CNN
+F 0 "Q503" H 8305 5596 50  0000 L CNN
 F 1 "SI2308CDS-T1-GE3" H 8305 5505 50  0001 L CNN
 F 2 "TO_SOT_Packages_SMD:SOT-23" H 8300 5650 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/77744/si2308cds.pdf" H 8100 5550 50  0001 C CNN
@@ -3415,10 +3397,32 @@ Wire Wire Line
 	7450 5050 7600 5050
 Wire Wire Line
 	8050 5050 8200 5050
+Wire Wire Line
+	3500 4600 3650 4600
+Wire Wire Line
+	3500 4600 3500 5600
+Wire Wire Line
+	1800 5700 4750 5700
+Wire Wire Line
+	4750 4800 4750 5700
+Wire Wire Line
+	3050 4800 3100 4800
+Wire Wire Line
+	3100 4800 3100 5800
+Wire Wire Line
+	3100 5800 1500 5800
+Wire Wire Line
+	650  7400 650  5600
+Wire Wire Line
+	650  7400 3550 7400
+Wire Wire Line
+	650  5600 3500 5600
 Wire Bus Line
 	1800 2900 1800 3600
 Wire Bus Line
 	3500 2900 3500 3600
+Wire Wire Line
+	1800 4600 1800 5700
 Wire Bus Line
 	1800 5100 6600 5100
 Wire Bus Line
@@ -3433,4 +3437,8 @@ Wire Bus Line
 	3350 3900 3350 5000
 Wire Bus Line
 	6600 2750 11050 2750
+Text Label 1950 5700 0    50   ~ 0
+FRAME_INT2
+Text Label 1950 5600 0    50   ~ 0
+FRAME_INT1
 $EndSCHEMATC
