@@ -806,8 +806,6 @@ Text Label 3550 4700 0    50   ~ 0
 X16M-
 Wire Wire Line
 	7050 2300 7250 2300
-Text GLabel 1900 3200 0    39   Input ~ 0
-PGOOD
 Wire Notes Line
 	4600 6800 4600 7000
 Wire Notes Line
@@ -965,8 +963,8 @@ Text Notes 8900 4600 0    50   ~ 0
 CAL_in
 Text Notes 8900 6000 0    50   ~ 0
 SWS1\nSWS2\nSWS3\nSWS4
-Text Notes 8900 6250 0    50   ~ 0
-PGOOD
+Text Notes 9400 6250 0    50   ~ 0
+DWC_CONT
 Text Notes 9450 3900 0    50   ~ 0
 SHIFT1\nSHIFT2
 Text Notes 9450 4150 0    50   ~ 0
@@ -1031,4 +1029,6 @@ Wire Notes Line style dotted
 	8950 5600 11050 5600
 Wire Notes Line style dotted
 	8950 6100 11050 6100
+Text GLabel 1900 3200 0    39   Input ~ 0
+DWC_CONT
 $EndSCHEMATC

@@ -86,538 +86,216 @@ $EndComp
 $Comp
 L Device:C C308
 U 1 1 5E7CA97B
-P 6750 5750
-F 0 "C308" H 6850 5650 50  0000 L CNN
-F 1 "100uF" H 6800 5550 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.00mm" H 6788 5600 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/datasheet/ESK107M016AC3AA.pdf" H 6750 5750 50  0001 C CNN
-F 4 "KEMET" H 6750 5750 50  0001 C CNN "Manufacturer"
-F 5 "CAP ALUM 100UF 20% 16V RADIAL" H 6750 5750 50  0001 C CNN "Description"
-F 6 "399-6601-ND" H 6750 5750 50  0001 C CNN "Digikey P/N"
-F 7 "ESK107M016AC3AA" H 6750 5750 50  0001 C CNN "Part Number"
-	1    6750 5750
+P 5800 4150
+F 0 "C308" H 5900 4050 50  0000 L CNN
+F 1 "100uF" H 5850 3950 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.00mm" H 5838 4000 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/datasheet/ESK107M016AC3AA.pdf" H 5800 4150 50  0001 C CNN
+F 4 "KEMET" H 5800 4150 50  0001 C CNN "Manufacturer"
+F 5 "CAP ALUM 100UF 20% 16V RADIAL" H 5800 4150 50  0001 C CNN "Description"
+F 6 "399-6601-ND" H 5800 4150 50  0001 C CNN "Digikey P/N"
+F 7 "ESK107M016AC3AA" H 5800 4150 50  0001 C CNN "Part Number"
+	1    5800 4150
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	6350 5550 6350 5600
+	5400 3950 5400 4000
 Wire Wire Line
-	5950 5550 6350 5550
+	5000 3950 5400 3950
 Wire Wire Line
-	5950 5550 5950 5600
-Connection ~ 5950 5550
-Wire Wire Line
-	1350 5850 1350 6000
-Wire Wire Line
-	1700 6000 2050 6000
-$Comp
-L Device:C C304
-U 1 1 5E78D695
-P 1700 5700
-F 0 "C304" H 1750 5550 50  0000 L CNN
-F 1 "2.2uF" H 1750 5450 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 1738 5550 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/specsheet/C1206C225K5RACAUTO.pdf" H 1700 5700 50  0001 C CNN
-F 4 "KEMET" H 1700 5700 50  0001 C CNN "Manufacturer"
-F 5 "CAP CER 2.2UF 50V X7R 1206" H 1700 5700 50  0001 C CNN "Description"
-F 6 "399-7019-1-ND" H 1700 5700 50  0001 C CNN "Digikey P/N"
-F 7 "C1206C225K5RACAUTO" H 1700 5700 50  0001 C CNN "Part Number"
-	1    1700 5700
-	-1   0    0    -1  
-$EndComp
+	5000 3950 5000 4000
+Connection ~ 5000 3950
 $Comp
 L power:GND #PWR0120
 U 1 1 5E786715
-P 1100 6000
-F 0 "#PWR0120" H 1100 5750 50  0001 C CNN
-F 1 "GND" V 1100 5850 50  0000 R CNN
-F 2 "" H 1100 6000 50  0001 C CNN
-F 3 "" H 1100 6000 50  0001 C CNN
-	1    1100 6000
+P 1250 4400
+F 0 "#PWR0120" H 1250 4150 50  0001 C CNN
+F 1 "GND" V 1250 4250 50  0000 R CNN
+F 2 "" H 1250 4400 50  0001 C CNN
+F 3 "" H 1250 4400 50  0001 C CNN
+	1    1250 4400
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	1500 4650 1350 4650
+	1650 4400 1650 4250
+Connection ~ 1650 4400
 Wire Wire Line
-	4800 4250 4700 4250
+	2000 4400 1650 4400
 Wire Wire Line
-	4800 3950 4800 4250
+	2000 4400 2000 4250
+Connection ~ 2000 4400
 Wire Wire Line
-	1500 3950 4800 3950
+	2350 4400 2000 4400
 Wire Wire Line
-	1500 4650 1500 3950
-Wire Wire Line
-	1350 4650 1350 5550
-Connection ~ 1500 4650
-Wire Wire Line
-	1700 4650 1500 4650
-Wire Wire Line
-	1700 4750 1700 4650
+	2350 4400 2350 4250
 $Comp
-L Mechanical:Heatsink_Pad HS4
-U 1 1 5E74A199
-P 4000 6000
-F 0 "HS4" H 3858 5947 50  0000 R CNN
-F 1 "Heatsink_Pad" H 3858 6038 50  0000 R CNN
-F 2 "" H 4012 5950 50  0001 C CNN
-F 3 "~" H 4012 5950 50  0001 C CNN
-	1    4000 6000
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	4800 6000 4800 6500
-Connection ~ 4800 6000
-Wire Wire Line
-	3600 4850 3200 4850
-Connection ~ 3200 4850
-Wire Wire Line
-	3200 4350 3200 4850
-Wire Wire Line
-	3600 4350 3200 4350
-Wire Wire Line
-	2050 6000 2050 5850
-Connection ~ 2050 6000
-Wire Wire Line
-	2400 6000 2050 6000
-Wire Wire Line
-	2400 6000 2400 5850
-Connection ~ 2400 6000
-Wire Wire Line
-	2750 6000 2400 6000
-Connection ~ 2750 6000
-Wire Wire Line
-	2750 6000 2750 5850
-Wire Wire Line
-	3200 6000 2750 6000
-Connection ~ 3200 4350
-Wire Wire Line
-	3200 4250 3200 4350
-Wire Wire Line
-	3600 4250 3200 4250
-$Comp
-L Device:R R304
-U 1 1 5E7104A8
-P 1350 5700
-F 0 "R304" V 1450 5600 50  0000 L CNN
-F 1 "301k" V 1350 5600 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603" V 1280 5700 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1350 5700 50  0001 C CNN
-F 4 "RES 301K OHM 1% 1/10W 0603" H 1350 5700 50  0001 C CNN "Description"
-F 5 "RMCF0603FT301KCT-ND" H 1350 5700 50  0001 C CNN "Digikey P/N"
-F 6 "Stackpole" H 1350 5700 50  0001 C CNN "Manufacturer"
-F 7 "RMCF0603FT301K" H 1350 5700 50  0001 C CNN "Part Number"
-	1    1350 5700
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R R303
-U 1 1 5E70FFEB
-P 1700 4900
-F 0 "R303" V 1600 5000 50  0000 R CNN
-F 1 "1k" V 1700 4950 50  0000 R CNN
-F 2 "Resistors_SMD:R_0603" V 1630 4900 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1700 4900 50  0001 C CNN
-F 4 "RES 1K OHM 5% 1/10W 0603" H 1700 4900 50  0001 C CNN "Description"
-F 5 "RMCF0603JT1K00CT-ND" H 1700 4900 50  0001 C CNN "Digikey P/N"
-F 6 "Stackpole" H 1700 4900 50  0001 C CNN "Manufacturer"
-F 7 "RMCF0603JT1K00" H 1700 4900 50  0001 C CNN "Part Number"
-	1    1700 4900
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	2350 3900 2350 4300
-Wire Wire Line
-	4900 3900 2350 3900
-Wire Wire Line
-	4900 4350 4900 3900
-Wire Wire Line
-	4700 4350 4900 4350
-$Comp
-L Device:R R305
-U 1 1 5E6F6588
-P 2350 4450
-F 0 "R305" V 2450 4350 50  0000 L CNN
-F 1 "100k" V 2350 4350 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603" V 2280 4450 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 2350 4450 50  0001 C CNN
-F 4 "RES 100K OHM 5% 1/10W 0603" H 2350 4450 50  0001 C CNN "Description"
-F 5 "RMCF0603JG100KCT-ND" H 2350 4450 50  0001 C CNN "Digikey P/N"
-F 6 "Stackpole" H 2350 4450 50  0001 C CNN "Manufacturer"
-F 7 "RMCF0603JG100K" H 2350 4450 50  0001 C CNN "Part Number"
-	1    2350 4450
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3100 4750 3600 4750
-Wire Wire Line
-	3100 6250 3100 4750
-Wire Wire Line
-	4900 6250 3100 6250
-Wire Wire Line
-	4900 5600 4900 6250
-Wire Wire Line
-	5550 5600 4900 5600
-$Comp
-L Device:R R307
+L Device:R R302
 U 1 1 5E6D1499
-P 5550 5800
-F 0 "R307" V 5650 5700 50  0000 L CNN
-F 1 "11.8k" V 5550 5700 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603" V 5480 5800 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 5550 5800 50  0001 C CNN
-F 4 "RES 11.8K OHM 1% 1/10W 0603" H 5550 5800 50  0001 C CNN "Description"
-F 5 "RMCF0603FT11K8CT-ND" H 5550 5800 50  0001 C CNN "Digikey P/N"
-F 6 "Stackpole" H 5550 5800 50  0001 C CNN "Manufacturer"
-F 7 "RMCF0603FT11K8" H 5550 5800 50  0001 C CNN "Part Number"
-	1    5550 5800
+P 4600 4200
+F 0 "R302" V 4700 4100 50  0000 L CNN
+F 1 "10k" V 4600 4100 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" V 4530 4200 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 4600 4200 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/10W 0603" H 4600 4200 50  0001 C CNN "Description"
+F 5 "RMCF0603JT10K0CT-ND" H 4600 4200 50  0001 C CNN "Digikey P/N"
+F 6 "Stackpole" H 4600 4200 50  0001 C CNN "Manufacturer"
+F 7 "RMCF0603JT10K0" H 4600 4200 50  0001 C CNN "Part Number"
+	1    4600 4200
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:R R306
+L Device:R R301
 U 1 1 5E6D0936
-P 5550 5400
-F 0 "R306" V 5650 5300 50  0000 L CNN
-F 1 "86.6k" V 5550 5300 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603" V 5480 5400 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 5550 5400 50  0001 C CNN
-F 4 "RES 86.6K OHM 1% 1/10W 0603" H 5550 5400 50  0001 C CNN "Description"
-F 5 "RMCF0603FT86K6CT-ND" H 5550 5400 50  0001 C CNN "Digikey P/N"
-F 6 "Stackpole" H 5550 5400 50  0001 C CNN "Manufacturer"
-F 7 "RMCF0603FT86K6" H 5550 5400 50  0001 C CNN "Part Number"
-	1    5550 5400
+P 4600 3800
+F 0 "R301" V 4700 3700 50  0000 L CNN
+F 1 "56.2k" V 4600 3700 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" V 4530 3800 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 4600 3800 50  0001 C CNN
+F 4 "RES 56.2K OHM 1% 1/10W 0603" H 4600 3800 50  0001 C CNN "Description"
+F 5 "RMCF0603FT56K2CT-ND" H 4600 3800 50  0001 C CNN "Digikey P/N"
+F 6 "Stackpole" H 4600 3800 50  0001 C CNN "Manufacturer"
+F 7 "RMCF0603FT56K2" H 4600 3800 50  0001 C CNN "Part Number"
+	1    4600 3800
 	-1   0    0    -1  
 $EndComp
-NoConn ~ 3600 4450
-NoConn ~ 3600 5250
-NoConn ~ 4700 4650
 Wire Wire Line
-	4700 4550 5550 4550
+	2350 3950 2350 3850
 Wire Wire Line
-	4950 4950 4950 5050
+	2350 3850 2000 3850
+Connection ~ 2000 3850
 Wire Wire Line
-	4700 4950 4950 4950
-Connection ~ 4950 4950
+	2000 3950 2000 3850
 Wire Wire Line
-	4950 4850 4950 4950
+	1650 3850 1250 3850
 Wire Wire Line
-	4700 4850 4950 4850
+	2000 3850 1650 3850
+Connection ~ 1650 3850
 Wire Wire Line
-	4950 5050 5150 5050
-Connection ~ 4950 4850
-Wire Wire Line
-	4950 4750 4950 4850
-Wire Wire Line
-	4700 4750 4950 4750
-Connection ~ 4950 5050
-Wire Wire Line
-	4700 5050 4950 5050
-Wire Wire Line
-	4700 5450 4800 5450
-Connection ~ 4800 5450
-Wire Wire Line
-	4800 5350 4800 5450
-Wire Wire Line
-	4700 5350 4800 5350
-Connection ~ 4800 5350
-Wire Wire Line
-	4800 5250 4800 5350
-Wire Wire Line
-	4700 5250 4800 5250
-Wire Wire Line
-	4800 5550 4800 6000
-Wire Wire Line
-	4800 5450 4800 5550
-Connection ~ 4800 5550
-Wire Wire Line
-	4800 5550 4700 5550
-Connection ~ 4800 5250
-Wire Wire Line
-	4800 5150 4800 5250
-Wire Wire Line
-	4700 5150 4800 5150
-Wire Wire Line
-	3050 6500 3600 6500
-Wire Wire Line
-	3050 4550 3050 6500
-Wire Wire Line
-	3600 4550 3050 4550
-Wire Wire Line
-	3600 5150 3400 5150
-Wire Wire Line
-	2750 5550 2750 5450
-Wire Wire Line
-	2750 5450 2400 5450
-Connection ~ 2400 5450
-Wire Wire Line
-	2400 5550 2400 5450
-Wire Wire Line
-	2050 5450 1100 5450
-Wire Wire Line
-	2400 5450 2050 5450
-Connection ~ 2050 5450
-Wire Wire Line
-	2050 5450 2050 5550
-Connection ~ 2750 5450
-Wire Wire Line
-	3400 5450 2750 5450
-Wire Wire Line
-	3400 5450 3400 5550
-Connection ~ 3400 5450
-Wire Wire Line
-	3600 5450 3400 5450
-Wire Wire Line
-	3400 5550 3600 5550
-Wire Wire Line
-	3400 5150 3400 5350
-Wire Wire Line
-	3400 5350 3400 5450
-Connection ~ 3400 5350
-Wire Wire Line
-	3600 5350 3400 5350
+	1650 3850 1650 3950
 $Comp
 L Device:C C307
 U 1 1 5E69DD50
-P 6350 5750
-F 0 "C307" H 6400 5650 50  0000 L CNN
-F 1 "22uF" H 6400 5550 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.00mm" H 6388 5600 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/specsheet/ESK226M050AC3AA.pdf" H 6350 5750 50  0001 C CNN
-F 4 "KEMET" H 6350 5750 50  0001 C CNN "Manufacturer"
-F 5 "CAP ALUM 22UF 20% 50V RADIAL" H 6350 5750 50  0001 C CNN "Description"
-F 6 "399-6108-ND" H 6350 5750 50  0001 C CNN "Digikey P/N"
-F 7 "ESK226M050AC3AA" H 6350 5750 50  0001 C CNN "Part Number"
-	1    6350 5750
+P 5400 4150
+F 0 "C307" H 5450 4050 50  0000 L CNN
+F 1 "22uF" H 5450 3950 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.00mm" H 5438 4000 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/ESK226M050AC3AA.pdf" H 5400 4150 50  0001 C CNN
+F 4 "KEMET" H 5400 4150 50  0001 C CNN "Manufacturer"
+F 5 "CAP ALUM 22UF 20% 50V RADIAL" H 5400 4150 50  0001 C CNN "Description"
+F 6 "399-6108-ND" H 5400 4150 50  0001 C CNN "Digikey P/N"
+F 7 "ESK226M050AC3AA" H 5400 4150 50  0001 C CNN "Part Number"
+	1    5400 4150
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:C C306
 U 1 1 5E69D7F3
-P 5950 5750
-F 0 "C306" H 6000 5650 50  0000 L CNN
-F 1 "2.2uF" H 6000 5550 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 5988 5600 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/specsheet/C1206C225K5RACAUTO.pdf" H 5950 5750 50  0001 C CNN
-F 4 "KEMET" H 5950 5750 50  0001 C CNN "Manufacturer"
-F 5 "CAP CER 2.2UF 50V X7R 1206" H 5950 5750 50  0001 C CNN "Description"
-F 6 "399-7019-1-ND" H 5950 5750 50  0001 C CNN "Digikey P/N"
-F 7 "C1206C225K5RACAUTO" H 5950 5750 50  0001 C CNN "Part Number"
-	1    5950 5750
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:C C305
-U 1 1 5E69D367
-P 5550 4700
-F 0 "C305" H 5200 4750 50  0000 L CNN
-F 1 "0.1uF" H 5200 4650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 5588 4550 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104K5RACAUTO.pdf" H 5550 4700 50  0001 C CNN
-F 4 "CAP CER 0.1UF 50V X7R 0603" H 5550 4700 50  0001 C CNN "Description"
-F 5 "KEMET" H 5550 4700 50  0001 C CNN "Manufacturer"
-F 6 "C0603C104K5RACAUTO" H 5550 4700 50  0001 C CNN "Part Number"
-F 7 "399-6856-1-ND" H 5550 4700 50  0001 C CNN "Digikey P/N"
-	1    5550 4700
+P 5000 4150
+F 0 "C306" H 5050 4050 50  0000 L CNN
+F 1 "2.2uF" H 5050 3950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 5038 4000 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C1206C225K5RACAUTO.pdf" H 5000 4150 50  0001 C CNN
+F 4 "KEMET" H 5000 4150 50  0001 C CNN "Manufacturer"
+F 5 "CAP CER 2.2UF 50V X7R 1206" H 5000 4150 50  0001 C CNN "Description"
+F 6 "399-7019-1-ND" H 5000 4150 50  0001 C CNN "Digikey P/N"
+F 7 "C1206C225K5RACAUTO" H 5000 4150 50  0001 C CNN "Part Number"
+	1    5000 4150
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:L L301
 U 1 1 5E69CDAB
-P 5300 5050
-F 0 "L301" V 5490 5050 50  0000 C CNN
-F 1 "1.8uH" V 5399 5050 50  0000 C CNN
-F 2 "FSAE2020:SRP1238A" H 5300 5050 50  0001 C CNN
-F 3 "https://www.bourns.com/docs/product-datasheets/srp1238a.pdf" H 5300 5050 50  0001 C CNN
-F 4 "FIXED IND 1.8UH 17A 7 MOHM SMD" H 5300 5050 50  0001 C CNN "Description"
-F 5 "SRP1238A-1R8MCT-ND" H 5300 5050 50  0001 C CNN "Digikey P/N"
-F 6 "Bourns" H 5300 5050 50  0001 C CNN "Manufacturer"
-F 7 "SRP1238A-1R8M" H 5300 5050 50  0001 C CNN "Part Number"
-	1    5300 5050
+P 4350 3450
+F 0 "L301" V 4540 3450 50  0000 C CNN
+F 1 "3.3uH" V 4449 3450 50  0000 C CNN
+F 2 "Inductors_SMD:L_Bourns-SRU8043" H 4350 3450 50  0001 C CNN
+F 3 "https://www.bourns.com/docs/Product-Datasheets/SRR1050A.pdf" H 4350 3450 50  0001 C CNN
+F 4 "FIXED IND 3.3UH 6.5A 11 MOHM SMD" H 4350 3450 50  0001 C CNN "Description"
+F 5 "SRR1050A-3R3YCT-ND" H 4350 3450 50  0001 C CNN "Digikey P/N"
+F 6 "Bourns" H 4350 3450 50  0001 C CNN "Manufacturer"
+F 7 "SRR1050A-3R3Y" H 4350 3450 50  0001 C CNN "Part Number"
+	1    4350 3450
 	0    1    -1   0   
-$EndComp
-$Comp
-L Device:R R301
-U 1 1 5E69C75A
-P 3750 6500
-F 0 "R301" V 3850 6500 50  0000 C CNN
-F 1 "41.2k" V 3750 6500 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 3680 6500 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 3750 6500 50  0001 C CNN
-F 4 "RES 41.2K OHM 1% 1/10W 0603" H 3750 6500 50  0001 C CNN "Description"
-F 5 "RMCF0603FT41K2CT-ND" H 3750 6500 50  0001 C CNN "Digikey P/N"
-F 6 "Stackpole" H 3750 6500 50  0001 C CNN "Manufacturer"
-F 7 "RMCF0603FT41K2" H 3750 6500 50  0001 C CNN "Part Number"
-	1    3750 6500
-	0    1    -1   0   
-$EndComp
-$Comp
-L TI_Additions:TPS53513 U301
-U 1 1 5E69B698
-P 4150 4850
-F 0 "U301" H 4150 5715 50  0000 C CNN
-F 1 "TPS53513" H 4150 5624 50  0000 C CNN
-F 2 "Texas_Additions:VQFN-CLIP-28-4.5x3.5mm" H 4100 5800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tps53513.pdf" H 4100 5800 50  0001 C CNN
-F 4 "Buck Switching Regulator IC Positive Adjustable 0.6V 1 Output 8A 28-VFQFN Exposed Pad" H 4150 4850 50  0001 C CNN "Description"
-F 5 "296-39411-1-ND" H 4150 4850 50  0001 C CNN "Digikey P/N"
-F 6 "TI" H 4150 4850 50  0001 C CNN "Manufacturer"
-F 7 "TPS53513RVER" H 4150 4850 50  0001 C CNN "Part Number"
-	1    4150 4850
-	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:C C303
 U 1 1 5E69B100
-P 2750 5700
-F 0 "C303" H 2800 5550 50  0000 L CNN
-F 1 "4700pF" H 2750 5450 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 2788 5550 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C472K5RACAUTO.pdf" H 2750 5700 50  0001 C CNN
-F 4 "KEMET" H 2750 5700 50  0001 C CNN "Manufacturer"
-F 5 "CAP CER 4700PF 50V X7R 0603" H 2750 5700 50  0001 C CNN "Description"
-F 6 "399-6896-1-ND" H 2750 5700 50  0001 C CNN "Digikey P/N"
-F 7 "C0603C472K5RACAUTO" H 2750 5700 50  0001 C CNN "Part Number"
-	1    2750 5700
+P 2350 4100
+F 0 "C303" H 2400 3950 50  0000 L CNN
+F 1 "4700pF" H 2350 3850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2388 3950 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C472K5RACAUTO.pdf" H 2350 4100 50  0001 C CNN
+F 4 "KEMET" H 2350 4100 50  0001 C CNN "Manufacturer"
+F 5 "CAP CER 4700PF 50V X7R 0603" H 2350 4100 50  0001 C CNN "Description"
+F 6 "399-6896-1-ND" H 2350 4100 50  0001 C CNN "Digikey P/N"
+F 7 "C0603C472K5RACAUTO" H 2350 4100 50  0001 C CNN "Part Number"
+	1    2350 4100
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:C C302
 U 1 1 5E69AAC6
-P 2400 5700
-F 0 "C302" H 2450 5550 50  0000 L CNN
-F 1 "2.2uF" H 2450 5450 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 2438 5550 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/specsheet/C1206C225K5RACAUTO.pdf" H 2400 5700 50  0001 C CNN
-F 4 "KEMET" H 2400 5700 50  0001 C CNN "Manufacturer"
-F 5 "CAP CER 2.2UF 50V X7R 1206" H 2400 5700 50  0001 C CNN "Description"
-F 6 "399-7019-1-ND" H 2400 5700 50  0001 C CNN "Digikey P/N"
-F 7 "C1206C225K5RACAUTO" H 2400 5700 50  0001 C CNN "Part Number"
-	1    2400 5700
+P 2000 4100
+F 0 "C302" H 2050 3950 50  0000 L CNN
+F 1 "2.2uF" H 2050 3850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 2038 3950 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C1206C225K5RACAUTO.pdf" H 2000 4100 50  0001 C CNN
+F 4 "KEMET" H 2000 4100 50  0001 C CNN "Manufacturer"
+F 5 "CAP CER 2.2UF 50V X7R 1206" H 2000 4100 50  0001 C CNN "Description"
+F 6 "399-7019-1-ND" H 2000 4100 50  0001 C CNN "Digikey P/N"
+F 7 "C1206C225K5RACAUTO" H 2000 4100 50  0001 C CNN "Part Number"
+	1    2000 4100
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:C C301
 U 1 1 5E69A64A
-P 2050 5700
-F 0 "C301" H 2100 5550 50  0000 L CNN
-F 1 "22uF" H 2100 5450 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.00mm" H 2088 5550 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/specsheet/ESK226M050AC3AA.pdf" H 2050 5700 50  0001 C CNN
-F 4 "KEMET" H 2050 5700 50  0001 C CNN "Manufacturer"
-F 5 "CAP ALUM 22UF 20% 50V RADIAL" H 2050 5700 50  0001 C CNN "Description"
-F 6 "399-6108-ND" H 2050 5700 50  0001 C CNN "Digikey P/N"
-F 7 "ESK226M050AC3AA" H 2050 5700 50  0001 C CNN "Part Number"
-	1    2050 5700
+P 1650 4100
+F 0 "C301" H 1700 3950 50  0000 L CNN
+F 1 "22uF" H 1700 3850 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.00mm" H 1688 3950 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/ESK226M050AC3AA.pdf" H 1650 4100 50  0001 C CNN
+F 4 "KEMET" H 1650 4100 50  0001 C CNN "Manufacturer"
+F 5 "CAP ALUM 22UF 20% 50V RADIAL" H 1650 4100 50  0001 C CNN "Description"
+F 6 "399-6108-ND" H 1650 4100 50  0001 C CNN "Digikey P/N"
+F 7 "ESK226M050AC3AA" H 1650 4100 50  0001 C CNN "Part Number"
+	1    1650 4100
 	-1   0    0    -1  
 $EndComp
-Text GLabel 1100 5450 0    39   Input ~ 0
+Text GLabel 1250 3850 0    39   Input ~ 0
 CAN_V+
 Wire Wire Line
-	5050 4450 4700 4450
-Text Notes 5550 4350 2    50   ~ 0
-EN Pin limit \nMax 7V input
+	5400 3950 5800 3950
 Wire Wire Line
-	1350 6000 1700 6000
-Connection ~ 1700 6000
+	5800 3950 5800 4000
+Connection ~ 5400 3950
 Wire Wire Line
-	1700 5850 1700 6000
-Text Notes 800  4550 0    50   ~ 0
-R301 = Rtrip\nR302 = Rmode\nR303 = Rfh\nR304 = Rfl\nR305 = Rpgood\nR306 = Rfbt\nR307 = Rfbb\n\nC304 = Creg\nC305 = Cbst\n
+	5000 4400 5000 4300
 Wire Wire Line
-	6350 5550 6750 5550
-Wire Wire Line
-	6750 5550 6750 5600
-Connection ~ 6350 5550
-Wire Wire Line
-	5950 6000 5950 5900
-Wire Wire Line
-	6350 5900 6350 6000
-Text Notes 3650 7150 0    50   ~ 0
-Overcurrent Protection\n(Units not meaningful? EQ per datasheet)\nIocp = (R301 * 10uA) / (47.2mOhm) + 1/(2*L*fsw) * (13.4V-5V)*5V/13.4V\nIocp = 41.2kOhm * 10uA / 47.2mOhm + 1/(2*1.8uH*1M) * 3.134V\nIocp = 8.729 + 0.87055 = 9.66\nIocp = 9.66A
-Text Notes 1750 7500 0    50   ~ 0
-Low voltage protection\nVlvp = Vout * 0.68\nVlvp = 5V * 0.68 = 3.4V\n\nHigh Voltage Protection\nVhvp = Vout * 1.2 = 6V\n\nHigh Temp Protection\n140C Shutdown\n\nUndervoltage Lockout\nVin <= 3.95V, reset at 4.35V\n\nSwitching Frequency:\nfsw = 1Mhz
-Wire Wire Line
-	3600 4650 3150 4650
-Wire Wire Line
-	3150 4650 3150 3850
-Wire Wire Line
-	3150 3850 5950 3850
-Wire Wire Line
-	5950 3850 5950 5050
-Text GLabel 6900 5550 2    39   Input ~ 0
+	5400 4300 5400 4400
+Text GLabel 5950 3950 2    39   Input ~ 0
 LED_+5V
 Wire Wire Line
-	6900 5550 6750 5550
-Connection ~ 6750 5550
+	5950 3950 5800 3950
+Connection ~ 5800 3950
 Wire Wire Line
-	6750 5900 6750 6000
-Connection ~ 6350 6000
+	5800 4300 5800 4400
+Connection ~ 5400 4400
 Wire Wire Line
-	6350 6000 6750 6000
-Connection ~ 5950 6000
+	5400 4400 5800 4400
+Connection ~ 5000 4400
 Wire Wire Line
-	5950 6000 6350 6000
+	5000 4400 5400 4400
 $Comp
 L power:GND #PWR0121
 U 1 1 5F916719
-P 6900 6000
-F 0 "#PWR0121" H 6900 5750 50  0001 C CNN
-F 1 "GND" V 6900 5700 50  0000 L CNN
-F 2 "" H 6900 6000 50  0001 C CNN
-F 3 "" H 6900 6000 50  0001 C CNN
-	1    6900 6000
+P 5950 4400
+F 0 "#PWR0121" H 5950 4150 50  0001 C CNN
+F 1 "GND" V 5950 4100 50  0000 L CNN
+F 2 "" H 5950 4400 50  0001 C CNN
+F 3 "" H 5950 4400 50  0001 C CNN
+	1    5950 4400
 	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	3900 6500 4800 6500
-$Comp
-L power:GND #PWR0122
-U 1 1 5F917C89
-P 4250 5900
-F 0 "#PWR0122" H 4250 5650 50  0001 C CNN
-F 1 "GND" H 4255 5727 50  0000 C CNN
-F 2 "" H 4250 5900 50  0001 C CNN
-F 3 "" H 4250 5900 50  0001 C CNN
-	1    4250 5900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4000 5900 4000 5850
-Wire Wire Line
-	4000 5850 4150 5850
-Wire Wire Line
-	4250 5850 4250 5900
-Wire Wire Line
-	4150 5800 4150 5850
-Connection ~ 4150 5850
-Wire Wire Line
-	4150 5850 4250 5850
-Text Label 5050 5600 0    50   ~ 0
-FB
-Text Label 5000 5050 0    50   ~ 0
-Vsw
-Text Label 4850 4550 0    50   ~ 0
-Vbst
-Text Label 1850 5050 0    50   ~ 0
-Vreg
-Text Label 1550 3950 0    50   ~ 0
-Vrf
-Text Label 3100 6500 0    50   ~ 0
-Vtrip
-Text Notes 6350 5400 0    50   ~ 0
-C308 target:\n97.725uF\n1uOhm
-Text Notes 4000 3700 0    50   ~ 0
-Ltarg = 3/(Imax * 1M) * (Vinmax -Vout) * Vout/Vinmax\nLtarg = 3/5A *1M * 13.4V-5V *5V/13.4V\nLtarg = 1.88uH\n\nResr target < 9.6mOhm
-Text GLabel 2350 3800 1    39   Input ~ 0
-PGOOD
-$Comp
-L power:+5V #PWR0123
-U 1 1 5F9792B9
-P 5050 4450
-F 0 "#PWR0123" H 5050 4300 50  0001 C CNN
-F 1 "+5V" V 5050 4650 50  0000 C CNN
-F 2 "" H 5050 4450 50  0001 C CNN
-F 3 "" H 5050 4450 50  0001 C CNN
-	1    5050 4450
-	0    1    1    0   
 $EndComp
 Text GLabel 8800 6000 0    39   Input ~ 0
 EXT_+3V3
@@ -1339,59 +1017,22 @@ Wire Notes Line
 Text Notes 4750 700  0    50   ~ 0
 USB Power Switchover Circuit
 Wire Wire Line
-	1700 5550 1700 5050
-Connection ~ 1700 5050
+	4600 3450 4600 3650
 Wire Wire Line
-	2350 3800 2350 3900
-Connection ~ 2350 5050
+	4600 4350 4600 4400
 Wire Wire Line
-	2350 5050 2450 5050
-Wire Wire Line
-	3200 4850 3200 6000
-Wire Wire Line
-	5550 5550 5550 5600
-Connection ~ 2350 3900
-Wire Wire Line
-	5550 4850 5550 5050
-Connection ~ 5550 5600
-Wire Wire Line
-	5550 5600 5550 5650
-Wire Wire Line
-	5450 5050 5550 5050
-Connection ~ 5550 5050
-Wire Wire Line
-	5550 5050 5550 5250
-Wire Wire Line
-	4800 6000 5550 6000
-Wire Wire Line
-	5550 5950 5550 6000
-Connection ~ 5550 6000
-Wire Wire Line
-	5550 6000 5950 6000
+	4600 4400 5000 4400
 Wire Notes Line
-	700  3200 700  7650
+	700  3200 700  4900
 Wire Notes Line
-	700  7650 6850 7650
+	700  4900 6500 4900
 Wire Notes Line
-	6850 7650 6850 6250
-Wire Notes Line
-	6850 6250 7350 6250
-Wire Notes Line
-	7350 6250 7350 4950
-Wire Notes Line
-	7350 4950 6350 4950
-Wire Notes Line
-	6350 4950 6350 3200
-Wire Notes Line
-	6350 3200 700  3200
+	6500 3200 700  3200
 Text Notes 850  3150 0    50   ~ 0
 High Current +5V LED Power Regulator
 Wire Wire Line
-	6900 6000 6750 6000
-Connection ~ 6750 6000
-Wire Wire Line
-	1100 6000 1350 6000
-Connection ~ 1350 6000
+	5950 4400 5800 4400
+Connection ~ 5800 4400
 Text GLabel 8800 6400 0    39   Input ~ 0
 CAN_V+
 Wire Notes Line
@@ -1403,36 +1044,97 @@ Wire Notes Line
 Wire Notes Line
 	11150 5100 8400 5100
 Wire Wire Line
-	1700 5050 2350 5050
+	4600 3450 5000 3450
 Wire Wire Line
-	2350 4600 2350 5050
-Connection ~ 2450 5050
+	5000 3450 5000 3950
 Wire Wire Line
-	2450 5050 3600 5050
-Wire Wire Line
-	2450 4950 2450 5050
-Wire Wire Line
-	2750 4950 3600 4950
-Text Label 2800 4950 0    50   ~ 0
-Vmode
+	1250 4400 1650 4400
 $Comp
-L Device:R R302
-U 1 1 5E6EC027
-P 2600 4950
-F 0 "R302" V 2500 5050 50  0000 R CNN
-F 1 "100m" V 2600 5050 50  0000 R CNN
-F 2 "Resistors_SMD:R_0603" V 2530 4950 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 2600 4950 50  0001 C CNN
-F 4 "RES 0.1 OHM 1% 1/8W 0603" H 2600 4950 50  0001 C CNN "Description"
-F 5 "CSR0603FKR100CT-ND" H 2600 4950 50  0001 C CNN "Digikey P/N"
-F 6 "Stackpole" H 2600 4950 50  0001 C CNN "Manufacturer"
-F 7 "CSR0603FKR100" H 2600 4950 50  0001 C CNN "Part Number"
-	1    2600 4950
-	0    -1   1    0   
+L Device:C C305
+U 1 1 5FACB71C
+P 4100 3650
+F 0 "C305" H 3750 3700 50  0000 L CNN
+F 1 "0.1uF" H 3750 3600 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4138 3500 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104K5RACAUTO.pdf" H 4100 3650 50  0001 C CNN
+F 4 "CAP CER 0.1UF 50V X7R 0603" H 4100 3650 50  0001 C CNN "Description"
+F 5 "KEMET" H 4100 3650 50  0001 C CNN "Manufacturer"
+F 6 "C0603C104K5RACAUTO" H 4100 3650 50  0001 C CNN "Part Number"
+F 7 "399-6856-1-ND" H 4100 3650 50  0001 C CNN "Digikey P/N"
+	1    4100 3650
+	1    0    0    -1  
 $EndComp
+Text Notes 750  2700 0    50   ~ 0
+Dashboard Warning Panel\nMaximum Draw 0.6A @ 5V LED Rail\n\nDisplay\nMaximum Draw 1.9A @ 5V LED Rail\n\n
+Text Notes 2650 2350 0    50   ~ 0
+Vin Min: 9V\nVin Max: 16V
+$Comp
+L FSAE2020:TPS564201 U301
+U 1 1 5FC0D877
+P 2950 4050
+F 0 "U301" H 3200 3585 50  0000 C CNN
+F 1 "TPS564201" H 3200 3676 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 3600 3600 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tps564201.pdf" H 2500 4200 50  0001 C CNN
+F 4 "Buck Switching Regulator IC Positive Adjustable 0.76V 1 Output 4A SOT-23-6 Thin, TSOT-23-6" H 2950 4050 50  0001 C CNN "Description"
+F 5 "296-47373-1-ND" H 2950 4050 50  0001 C CNN "Digikey P/N"
+F 6 "TI" H 2950 4050 50  0001 C CNN "Manufacturer"
+F 7 "TPS564201DDCR" H 2950 4050 50  0001 C CNN "Part Number"
+	1    2950 4050
+	1    0    0    1   
+$EndComp
+Connection ~ 2350 3850
 Wire Wire Line
-	5550 5050 5950 5050
-Connection ~ 5950 5050
+	2350 3850 2550 3850
 Wire Wire Line
-	5950 5050 5950 5550
+	4100 4050 3650 4050
+Wire Wire Line
+	4100 4050 4100 3800
+Wire Wire Line
+	4100 3500 4100 3450
+Wire Wire Line
+	4100 3450 2650 3450
+Wire Wire Line
+	2650 3450 2650 3950
+Wire Wire Line
+	2650 3950 2750 3950
+Wire Wire Line
+	4600 3950 4600 4000
+Wire Wire Line
+	4400 3850 4400 4000
+Wire Wire Line
+	4400 4000 4600 4000
+Connection ~ 4600 4000
+Wire Wire Line
+	4600 4000 4600 4050
+Wire Wire Line
+	3650 3850 4400 3850
+Wire Wire Line
+	2550 3850 2550 3500
+Wire Wire Line
+	2550 3500 3700 3500
+Wire Wire Line
+	3700 3500 3700 3950
+Wire Wire Line
+	3700 3950 3650 3950
+Connection ~ 2550 3850
+Wire Wire Line
+	2550 3850 2750 3850
+Wire Wire Line
+	2350 4400 2750 4400
+Wire Wire Line
+	2750 4400 2750 4050
+Connection ~ 2350 4400
+Wire Wire Line
+	4600 4400 2750 4400
+Connection ~ 4600 4400
+Connection ~ 2750 4400
+Wire Wire Line
+	4600 3450 4500 3450
+Connection ~ 4600 3450
+Wire Wire Line
+	4200 3450 4100 3450
+Connection ~ 4100 3450
+Wire Notes Line
+	6500 3200 6500 4900
 $EndSCHEMATC

@@ -3417,6 +3417,10 @@ Wire Wire Line
 	650  7400 3550 7400
 Wire Wire Line
 	650  5600 3500 5600
+Text Label 1950 5700 0    50   ~ 0
+FRAME_INT2
+Text Label 1950 5600 0    50   ~ 0
+FRAME_INT1
 Wire Bus Line
 	1800 2900 1800 3600
 Wire Bus Line
@@ -3437,8 +3441,4 @@ Wire Bus Line
 	3350 3900 3350 5000
 Wire Bus Line
 	6600 2750 11050 2750
-Text Label 1950 5700 0    50   ~ 0
-FRAME_INT2
-Text Label 1950 5600 0    50   ~ 0
-FRAME_INT1
 $EndSCHEMATC
