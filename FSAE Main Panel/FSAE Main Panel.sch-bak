@@ -963,8 +963,8 @@ Text Notes 8900 4600 0    50   ~ 0
 CAL_in
 Text Notes 8900 6000 0    50   ~ 0
 SWS1\nSWS2\nSWS3\nSWS4
-Text Notes 8900 6250 0    50   ~ 0
-PGOOD
+Text Notes 9400 6250 0    50   ~ 0
+DWC_CONT
 Text Notes 9450 3900 0    50   ~ 0
 SHIFT1\nSHIFT2
 Text Notes 9450 4150 0    50   ~ 0

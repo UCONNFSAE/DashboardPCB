@@ -1403,9 +1403,6 @@ Wire Wire Line
 	7350 2900 8100 2900
 Text Label 7500 3400 0    50   ~ 0
 CAL8
-NoConn ~ 7800 2700
-Text Label 7500 2700 0    50   ~ 0
-CAL1
 $Comp
 L Device:R R218
 U 1 1 5FA1DDB5
@@ -1718,4 +1715,17 @@ $EndComp
 Connection ~ 1800 2350
 Wire Wire Line
 	1800 2350 2000 2350
+$Comp
+L power:GND #PWR?
+U 1 1 5FB59AD5
+P 7800 2700
+F 0 "#PWR?" H 7800 2450 50  0001 C CNN
+F 1 "GND" V 7800 2500 50  0000 C CNN
+F 2 "" H 7800 2700 50  0001 C CNN
+F 3 "" H 7800 2700 50  0001 C CNN
+	1    7800 2700
+	0    -1   1    0   
+$EndComp
+Text Notes 7500 2700 0    50   ~ 0
+CAL1
 $EndSCHEMATC
