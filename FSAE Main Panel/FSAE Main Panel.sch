@@ -1031,4 +1031,5 @@ Wire Notes Line style dotted
 	8950 6100 11050 6100
 Text GLabel 1900 3200 0    39   Input ~ 0
 DWC_CONT
+NoConn ~ 7050 2800
 $EndSCHEMATC

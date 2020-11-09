@@ -612,4 +612,8 @@ $EndComp
 Wire Wire Line
 	7100 3150 7350 3150
 Connection ~ 7100 3150
+Text Label 4000 3650 0    50   ~ 0
+X16M_C+
+Text Label 4000 3550 0    50   ~ 0
+X16M_C-
 $EndSCHEMATC

@@ -1403,8 +1403,6 @@ Wire Wire Line
 	7350 2900 8100 2900
 Text Label 7500 3400 0    50   ~ 0
 CAL8
-Text Label 7500 2700 0    50   ~ 0
-CAL1
 $Comp
 L Device:R R218
 U 1 1 5FA1DDB5
@@ -1728,4 +1726,6 @@ F 3 "" H 7800 2700 50  0001 C CNN
 	1    7800 2700
 	0    -1   1    0   
 $EndComp
+Text Notes 7500 2700 0    50   ~ 0
+CAL1
 $EndSCHEMATC
