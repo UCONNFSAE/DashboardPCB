@@ -99,17 +99,17 @@ F1 "Display.sch" 60
 $EndSheet
 Text GLabel 7250 2900 2    39   Input ~ 0
 ~RESET
-Text GLabel 1900 5550 0    39   Input ~ 0
+Text GLabel 1900 5450 0    39   Input ~ 0
 ~CLEAR
 Text GLabel 7250 2200 2    39   Input ~ 0
 ~RPM_EN
 Text GLabel 7250 2100 2    39   Input ~ 0
 FRAME_CLR
-Text GLabel 1900 5200 0    39   Input ~ 0
+Text GLabel 1900 5100 0    39   Input ~ 0
 FRAME_CLK
-Text GLabel 1900 5050 0    39   Input ~ 0
+Text GLabel 1900 4950 0    39   Input ~ 0
 FRAME_SET
-Text GLabel 1900 4900 0    39   Input ~ 0
+Text GLabel 1900 4800 0    39   Input ~ 0
 ~PWM_WHITE
 Text GLabel 7250 3800 2    39   Input ~ 0
 USB_D+
@@ -297,11 +297,11 @@ Wire Wire Line
 	3850 3000 3600 3000
 Wire Wire Line
 	3600 2900 3850 2900
-Text GLabel 1900 5350 0    39   Input ~ 0
+Text GLabel 1900 5250 0    39   Input ~ 0
 HIGH_TEMP
 Text GLabel 3600 2700 0    39   Input ~ 0
 OIL_PRES
-Text GLabel 1900 4750 0    39   Input ~ 0
+Text GLabel 1900 4650 0    39   Input ~ 0
 FRAME_IN
 Text Label 3450 2600 0    50   ~ 0
 VDDANA
@@ -313,9 +313,9 @@ Text Label 7300 2600 0    50   ~ 0
 VCORE1
 Text GLabel 7250 4100 2    39   Input ~ 0
 ~PWM_GREEN
-Text GLabel 1900 4300 0    39   Input ~ 0
+Text GLabel 1900 4200 0    39   Input ~ 0
 ~PWM_YELLOW
-Text GLabel 1900 4550 0    39   Input ~ 0
+Text GLabel 1900 4450 0    39   Input ~ 0
 ~PWM_RED
 Text GLabel 3600 2300 0    39   Input ~ 0
 SHIFT1
@@ -1025,7 +1025,7 @@ Wire Notes Line style dotted
 	8950 5600 11050 5600
 Wire Notes Line style dotted
 	8950 6100 11050 6100
-Text GLabel 1900 5450 0    39   Input ~ 0
+Text GLabel 1900 5350 0    39   Input ~ 0
 DWC_CONT
 Wire Wire Line
 	7250 4700 7050 4700
@@ -1076,4 +1076,6 @@ Wire Wire Line
 Wire Wire Line
 	7250 4100 7050 4100
 NoConn ~ 3850 2800
+Text GLabel 1900 5550 0    39   Input ~ 0
+~PWM_GREEN
 $EndSCHEMATC
