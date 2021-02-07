@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:FSAE Main Panel-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -99,24 +98,22 @@ F1 "Display.sch" 60
 $EndSheet
 Text GLabel 7250 2900 2    39   Input ~ 0
 ~RESET
-Text GLabel 1900 5450 0    39   Input ~ 0
+Text GLabel 3600 4200 0    39   Input ~ 0
 ~CLEAR
 Text GLabel 7250 2200 2    39   Input ~ 0
 ~RPM_EN
 Text GLabel 7250 2100 2    39   Input ~ 0
 FRAME_CLR
-Text GLabel 1900 5100 0    39   Input ~ 0
+Text GLabel 7250 3200 2    39   Input ~ 0
 FRAME_CLK
-Text GLabel 1900 4950 0    39   Input ~ 0
+Text GLabel 7250 2800 2    39   Input ~ 0
 FRAME_SET
-Text GLabel 1900 4800 0    39   Input ~ 0
+Text GLabel 7250 4000 2    39   Input ~ 0
 ~PWM_WHITE
 Text GLabel 7250 3800 2    39   Input ~ 0
 USB_D+
 Text GLabel 7250 3900 2    39   Input ~ 0
 USB_D-
-Text Notes 7850 650  0    60   ~ 0
-Pins that support I2C: PA8, PA9, PA12, PA13, PA16, PA17, PA22, PA23
 $Comp
 L power:GND #PWR0103
 U 1 1 5BF9AD79
@@ -227,18 +224,10 @@ Text GLabel 3600 2900 0    39   Input ~ 0
 CAN_MOSI
 Text GLabel 3600 3000 0    39   Input ~ 0
 CAN_MISO
-Text Notes 7850 800  0    60   ~ 0
-PA8 and PA9 (13+14) for I2C expansion
-Text Notes 7850 950  0    60   ~ 0
-PA4 through PA7 (9-12) for SPI connection with CAN
 Text GLabel 7250 2300 2    39   Input ~ 0
 SWDIO
 Text GLabel 7250 2400 2    39   Input ~ 0
 SWCLK
-Text Notes 7850 1100 0    60   ~ 0
-PA27 RX LED
-Text Notes 7850 1250 0    60   ~ 0
-PB3 TX LED
 Wire Wire Line
 	3250 1450 3350 1450
 Connection ~ 3450 1950
@@ -297,11 +286,11 @@ Wire Wire Line
 	3850 3000 3600 3000
 Wire Wire Line
 	3600 2900 3850 2900
-Text GLabel 1900 5250 0    39   Input ~ 0
+Text GLabel 7250 3000 2    39   Input ~ 0
 HIGH_TEMP
 Text GLabel 3600 2700 0    39   Input ~ 0
 OIL_PRES
-Text GLabel 1900 4650 0    39   Input ~ 0
+Text GLabel 7250 3100 2    39   Input ~ 0
 FRAME_IN
 Text Label 3450 2600 0    50   ~ 0
 VDDANA
@@ -313,9 +302,9 @@ Text Label 7300 2600 0    50   ~ 0
 VCORE1
 Text GLabel 7250 4100 2    39   Input ~ 0
 ~PWM_GREEN
-Text GLabel 1900 4200 0    39   Input ~ 0
+Text GLabel 3600 3600 0    39   Input ~ 0
 ~PWM_YELLOW
-Text GLabel 1900 4450 0    39   Input ~ 0
+Text GLabel 3600 3900 0    39   Input ~ 0
 ~PWM_RED
 Text GLabel 3600 2300 0    39   Input ~ 0
 SHIFT1
@@ -459,13 +448,13 @@ $EndComp
 Connection ~ 3350 1450
 Wire Wire Line
 	3350 1450 3450 1450
-Text GLabel 7250 4700 2    39   Input ~ 0
+Text GLabel 3600 4500 0    39   Input ~ 0
 CAL_IN
-Text GLabel 1900 5850 0    39   Input ~ 0
+Text GLabel 7250 4400 2    39   Input ~ 0
 CAL_a
-Text GLabel 1900 5750 0    39   Input ~ 0
+Text GLabel 7250 4300 2    39   Input ~ 0
 CAL_b
-Text GLabel 1900 5650 0    39   Input ~ 0
+Text GLabel 7250 4200 2    39   Input ~ 0
 CAL_c
 Wire Notes Line style solid rgb(194, 0, 9)
 	6800 6900 850  6900
@@ -757,21 +746,21 @@ Wire Notes Line
 	4150 6800 4800 6800
 Wire Notes Line
 	1700 6800 2350 6800
-Text GLabel 7250 4400 2    39   Input ~ 0
+Text GLabel 7250 4700 2    39   Input ~ 0
 SWS2
-Text GLabel 7250 4600 2    39   Input ~ 0
+Text GLabel 3600 4400 0    39   Input ~ 0
 SWS4
-Text GLabel 7250 4300 2    39   Input ~ 0
+Text GLabel 7250 4600 2    39   Input ~ 0
 SWS1
 $Comp
 L power:+3.3VA #PWR0107
 U 1 1 5F836DEC
-P 8700 2500
-F 0 "#PWR0107" H 8700 2350 50  0001 C CNN
-F 1 "+3.3VA" V 8700 2750 50  0000 C CNN
-F 2 "" H 8700 2500 50  0001 C CNN
-F 3 "" H 8700 2500 50  0001 C CNN
-	1    8700 2500
+P 8800 2500
+F 0 "#PWR0107" H 8800 2350 50  0001 C CNN
+F 1 "+3.3VA" V 8800 2750 50  0000 C CNN
+F 2 "" H 8800 2500 50  0001 C CNN
+F 3 "" H 8800 2500 50  0001 C CNN
+	1    8800 2500
 	0    1    1    0   
 $EndComp
 $Comp
@@ -797,7 +786,7 @@ F 3 "" H 2200 2600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	8200 2600 7850 2600
+	8300 2600 7950 2600
 Text Label 3550 4600 0    50   ~ 0
 X16M+
 Text Label 3550 4700 0    50   ~ 0
@@ -815,84 +804,84 @@ Wire Notes Line
 Wire Notes Line
 	6150 6800 6400 6800
 Wire Wire Line
-	8550 3000 8200 3000
+	8650 3000 8300 3000
 Wire Wire Line
-	8200 2600 8200 2700
+	8300 2600 8300 2700
 Wire Wire Line
-	7850 2700 7850 2600
+	7950 2700 7950 2600
 Wire Wire Line
-	7850 3000 7850 2900
+	7950 3000 7950 2900
 Wire Wire Line
-	8200 3000 7850 3000
+	8300 3000 7950 3000
 $Comp
 L Device:C_Small C109
 U 1 1 5F85069C
-P 7850 2800
-F 0 "C109" H 7900 2900 50  0000 L CNN
-F 1 "1uF" H 7850 2700 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 7850 2800 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C472K5RACAUTO.pdf" H 7850 2800 50  0001 C CNN
-F 4 "CAP CER 0603 1UF 16V X7R 10%" H 7850 2800 50  0001 C CNN "Description"
-F 5 "KEMET" H -250 200 50  0001 C CNN "Manufacturer"
-F 6 "C0603C105K4RACAUTO" H -250 200 50  0001 C CNN "Part Number"
-F 7 "399-17704-1-ND" H 7850 2800 50  0001 C CNN "Digikey P/N"
-	1    7850 2800
+P 7950 2800
+F 0 "C109" H 8000 2900 50  0000 L CNN
+F 1 "1uF" H 7950 2700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7950 2800 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C472K5RACAUTO.pdf" H 7950 2800 50  0001 C CNN
+F 4 "CAP CER 0603 1UF 16V X7R 10%" H 7950 2800 50  0001 C CNN "Description"
+F 5 "KEMET" H -150 200 50  0001 C CNN "Manufacturer"
+F 6 "C0603C105K4RACAUTO" H -150 200 50  0001 C CNN "Part Number"
+F 7 "399-17704-1-ND" H 7950 2800 50  0001 C CNN "Digikey P/N"
+	1    7950 2800
 	-1   0    0    -1  
 $EndComp
-Connection ~ 8200 3000
+Connection ~ 8300 3000
 Wire Wire Line
-	8200 2900 8200 3000
+	8300 2900 8300 3000
 $Comp
 L Device:C_Small C108
 U 1 1 5BF9BC3C
-P 8200 2800
-F 0 "C108" H 8250 2900 50  0000 L CNN
-F 1 "0.1uF" H 8200 2700 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 8200 2800 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104K5RACAUTO.pdf" H 8200 2800 50  0001 C CNN
-F 4 "CAP CER 0.1UF 50V X7R 0603" H 8200 2800 50  0001 C CNN "Description"
-F 5 "KEMET" H 100 200 50  0001 C CNN "Manufacturer"
-F 6 "C0603C104K5RACAUTO" H 100 200 50  0001 C CNN "Part Number"
-F 7 "399-6856-1-ND" H 8200 2800 50  0001 C CNN "Digikey P/N"
-	1    8200 2800
+P 8300 2800
+F 0 "C108" H 8350 2900 50  0000 L CNN
+F 1 "0.1uF" H 8300 2700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8300 2800 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104K5RACAUTO.pdf" H 8300 2800 50  0001 C CNN
+F 4 "CAP CER 0.1UF 50V X7R 0603" H 8300 2800 50  0001 C CNN "Description"
+F 5 "KEMET" H 200 200 50  0001 C CNN "Manufacturer"
+F 6 "C0603C104K5RACAUTO" H 200 200 50  0001 C CNN "Part Number"
+F 7 "399-6856-1-ND" H 8300 2800 50  0001 C CNN "Digikey P/N"
+	1    8300 2800
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C107
 U 1 1 5BF9BC05
-P 8550 2800
-F 0 "C107" H 8350 2900 50  0000 L CNN
-F 1 "0.1uF" H 8350 2700 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 8550 2800 50  0001 C CNN
-F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104K5RACAUTO.pdf" H 8550 2800 50  0001 C CNN
-F 4 "CAP CER 0.1UF 50V X7R 0603" H 8550 2800 50  0001 C CNN "Description"
-F 5 "KEMET" H 600 300 50  0001 C CNN "Manufacturer"
-F 6 "C0603C104K5RACAUTO" H 600 300 50  0001 C CNN "Part Number"
-F 7 "399-6856-1-ND" H 8550 2800 50  0001 C CNN "Digikey P/N"
-	1    8550 2800
+P 8650 2800
+F 0 "C107" H 8450 2900 50  0000 L CNN
+F 1 "0.1uF" H 8450 2700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8650 2800 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104K5RACAUTO.pdf" H 8650 2800 50  0001 C CNN
+F 4 "CAP CER 0.1UF 50V X7R 0603" H 8650 2800 50  0001 C CNN "Description"
+F 5 "KEMET" H 700 300 50  0001 C CNN "Manufacturer"
+F 6 "C0603C104K5RACAUTO" H 700 300 50  0001 C CNN "Part Number"
+F 7 "399-6856-1-ND" H 8650 2800 50  0001 C CNN "Digikey P/N"
+	1    8650 2800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0113
 U 1 1 5BD001EE
-P 8200 3000
-F 0 "#PWR0113" H 8200 2750 50  0001 C CNN
-F 1 "GND" H 8200 2850 50  0000 C CNN
-F 2 "" H 8200 3000 50  0001 C CNN
-F 3 "" H 8200 3000 50  0001 C CNN
-	1    8200 3000
+P 8300 3000
+F 0 "#PWR0113" H 8300 2750 50  0001 C CNN
+F 1 "GND" H 8300 2850 50  0000 C CNN
+F 2 "" H 8300 3000 50  0001 C CNN
+F 3 "" H 8300 3000 50  0001 C CNN
+	1    8300 3000
 	1    0    0    -1  
 $EndComp
-Connection ~ 7850 2600
+Connection ~ 7950 2600
 Wire Wire Line
-	7050 2600 7850 2600
+	7050 2600 7950 2600
 Wire Wire Line
-	8550 2900 8550 3000
+	8650 2900 8650 3000
 Wire Wire Line
-	8550 2700 8550 2500
+	8650 2700 8650 2500
 Wire Wire Line
-	7050 2500 8550 2500
-Connection ~ 8550 2500
+	7050 2500 8650 2500
+Connection ~ 8650 2500
 Wire Wire Line
 	7800 3700 7800 4000
 Wire Wire Line
@@ -905,7 +894,7 @@ Wire Wire Line
 Wire Wire Line
 	8000 3600 8000 3700
 Wire Wire Line
-	8700 2500 8550 2500
+	8800 2500 8650 2500
 Wire Wire Line
 	8150 3600 8000 3600
 Connection ~ 8000 3600
@@ -928,12 +917,12 @@ Connection ~ 2850 4400
 Wire Wire Line
 	2850 4400 2950 4400
 Wire Wire Line
-	7850 3000 7550 3000
+	7950 3000 7700 3000
 Wire Wire Line
-	7550 3000 7550 2700
+	7700 3000 7700 2700
 Wire Wire Line
-	7050 2700 7550 2700
-Connection ~ 7850 3000
+	7050 2700 7700 2700
+Connection ~ 7950 3000
 Wire Wire Line
 	2900 2900 3150 2900
 Wire Wire Line
@@ -1025,13 +1014,13 @@ Wire Notes Line style dotted
 	8950 5600 11050 5600
 Wire Notes Line style dotted
 	8950 6100 11050 6100
-Text GLabel 1900 5350 0    39   Input ~ 0
+Text GLabel 3600 2800 0    39   Input ~ 0
 DWC_CONT
 Wire Wire Line
 	7250 4700 7050 4700
 Wire Wire Line
 	7250 4600 7050 4600
-Text GLabel 7250 4500 2    39   Input ~ 0
+Text GLabel 3600 4300 0    39   Input ~ 0
 SWS3
 Wire Wire Line
 	7250 4300 7050 4300
@@ -1075,7 +1064,30 @@ Wire Wire Line
 	1900 5850 2100 5850
 Wire Wire Line
 	7250 4100 7050 4100
-NoConn ~ 3850 2800
-Text GLabel 1900 5550 0    39   Input ~ 0
-~PWM_GREEN
+Wire Wire Line
+	3600 3600 3850 3600
+Wire Wire Line
+	3600 3900 3850 3900
+Wire Wire Line
+	3600 4200 3850 4200
+Wire Wire Line
+	3600 4300 3850 4300
+Wire Wire Line
+	3600 4400 3850 4400
+Wire Wire Line
+	3600 4500 3850 4500
+Wire Wire Line
+	7250 3100 7050 3100
+Wire Wire Line
+	7250 3200 7050 3200
+Wire Wire Line
+	3600 2800 3850 2800
+Wire Wire Line
+	7250 4200 7050 4200
+Wire Wire Line
+	7250 4000 7050 4000
+Wire Wire Line
+	7250 3000 7050 3000
+Wire Wire Line
+	7250 2800 7050 2800
 $EndSCHEMATC

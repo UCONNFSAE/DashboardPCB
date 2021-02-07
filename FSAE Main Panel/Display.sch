@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:FSAE Main Panel-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -3421,6 +3420,32 @@ Text Label 1950 5700 0    50   ~ 0
 FRAME_INT2
 Text Label 1950 5600 0    50   ~ 0
 FRAME_INT1
+$Comp
+L Mechanical:Heatsink_Pad HS1
+U 1 1 603E02E8
+P 900 4150
+F 0 "HS1" H 758 4097 50  0000 R CNN
+F 1 "Heatsink_Pad" H 758 4188 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 912 4100 50  0001 C CNN
+F 3 "~" H 912 4100 50  0001 C CNN
+	1    900  4150
+	-1   0    0    1   
+$EndComp
+Text GLabel 900  3800 2    50   Input ~ 0
+HEATSINK
+$Comp
+L Mechanical:Heatsink_Pad HS2
+U 1 1 603E2973
+P 900 3400
+F 0 "HS2" H 1041 3439 50  0000 L CNN
+F 1 "Heatsink_Pad" H 1041 3348 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 912 3350 50  0001 C CNN
+F 3 "~" H 912 3350 50  0001 C CNN
+	1    900  3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  3500 900  4050
 Wire Bus Line
 	1800 2900 1800 3600
 Wire Bus Line
