@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "H:\\DashboardPCB\\FSAE Main Panel\\FSAE Main Panel.sch")
-    (date "2/7/2021 3:21:53 PM")
+    (date "2/16/2021 5:19:03 PM")
     (tool "Eeschema (5.1.9)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
