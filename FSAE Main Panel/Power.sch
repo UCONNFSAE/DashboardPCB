@@ -785,11 +785,11 @@ P 10500 3800
 F 0 "D302" V 10454 3879 50  0000 L CNN
 F 1 "D_TVS" V 10545 3879 50  0000 L CNN
 F 2 "Resistors_SMD:R_0603" H 10500 3800 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/tpd1e10b06.pdf" H 10500 3800 50  0001 C CNN
-F 4 "TVS DIODE 5.5V 14V 2X1SON" H 10500 3800 50  0001 C CNN "Description"
-F 5 "296-30406-1-ND" H 10500 3800 50  0001 C CNN "Digikey P/N"
-F 6 "TI" H 10500 3800 50  0001 C CNN "Manufacturer"
-F 7 "TPD1E10B06DPYR" H 10500 3800 50  0001 C CNN "Part Number"
+F 3 "https://www.diodes.com/assets/Datasheets/D5V0H1U2LP1610.pdf" H 10500 3800 50  0001 C CNN
+F 4 "11.5V Clamp 90A (8/20µs) Ipp Tvs Diode Surface Mount U-DFN1610-2 (Type B)" H 10500 3800 50  0001 C CNN "Description"
+F 5 "D5V0H1U2LP1610-7DICT-ND" H 10500 3800 50  0001 C CNN "Digikey P/N"
+F 6 "Diodes Inc" H 10500 3800 50  0001 C CNN "Manufacturer"
+F 7 "D5V0H1U2LP1610-7" H 10500 3800 50  0001 C CNN "Part Number"
 	1    10500 3800
 	0    1    1    0   
 $EndComp

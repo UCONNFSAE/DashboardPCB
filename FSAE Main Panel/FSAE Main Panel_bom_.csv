@@ -1,47 +1,48 @@
-Quantity Per PCB,Part Number,Digikey P/N,Manufacturer
-1,"PRTR5V0U2X,215",1727-3884-1-ND,Nexperia
-1,MS1V-T1K-32.768kHz,2195-MS1VT1K32.768KHZ12.5PF20PPMTAQCAUCT-ND,Micro Crystal Switzerland
-1,CD74HC238PWR,296-13814-1-ND,TI
-1,CD40106BPWR,296-14082-1-ND,TI
-1,TPD1E10B06DPYR,296-30406-1-ND,TI
-1,TLC6C598QPWRQ1,296-36199-1-ND,TI
-3,LP5907MFX-3.3/NOPB,296-38557-1-ND,TI
-1,TPS564201DDCR,296-47373-1-ND,TI
-2,TLC6C5816QPWPRQ1,296-51674-1-ND,TI
-6,C0402C919C5GAC7867,399-14287-1-ND,KEMET
-16,C0603C105K4RACAUTO,399-17704-1-ND,KEMET
-4,ESK226M050AC3AA,399-6108-ND,KEMET
-2,ESK107M016AC3AA,399-6601-ND,KEMET
-23,C0603C104K5RACAUTO,399-6856-1-ND,KEMET
-5,C0603C472K5RACAUTO,399-6896-1-ND,KEMET
-5,C1206C106K4RACAUTO,399-7012-1-ND,KEMET
-3,C1206C225K5RACAUTO,399-7019-1-ND,KEMET
-4,LCB G6SP-DBFA-4J5L-0-140-R18-Z,475-3674-1-ND,OSRAM
-1,BLM41PG471SN1L,490-1060-1-ND,Murata
-1,BLM41PG471SN1L,490-1060-1-ND,Murata
-14,SM1206NHC-IL,492-1944-1-ND,Bivar
-16,SM1206NPGC-IL,492-1945-1-ND,Bivar
-7,SM1206NUWC-IL,492-1946-1-ND,Bivar
-14,SM1206NYC-IL,492-1947-1-ND,Bivar
-4,CRCW121011R0FKEA,541-11.0AACT-ND,Vishay
-1,20021111-00010T4LF,609-3712-ND,Amphenol
-1,10118192-0001LF,609-4613-1-ND,Amphenol
-1,ATSAMD21G18A-AU,ATSAMD21G18A-AU-ND,Microchip
-2,PTS125SK43-2 LFS,CKN9139-ND,C&K
-1,DMG2305UX-13,DMG2305UX-13DICT-ND,Diodes Inc
-2,MF-MSMF050-2,IRLML6402PBFCT-ND,Bourns
-1,LM2940IMP-5.0/NOPB,LM2940IMP-5.0/NOPBCT-ND,TI
-2,MBR230S1F-7,MBR230S1F-7DICT-ND,Diodes Inc
-1,MCP25625T-E/SS,MCP25625T-E/SSCT-ND,Microchip
-52,RMCF0603FT120R,RMCF0603FT120RCT-ND,Stackpole
-1,RMCF0603FT56K2,RMCF0603FT56K2CT-ND,Stackpole
-12,RMCF0603JT10K0,RMCF0603JT10K0CT-ND,Stackpole
-2,RMCF0603JT1K00,RMCF0603JT1K00CT-ND,Stackpole
-2,RMCF0603JT1M00,RMCF0603JT1M00CT-ND,Stackpole
-8,RMCF0603JT330R,RMCF0603JT330RCT-ND,Stackpole
-1,RMCF0603ZT0R00,RMCF0603ZT0R00CT-ND,Stackpole
-4,SI2308CDS-T1-GE3,SI2308CDS-T1-GE3CT-ND,Vishay
-1,SRR1050A-3R3Y,SRR1050A-3R3YCT-ND,Bourns
-3,1718571008,WM10303-ND,Molex
-1,22122104,WM2719-ND,Molex
-2,ECS-160-8-30B-CKM,XC1839CT-ND,ECS
+Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet,Part Number,Sheetpath,Digikey P/N,Manufacturer,Function
+1,"Unpolarized capacitor, small symbol",C_Small,C103 C104 C110 C111 C407 C408,9.1pF,C_0402_NoSilk,6,https://api.kemet.com/component-edge/download/datasheet/C0402C919C5GAC7867.pdf,C0402C919C5GAC7867,/,399-14287-1-ND,KEMET,
+2,Unpolarized capacitor,C,C203 C204 C213 C216 C303,4700pF,C_0603,5,https://api.kemet.com/component-edge/download/specsheet/C0603C472K5RACAUTO.pdf,C0603C472K5RACAUTO,/External Interface/,399-6896-1-ND,KEMET,
+3,"Unpolarized capacitor, small symbol",C_Small,C102 C105 C106 C107 C108 C205 C206 C207 C208 C209 C210 C211 C214 C305 C315 C316 C402 C403 C405 C406 C502 C504 C505,0.1uF,C_0603,23,https://api.kemet.com/component-edge/download/specsheet/C0603C104K5RACAUTO.pdf,C0603C104K5RACAUTO,/,399-6856-1-ND,KEMET,
+4,"Unpolarized capacitor, small symbol",C_Small,C109 C201 C202 C212 C215 C314 C317 C319 C320 C322 C323 C401 C404 C501 C506 C507,1uF,C_0603,16,https://api.kemet.com/component-edge/download/specsheet/C0603C472K5RACAUTO.pdf,C0603C105K4RACAUTO,/,399-17704-1-ND,KEMET,
+5,Unpolarized capacitor,C,C302 C306 C310,2.2uF,C_1206,3,https://api.kemet.com/component-edge/download/specsheet/C1206C225K5RACAUTO.pdf,C1206C225K5RACAUTO,/Power/,399-7019-1-ND,KEMET,
+6,"Unpolarized capacitor, small symbol",C_Small,C101 C313 C318 C321 C324,10uF,C_1206,5,https://api.kemet.com/component-edge/download/datasheet/C1206C106K4RACAUTO.pdf,C1206C106K4RACAUTO,/,399-7012-1-ND,KEMET,CAP CER 10UF 25V X5R 1206
+7,Unpolarized capacitor,C,C301 C307 C309 C311,22uF,CP_Radial_D5.0mm_P2.00mm,4,https://api.kemet.com/component-edge/download/specsheet/ESK226M050AC3AA.pdf,ESK226M050AC3AA,/Power/,399-6108-ND,KEMET,
+8,Unpolarized capacitor,C,C308 C312,100uF,CP_Radial_D5.0mm_P2.00mm,2,https://api.kemet.com/component-edge/download/datasheet/ESK107M016AC3AA.pdf,ESK107M016AC3AA,/Power/,399-6601-ND,KEMET,
+9,Diode,D,D301 D401,D,D_SOD-123F,2,https://www.diodes.com/assets/Datasheets/MBR230S1F.pdf,MBR230S1F-7,/Power/,MBR230S1F-7DICT-ND,Diodes Inc,
+10,Bidirectional transient-voltage-suppression diode,D_TVS,D302,D_TVS,R_0603,1,https://www.ti.com/lit/ds/symlink/tpd1e10b06.pdf,TPD1E10B06DPYR,/Power/,296-30406-1-ND,TI,
+11,"Light emitting diode, small symbol",LED_Small,D534 D535 D536 D537,LCB G6SP-DBFA-4J5L-0-140-R18-Z,LCB_G6SP,4,https://dammedia.osram.info/media/resource/hires/osram-dam-6030625/LCB%20G6SP_EN.pdf,LCB G6SP-DBFA-4J5L-0-140-R18-Z,/Display/,475-3674-1-ND,OSRAM,Shift_1 Shift_2 Shift_3 Shift_4
+12,,PRTR5V0U2X,D201,PRTR5V0U2X,SOT-143,1,https://assets.nexperia.com/documents/data-sheet/PRTR5V0U2X.pdf,"PRTR5V0U2X,215",/External Interface/,1727-3884-1-ND,Nexperia,
+13,"Light emitting diode, small symbol",LED_Small,D526 D527 D528 D529 D530 D531 D532 D533 D556 D557 D558 D559 D560 D561,SM1206NHC-IL,LED_1206,14,https://www.bivar.com/Portals/0/Products/SM1206NHC-IL.pdf,SM1206NHC-IL,/Display/,492-1944-1-ND,Bivar,12500-Red 13000-Red 13500-Red 14000-Red 14500-Red 15000-Red Spare-Red Oil Pressure
+14,"Light emitting diode, small symbol",LED_Small,D502 D503 D504 D505 D506 D507 D508 D509 D510 D511 D512 D513 D514 D515 D516 D517,SM1206NPGC-IL,LED_1206,16,https://www.bivar.com/parts_content/Datasheets/SM1206NPGC-IL.pdf,SM1206NPGC-IL,/Display/,492-1945-1-ND,Bivar,500-Green 1000-Green 1500-Green 2000-Green 2500-Green 3000-Green 3500-Green 4000-Green 4500-Green 5000-Green 5500-Green 6000-Green 6500-Green 7000-Green 7500-Green 8000-Green
+15,"Light emitting diode, small symbol",LED_Small,D538 D539 D540 D541 D542 D543 D544,SM1206NUWC-IL,LED_1206,7,https://www.bivar.com/parts_content/Datasheets/SM1206NUWC-IL.pdf,SM1206NUWC-IL,/Display/,492-1946-1-ND,Bivar,7Seg_A 7Seg_B 7Seg_C 7Seg_D 7Seg_E 7Seg_F 7Seg_G
+16,"Light emitting diode, small symbol",LED_Small,D518 D519 D520 D521 D522 D523 D524 D525 D550 D551 D552 D553 D554 D555,SM1206NYC-IL,LED_1206,14,https://www.bivar.com/Files/Datasheets/SM1206NYC-IL.pdf,SM1206NYC-IL,/Display/,492-1947-1-ND,Bivar,8500-Yellow 9000-Yellow 9500-Yellow 10000-Yellow 10500-Yellow 11000-Yellow 11500-Yellow 12000-Yellow High Temp
+17,"Resettable fuse, polymeric positive temperature coefficient",Polyfuse,F201 F301,MF-MSMF050-2,MF-MSMF050-2,2,https://www.bourns.com/docs/Product-Datasheets/mfmsmf.pdf,MF-MSMF050-2,/External Interface/,IRLML6402PBFCT-ND,Bourns,
+18,"Heatsink with electrical connection, 1 pin",Heatsink_Pad,HS1 HS2,Heatsink_Pad,PinHeader_1x01_P2.54mm_Vertical,2,~,,/Display/,,,
+19,"Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_01x08,J1 J2 J6,Conn_01x08,Molex_KK-6410-08_08x2.54mm_Straight,3,"https://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf",1718571008,/External Interface/,WM10303-ND,Molex,
+20,"Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_01x10,J3,Conn_01x10,Molex_KK-6410-10_10x2.54mm_Straight,1,"https://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf",0022122104,/External Interface/,WM2719-ND,Molex,
+21,,Cortex_Debug,J5,Cortex_Debug,Pin_Header_Straight_2x05_Pitch1.27mm,1,https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/20021111.pdf,20021111-00010T4LF,/External Interface/,609-3712-ND,Amphenol,
+22,,Conn_01x06-conn,J4,USB Micro B,10118192-0001LF,1,https://www.amphenol-icc.com/media/wysiwyg/files/drawing/10118192.pdf,10118192-0001LF,/External Interface/,609-4613-1-ND,Amphenol,
+23,Inductor,L,L301,3.3uH,L_Bourns-SRU8043,1,https://www.bourns.com/docs/Product-Datasheets/SRR1050A.pdf,SRR1050A-3R3Y,/Power/,SRR1050A-3R3YCT-ND,Bourns,
+24,"Ferrite bead, small symbol",Ferrite_Bead_Small,L101,BLM41PG471SN1L,L_1806,1,https://www.murata.com/en-us/products/productdata/8796739862558/ENFA0007.pdf,BLM41PG471SN1L,/,490-1060-1-ND,Murata,
+25,Ferrite bead,Ferrite_Bead,L201,BLM41PG471SN1L,L_1806,1,https://www.murata.com/en-us/products/productdata/8796739862558/ENFA0007.pdf,BLM41PG471SN1L,/External Interface/,490-1060-1-ND,Murata,
+26,"P-MOSFET transistor, gate/source/drain",Q_PMOS_GSD,Q301,DMG2305UX-13,SOT-23,1,https://www.diodes.com/assets/Datasheets/DMG2305UX.pdf,DMG2305UX-13,/Power/,DMG2305UX-13DICT-ND,Diodes Inc,
+27,"N-MOSFET transistor, gate/source/drain",Q_NMOS_GSD,Q501 Q502 Q503 Q504,SI2308CDS-T1-GE3,SOT-23,4,http://www.vishay.com/docs/77744/si2308cds.pdf,SI2308CDS-T1-GE3,/Display/,SI2308CDS-T1-GE3CT-ND,Vishay,
+28,Resistor,R,R405,0,R_0603,1,https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf,RMCF0603ZT0R00,/CAN/,RMCF0603ZT0R00CT-ND,Stackpole,
+29,"Resistor, small symbol",R_Small,R534 R535 R536 R537,11,R_1210,4,http://www.vishay.com/docs/20035/dcrcwe3.pdf,CRCW121011R0FKEA,/Display/,541-11.0AACT-ND,Vishay,
+30,Resistor,R,R401 R502 R503 R504 R505 R506 R507 R508 R509 R510 R511 R512 R513 R514 R515 R516 R517 R518 R519 R520 R521 R522 R523 R524 R525 R526 R527 R528 R529 R530 R531 R532 R533 R550 R551 R552 R553 R554 R555 R556 R557 R558 R559 R560 R561 R562 R563 R564 R565 R566 R567 R568,120,R_0603,52,https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf,RMCF0603FT120R,/CAN/,RMCF0603FT120RCT-ND,Stackpole,
+31,Resistor,R,R202 R204 R206 R208 R210 R212 R214 R216,330,R_0603,8,https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf,RMCF0603JT330R,/External Interface/,RMCF0603JT330RCT-ND,Stackpole,
+32,Resistor,R,R220 R402,1k,R_0603,2,https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf,RMCF0603JT1K00,/External Interface/,RMCF0603JT1K00CT-ND,Stackpole,
+33,Resistor,R,R201 R203 R205 R207 R209 R211 R213 R215 R218 R302 R403 R404,10k,R_0603,12,https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf,RMCF0603JT10K0,/External Interface/,RMCF0603JT10K0CT-ND,Stackpole,
+34,Resistor,R,R301,56.2k,R_0603,1,https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf,RMCF0603FT56K2,/Power/,RMCF0603FT56K2CT-ND,Stackpole,
+35,"Resistor, small symbol",R_Small,R217 R219,1M,R_0603,2,https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf,RMCF0603JT1M00,/External Interface/,RMCF0603JT1M00CT-ND,Stackpole,
+36,"Push button switch, generic, two pins",SW_Push,SW1 SW2,SW_SPST,PTS125,2,https://dznh3ojzb2azq.cloudfront.net/products/Tactile/PTS125/documents/datasheet.pdf,PTS125SK43-2 LFS,/External Interface/,CKN9139-ND,C&K,
+37,6 Channel Schmitt Trigger Inverter TSSOP-14,CD40106BPWR,U201,CD40106BPWR,TSSOP-14_4.4x5mm_Pitch0.65mm,1,https://www.ti.com/lit/ds/symlink/cd40106b.pdf,CD40106BPWR,/External Interface/,296-14082-1-ND,TI,
+38,1x3:8 CMOS 3 to 8 line NonInverting Decoder,74HC238,U202,CD74HC238PWR,TSSOP-16_4.4x5mm_Pitch0.65mm,1,https://www.ti.com/lit/ds/symlink/cd74hc138.pdf,CD74HC238PWR,/External Interface/,296-13814-1-ND,TI,
+39,1A Low Dropout regulator,LM2940,U302,LM2940IMP-5.0/NOPB,SOT-223-3_TabPin2,1,https://www.ti.com/lit/ds/symlink/lp5907-q1.pdf,LM2940IMP-5.0/NOPB,/Power/,LM2940IMP-5.0/NOPBCT-ND,TI,
+40,"250-mA Ultra-Low-Noise Low-IQ LDO, 3.3V, SOT-23",LP5907MFX-3.3,U303 U304 U305,LP5907MFX-3.3,SOT-23-5,3,https://www.ti.com/lit/ds/symlink/lp5907-q1.pdf,LP5907MFX-3.3/NOPB,/Power/,296-38557-1-ND,TI,
+41,CAN Controller with Integrated Transceiver,MCP25625,U401,MCP25625,SSOP-28_5.3x10.2mm_Pitch0.65mm,1,http://ww1.microchip.com/downloads/en/DeviceDoc/MCP25625-CAN-Controller-Data-Sheet-20005282C.pdf,MCP25625T-E/SS,/CAN/,MCP25625T-E/SSCT-ND,Microchip,
+42,,SAMD21G18A-AU,U101,SAMD21G18A-AU,TQFP-48_7x7mm_Pitch0.5mm,1,http://ww1.microchip.com/downloads/en/DeviceDoc/SAM_D21_DA1_Family_DataSheet_DS40001882F.pdf,ATSAMD21G18A-AU,/,ATSAMD21G18A-AU-ND,Microchip,
+43,16-Bit Line Driver Shift Register with Diagnostics,TLC6C5816,U502 U503,TLC6C5816,TLC6C5816,2,http://www.ti.com/lit/ds/symlink/tlc6c5816-q1.pdf,TLC6C5816QPWPRQ1,/Display/,296-51674-1-ND,TI,
+44,TLC6C598 Shift Register,TLC6C598,U501,TLC6C598,TSSOP-16_4.4x5mm_Pitch0.65mm,1,http://www.ti.com/lit/ds/symlink/tlc6c598.pdf,TLC6C598QPWRQ1,/Display/,296-36199-1-ND,TI,
+45,"4.5-V to 17-V Input, 4-A Synchronous Step-Down Voltage Regulator",TPS564201,U301,TPS564201,SOT-23-6,1,https://www.ti.com/lit/ds/symlink/tps564201.pdf,TPS564201DDCR,/Power/,296-47373-1-ND,TI,
+46,"Four pin crystal, GND on pins 2 and 4",Crystal_GND24,Y102 Y401,16MHz,Crystal_SMD_5032-4pin_5.0x3.2mm,2,https://www.mouser.com/datasheet/2/122/ecx_53b-1479911.pdf,ECS-160-8-30B-CKM,/,XC1839CT-ND,ECS,
+47,"Two pin crystal, small symbol",Crystal_Small,Y101,32.768kHz,MS1V-T1K,1,https://www.mouser.com/datasheet/2/530/MS1V-T1K-1085690.pdf,MS1V-T1K-32.768kHz,/,2195-MS1VT1K32.768KHZ12.5PF20PPMTAQCAUCT-ND,Micro Crystal Switzerland,
